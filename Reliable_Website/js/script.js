@@ -151,19 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
             let progress = 0;
             
             if (rect.top < triggerPoint) {
-                // Total scrollable distance for the line to fill (from entering trigger point to leaving trigger point)
-                // We'll base it roughly on the height of the section or a fixed scroll distance
                 const distance = 400; // arbitrary pixel distance for the line to fully draw
-                
                 let scrolledPastTrigger = triggerPoint - rect.top;
-                
                 progress = (scrolledPastTrigger / distance) * 100;
                 
                 if (progress < 0) progress = 0;
                 if (progress > 100) progress = 100;
             }
             
-            processLineFill.style.width = progress + '%';
+            if (window.innerWidth <= 768) {
+                processLineFill.style.width = '4px';
+                processLineFill.style.height = progress + '%';
+            } else {
+                processLineFill.style.height = '4px';
+                processLineFill.style.width = progress + '%';
+            }
         });
     }
 

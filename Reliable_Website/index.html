@@ -73,7 +73,7 @@
             <div class="nav-logo">
                 <img src="assets/logo/logo-transparent.png" alt="Logo">
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="mobileNavMenu">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Product/Services</a>
@@ -81,6 +81,11 @@
                 <a href="contact.html">Contact</a>
             </div>
             <button class="nav-btn" onclick="window.location.href='contact.html'">Get a Quote &rarr;</button>
+            <div class="hamburger-exact" onclick="this.classList.toggle('active'); document.getElementById('mobileNavMenu').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
 
         <div class="hero-content-exact">
