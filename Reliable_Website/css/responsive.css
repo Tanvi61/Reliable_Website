@@ -329,6 +329,7 @@
   .hero-eyebrow-container { justify-content: center; }
   .hero-title-exact, .hero-desc-exact { font-size: 3.5rem; line-height: 1.1; width: 100%; max-width: 100%; }
   .hero-desc-exact { font-size: 1.1rem; }
+  .desktop-break { display: none; }
   .hero-actions { justify-content: center; width: 100%; flex-wrap: wrap; }
   
   .about-modern-wrapper { flex-direction: column; gap: 30px; }
