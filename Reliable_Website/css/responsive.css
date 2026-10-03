@@ -337,7 +337,7 @@
   .premium-image-container { order: 1; max-width: 100%; margin-bottom: 20px; }
   .stat-card-modern { justify-content: center; }
   .section-heading, .section-subheading { text-align: center; margin-left: auto; margin-right: auto; }
-  .section-label { width: 100%; justify-content: center; }
+  .section-label { display: block; text-align: center; width: 100%; }
   
   .flip-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .tech-preview-container { height: auto; min-height: auto; aspect-ratio: 16 / 10; }
