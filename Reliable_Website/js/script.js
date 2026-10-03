@@ -387,6 +387,22 @@ document.addEventListener('DOMContentLoaded', () => {
         testimonialTrack.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
         testimonialTrack.addEventListener('mouseleave', startAutoPlay);
         
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        testimonialTrack.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+            clearInterval(autoPlayInterval);
+        }, {passive: true});
+        
+        testimonialTrack.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) moveNext();
+            if (touchEndX > touchStartX + 50) movePrev();
+            startAutoPlay();
+        }, {passive: true});
+        
         updateCarousel();
         startAutoPlay();
     }
