@@ -63,6 +63,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1987,7 +1988,7 @@ textarea {
 /* HERO WRAPPER */
 .hero-exact {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 730px;
   overflow: hidden;
   font-family: 'Manrope', sans-serif;

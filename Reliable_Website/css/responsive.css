@@ -358,7 +358,7 @@
   .footer-col:nth-child(2) { order: 3; }
   .footer-col:nth-child(3) { order: 4; }
   
-  .footer { padding-bottom: 180px; background-position: top center; }
-  .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+  .footer { padding-bottom: 20px; background-position: bottom center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 15px; margin-top: 150px; }
   .nav-logo img { height: 40px; }
 }
