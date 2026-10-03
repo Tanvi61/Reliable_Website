@@ -293,12 +293,14 @@
 /* Tablet & Mobile Navigation / Top Bar */
 @media (max-width: 1024px) {
   * { -webkit-tap-highlight-color: transparent; }
-  .top-bar-exact { height: auto; padding: 10px 0; }
-  .top-bar-content { flex-direction: column; gap: 8px; justify-content: center; width: 90%; }
-  .top-bar-left { flex-direction: column; gap: 5px; text-align: center; font-size: 11px; }
+  .top-bar-exact { height: auto; padding: 6px 0; }
+  .top-bar-content { flex-direction: row; flex-wrap: wrap; gap: 6px; justify-content: center; width: 95%; }
+  .top-bar-left { flex-direction: row; flex-wrap: wrap; gap: 8px; justify-content: center; text-align: center; font-size: 10.5px; }
+  .top-bar-right { gap: 10px; margin-top: 2px; }
+  .top-bar-right .top-bar-social { width: 22px; height: 22px; }
   .top-bar-divider { display: none; }
   
-  .nav-exact { top: 75px; left: 10px; right: 10px; width: calc(100% - 20px); height: 65px; padding: 0 15px; }
+  .nav-exact { top: 58px; left: 10px; right: 10px; width: calc(100% - 20px); height: 65px; padding: 0 15px; }
   
   .hamburger-exact { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
   .hamburger-exact span { display: block; width: 25px; height: 3px; background: var(--primary-navy); border-radius: 2px; transition: 0.3s; }
@@ -342,8 +344,8 @@
 /* Mobile Devices */
 @media (max-width: 768px) {
   .hero-video-bg { object-position: 85% 20%; }
-  .top-bar-exact { display: none; /* Hide top bar on mobile to save space */ }
-  .nav-exact { top: 10px; }
+  .top-bar-exact { display: flex; }
+  .nav-exact { top: 58px; }
   .hero-title-exact { font-size: 2.5rem; }
   .hero-desc-exact { font-size: 1rem; }
   .flip-grid { grid-template-columns: 1fr; }
