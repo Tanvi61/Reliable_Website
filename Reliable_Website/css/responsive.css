@@ -230,7 +230,8 @@
   }
 
   .tech-preview-container {
-    height: 320px;
+    height: auto;
+    aspect-ratio: 16 / 10;
   }
 
   .why-features {
@@ -338,7 +339,7 @@
   .section-label { width: 100%; justify-content: center; }
   
   .flip-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .tech-preview-container { min-height: 300px; aspect-ratio: auto; }
+  .tech-preview-container { height: auto; min-height: auto; aspect-ratio: 16 / 10; }
 }
 
 /* Mobile Devices */
