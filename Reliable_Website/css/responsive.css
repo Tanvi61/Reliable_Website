@@ -345,7 +345,7 @@
 
 /* Mobile Devices */
 @media (max-width: 768px) {
-  .hero-video-bg { object-position: 85% 20%; }
+  .hero-video-bg { object-position: center center; }
   .top-bar-exact { display: flex; }
   .nav-exact { top: 58px; }
   .hero-title-exact { font-size: 2.5rem; }

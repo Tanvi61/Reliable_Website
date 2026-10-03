@@ -220,9 +220,7 @@ textarea {
 }
 
 .section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-block;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -233,11 +231,15 @@ textarea {
 
 .section-label::before {
   content: '';
+  display: inline-block;
   width: 8px;
   height: 8px;
   background-color: var(--accent-orange);
   border-radius: 50%;
-  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 
 .section-heading {
