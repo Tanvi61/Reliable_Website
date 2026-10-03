@@ -1,0 +1,274 @@
+/* ==========================================
+   RELIABLE LAND SURVEY CONSULTANCY
+   Responsive Stylesheet for All Device Sizes
+   ========================================== */
+
+/* Laptop & Desktop (1024px - 1280px) */
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 960px;
+  }
+  
+  .hero-heading {
+    font-size: 3.2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .counter-number {
+    font-size: 2.8rem;
+  }
+  
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .process-line-bg, .process-line-fill {
+    display: none;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--dark-navy);
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateY(-150%);
+    transition: transform var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    color: #FFFFFF !important;
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .about-grid,
+  .why-grid,
+  .tech-interactive-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-accent-badge {
+    bottom: -15px;
+    right: 15px;
+  }
+
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-service-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-service-visual {
+    min-height: 260px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile Devices (360px - 767px) */
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .hero-heading {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .trust-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .trust-item {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    justify-content: center;
+  }
+
+  .capability-blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .about-accent-badge {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: -30px;
+    max-width: 100%;
+  }
+
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .counter-number {
+    font-size: 2.2rem;
+  }
+
+  .counter-label {
+    font-size: 0.82rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-step {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .step-node {
+    margin-bottom: 0;
+    width: 54px;
+    height: 54px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .tech-interactive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-preview-container {
+    height: 320px;
+  }
+
+  .why-features {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+  }
+
+  .cta-heading {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-card, .enquiry-form-card {
+    padding: 28px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .floating-actions {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .float-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* Extra Small Phones (360px and below) */
+@media (max-width: 380px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

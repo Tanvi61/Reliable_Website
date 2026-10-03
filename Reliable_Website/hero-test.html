@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Manrope', sans-serif; background: #fff; overflow-x: hidden; }
+
+  /* HERO WRAPPER */
+  .hero-exact {
+    position: relative;
+    width: 100vw;
+    height: 800px;
+    background-image: url('assets/images/hero-bg-new.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: visible;
+  }
+
+  /* LEFT OVERLAY */
+  .hero-exact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.65) 80%, rgba(255,255,255,0.10) 95%, transparent 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    z-index: 1;
+  }
+
+  /* NAVBAR */
+  .nav-exact {
+    position: absolute;
+    top: 16px;
+    left: 7.5%;
+    right: 7.5%;
+    width: 85%;
+    height: 74px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .nav-logo {
+    width: 198px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo img { width: 100%; height: auto; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #12345A;
+    position: relative;
+  }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: #0878C9;
+    border-radius: 2px;
+  }
+
+  .nav-btn {
+    width: 158px;
+    height: 50px;
+    background: #0878C9;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    position: absolute;
+    left: 84px;
+    top: 175px;
+    max-width: 530px;
+    z-index: 2;
+  }
+
+  .hero-eyebrow-container {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow-line {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 4px;
+    height: 88px;
+    background: #F58220;
+  }
+  .hero-eyebrow {
+    font-size: 15px;
+    font-weight: 700;
+    color: #122F55;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 63px;
+    font-weight: 800;
+    color: #12345A;
+    line-height: 0.96;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+    width: 520px;
+  }
+  .hero-title span {
+    color: #0878C9;
+    display: block;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #405B78;
+    width: 500px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 15px;
+  }
+  .btn-explore {
+    width: 264px;
+    height: 53px;
+    background: #F51F26;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+  }
+  .btn-contact {
+    width: 208px;
+    height: 53px;
+    background: #fff;
+    color: #0878C9;
+    border: 2px solid #0878C9;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  /* CAPABILITY ROW */
+  .capability-row {
+    position: absolute;
+    top: 675px;
+    left: 84px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  .cap-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 24px;
+  }
+  .cap-divider {
+    width: 1px;
+    height: 36px;
+    background: #D9E3EC;
+    margin-right: 24px;
+  }
+  .cap-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0878C9;
+  }
+  .cap-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #12345A;
+  }
+  .cap-text p {
+    font-size: 15px;
+    color: #7A90A5;
+  }
+
+  /* BADGES */
+  .badge {
+    position: absolute;
+    width: 145px;
+    height: 50px;
+    background: rgba(12,45,70,0.88);
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 5;
+  }
+  .badge-3d { left: 915px; top: 450px; }
+  .badge-lidar { left: 1400px; top: 485px; }
+  .badge-terrain { right: 150px; top: 620px; }
+
+  /* COORDINATES */
+  .coords {
+    position: absolute;
+    right: 145px;
+    top: 340px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: monospace;
+    z-index: 5;
+  }
+  .coords-icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+  }
+  .coords-icon::before {
+    content:''; position:absolute; top:50%; left:-4px; right:-4px; height:1px; background:#fff;
+  }
+  .coords-icon::after {
+    content:''; position:absolute; left:50%; top:-4px; bottom:-4px; width:1px; background:#fff;
+  }
+
+  /* SLIDER CONTROLS */
+  .slider-controls {
+    position: absolute;
+    right: 120px;
+    bottom: 120px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 5;
+  }
+  .slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 20px;
+  }
+  .dot-active {
+    width: 24px;
+    height: 3px;
+    background: #0878C9;
+    border-radius: 2px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  .slider-btn {
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #12345A;
+    cursor: pointer;
+  }
+
+  /* BOTTOM SERVICE BAR */
+  .service-bar {
+    position: absolute;
+    bottom: -50px;
+    left: 3%;
+    width: 94%;
+    height: 115px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(20,70,110,0.15);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    padding: 0 15px;
+  }
+  .service-bar-divider {
+    width: 1px;
+    height: 50px;
+    background: #D9E3EC;
+  }
+  .service-icon {
+    width: 36px;
+    height: 36px;
+    color: #0878C9;
+  }
+  .service-info h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #12345A;
+    margin-bottom: 4px;
+  }
+  .service-info p {
+    font-size: 13px;
+    color: #7A90A5;
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero-exact">
+  
+  <nav class="nav-exact">
+    <div class="nav-logo">
+      <img src="assets/logo/logo.png" alt="Logo">
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services <span style="font-size:10px;">▼</span></a>
+      <a href="#">Projects</a>
+      <a href="#">Equipment</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </div>
+    <button class="nav-btn">Get a Quote &rarr;</button>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow-container">
+      <div class="hero-eyebrow-line"></div>
+      <div class="hero-eyebrow">RELIABLE LAND SURVEY CONSULTANCY</div>
+    </div>
+    <h1 class="hero-title">
+      Accurate<br>
+      Survey Data for<br>
+      <span>A Smarter<br>Tomorrow.</span>
+    </h1>
+    <p class="hero-desc">
+      Professional surveying and geospatial solutions using<br>
+      LiDAR, drone mapping, DGPS, Total Station and modern<br>
+      survey technology for infrastructure projects.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-explore">Explore Our Services &rarr;</a>
+      <a href="#" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="capability-row">
+    <div class="cap-item">
+      <div class="cap-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="cap-text">
+        <h4>High Accuracy</h4>
+        <p>Survey Solutions</p>
+      </div>
+    </div>
+    <div class="cap-divider"></div>
+    <div class="cap-item">
+      <div class="cap-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+      <div class="cap-text">
+        <h4>Modern</h4>
+        <p>Survey Technology</p>
+      </div>
+    </div>
+    <div class="cap-divider"></div>
+    <div class="cap-item" style="padding-right:0;">
+      <div class="cap-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="cap-text">
+        <h4>Experienced</h4>
+        <p>Project Support</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="badge badge-3d">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0878C9" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+    3D Mapping
+  </div>
+  <div class="badge badge-lidar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0878C9" stroke-width="2"><path d="M2 12h4l2-9 4 18 2-9h4"/></svg>
+    LiDAR Survey
+  </div>
+  <div class="badge badge-terrain">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0878C9" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    Terrain Model
+  </div>
+
+  <div class="coords">
+    <div class="coords-icon"></div>
+    <div>
+      18.5204° N<br>
+      73.8567° E
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <div class="slider-dots">
+      <div class="dot-active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <button class="slider-btn">&larr;</button>
+    <button class="slider-btn">&rarr;</button>
+  </div>
+
+  <div class="service-bar">
+    <div class="service-item">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20l7-16 7 16"/></svg></div>
+      <div class="service-info">
+        <h5>Topographical Survey</h5>
+        <p>Contours, EGL, terrain mapping</p>
+      </div>
+    </div>
+    <div class="service-bar-divider"></div>
+    <div class="service-item">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="service-info">
+        <h5>Drone & LiDAR Mapping</h5>
+        <p>RTK, Photogrammetry, 3D Mapping</p>
+      </div>
+    </div>
+    <div class="service-bar-divider"></div>
+    <div class="service-item">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="service-info">
+        <h5>DGPS / GNSS Survey</h5>
+        <p>Control points, coordinates</p>
+      </div>
+    </div>
+    <div class="service-bar-divider"></div>
+    <div class="service-item">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+      <div class="service-info">
+        <h5>Total Station Survey</h5>
+        <p>Engineering measurements</p>
+      </div>
+    </div>
+    <div class="service-bar-divider"></div>
+    <div class="service-item">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+      <div class="service-info">
+        <h5>CAD / GIS Outputs</h5>
+        <p>Drawings, DEM/DTM, GIS data</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
