@@ -118,29 +118,79 @@
     <div id="form-section"></div>
 
                 <!-- CONTACT SPLIT SECTION -->
-<section class="section fade-up" style="padding: 80px 0; background-color: #f4f6f8;">
+<section class="section fade-up" style="padding: 70px 0 80px 0; background-color: #f4f6f8;">
     <div class="container">
+        
+        <!-- Section Header -->
+        <div class="text-center" style="margin-bottom: 45px;">
+            <div class="section-label" style="margin-bottom: 8px;">GET IN TOUCH</div>
+            <h2 class="section-heading" style="font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Consultation & Headquarters</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 15px; line-height: 1.6;">
+                Submit your project specifications for an engineering quotation or reach out directly to our Pune headquarters.
+            </p>
+        </div>
+
         <style>
-            .contact-grid {
+            .contact-grid-spaced {
                 display: grid;
-                grid-template-columns: 1.3fr 0.9fr;
-                border-radius: 20px;
-                box-shadow: 0 20px 50px rgba(8, 43, 76, 0.08);
-                overflow: hidden;
-                background: #ffffff;
-                border: 1px solid rgba(18, 63, 104, 0.08);
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                align-items: stretch;
             }
             @media (max-width: 991px) {
-                .contact-grid {
+                .contact-grid-spaced {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+            .contact-box-card {
+                background: #ffffff;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(8, 43, 76, 0.06);
+                border: 1px solid #e2e8f0;
+                padding: clamp(28px, 3.5vw, 40px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .contact-card-header {
+                font-size: 22px;
+                color: var(--dark-navy);
+                font-weight: 800;
+                font-family: var(--font-heading);
+                margin: 0 0 8px 0;
+                line-height: 1.3;
+            }
+            .contact-card-sub {
+                color: var(--text-muted);
+                font-size: 14px;
+                line-height: 1.5;
+                margin: 0 0 22px 0;
+            }
+            .contact-form-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            @media (max-width: 600px) {
+                .contact-form-grid {
                     grid-template-columns: 1fr;
                 }
+                .contact-form-grid .full-width {
+                    grid-column: span 1 !important;
+                }
+            }
+            .contact-form-grid .full-width {
+                grid-column: span 2;
             }
             .contact-input-field {
                 width: 100%;
-                padding: 14px 18px;
+                padding: 12px 15px;
                 border: 1.5px solid #d9e2ec;
                 border-radius: 8px;
-                font-size: 15px;
+                font-size: 14px;
                 font-family: var(--font-main);
                 color: var(--text-dark);
                 background: #ffffff;
@@ -153,153 +203,306 @@
                 box-shadow: 0 0 0 3px rgba(244, 123, 32, 0.15);
             }
             .contact-label {
-                font-size: 12px;
+                font-size: 11.5px;
                 font-weight: 700;
                 color: var(--dark-navy);
                 letter-spacing: 0.5px;
                 text-transform: uppercase;
-                margin-bottom: 6px;
+                margin-bottom: 5px;
                 display: block;
                 font-family: var(--font-heading);
+            }
+            .info-block-row {
+                background: #f8fafc;
+                border: 1px solid #edf2f7;
+                border-radius: 10px;
+                padding: 14px 16px;
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                transition: transform 0.2s ease, border-color 0.2s ease;
+            }
+            .info-block-row:hover {
+                border-color: #cbd5e1;
+                transform: translateY(-1px);
             }
             .faq-item summary::-webkit-details-marker { display: none; }
             .faq-item[open] summary svg { transform: rotate(180deg); transition: transform 0.3s ease; }
             .faq-item:not([open]) summary svg { transform: rotate(0deg); transition: transform 0.3s ease; }
         </style>
         
-        <div class="contact-grid">
+        <div class="contact-grid-spaced">
             
-            <!-- Left Side: Form -->
-            <div style="padding: clamp(35px, 5vw, 60px); background: #f8fbfe; border-right: 1px solid rgba(18, 63, 104, 0.06);">
-                <div class="section-label" style="margin-bottom: 8px;">GET IN TOUCH</div>
-                <h2 style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: var(--dark-navy); margin-bottom: 12px; font-weight: 800; font-family: var(--font-heading); line-height: 1.2;">Consultation & Quote Request</h2>
-                <p style="color: var(--text-muted); margin-bottom: 35px; font-size: 15px; line-height: 1.6;">Fill in your survey project details below. Our senior geospatial engineers will analyze your scope and get in touch within 24 hours.</p>
-                
-                <form id="contactForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            <!-- Box 1 (Left): Form Card -->
+            <div class="contact-box-card">
+                <div style="display: flex; flex-direction: column; height: 100%;">
                     <div>
-                        <label class="contact-label">Full Name *</label>
-                        <input type="text" id="contact-name" class="contact-input-field" placeholder="Enter your full name" required>
+                        <h3 class="contact-card-header">Project Quotation Request</h3>
+                        <p class="contact-card-sub">Provide your project specifications. Our survey engineers will review the scope and respond within 24 hours.</p>
                     </div>
-                    <div>
-                        <label class="contact-label">Company / Firm Name</label>
-                        <input type="text" id="contact-company" class="contact-input-field" placeholder="Company or organization">
-                    </div>
-                    <div>
-                        <label class="contact-label">Email Address *</label>
-                        <input type="email" id="contact-email" class="contact-input-field" placeholder="name@example.com" required>
-                    </div>
-                    <div>
-                        <label class="contact-label">Phone Number *</label>
-                        <input type="tel" id="contact-phone" class="contact-input-field" placeholder="+91 96046 48777" required>
-                    </div>
-                    <div style="grid-column: 1 / -1;">
-                        <label class="contact-label">Survey Service Required *</label>
-                        <select id="contact-service" class="contact-input-field" required style="cursor: pointer;">
-                            <option value="" disabled selected>Select a survey service...</option>
-                            <option value="Topographical Survey">Topographical & Land Survey</option>
-                            <option value="DGPS / GNSS Control">DGPS / GNSS Control Establishment</option>
-                            <option value="Total Station Survey">Total Station Measurement & Layout</option>
-                            <option value="RTK Drone Mapping">RTK Drone Aerial Mapping & Photogrammetry</option>
-                            <option value="Drone LiDAR Scanning">Drone LiDAR & 3D Scanning</option>
-                            <option value="Road & Highway Survey">Road & Highway Alignment Survey</option>
-                            <option value="Rail & Metro Survey">Rail & Metro Infrastructure Survey</option>
-                            <option value="CAD & GIS Processing">CAD Drafting & GIS Processing</option>
-                            <option value="General Consultation">General Survey Consultation</option>
-                        </select>
-                    </div>
-                    <div style="grid-column: 1 / -1;">
-                        <label class="contact-label">Project Location & Scope</label>
-                        <input type="text" id="contact-location" class="contact-input-field" placeholder="e.g. Pune, PCMC, Hinjewadi, or approx. Acreage/KM">
-                    </div>
-                    <div style="grid-column: 1 / -1;">
-                        <label class="contact-label">Message / Project Requirements *</label>
-                        <textarea id="contact-message" class="contact-input-field" rows="4" placeholder="Describe your site details, required deliverables (Contours, 3D CAD, Point Cloud, Orthomosaic), and target timeline..." required style="resize: vertical;"></textarea>
-                    </div>
-                    <div style="grid-column: 1 / -1; margin-top: 10px;">
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px 30px; font-size: 16px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            Submit Consultation Request
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </button>
-                    </div>
-                </form>
+                    
+                    <form id="contactForm" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+                        <div class="contact-form-grid">
+                            <div>
+                                <label class="contact-label">Full Name *</label>
+                                <input type="text" id="contact-name" class="contact-input-field" placeholder="Enter full name" required>
+                            </div>
+                            <div>
+                                <label class="contact-label">Company / Firm Name</label>
+                                <input type="text" id="contact-company" class="contact-input-field" placeholder="Organization name">
+                            </div>
+                            <div>
+                                <label class="contact-label">Email Address *</label>
+                                <input type="email" id="contact-email" class="contact-input-field" placeholder="name@example.com" required>
+                            </div>
+                            <div>
+                                <label class="contact-label">Phone Number *</label>
+                                <input type="tel" id="contact-phone" class="contact-input-field" placeholder="+91 96046 48777" required>
+                            </div>
+                            <div class="full-width">
+                                <label class="contact-label">Survey Service Required *</label>
+                                <select id="contact-service" class="contact-input-field" required style="cursor: pointer;">
+                                    <option value="" disabled selected>Select a survey service...</option>
+                                    <option value="Topographical Survey">Topographical & Land Survey</option>
+                                    <option value="DGPS / GNSS Control">DGPS / GNSS Control Establishment</option>
+                                    <option value="Total Station Survey">Total Station Measurement & Layout</option>
+                                    <option value="RTK Drone Mapping">RTK Drone Aerial Mapping & Photogrammetry</option>
+                                    <option value="Drone LiDAR Scanning">Drone LiDAR & 3D Scanning</option>
+                                    <option value="Road & Highway Survey">Road & Highway Alignment Survey</option>
+                                    <option value="Rail & Metro Survey">Rail & Metro Infrastructure Survey</option>
+                                    <option value="CAD & GIS Processing">CAD Drafting & GIS Processing</option>
+                                    <option value="General Consultation">General Survey Consultation</option>
+                                </select>
+                            </div>
+                            <div class="full-width">
+                                <label class="contact-label">Project Location & Scope</label>
+                                <input type="text" id="contact-location" class="contact-input-field" placeholder="e.g. Pune, PCMC, Hinjewadi, or Acreage/KM">
+                            </div>
+                            <div class="full-width">
+                                <label class="contact-label">Message / Project Scope *</label>
+                                <textarea id="contact-message" class="contact-input-field" rows="3" placeholder="Describe site details, required deliverables (Contours, 3D CAD, Point Cloud), and timeline..." required style="resize: vertical;"></textarea>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 18px;">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                Submit Consultation Request
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <!-- Right Side: Info -->
-            <div style="padding: clamp(35px, 5vw, 60px); background: #ffffff; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h2 style="font-size: clamp(1.6rem, 2.5vw, 2rem); color: var(--dark-navy); margin-bottom: 35px; font-weight: 800; font-family: var(--font-heading);">Our Headquarters</h2>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 32px;">
+            <!-- Box 2 (Right): Headquarters Card -->
+            <div class="contact-box-card">
+                <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                    <div>
+                        <h3 class="contact-card-header">Headquarters & Direct Office</h3>
+                        <p class="contact-card-sub">Reach our technical desk directly for active field project coordination or visit our central Pune office.</p>
                         
-                        <!-- Address -->
-                        <div style="display: flex; gap: 20px; align-items: flex-start;">
-                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div>
-                                <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-heading);">HEADQUARTERS LOCATION</div>
-                                <p style="color: var(--dark-navy); font-size: 16px; font-weight: 700; line-height: 1.5; margin: 0;">Pune, Maharashtra, India</p>
-                                <p style="color: var(--text-muted); font-size: 13px; margin-top: 4px; line-height: 1.4;">Executing surveying projects across Maharashtra & Pan-India</p>
-                            </div>
-                        </div>
-
-                        <!-- Phone -->
-                        <div style="display: flex; gap: 20px; align-items: flex-start;">
-                            <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-heading);">DIRECT CONTACT PHONES</div>
-                                <div style="display: flex; flex-direction: column; gap: 4px;">
-                                    <a href="tel:+919604648777" style="color: var(--dark-navy); font-size: 17px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 96046 48777</a>
-                                    <a href="tel:+918600044688" style="color: var(--dark-navy); font-size: 17px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 86000 44688</a>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            
+                            <!-- Address -->
+                            <div class="info-block-row">
+                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">HEADQUARTERS LOCATION</div>
+                                    <p style="color: var(--dark-navy); font-size: 14.5px; font-weight: 700; line-height: 1.3; margin: 0;">Pune, Maharashtra, India</p>
+                                    <p style="color: var(--text-muted); font-size: 12.5px; margin: 2px 0 0 0; line-height: 1.3;">Executing surveys across Maharashtra & Pan-India</p>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Email -->
-                        <div style="display: flex; gap: 20px; align-items: flex-start;">
-                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <!-- Phone -->
+                            <div class="info-block-row">
+                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">DIRECT CONTACT PHONES</div>
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;">
+                                        <a href="tel:+919604648777" style="color: var(--dark-navy); font-size: 14.5px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 96046 48777</a>
+                                        <span style="color: #cbd5e1;">|</span>
+                                        <a href="tel:+918600044688" style="color: var(--dark-navy); font-size: 14.5px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 86000 44688</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-heading);">OFFICIAL EMAIL</div>
-                                <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); font-size: 16px; font-weight: 700; text-decoration: none; word-break: break-all;">info@reliablelandsurvey.in</a>
-                            </div>
-                        </div>
 
-                        <!-- Hours -->
-                        <div style="display: flex; gap: 20px; align-items: flex-start;">
-                            <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <!-- Email -->
+                            <div class="info-block-row">
+                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">OFFICIAL EMAIL</div>
+                                    <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); font-size: 14.5px; font-weight: 700; text-decoration: none; word-break: break-all;">info@reliablelandsurvey.in</a>
+                                </div>
                             </div>
-                            <div>
-                                <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; font-family: var(--font-heading);">OPERATING HOURS</div>
-                                <p style="color: var(--dark-navy); font-size: 15px; font-weight: 700; margin: 0 0 8px 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
-                                <span style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block;">CLOSED ON SUNDAYS & HOLIDAYS</span>
-                            </div>
-                        </div>
 
+                            <!-- Hours -->
+                            <div class="info-block-row">
+                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </div>
+                                <div style="flex: 1;">
+                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">OPERATING HOURS</div>
+                                    <p style="color: var(--dark-navy); font-size: 14px; font-weight: 700; margin: 0 0 2px 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+                                    <span style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); font-size: 10.5px; font-weight: 800; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block;">CLOSED ON SUNDAYS</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
 
-                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 35px;">
-                    <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 15px 24px; border-radius: 8px; text-align: center; font-weight: 700; display: flex; justify-content: center; align-items: center; gap: 10px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg> View on Google Maps
-                    </a>
-                    <a href="https://wa.me/919604648777" target="_blank" rel="noopener" style="background: #25D366; color: #fff; text-decoration: none; padding: 15px 24px; border-radius: 8px; text-align: center; font-weight: 700; display: flex; justify-content: center; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(37, 211, 102, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(37, 211, 102, 0.25)';">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                        Instant WhatsApp Inquiry
-                    </a>
+                    <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg> View on Map
+                        </a>
+                        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" style="background: #25D366; color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 18px rgba(37, 211, 102, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.25)';">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- GOOGLE MAP (Pune, Maharashtra) -->
-<section class="fade-up" style="width: 100%; height: 450px; background: #eaeaea; margin-bottom: 0;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- OPERATIONAL DISPATCH & MAP SPLIT SECTION -->
+<section class="section fade-up" style="padding: 70px 0 90px 0; background: #ffffff;">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="text-center" style="margin-bottom: 45px;">
+            <div class="section-label" style="margin-bottom: 8px;">SURVEY MOBILIZATION</div>
+            <h2 class="section-heading" style="font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Regional Reach & Map</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 15px; line-height: 1.6;">
+                Rapid on-site instrument deployment with verified geodetic standards across Maharashtra and Pan-India.
+            </p>
+        </div>
+
+        <style>
+            .map-grid-spaced {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                align-items: stretch;
+            }
+            @media (max-width: 991px) {
+                .map-grid-spaced {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+                .map-card-box {
+                    min-height: 380px !important;
+                }
+            }
+            .reach-card-box {
+                background: #ffffff;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(8, 43, 76, 0.06);
+                border: 1px solid #e2e8f0;
+                padding: clamp(28px, 3.5vw, 40px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .map-card-box {
+                background: #ffffff;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(8, 43, 76, 0.06);
+                border: 1px solid #e2e8f0;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                min-height: 440px;
+                box-sizing: border-box;
+            }
+            .reach-feature-item {
+                display: flex;
+                gap: 16px;
+                align-items: flex-start;
+                background: #f8fafc;
+                border: 1px solid #edf2f7;
+                border-radius: 10px;
+                padding: 14px 16px;
+            }
+            .reach-feature-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                background: rgba(18, 63, 104, 0.08);
+                color: var(--primary-navy);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+        </style>
+
+        <div class="map-grid-spaced">
+            <!-- Box 1 (Left): Operational Info & Field Deployment -->
+            <div class="reach-card-box">
+                <div>
+                    <h3 class="contact-card-header">Regional Field Operations</h3>
+                    <p class="contact-card-sub" style="margin-bottom: 20px;">Equipped with certified geospatial instruments, our teams deploy swiftly to major infrastructure corridors.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <!-- Point 1 -->
+                        <div class="reach-feature-item">
+                            <div class="reach-feature-icon" style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--dark-navy); font-size: 15px; font-weight: 800; margin-bottom: 2px; font-family: var(--font-heading);">Rapid Mobilization (24–48 Hours)</h4>
+                                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.4; margin: 0;">Instant dispatch across Pune, PCMC, Mumbai MMR, Nashik, Chhatrapati Sambhaji Nagar, Satara, and Kolhapur.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="reach-feature-item">
+                            <div class="reach-feature-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--dark-navy); font-size: 15px; font-weight: 800; margin-bottom: 2px; font-family: var(--font-heading);">SOI & GTS Geodetic Benchmark Control</h4>
+                                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.4; margin: 0;">Permanent geodetic DGPS control points tied to Survey of India grid and WGS84 datum.</p>
+                            </div>
+                        </div>
+
+                        <!-- Point 3 -->
+                        <div class="reach-feature-item">
+                            <div class="reach-feature-icon" style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--dark-navy); font-size: 15px; font-weight: 800; margin-bottom: 2px; font-family: var(--font-heading);">Ready-to-Design CAD & GIS Deliverables</h4>
+                                <p style="color: var(--text-muted); font-size: 13px; line-height: 1.4; margin: 0;">AutoCAD .DWG, 3D Contours, DTM/DEM surfaces, LiDAR Point Clouds, and GIS spatial layers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 18px; padding-top: 15px; border-top: 1px solid #edf2f7; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;">
+                    <a href="tel:+919604648777" class="btn btn-primary" style="padding: 12px 20px; font-size: 14px; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Call Field Dispatch Desk
+                    </a>
+                    <span style="font-size: 13px; color: var(--text-muted); font-weight: 600;">Pan-India mobilization</span>
+                </div>
+            </div>
+
+            <!-- Box 2 (Right): Interactive Google Map Card -->
+            <div class="map-card-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 440px; flex: 1; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- FAQ SECTION WITH ANIMATIONS -->
