@@ -396,3 +396,19 @@
         grid-template-columns: 1fr !important;
     }
 }
+
+
+/* Mobile & Responsive Footer MindAxis Link */
+@media (max-width: 1200px), (max-width: 991px), (max-width: 768px), (max-width: 576px) {
+  .copyright-info a,
+  .copyright-info strong a,
+  .footer-bottom a[href*="mindaxisinnovation"],
+  .footer .copyright-info a,
+  .footer-dev-link,
+  .mindaxis-footer-link {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration: none !important;
+  }
+}
+

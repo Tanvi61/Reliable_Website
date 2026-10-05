@@ -107,7 +107,7 @@ function updatePage(filename, sectionsToKeep, activeNav) {
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; margin-bottom: 5px; color: var(--primary-navy);">Address</h4>
-                                    <p style="color: var(--text-body); font-size: 16px;">123 Survey Complex, Tech Park Road<br>Mumbai, Maharashtra 400001</p>
+                                    <p style="color: var(--text-body); font-size: 16px;">Pune, Maharashtra, India<br>Pan-Maharashtra & Pan-India Operations</p>
                                 </div>
                             </div>
                         </div>

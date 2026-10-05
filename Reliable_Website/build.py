@@ -85,7 +85,7 @@ def update_page(filename, sections_to_keep, active_nav):
                         <div style="display: flex; flex-direction: column; gap: 20px;">
                             <p><strong>Phone:</strong> +91 98765 43210</p>
                             <p><strong>Email:</strong> info@reliablelandsurvey.com</p>
-                            <p><strong>Address:</strong> 123 Survey Complex, Tech Park Road, Mumbai</p>
+                            <p><strong>Address:</strong> Pune, Maharashtra, India</p>
                         </div>
                     </div>
                 </div>
