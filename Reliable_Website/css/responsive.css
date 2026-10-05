@@ -310,45 +310,50 @@
   .hamburger-exact.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
   
   .nav-exact .nav-links { 
-    position: fixed; 
-    top: 0; 
-    right: -100%; 
-    width: 300px; 
-    max-width: 85vw;
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100vh;
-    max-height: 100dvh;
-    background: #ffffff; 
-    flex-direction: column; 
-    justify-content: flex-start;
-    padding: 85px 20px 80px; 
-    box-shadow: -5px 0 25px rgba(8,43,76,0.18); 
-    border-radius: 0; 
-    display: flex; 
-    gap: 16px; 
-    text-align: center;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    overscroll-behavior-y: contain !important;
-    touch-action: pan-y !important;
-    box-sizing: border-box !important;
-    transition: right 0.35s cubic-bezier(0.77, 0.2, 0.05, 1);
-    z-index: 1000;
+    position: fixed !important; 
+    top: 0 !important; 
+    bottom: 0 !important;
+    right: -100% !important; 
+    width: 300px !important; 
+    max-width: 85vw !important; 
+    height: 100vh !important; 
+    height: 100dvh !important; 
+    max-height: 100vh !important; 
+    max-height: 100dvh !important; 
+    background: #ffffff !important; 
+    flex-direction: column !important; 
+    justify-content: flex-start !important; 
+    padding: 85px 20px 90px !important; 
+    box-shadow: -5px 0 25px rgba(8,43,76,0.18) !important; 
+    border-radius: 0 !important; 
+    display: flex !important; 
+    gap: 16px !important; 
+    text-align: center !important; 
+    overflow-y: scroll !important; 
+    overflow-x: hidden !important; 
+    -webkit-overflow-scrolling: touch !important; 
+    overscroll-behavior: contain !important; 
+    overscroll-behavior-y: contain !important; 
+    touch-action: pan-y !important; 
+    box-sizing: border-box !important; 
+    transition: right 0.35s cubic-bezier(0.77, 0.2, 0.05, 1) !important; 
+    z-index: 100000 !important; 
+    pointer-events: auto !important;
+  }
+  .nav-exact .nav-links.active { 
+    right: 0 !important; 
   }
   .nav-exact .nav-links > * {
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
   }
   .nav-exact .nav-links::-webkit-scrollbar {
-    width: 4px;
+    width: 5px !important;
   }
   .nav-exact .nav-links::-webkit-scrollbar-thumb {
-    background: rgba(18, 52, 90, 0.2);
-    border-radius: 4px;
+    background: rgba(18, 52, 90, 0.25) !important;
+    border-radius: 4px !important;
   }
-  .nav-exact .nav-links.active { right: 0; }
-  .nav-exact .nav-btn { display: none; }
+  .nav-exact .nav-btn { display: none !important; }
   
   .hero-exact::before { 
     width: 100%; 
@@ -435,11 +440,12 @@
 /* Tablet & Mobile Dropdown Styling (Accordion in Slide Drawer) */
 @media (max-width: 1024px) {
   .nav-exact .nav-links {
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     overflow-x: hidden !important;
     height: 100dvh !important;
     max-height: 100dvh !important;
     -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
     overscroll-behavior-y: contain !important;
     touch-action: pan-y !important;
     box-sizing: border-box !important;

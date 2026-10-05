@@ -27,14 +27,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial check in case page loads scrolled down
     handleScroll();
 
+    // Hamburger Toggle & Body Scroll Lock
+    const hamburgerBtn = document.querySelector('.hamburger-exact');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
+
+    function closeMobileMenu() {
+        if (hamburgerBtn) hamburgerBtn.classList.remove('active');
+        if (mobileNavMenu) mobileNavMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    }
+
+    if (hamburgerBtn && mobileNavMenu) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileNavMenu.classList.contains('active');
+            if (!isOpen) {
+                hamburgerBtn.classList.add('active');
+                mobileNavMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.documentElement.style.overflow = 'hidden';
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        // Close on clicking outside menu
+        document.addEventListener('click', (e) => {
+            if (mobileNavMenu.classList.contains('active')) {
+                if (!mobileNavMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
+    }
+
     // Close Mobile Menu on Link Click (excluding dropdown toggle on mobile)
     document.querySelectorAll('.nav-exact .nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
-            const hamburger = document.querySelector('.hamburger-exact');
-            const navMenu = document.getElementById('mobileNavMenu');
-            if (hamburger) hamburger.classList.remove('active');
-            if (navMenu) navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMobileMenu();
         });
     });
 
@@ -43,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 1024) {
                 e.preventDefault();
+                e.stopPropagation();
                 const parent = toggle.closest('.nav-dropdown');
                 if (parent) {
                     parent.classList.toggle('open');
