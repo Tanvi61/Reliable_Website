@@ -27,15 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial check in case page loads scrolled down
     handleScroll();
 
-    // Hamburger Toggle & Body Scroll Lock
+    // Hamburger Toggle
     const hamburgerBtn = document.querySelector('.hamburger-exact');
     const mobileNavMenu = document.getElementById('mobileNavMenu');
 
     function closeMobileMenu() {
         if (hamburgerBtn) hamburgerBtn.classList.remove('active');
         if (mobileNavMenu) mobileNavMenu.classList.remove('active');
-        document.body.style.overflow = '';
-        document.documentElement.style.overflow = '';
     }
 
     if (hamburgerBtn && mobileNavMenu) {
@@ -45,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) {
                 hamburgerBtn.classList.add('active');
                 mobileNavMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                document.documentElement.style.overflow = 'hidden';
             } else {
                 closeMobileMenu();
             }
