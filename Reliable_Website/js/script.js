@@ -30,10 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger Toggle
     const hamburgerBtn = document.querySelector('.hamburger-exact');
     const mobileNavMenu = document.getElementById('mobileNavMenu');
+    const navExact = document.querySelector('.nav-exact');
 
     function closeMobileMenu() {
         if (hamburgerBtn) hamburgerBtn.classList.remove('active');
         if (mobileNavMenu) mobileNavMenu.classList.remove('active');
+        if (navExact) navExact.classList.remove('active');
     }
 
     if (hamburgerBtn && mobileNavMenu) {
@@ -43,19 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) {
                 hamburgerBtn.classList.add('active');
                 mobileNavMenu.classList.add('active');
+                if (navExact) navExact.classList.add('active');
             } else {
                 closeMobileMenu();
             }
         });
 
-        // Close on clicking outside menu
-        document.addEventListener('click', (e) => {
-            if (mobileNavMenu.classList.contains('active')) {
-                if (!mobileNavMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                    closeMobileMenu();
+        // Close on clicking outside menu or clicking dark backdrop
+        if (navExact) {
+            navExact.addEventListener('click', (e) => {
+                if (navExact.classList.contains('active')) {
+                    if (mobileNavMenu && !mobileNavMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                        closeMobileMenu();
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     // Close Mobile Menu on Link Click (excluding dropdown toggle on mobile)
