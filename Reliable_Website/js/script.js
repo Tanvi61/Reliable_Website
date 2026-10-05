@@ -490,6 +490,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ==========================================
+       10. FAQ HOVER / TOUCH INTERACTION
+    ========================================== */
+    document.querySelectorAll('.faq-card').forEach(card => {
+        // Touch support for mobile devices
+        card.addEventListener('touchstart', () => {
+            document.querySelectorAll('.faq-card').forEach(c => {
+                if (c !== card) c.classList.remove('is-active');
+            });
+            card.classList.toggle('is-active');
+        }, { passive: true });
+    });
+
     /* Custom cursor removed per user request */
 
 });
