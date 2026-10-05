@@ -3267,3 +3267,70 @@ a:hover .hover-arrow, button:hover .hover-arrow, .btn:hover .hover-arrow, .nav-b
 @keyframes heroContinuousFadeUp { 0% { opacity: 0; transform: translateY(30px); } 10%, 80% { opacity: 1; transform: translateY(0); } 90%, 100% { opacity: 0; transform: translateY(-30px); } }
 .anim-continuous-title { animation: heroContinuousFadeUp 4s cubic-bezier(0.16, 1, 0.3, 1) infinite; opacity: 0; }
 .anim-continuous-desc { animation: heroContinuousFadeUp 4s cubic-bezier(0.16, 1, 0.3, 1) infinite; animation-delay: 0.2s; opacity: 0; }
+
+/* Scrolled State for Top Bar & Nav */
+.top-bar-exact.scrolled { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+.top-bar-exact { transition: transform 0.3s ease, opacity 0.3s ease; }
+.nav-exact.scrolled { top: 15px !important; }
+.nav-exact { transition: top 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; }
+
+/* Hero Custom Animations */
+@keyframes bgPan {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.bg-pan-anim {
+  animation: bgPan 20s ease-in-out infinite;
+  transform-origin: center right;
+}
+
+@keyframes textFadeInLeft {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.text-fade-in-left {
+  animation: textFadeInLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+
+@media (max-width: 991px) {
+  .hero-text-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.expertise-bg-anim {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: pulseBg 10s ease-in-out infinite;
+}
+@keyframes pulseBg {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.05); }
+  100% { filter: brightness(1); }
+}
+
+
+@keyframes floatY {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.float-anim {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.who-we-are-bg-anim {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: pulseBg 15s ease-in-out infinite;
+}

@@ -6,47 +6,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* ==========================================
-       1. NAVBAR & MOBILE MENU
+       1. NAVBAR SCROLL LOGIC
     ========================================== */
-    const header = document.querySelector('.header');
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const topBar = document.querySelector('.top-bar-exact');
+    const navBar = document.querySelector('.nav-exact');
+
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            if (topBar) topBar.classList.add('scrolled');
+            if (navBar) navBar.classList.add('scrolled');
+        } else {
+            if (topBar) topBar.classList.remove('scrolled');
+            if (navBar) navBar.classList.remove('scrolled');
+        }
+    }
 
     // Sticky Navbar on Scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    window.addEventListener('scroll', handleScroll, {passive: true});
 
     // Initial check in case page loads scrolled down
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    }
-
-    // Mobile Menu Toggle
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            
-            // Toggle body scroll
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        });
-    }
+    handleScroll();
 
     // Close Mobile Menu on Link Click
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-exact .nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            const hamburger = document.querySelector('.hamburger-exact');
+            const navMenu = document.getElementById('mobileNavMenu');
+            if (hamburger) hamburger.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
             document.body.style.overflow = '';
         });
     });

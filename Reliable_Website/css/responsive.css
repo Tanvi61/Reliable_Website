@@ -310,11 +310,24 @@
   .hamburger-exact.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
   
   .nav-exact .nav-links { 
-    position: absolute; top: 75px; left: 0; width: 100%; background: #ffffff; 
-    flex-direction: column; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-    border-radius: 10px; display: none; gap: 15px; text-align: center;
+    position: fixed; 
+    top: 0; 
+    right: -100%; 
+    width: 280px; 
+    height: 100vh;
+    background: #ffffff; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    padding: 100px 30px 40px; 
+    box-shadow: -5px 0 20px rgba(0,0,0,0.15); 
+    border-radius: 0; 
+    display: flex; 
+    gap: 25px; 
+    text-align: left;
+    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 1000;
   }
-  .nav-exact .nav-links.active { display: flex; }
+  .nav-exact .nav-links.active { right: 0; }
   .nav-exact .nav-btn { display: none; }
   
   .hero-exact::before { 
@@ -361,4 +374,25 @@
   .footer { padding-bottom: 20px; background-position: bottom center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 15px; margin-top: 150px; }
   .nav-logo img { height: 40px; }
+}
+
+@media (max-width: 991px) {
+  .mobile-text-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive 4-Column Grid for Why Choose Us */
+@media (max-width: 991px) {
+    .four-col-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 576px) {
+    .four-col-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
