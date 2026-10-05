@@ -362,9 +362,6 @@
                             <h2 id="exp-title">Accurate Measurements</h2>
                             <p id="exp-desc">Accurate measurements and dependable survey data for critical engineering and design.</p>
                         </div>
-                        
-                        <!-- Watermark -->
-                        <div class="exp-watermark" id="exp-watermark">01</div>
                     </div>
                 </div>
 
@@ -417,13 +414,11 @@
                 const data = expData[currentExpIndex];
                 const imgEl = document.getElementById('exp-img');
                 const textWrap = document.getElementById('exp-text-wrap');
-                const watermark = document.getElementById('exp-watermark');
                 
                 imgEl.style.opacity = 0;
                 imgEl.style.transform = 'scale(1.05)';
                 textWrap.style.opacity = 0;
                 textWrap.style.transform = 'translateY(10px)';
-                watermark.style.opacity = 0;
                 
                 setTimeout(() => {
                     imgEl.src = data.img;
@@ -431,7 +426,6 @@
                     document.getElementById('exp-tag-text').innerText = data.tag;
                     document.getElementById('exp-title').innerText = data.title;
                     document.getElementById('exp-desc').innerText = data.desc;
-                    watermark.innerText = '0' + (currentExpIndex + 1);
                     
                     document.querySelectorAll('.exp-dot-btn').forEach((d, i) => d.className = i === currentExpIndex ? 'exp-dot-btn active' : 'exp-dot-btn');
                     document.querySelectorAll('.exp-thumb').forEach((t, i) => t.className = i === currentExpIndex ? 'exp-thumb active' : 'exp-thumb');
@@ -440,7 +434,6 @@
                     imgEl.style.transform = 'scale(1)';
                     textWrap.style.opacity = 1;
                     textWrap.style.transform = 'translateY(0)';
-                    watermark.style.opacity = 1;
                 }, 300);
             }
             
@@ -695,6 +688,7 @@
 </body>
 
 </html>
+
 
 
 
