@@ -27,14 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial check in case page loads scrolled down
     handleScroll();
 
-    // Close Mobile Menu on Link Click
-    document.querySelectorAll('.nav-exact .nav-links a').forEach(link => {
+    // Close Mobile Menu on Link Click (excluding dropdown toggle on mobile)
+    document.querySelectorAll('.nav-exact .nav-links a:not(.nav-dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
             const hamburger = document.querySelector('.hamburger-exact');
             const navMenu = document.getElementById('mobileNavMenu');
             if (hamburger) hamburger.classList.remove('active');
             if (navMenu) navMenu.classList.remove('active');
             document.body.style.overflow = '';
+        });
+    });
+
+    // Mobile Dropdown Toggle
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const parent = toggle.closest('.nav-dropdown');
+                if (parent) {
+                    parent.classList.toggle('open');
+                }
+            }
         });
     });
 
