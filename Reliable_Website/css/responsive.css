@@ -316,17 +316,36 @@
     width: 300px; 
     max-width: 85vw;
     height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
     background: #ffffff; 
     flex-direction: column; 
     justify-content: flex-start;
-    padding: 85px 20px 40px; 
+    padding: 85px 20px 80px; 
     box-shadow: -5px 0 25px rgba(8,43,76,0.18); 
     border-radius: 0; 
     display: flex; 
     gap: 16px; 
-    text-align: left;
+    text-align: center;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    touch-action: pan-y !important;
+    box-sizing: border-box !important;
     transition: right 0.35s cubic-bezier(0.77, 0.2, 0.05, 1);
     z-index: 1000;
+  }
+  .nav-exact .nav-links > * {
+    flex-shrink: 0;
+  }
+  .nav-exact .nav-links::-webkit-scrollbar {
+    width: 4px;
+  }
+  .nav-exact .nav-links::-webkit-scrollbar-thumb {
+    background: rgba(18, 52, 90, 0.2);
+    border-radius: 4px;
   }
   .nav-exact .nav-links.active { right: 0; }
   .nav-exact .nav-btn { display: none; }
@@ -418,7 +437,11 @@
   .nav-exact .nav-links {
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    max-height: 100vh !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-y: contain !important;
+    touch-action: pan-y !important;
     box-sizing: border-box !important;
     align-items: center !important;
     text-align: center !important;
