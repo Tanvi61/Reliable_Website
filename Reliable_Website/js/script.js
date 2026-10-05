@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Elements to animate
-    const animateElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right, .zoom-in, .service-card, .process-step, .deliverable-pill, .why-feature-card, .cap-block');
+    const animateElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right, .zoom-in, .service-card, .process-step, .deliverable-pill, .why-feature-card, .cap-block, .contact-box-left, .contact-box-right');
     animateElements.forEach(el => scrollObserver.observe(el));
 
     /* ==========================================

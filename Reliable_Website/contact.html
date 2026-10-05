@@ -162,6 +162,7 @@
                     gap: 30px;
                 }
             }
+            /* GET IN TOUCH CONVERGING ANIMATION */
             .contact-box-card {
                 background: #ffffff;
                 border-radius: 16px;
@@ -173,87 +174,37 @@
                 justify-content: space-between;
                 height: 100%;
                 box-sizing: border-box;
+                will-change: transform, opacity;
             }
-            .contact-card-header {
-                font-size: 22px;
-                color: var(--dark-navy);
-                font-weight: 800;
-                font-family: var(--font-heading);
-                margin: 0 0 8px 0;
-                line-height: 1.3;
+            .contact-box-left {
+                opacity: 0;
+                transform: translateX(-140px);
+                transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
             }
-            .contact-card-sub {
-                color: var(--text-muted);
-                font-size: 14px;
-                line-height: 1.5;
-                margin: 0 0 22px 0;
+            .contact-box-right {
+                opacity: 0;
+                transform: translateX(140px);
+                transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
             }
-            .contact-form-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
+            .contact-box-left.animate,
+            .contact-box-right.animate {
+                opacity: 1;
+                transform: translateX(0);
             }
-            @media (max-width: 600px) {
-                .contact-form-grid {
-                    grid-template-columns: 1fr;
+            @media (max-width: 991px) {
+                .contact-box-left {
+                    transform: translateX(-60px);
                 }
-                .contact-form-grid .full-width {
-                    grid-column: span 1 !important;
+                .contact-box-right {
+                    transform: translateX(60px);
                 }
             }
-            .contact-form-grid .full-width {
-                grid-column: span 2;
-            }
-            .contact-input-field {
-                width: 100%;
-                padding: 12px 15px;
-                border: 1.5px solid #d9e2ec;
-                border-radius: 8px;
-                font-size: 14px;
-                font-family: var(--font-main);
-                color: var(--text-dark);
-                background: #ffffff;
-                outline: none;
-                transition: all 0.25s ease;
-                box-sizing: border-box;
-            }
-            .contact-input-field:focus {
-                border-color: var(--accent-orange);
-                box-shadow: 0 0 0 3px rgba(244, 123, 32, 0.15);
-            }
-            .contact-label {
-                font-size: 11.5px;
-                font-weight: 700;
-                color: var(--dark-navy);
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                margin-bottom: 5px;
-                display: block;
-                font-family: var(--font-heading);
-            }
-            .info-block-row {
-                background: #f8fafc;
-                border: 1px solid #edf2f7;
-                border-radius: 10px;
-                padding: 14px 16px;
-                display: flex;
-                gap: 14px;
-                align-items: center;
-                transition: transform 0.2s ease, border-color 0.2s ease;
-            }
-            .info-block-row:hover {
-                border-color: #cbd5e1;
-                transform: translateY(-1px);
-            }
-            .faq-item summary::-webkit-details-marker { display: none; }
-            .faq-item[open] summary svg { transform: rotate(180deg); transition: transform 0.3s ease; }
-            .faq-item:not([open]) summary svg { transform: rotate(0deg); transition: transform 0.3s ease; }
         </style>
         
-        <div class="contact-grid-spaced">
+        <div class="contact-grid-spaced" style="overflow: hidden; padding: 10px 0;">
             
             <!-- Box 1 (Left): Form Card -->
-            <div class="contact-box-card">
+            <div class="contact-box-card contact-box-left">
                 <div style="display: flex; flex-direction: column; height: 100%;">
                     <div>
                         <h3 class="contact-card-header">Project Quotation Request</h3>
@@ -314,7 +265,7 @@
             </div>
 
             <!-- Box 2 (Right): Headquarters Card -->
-            <div class="contact-box-card">
+            <div class="contact-box-card contact-box-right">
                 <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
                     <div>
                         <h3 class="contact-card-header">Headquarters & Direct Office</h3>

@@ -3654,3 +3654,38 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==========================================
+   CONVERGING SCROLL ANIMATION (GET IN TOUCH / BOXES)
+   ========================================== */
+.contact-box-card {
+  will-change: transform, opacity;
+}
+
+.contact-box-left {
+  opacity: 0;
+  transform: translateX(-140px);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
+}
+
+.contact-box-right {
+  opacity: 0;
+  transform: translateX(140px);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
+}
+
+.contact-box-left.animate,
+.contact-box-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 991px) {
+  .contact-box-left {
+    transform: translateX(-50px);
+  }
+  .contact-box-right {
+    transform: translateX(50px);
+  }
+}
+
