@@ -3399,12 +3399,23 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 6px 0;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #12345A;
-  transition: color 0.25s ease;
+  outline: none;
+  border: none;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s ease;
+}
+
+.nav-dropdown-toggle:focus,
+.nav-dropdown-toggle:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .nav-dropdown-toggle:hover,
@@ -3422,54 +3433,56 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   transform: rotate(180deg);
 }
 
-.nav-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  min-width: 390px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 20px 45px rgba(8, 43, 76, 0.14), 0 4px 15px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e2e8f0;
-  padding: 10px;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+@media (min-width: 1025px) {
+  .nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 290px;
+    max-width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(8, 43, 76, 0.12), 0 3px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(18, 52, 90, 0.08);
+    padding: 6px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
 
-/* Invisible bridge so mouse hover doesn't break */
-.nav-dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -16px;
-  left: 0;
-  width: 100%;
-  height: 16px;
-}
+  /* Invisible bridge so mouse hover doesn't break */
+  .nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+  }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu,
-.nav-dropdown.open .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .nav-dropdown-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 9px 12px;
-  border-radius: 8px;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.18s ease;
   background: transparent;
 }
 
@@ -3479,8 +3492,8 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 }
 
 .nav-dropdown-item .dropdown-item-bullet {
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--accent-orange);
   margin-top: 6px;
@@ -3498,8 +3511,8 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 }
 
 .nav-dropdown-item .dropdown-item-title {
-  font-size: 13.5px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--dark-navy);
   font-family: var(--font-heading);
   line-height: 1.3;
@@ -3510,26 +3523,26 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 }
 
 .nav-dropdown-item .dropdown-item-desc {
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--text-muted);
-  line-height: 1.35;
+  line-height: 1.3;
   margin-top: 1px;
 }
 
 .dropdown-footer-link {
-  border-top: 1px solid #edf2f7;
-  margin-top: 6px;
-  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: 4px;
+  padding-top: 6px;
   text-align: center;
 }
 
 .dropdown-footer-link a {
-  font-size: 12.5px;
-  font-weight: 800;
+  font-size: 11.5px;
+  font-weight: 700;
   color: var(--accent-orange) !important;
   text-decoration: none;
   display: block;
-  padding: 4px 0;
+  padding: 3px 0;
   letter-spacing: 0.3px;
   transition: color 0.2s;
 }

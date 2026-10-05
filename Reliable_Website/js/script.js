@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Dropdown Toggle
     document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 991) {
+            if (window.innerWidth <= 1024) {
                 e.preventDefault();
                 const parent = toggle.closest('.nav-dropdown');
                 if (parent) {
