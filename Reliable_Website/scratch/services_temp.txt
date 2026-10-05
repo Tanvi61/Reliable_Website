@@ -25,6 +25,62 @@
 <body>
 
     <!-- ==========================================
+       HERO EXACT REPLICA
+    ========================================== -->
+    <div class="hero-exact" style="position: relative; width: 100%; background: #000; overflow: hidden; display: flex; align-items: center;">
+      <style>
+          @keyframes subtleZoom {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.05); }
+              100% { transform: scale(1); }
+          }
+          .responsive-hero-img {
+              width: 100%;
+              height: auto;
+              min-height: 400px;
+              object-fit: cover;
+              object-position: top center;
+              animation: subtleZoom 20s ease-in-out infinite;
+              opacity: 0.85; /* Slightly darkened for text readability */
+          }
+          .hero-text-overlay {
+              position: absolute;
+              top: 50%;
+              left: 5%;
+              transform: translateY(-50%);
+              max-width: 500px;
+              z-index: 10;
+              pointer-events: none;
+          }
+          @keyframes slideInLeft {
+              from { opacity: 0; transform: translateX(-50px); }
+              to { opacity: 1; transform: translateX(0); }
+          }
+          .anim-text-left {
+              animation: slideInLeft 1s ease-out forwards;
+              text-shadow: 0 4px 15px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6);
+          }
+          @media(max-width: 768px) {
+              .responsive-hero-img { min-height: 350px; object-position: center left; }
+              .hero-text-overlay { left: 20px; top: 60%; }
+              .hero-text-overlay h1 { font-size: 2rem !important; }
+          }
+      </style>
+      
+      <!-- The Image -->
+      <img src="assets/images/services-hero-bg.png" class="responsive-hero-img" alt="Our Services">
+      
+      <!-- Gradient overlay for left side text readability -->
+      <div style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: linear-gradient(to right, rgba(18,47,85,0.8), transparent); z-index: 1;"></div>
+      
+      <!-- Animated Text on the Left -->
+      <div class="hero-text-overlay">
+          <h5 class="anim-text-left" style="color: var(--accent-orange); font-weight: 700; letter-spacing: 3px; font-size: 14px; margin-bottom: 15px; animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards;">OUR EXPERTISE</h5>
+          <h1 class="anim-text-left" style="font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 20px; animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards;">Comprehensive<br>Surveying Solutions</h1>
+          <p class="anim-text-left" style="font-size: 1.1rem; color: #f0f0f0; line-height: 1.6; font-weight: 500; animation-delay: 0.6s; opacity: 0; animation-fill-mode: forwards;">Delivering precision engineering data through modern DGPS, LiDAR, and Drone mapping technologies.</p>
+      </div>
+
+      <!-- ==========================================
            TOP BAR
         ========================================== -->
         <div class="top-bar-exact" style="z-index: 20;">
@@ -54,140 +110,45 @@
             </div>
         </div>
 
-    <nav class="nav-exact anim-nav" style="z-index: 20;">
-        <div class="nav-logo">
-            <img src="assets/logo/logo-transparent.png" alt="Logo">
-        </div>
-        <div class="nav-links" id="mobileNavMenu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html" class="active">Product/Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <button class="nav-btn" onclick="window.location.href='contact.html'">Get a Quote &rarr;</button>
-        <div class="hamburger-exact" onclick="this.classList.toggle('active'); document.getElementById('mobileNavMenu').classList.toggle('active')">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-
-    
-
-    
-<!-- ==========================================
-   SERVICES HERO BANNER
-========================================== -->
-<div class="services-hero-exact" style="position: relative; width: 100%; height: 75vh; min-height: 500px; max-height: 800px; overflow: hidden; background-color: #f4f9fd; margin-top: 135px;">
-    <style>
-        @keyframes subtleZoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-        .services-hero-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 20%;
-            animation: subtleZoom 25s ease-in-out infinite;
-        }
-        .services-hero-content {
-            position: absolute;
-            top: 50%;
-            left: 5%;
-            transform: translateY(-50%);
-            max-width: 600px;
-            z-index: 10;
-            padding: 20px;
-            pointer-events: none;
-        }
-        .services-hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            color: var(--dark-navy);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.9);
-        }
-        .services-hero-desc {
-            font-size: clamp(1rem, 1.5vw, 1.15rem);
-            color: #111;
-            font-weight: 700;
-            line-height: 1.6;
-            text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1);
-        }
-        @media(max-width: 768px) {
-            .services-hero-exact { 
-                height: 500px !important; 
-                min-height: 500px !important; 
-                display: block !important; 
-                margin-top: 80px !important;
-            }
-            .services-hero-img { 
-                height: 100% !important; 
-                width: 100% !important;
-                object-fit: cover !important; 
-                object-position: center !important;
-                animation: none !important; 
-            }
-            .services-hero-content { 
-                position: absolute !important; 
-                top: 50% !important; 
-                left: 5% !important; 
-                right: 5% !important;
-                transform: translateY(-50%) !important;
-                width: 90% !important;
-                max-width: none !important;
-                text-align: center !important; 
-                background: transparent !important; 
-                backdrop-filter: none !important;
-                border-radius: 0 !important;
-                padding: 10px !important; 
-                box-shadow: none !important;
-                z-index: 10 !important;
-            }
-            .services-hero-title { 
-                text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,1) !important; 
-                color: var(--dark-navy) !important; 
-                font-size: 2rem !important; 
-                margin-bottom: 10px !important; 
-            }
-            .services-hero-desc { 
-                text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1) !important; 
-                color: #111 !important; 
-                font-size: 0.95rem !important;
-                font-weight: 700 !important;
-                margin-bottom: 0 !important;
-            }
-        }
-    </style>
-    
-    <!-- Image -->
-    <img src="assets/images/services-hero-bg.png" class="services-hero-img" alt="Our Services">
-    
-    <!-- Content -->
-    <div class="services-hero-content">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px; justify-content: flex-start;">
-            <span style="width: 40px; height: 3px; background: var(--accent-orange); display: inline-block; box-shadow: 0 0 5px rgba(255,255,255,0.8);"></span>
-            <span style="color: var(--accent-orange); font-weight: 900; letter-spacing: 4px; font-size: 14px; text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1);">OUR EXPERTISE</span>
-        </div>
-        <h1 class="services-hero-title">Comprehensive<br>Surveying Solutions</h1>
-        <p class="services-hero-desc">Delivering precision engineering data through modern DGPS, LiDAR, and Drone mapping technologies.</p>
-    </div>
-</div>
-
-
-    
-        </div>
-
-        
+        <nav class="nav-exact anim-nav" style="z-index: 20;">
+            <div class="nav-logo">
+                <img src="assets/logo/logo-transparent.png" alt="Logo">
+            </div>
+            <div class="nav-links" id="mobileNavMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Product/Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="nav-btn" onclick="window.location.href='contact.html'">Get a Quote &rarr;</button>
+            <div class="hamburger-exact" onclick="this.classList.toggle('active'); document.getElementById('mobileNavMenu').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </div>
         </div>
 
-        
+        <nav class="nav-exact anim-nav">
+            <div class="nav-logo">
+                <img src="assets/logo/logo-transparent.png" alt="Logo">
+            </div>
+            <div class="nav-links" id="mobileNavMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Product/Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="nav-btn" onclick="window.location.href='contact.html'">Get a Quote &rarr;</button>
+            <div class="hamburger-exact" onclick="this.classList.toggle('active'); document.getElementById('mobileNavMenu').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
       
       <div class="hero-content-exact" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; pointer-events: none;">
         <!-- We let the image speak for itself, so removing the giant H1 text that would cover the icons -->
@@ -220,7 +181,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Topographical Survey</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Detailed mapping of natural and man-made features. We produce highly accurate contour maps, spot levels, and comprehensive baseline data essential for preliminary design and detailed engineering.</p>
-                        <a href="topographical-survey.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -230,7 +191,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">DGPS / GNSS Control</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Establishment of primary and secondary geodetic control networks using dual-frequency GNSS receivers. Crucial for long linear projects like highways, railways, and metro rail systems.</p>
-                        <a href="dgps-gnss-control.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -240,7 +201,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Total Station Survey</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">High-precision detailed surveys for construction staking, as-built mapping, structural alignment, and complex boundary demarcations using advanced Total Stations.</p>
-                        <a href="total-station-survey.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -250,7 +211,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">RTK Drone Mapping</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Rapid aerial photogrammetry over vast terrains. Delivers high-resolution orthomosaics, Digital Elevation Models (DEM), and 3D surface models with absolute accuracy.</p>
-                        <a href="rtk-drone-mapping.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -260,7 +221,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">LiDAR 3D Scanning</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Aerial and terrestrial laser scanning for dense vegetation penetration and complex structural modeling. Outputs highly dense and extremely accurate 3D point clouds.</p>
-                        <a href="lidar-3d-scanning.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -270,37 +231,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">CAD / GIS Processing</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">In-house processing turning raw field data into engineering-ready deliverables including L-sections, Cross-sections, detailed Utility Maps, and complete GIS spatial databases.</p>
-                        <a href="cad-gis-processing.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                    </div>
-                </div>
-
-                <!-- Service 7 -->
-                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img src="assets/images/drone_photogrammetry.jpg" alt="Drone Photogrammetry" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 30px;">
-                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Drone Photogrammetry</h3>
-                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Aerial orthomosaic, DSM/DTM generation, terrain mapping, corridor mapping and progress documentation.</p>
-                        <a href="drone-photogrammetry.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                    </div>
-                </div>
-
-                <!-- Service 8 -->
-                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img src="assets/images/rail_metro.jpg" alt="Rail / Metro Surveys" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 30px;">
-                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Rail / Metro</h3>
-                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Corridor, station/depot, track/alignment, pier/viaduct, utilities and asset inventory support.</p>
-                        <a href="rail-metro.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-                    </div>
-                </div>
-
-                <!-- Service 9 -->
-                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img src="assets/images/road_highway.jpg" alt="Road / Highway Surveys" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 30px;">
-                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Road / Highway</h3>
-                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Corridor, L-section, cross-sections, drainage, structures, utilities and DPR survey support.</p>
-                        <a href="road-highway.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        <a href="contact.html" style="color: var(--accent-orange); font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 5px;">Request Survey <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                     </div>
                 </div>
 
@@ -311,104 +242,11 @@
     <!-- ==========================================
        CALL TO ACTION
     ========================================== -->
-    <style>
-        @keyframes ctaBgZoom {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        @keyframes textShimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(239, 108, 0, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(239, 108, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 108, 0, 0); }
-        }
-        .cta-enhanced {
-            position: relative;
-            padding: 120px 0;
-            text-align: center;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cta-bg-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('assets/images/metro.jpg');
-            background-size: cover;
-            background-position: center;
-            animation: ctaBgZoom 30s infinite ease-in-out;
-            z-index: 1;
-        }
-        .cta-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(8, 28, 54, 0.95) 0%, rgba(8, 28, 54, 0.85) 100%);
-            z-index: 2;
-        }
-        .cta-content {
-            position: relative;
-            z-index: 3;
-        }
-        .cta-title {
-            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-            font-weight: 900;
-            margin-bottom: 25px;
-            line-height: 1.2;
-            background: linear-gradient(to right, #ffffff 20%, #a9b9c9 40%, #a9b9c9 60%, #ffffff 80%);
-            background-size: 200% auto;
-            color: #fff;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textShimmer 4s linear infinite;
-        }
-        .cta-desc {
-            color: #d1dce5;
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-        .cta-btn-animated {
-            display: inline-block;
-            background: var(--accent-orange);
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: bold;
-            padding: 18px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            animation: pulseGlow 2.5s infinite;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .cta-btn-animated:hover {
-            background: #d85a00;
-            transform: translateY(-5px) scale(1.02);
-            color: #fff;
-        }
-    </style>
-    <section class="cta-enhanced">
-        <div class="cta-bg-img"></div>
-        <div class="cta-overlay"></div>
-        <div class="container cta-content">
-            <h2 class="cta-title">Ready to start your next infrastructure project?</h2>
-            <p class="cta-desc">Our team of geospatial experts and modern surveying fleet are ready to deploy to your site.</p>
-            <a href="contact.html" class="cta-btn-animated">Contact Us Now</a>
+    <section style="background: var(--dark-navy); padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;">Ready to start your next infrastructure project?</h2>
+            <p style="color: #a9b9c9; font-size: 18px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Our team of geospatial experts and modern surveying fleet are ready to deploy to your site.</p>
+            <a href="contact.html" class="btn btn-primary" style="font-size: 18px; padding: 15px 40px; border-radius: 50px;">Contact Us Now</a>
         </div>
     </section>
 
@@ -504,12 +342,6 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
