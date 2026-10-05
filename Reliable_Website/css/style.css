@@ -3493,7 +3493,6 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 .nav-dropdown-item:hover {
   background: rgba(244, 123, 32, 0.08);
   color: var(--accent-orange) !important;
-  padding-left: 15px;
 }
 
 .dropdown-footer-link {
