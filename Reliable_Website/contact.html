@@ -416,7 +416,7 @@
 </section>
 
 <!-- SHOWROOM-STYLE VISIT US & FRAMED MAP SECTION -->
-<section class="section fade-up" style="padding: 85px 0 95px 0; background-color: #edf2ee;">
+<section class="section fade-up" style="padding: 85px 0 95px 0; background-color: var(--bg-soft);">
     <div class="container">
         
         <style>
@@ -427,11 +427,11 @@
                 align-items: center;
             }
             .showroom-map-frame {
-                background: #e3ded6;
+                background: #e5edf5;
                 border-radius: 36px;
                 padding: 14px;
-                box-shadow: 0 20px 45px rgba(8, 43, 76, 0.09);
-                border: 1px solid rgba(0,0,0,0.06);
+                box-shadow: 0 20px 45px rgba(8, 43, 76, 0.08);
+                border: 1px solid #d5e2ef;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -447,11 +447,28 @@
                 position: relative;
                 flex: 1;
                 display: flex;
+                border: 1px solid #c8d8e8;
+            }
+            .showroom-map-btn {
+                background: var(--dark-navy);
+                color: #ffffff;
+                padding: 15px 28px;
+                border-radius: 8px;
+                font-weight: 800;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                transition: all 0.3s ease;
+                box-shadow: 0 6px 18px rgba(8, 43, 76, 0.15);
             }
             .showroom-map-btn:hover {
-                background: #152923 !important;
+                background: var(--accent-orange) !important;
                 transform: translateY(-2px);
-                box-shadow: 0 8px 22px rgba(31, 59, 50, 0.35) !important;
+                box-shadow: 0 10px 25px rgba(244, 123, 32, 0.35) !important;
             }
             @media (max-width: 991px) {
                 .showroom-split-grid {
@@ -476,15 +493,15 @@
             <div>
                 <!-- Pre-Label Tag -->
                 <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2d3748" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
-                    <span style="font-size: 11.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #2d3748; font-family: var(--font-heading);">VISIT US</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span class="section-label" style="margin: 0; font-size: 11.5px; letter-spacing: 1.5px;">VISIT US</span>
                 </div>
 
                 <!-- Main Section Title -->
-                <h2 style="font-size: clamp(2.3rem, 4.2vw, 3.4rem); font-weight: 800; color: #1a202c; font-family: var(--font-heading); line-height: 1.12; margin: 0 0 18px 0; letter-spacing: -0.5px;">Our Technical Center</h2>
+                <h2 style="font-size: clamp(2.3rem, 4.2vw, 3.4rem); font-weight: 800; color: var(--dark-navy); font-family: var(--font-heading); line-height: 1.15; margin: 0 0 18px 0; letter-spacing: -0.5px;">Our Technical Center</h2>
 
                 <!-- Subtitle Description -->
-                <p style="color: #4a5568; font-size: 15px; line-height: 1.65; margin: 0 0 32px 0; max-width: 520px;">
+                <p style="color: var(--text-muted); font-size: 15px; line-height: 1.65; margin: 0 0 32px 0; max-width: 520px;">
                     Experience our precision geodetic instrumentation and advanced geospatial data processing infrastructure in person. Our senior geospatial consultants are on hand to guide you through project baselines, LiDAR point clouds, and CAD deliverables.
                 </p>
 
@@ -493,41 +510,41 @@
                     
                     <!-- Point 1 -->
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(0,0,0,0.05); color: #1f3b32; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                         </div>
                         <div>
-                            <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #718096; margin-bottom: 4px; font-family: var(--font-heading);">PREMIUM GEODETIC INSTRUMENT HUB</div>
-                            <p style="color: #1a202c; font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Inspect and verify dual-frequency DGPS GNSS receivers, 1" robotic Total Stations, and survey-grade RTK LiDAR drones.</p>
+                            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--primary-navy); margin-bottom: 4px; font-family: var(--font-heading);">PREMIUM GEODETIC INSTRUMENT HUB</div>
+                            <p style="color: var(--dark-navy); font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Inspect and verify dual-frequency DGPS GNSS receivers, 1" robotic Total Stations, and survey-grade RTK LiDAR drones.</p>
                         </div>
                     </div>
 
                     <!-- Point 2 -->
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(0,0,0,0.05); color: #1f3b32; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         </div>
                         <div>
-                            <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #718096; margin-bottom: 4px; font-family: var(--font-heading);">DIRECT PROJECT CONSULTATION</div>
-                            <p style="color: #1a202c; font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Consult directly with licensed surveying consultants on boundary demarcation, highway alignments, and layout master plans.</p>
+                            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--primary-navy); margin-bottom: 4px; font-family: var(--font-heading);">DIRECT PROJECT CONSULTATION</div>
+                            <p style="color: var(--dark-navy); font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Consult directly with licensed surveying consultants on boundary demarcation, highway alignments, and layout master plans.</p>
                         </div>
                     </div>
 
                     <!-- Point 3 -->
                     <div style="display: flex; gap: 16px; align-items: flex-start;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(0,0,0,0.05); color: #1f3b32; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                         </div>
                         <div>
-                            <div style="font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #718096; margin-bottom: 4px; font-family: var(--font-heading);">BLUEPRINT & CAD PROCESSING LAB</div>
-                            <p style="color: #1a202c; font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Review raw LiDAR point clouds, 3D digital elevation models (DEM), and ready-to-build AutoCAD .DWG contour drawings.</p>
+                            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--primary-navy); margin-bottom: 4px; font-family: var(--font-heading);">BLUEPRINT & CAD PROCESSING LAB</div>
+                            <p style="color: var(--dark-navy); font-size: 14px; font-weight: 700; line-height: 1.45; margin: 0;">Review raw LiDAR point clouds, 3D digital elevation models (DEM), and ready-to-build AutoCAD .DWG contour drawings.</p>
                         </div>
                     </div>
 
                 </div>
 
                 <!-- CTA Button -->
-                <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="showroom-map-btn" style="background: #1f3b32; color: #ffffff; padding: 15px 28px; border-radius: 8px; font-weight: 800; font-size: 12.5px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.25s ease; box-shadow: 0 4px 14px rgba(31, 59, 50, 0.25);">
+                <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="showroom-map-btn">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
                     OPEN IN GOOGLE MAPS
                 </a>
@@ -538,20 +555,20 @@
                 <div class="showroom-map-inner">
                     
                     <!-- Floating Place Info Window (Over Map) -->
-                    <div style="position: absolute; top: 16px; left: 16px; background: #ffffff; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.18); border: 1px solid rgba(0,0,0,0.08); z-index: 5; max-width: 290px; pointer-events: auto;">
-                        <h4 style="margin: 0 0 3px 0; color: #1a202c; font-size: 14px; font-weight: 800; line-height: 1.3; font-family: var(--font-heading);">Reliable Land Survey Consultancy</h4>
-                        <p style="margin: 0 0 6px 0; color: #4a5568; font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Pune, Maharashtra, India</p>
-                        <div style="display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: #d97706; margin-bottom: 12px;">
+                    <div style="position: absolute; top: 16px; left: 16px; background: #ffffff; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(8, 43, 76, 0.15); border: 1px solid #e2e8f0; z-index: 5; max-width: 290px; pointer-events: auto;">
+                        <h4 style="margin: 0 0 3px 0; color: var(--dark-navy); font-size: 14px; font-weight: 800; line-height: 1.3; font-family: var(--font-heading);">Reliable Land Survey Consultancy</h4>
+                        <p style="margin: 0 0 6px 0; color: var(--text-body); font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Pune, Maharashtra, India</p>
+                        <div style="display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--accent-orange); margin-bottom: 12px;">
                             <span>5.0</span>
                             <span style="letter-spacing: 1px;">★★★★★</span>
-                            <span style="color: #718096; font-weight: 500; font-size: 11px;">(98+)</span>
+                            <span style="color: var(--text-muted); font-weight: 600; font-size: 11px;">(98+ Reviews)</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: #1a73e8; color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.2s;" onmouseover="this.style.background='#1557b0'" onmouseout="this.style.background='#1a73e8'">
+                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--primary-navy); color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s;" onmouseover="this.style.background='var(--accent-orange)'" onmouseout="this.style.background='var(--primary-navy)'">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                                 Open in Maps
                             </a>
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: #e8f0fe; color: #1a73e8; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='#d2e3fc'" onmouseout="this.style.background='#e8f0fe'" title="Directions">
+                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.25s;" onmouseover="this.style.background='rgba(244, 123, 32, 0.15)'; this.style.color='var(--accent-orange)';" onmouseout="this.style.background='rgba(18, 63, 104, 0.08)'; this.style.color='var(--primary-navy)';" title="Directions">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                             </a>
                         </div>
