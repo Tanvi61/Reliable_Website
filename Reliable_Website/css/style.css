@@ -3531,12 +3531,12 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 .faq-card {
   background: #ffffff;
   border-radius: 14px;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
   box-shadow: 0 4px 15px rgba(8, 43, 76, 0.03);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
   overflow: hidden;
   position: relative;
-  cursor: default;
+  cursor: pointer;
 }
 
 .faq-card::before {
@@ -3548,53 +3548,36 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
   width: 4px;
   background: var(--accent-orange);
   opacity: 0;
-  transform: scaleY(0.3);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
 .faq-card-header {
-  padding: 22px 26px;
+  padding: 22px 28px;
   font-weight: 800;
   color: var(--dark-navy);
   font-size: 17px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   font-family: var(--font-heading);
-  gap: 16px;
-  transition: color 0.25s ease;
+  transition: color 0.3s ease;
   user-select: none;
 }
 
 .faq-question {
-  flex: 1;
-  line-height: 1.4;
-}
-
-.faq-icon-pill {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(244, 123, 32, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-orange);
-  flex-shrink: 0;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.faq-icon-pill svg {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+  line-height: 1.45;
+  transition: color 0.3s ease;
 }
 
 /* Hover & Focus State - Expands automatically without clicking */
 .faq-card:hover,
 .faq-card:focus-within,
 .faq-card.is-active {
-  border-color: rgba(244, 123, 32, 0.35);
-  box-shadow: 0 12px 30px rgba(8, 43, 76, 0.08), 0 2px 8px rgba(244, 123, 32, 0.06);
-  transform: translateY(-2px);
+  border-color: rgba(244, 123, 32, 0.45);
+  box-shadow: 0 16px 36px rgba(8, 43, 76, 0.08), 0 0 0 1px rgba(244, 123, 32, 0.2);
+  transform: translateY(-3px);
+  background: #ffffff;
 }
 
 .faq-card:hover::before,
@@ -3606,28 +3589,18 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 
 .faq-card:hover .faq-card-header,
 .faq-card:focus-within .faq-card-header,
-.faq-card.is-active .faq-card-header {
+.faq-card.is-active .faq-card-header,
+.faq-card:hover .faq-question,
+.faq-card:focus-within .faq-question,
+.faq-card.is-active .faq-question {
   color: var(--accent-orange);
-}
-
-.faq-card:hover .faq-icon-pill,
-.faq-card:focus-within .faq-icon-pill,
-.faq-card.is-active .faq-icon-pill {
-  background: var(--accent-orange);
-  color: #ffffff;
-}
-
-.faq-card:hover .faq-icon-pill svg,
-.faq-card:focus-within .faq-icon-pill svg,
-.faq-card.is-active .faq-icon-pill svg {
-  transform: rotate(180deg);
 }
 
 /* Smooth Accordion Height Expansion */
 .faq-card-body {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-card:hover .faq-card-body,
@@ -3638,19 +3611,19 @@ a, button, .btn, .nav-btn, summary, [role="button"], .tab-btn, .industry-card, .
 
 .faq-card-content {
   overflow: hidden;
-  padding: 0 26px;
+  padding: 0 28px;
   color: #475569;
   line-height: 1.7;
   font-size: 15px;
   opacity: 0;
   transform: translateY(-6px);
-  transition: opacity 0.3s ease 0.05s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+  transition: opacity 0.35s ease 0.05s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
 }
 
 .faq-card:hover .faq-card-content,
 .faq-card:focus-within .faq-card-content,
 .faq-card.is-active .faq-card-content {
-  padding-bottom: 22px;
+  padding-bottom: 24px;
   opacity: 1;
   transform: translateY(0);
 }
