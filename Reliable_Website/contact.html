@@ -34,8 +34,8 @@
     <div class="hero-exact" style="position: relative; height: 650px; overflow: hidden; background: #eef5f9;">
       <img src="assets/images/contact-hero-bg.jpg" alt="Geospatial Infrastructure Surveying" style="position: absolute; top: 0; right: 0; width: 100%; height: 100%; object-fit: cover; object-position: center right; z-index: 0;">
       
-      <!-- Premium Fade Overlay -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(244,246,248,0.96) 0%, rgba(244,246,248,0.88) 46%, rgba(244,246,248,0.25) 80%, rgba(244,246,248,0.02) 100%); z-index: 1;"></div>
+      <!-- Soft Light Gradient Overlay (Low opacity so the background image remains vivid) -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(245,248,251,0.68) 0%, rgba(245,248,251,0.38) 42%, rgba(245,248,251,0.06) 72%, transparent 100%); z-index: 1; pointer-events: none;"></div>
       
       <!-- ==========================================
            TOP BAR
@@ -105,29 +105,79 @@
             </div>
         </nav>
       
-      <div class="hero-content-exact" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; padding-top: 80px;">
-        <div class="container" style="text-align: left; max-width: 1240px; margin: 0 auto; padding: 0 40px; animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+      <style>
+        @keyframes pulseGlowContact {
+          0% {
+            box-shadow: 0 0 0 0 rgba(244, 123, 32, 0.6), 0 8px 25px rgba(244, 123, 32, 0.35);
+          }
+          70% {
+            box-shadow: 0 0 0 16px rgba(244, 123, 32, 0), 0 12px 30px rgba(244, 123, 32, 0.45);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(244, 123, 32, 0), 0 8px 25px rgba(244, 123, 32, 0.35);
+          }
+        }
+        @keyframes arrowNudgeX {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(6px); }
+        }
+        .hero-contact-cta {
+          padding: 18px 42px;
+          font-size: 16px;
+          border-radius: 50px;
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          background: linear-gradient(135deg, #F47B20, #e06912);
+          color: #ffffff !important;
+          text-decoration: none;
+          font-weight: 800;
+          letter-spacing: 0.3px;
+          box-shadow: 0 8px 25px rgba(244, 123, 32, 0.35);
+          animation: pulseGlowContact 2.2s infinite;
+          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-contact-cta:hover {
+          transform: translateY(-3px) scale(1.03);
+          box-shadow: 0 14px 35px rgba(244, 123, 32, 0.48) !important;
+        }
+        .hero-contact-cta .cta-arrow {
+          display: inline-block;
+          font-size: 20px;
+          line-height: 1;
+          animation: arrowNudgeX 1.5s infinite ease-in-out;
+          transition: transform 0.25s ease;
+        }
+        .hero-contact-cta:hover .cta-arrow {
+          transform: translateX(8px);
+        }
+      </style>
+
+      <div class="hero-content-exact" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; padding-top: 75px;">
+        <div class="container" style="text-align: left; max-width: 1240px; margin: 0 auto; padding: 0 clamp(35px, 6vw, 70px); animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
           
-          <!-- Breadcrumbs -->
-          <div style="font-size: 12px; font-weight: 800; color: #1769AA; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; display: flex; align-items: center; gap: 12px;">
-            <a href="index.html" style="color: #667085; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#F47B20'" onmouseout="this.style.color='#667085'">HOME</a>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="3"><path d="M9 18l6-6-6-6"/></svg>
-            <span style="color: #F47B20;">CONTACT US</span>
+          <div style="max-width: 620px;">
+            <!-- Breadcrumbs -->
+            <div style="font-size: 12px; font-weight: 800; color: #1769AA; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;">
+              <a href="index.html" style="color: #667085; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#F47B20'" onmouseout="this.style.color='#667085'">HOME</a>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="3"><path d="M9 18l6-6-6-6"/></svg>
+              <span style="color: #F47B20;">CONTACT US</span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="hero-title-exact" style="font-size: clamp(2.8rem, 5vw, 4.4rem); font-weight: 800; color: #082B4C; font-family: 'Manrope', sans-serif; letter-spacing: -1px; line-height: 1.1; margin: 0 0 22px 0;">
+              Speak with <br><span style="color: #1769AA;">an Expert.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p style="font-size: 17.5px; color: #2d3d50; line-height: 1.7; font-weight: 500; margin-bottom: 35px;">
+              Whether you require a detailed topographical survey, drone mapping, or precise DGPS control establishment, our technical experts are here to consult on your next infrastructure project.
+            </p>
+            
+            <a href="#form-section" class="hero-contact-cta">
+              Drop a Message <span class="cta-arrow">&rarr;</span>
+            </a>
           </div>
-
-          <!-- Main Title -->
-          <h1 class="hero-title-exact" style="font-size: 72px; font-weight: 800; color: #082B4C; font-family: 'Manrope', sans-serif; letter-spacing: -1px; line-height: 1.1; margin: 0 0 25px 0;">
-            Speak with <br><span style="color: #1769AA;">an Expert.</span>
-          </h1>
-
-          <!-- Subtitle -->
-          <p style="font-size: 18px; color: #334155; max-width: 550px; line-height: 1.7; font-weight: 500; margin-bottom: 40px;">
-            Whether you require a detailed topographical survey, drone mapping, or precise DGPS control establishment, our technical experts are here to consult on your next infrastructure project.
-          </p>
-          
-          <a href="#form-section" class="btn btn-primary" style="padding: 18px 40px; font-size: 16px; border-radius: 50px; display: inline-flex; align-items: center; gap: 12px; background: #F47B20; color: #fff; text-decoration: none; font-weight: bold; box-shadow: 0 10px 25px rgba(244,123,32,0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 35px rgba(244,123,32,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(244,123,32,0.3)';">
-            Drop a Message <span class="hover-arrow">&rarr;</span>
-          </a>
 
         </div>
       </div>
