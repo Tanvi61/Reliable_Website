@@ -633,13 +633,17 @@
     </div>
 </section>
 
-<!-- FAQ SECTION WITH ANIMATIONS -->
-<section class="section" style="padding: 90px 0 100px 0; background: #fff;">
-    <div class="container">
+<!-- FAQ SECTION WITH ANIMATIONS & CUSTOM BACKGROUND -->
+<section class="section fade-up" style="position: relative; padding: 100px 0 115px 0; overflow: hidden; background: url('assets/images/faq-bg.png') no-repeat center center / cover;">
+    
+    <!-- Soft Overlay for Optimal Text & Card Contrast -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.5) 100%); z-index: 0; pointer-events: none;"></div>
+
+    <div class="container" style="position: relative; z-index: 1;">
         <div class="text-center fade-up" style="margin-bottom: 50px;">
             <div class="section-label" style="margin-bottom: 8px;">FAQS</div>
             <h2 class="section-heading" style="font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Frequently Asked Questions</h2>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 15px; line-height: 1.6;">Find answers to common queries about our surveying process, deliverables, and capabilities.</p>
+            <p style="color: var(--text-body); max-width: 600px; margin: 0 auto; font-size: 15px; line-height: 1.6;">Find answers to common queries about our surveying process, deliverables, and capabilities.</p>
         </div>
 
         <div style="max-width: 850px; margin: 0 auto;">
