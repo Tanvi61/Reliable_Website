@@ -123,11 +123,10 @@
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          bottom: 83px !important;
-          bottom: calc(83px + env(safe-area-inset-bottom, 0px)) !important;
-          top: auto !important;
-          transform: none !important;
-          -webkit-transform: none !important;
+          top: 42% !important;
+          bottom: auto !important;
+          transform: translateY(-50%) !important;
+          -webkit-transform: translateY(-50%) !important;
           z-index: 2147483647 !important;
           gap: 10px !important;
         }
@@ -141,7 +140,7 @@
 
 <body>
     <!-- Floating Quick Actions (Persistent on right side from top to bottom) -->
-    <div class="floating-actions">
+    <div class="floating-actions" style="position: fixed !important; right: 16px !important; top: 42% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
         <a href="tel:+919372228042" class="float-btn float-call" aria-label="Call Now" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <i class="fa-solid fa-phone"></i>
             <span class="float-tooltip">Call Now</span>
@@ -151,6 +150,36 @@
             <span class="float-tooltip">WhatsApp Chat</span>
         </a>
     </div>
+    <script>
+    (function(){
+      function alignFloatingWidget(){
+        var el = document.querySelector('.floating-actions');
+        if (!el) return;
+        var isMobile = window.innerWidth <= 1024;
+        el.style.setProperty('position', 'fixed', 'important');
+        el.style.setProperty('bottom', 'auto', 'important');
+        el.style.setProperty('transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('-webkit-transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('z-index', '2147483647', 'important');
+        el.style.setProperty('display', 'flex', 'important');
+        el.style.setProperty('flex-direction', 'column', 'important');
+        el.style.setProperty('visibility', 'visible', 'important');
+        el.style.setProperty('opacity', '1', 'important');
+        if (isMobile) {
+          el.style.setProperty('top', '42%', 'important');
+          el.style.setProperty('right', '16px', 'important');
+          el.style.setProperty('gap', '10px', 'important');
+        } else {
+          el.style.setProperty('top', '60%', 'important');
+          el.style.setProperty('right', '18px', 'important');
+          el.style.setProperty('gap', '12px', 'important');
+        }
+      }
+      alignFloatingWidget();
+      window.addEventListener('resize', alignFloatingWidget);
+      window.addEventListener('load', alignFloatingWidget);
+    })();
+    </script>
 
     <!-- Standalone Scroll to Top Button (Bottom right) -->
     <button class="float-btn back-to-top" id="backToTop" aria-label="Scroll to top" style="position: fixed !important; bottom: 25px !important; right: 20px !important; z-index: 2147483646 !important; display: none !important;">
