@@ -268,8 +268,8 @@
     position: fixed !important;
     right: 16px !important;
     right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-    bottom: 85px !important;
-    bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: 83px !important;
+    bottom: calc(83px + env(safe-area-inset-bottom, 0px)) !important;
     top: auto !important;
     transform: none !important;
     -webkit-transform: none !important;
@@ -306,6 +306,14 @@
 
 /* Tablet & Mobile Navigation / Top Bar */
 @media (max-width: 1024px) {
+  .float-btn.scroll-top,
+  #scrollTopBtn.scroll-top,
+  #scrollTopBtn {
+    right: 16px !important;
+    right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+    bottom: 25px !important;
+    bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+  }
   * { -webkit-tap-highlight-color: transparent; }
   .top-bar-exact { height: 75px; padding: 6px 0; }
   .top-bar-content { flex-direction: row; flex-wrap: wrap; gap: 6px; justify-content: center; width: 95%; }
@@ -683,8 +691,8 @@
     position: fixed !important;
     right: 16px !important;
     right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-    bottom: 85px !important;
-    bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: 83px !important;
+    bottom: calc(83px + env(safe-area-inset-bottom, 0px)) !important;
     top: auto !important;
     transform: none !important;
     -webkit-transform: none !important;

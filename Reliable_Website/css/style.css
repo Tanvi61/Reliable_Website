@@ -1897,8 +1897,8 @@ textarea {
   position: fixed !important;
   bottom: 25px !important;
   bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
-  right: 20px !important;
-  right: calc(20px + env(safe-area-inset-right, 0px)) !important;
+  right: 18px !important;
+  right: calc(18px + env(safe-area-inset-right, 0px)) !important;
   z-index: 2147483646 !important;
   background-color: var(--dark-navy) !important;
 }

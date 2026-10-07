@@ -76,7 +76,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Persistent Floating Actions Styles -->
+    <!-- Persistent Floating Actions Styles (Visible from page start across all devices) -->
     <style>
       .floating-actions {
         position: fixed !important;
@@ -94,12 +94,37 @@
         visibility: visible !important;
         opacity: 1 !important;
       }
+      .float-btn.whatsapp,
+      .float-btn.call {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .float-btn.scroll-top,
+      #scrollTopBtn.scroll-top,
+      #scrollTopBtn {
+        position: fixed !important;
+        bottom: 25px !important;
+        bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 18px !important;
+        right: calc(18px + env(safe-area-inset-right, 0px)) !important;
+        z-index: 2147483646 !important;
+        background-color: var(--dark-navy) !important;
+      }
       @media (max-width: 1024px) {
+        .float-btn.scroll-top,
+        #scrollTopBtn.scroll-top,
+        #scrollTopBtn {
+          right: 16px !important;
+          right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+          bottom: 25px !important;
+          bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+        }
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          bottom: 85px !important;
-          bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+          bottom: 83px !important;
+          bottom: calc(83px + env(safe-area-inset-bottom, 0px)) !important;
           top: auto !important;
           transform: none !important;
           -webkit-transform: none !important;
@@ -110,20 +135,6 @@
           width: 48px !important;
           height: 48px !important;
         }
-      }
-      .float-btn.float-wa,
-      .float-btn.float-call {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-      .float-btn.back-to-top {
-        position: fixed !important;
-        bottom: 25px !important;
-        bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
-        right: 20px !important;
-        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
-        z-index: 2147483646 !important;
       }
     </style>
 </head>

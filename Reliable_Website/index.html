@@ -26,8 +26,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261007_6">
-    <link rel="stylesheet" href="css/responsive.css?v=20261007_6">
+    <link rel="stylesheet" href="css/style.css?v=20261007_8">
+    <link rel="stylesheet" href="css/responsive.css?v=20261007_8">
 
     <!-- Strictly remove section label orange dot sitewide -->
     <style>
@@ -65,23 +65,6 @@
         visibility: visible !important;
         opacity: 1 !important;
       }
-      @media (max-width: 1024px) {
-        .floating-actions {
-          right: 16px !important;
-          right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          bottom: 85px !important;
-          bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
-          top: auto !important;
-          transform: none !important;
-          -webkit-transform: none !important;
-          z-index: 2147483647 !important;
-          gap: 10px !important;
-        }
-        .float-btn {
-          width: 48px !important;
-          height: 48px !important;
-        }
-      }
       .float-btn.whatsapp,
       .float-btn.call {
         display: flex !important;
@@ -94,10 +77,35 @@
         position: fixed !important;
         bottom: 25px !important;
         bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
-        right: 20px !important;
-        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
+        right: 18px !important;
+        right: calc(18px + env(safe-area-inset-right, 0px)) !important;
         z-index: 2147483646 !important;
         background-color: var(--dark-navy) !important;
+      }
+      @media (max-width: 1024px) {
+        .float-btn.scroll-top,
+        #scrollTopBtn.scroll-top,
+        #scrollTopBtn {
+          right: 16px !important;
+          right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+          bottom: 25px !important;
+          bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+        }
+        .floating-actions {
+          right: 16px !important;
+          right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+          bottom: 83px !important;
+          bottom: calc(83px + env(safe-area-inset-bottom, 0px)) !important;
+          top: auto !important;
+          transform: none !important;
+          -webkit-transform: none !important;
+          z-index: 2147483647 !important;
+          gap: 10px !important;
+        }
+        .float-btn {
+          width: 48px !important;
+          height: 48px !important;
+        }
       }
     </style>
 
@@ -117,7 +125,7 @@
     </div>
 
     <!-- Standalone Scroll to Top Button (Bottom right) -->
-    <a href="#" class="float-btn scroll-top" id="scrollTopBtn" aria-label="Scroll Top" style="position: fixed !important; bottom: 25px !important; right: 20px !important; z-index: 2147483646 !important; display: none !important; background-color: var(--dark-navy) !important;">
+    <a href="#" class="float-btn scroll-top" id="scrollTopBtn" aria-label="Scroll Top" style="position: fixed !important; bottom: 25px !important; z-index: 2147483646 !important; display: none !important; background-color: var(--dark-navy) !important;">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
         <span class="float-tooltip">Scroll Top</span>
     </a>
