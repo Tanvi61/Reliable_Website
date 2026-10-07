@@ -2,17 +2,17 @@ const http = require('http');
 const { spawn } = require('child_process');
 const fs = require('fs');
 
-async function captureElement(url, outPath, width, height, mobile, selector) {
-  return new Promise((resolve, reject) => {
-    const port = 9400 + Math.floor(Math.random() * 50);
-    const chromeProc = spawn('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', [
-      '--headless=new',
-      `--remote-debugging-port=${port}`,
-      '--no-sandbox',
-      '--disable-gpu',
-      url
-    ]);
+async function captureView(url, width, height, mobile, outPath) {
+  const port = 9600 + Math.floor(Math.random() * 50);
+  const chromeProc = spawn('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', [
+    '--headless=new',
+    `--remote-debugging-port=${port}`,
+    '--no-sandbox',
+    '--disable-gpu',
+    url
+  ]);
 
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       http.get(`http://127.0.0.1:${port}/json`, (res) => {
         let data = '';
@@ -20,8 +20,7 @@ async function captureElement(url, outPath, width, height, mobile, selector) {
         res.on('end', () => {
           try {
             const tabs = JSON.parse(data);
-            const pageTab = tabs.find(t => t.type === 'page') || tabs[0];
-            const ws = new WebSocket(pageTab.webSocketDebuggerUrl);
+            const ws = new WebSocket((tabs.find(t => t.type === 'page') || tabs[0]).webSocketDebuggerUrl);
 
             ws.onopen = () => {
               ws.send(JSON.stringify({
@@ -39,18 +38,11 @@ async function captureElement(url, outPath, width, height, mobile, selector) {
                     id: 2,
                     method: 'Runtime.evaluate',
                     params: {
-                      expression: `(() => {
-                        const el = document.querySelector('${selector}');
-                        if (!el) return -1;
-                        window.scrollTo(0, el.offsetTop);
-                        return el.offsetTop;
-                      })()`,
-                      returnByValue: true
+                      expression: `document.querySelector('.review-us-section').scrollIntoView({ behavior: 'instant', block: 'center' })`
                     }
                   }));
                 }, 1000);
               } else if (msg.id === 2) {
-                console.log('Scrolled to offset:', msg.result.value);
                 setTimeout(() => {
                   ws.send(JSON.stringify({
                     id: 3,
@@ -82,7 +74,15 @@ async function captureElement(url, outPath, width, height, mobile, selector) {
 }
 
 (async () => {
-  const url = 'file:///E:/MindAxis_Web/Reliable_Website/index.html';
-  await captureElement(url, 'scratch/review_mobile.png', 390, 844, true, '.review-us-section');
-  await captureElement(url, 'scratch/review_tab.png', 768, 1024, false, '.review-us-section');
+  const fileUrl = 'file:///E:/MindAxis_Web/Reliable_Website/index.html';
+  console.log('Capturing Mobile...');
+  await captureView(fileUrl, 390, 844, true, 'scratch/final_review_mobile.png');
+
+  console.log('Capturing Tablet...');
+  await captureView(fileUrl, 768, 1024, false, 'scratch/final_review_tablet.png');
+
+  console.log('Capturing Desktop...');
+  await captureView(fileUrl, 1280, 800, false, 'scratch/final_review_desktop.png');
+
+  console.log('Done capturing all views.');
 })();

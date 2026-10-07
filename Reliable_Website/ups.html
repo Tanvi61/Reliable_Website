@@ -98,7 +98,7 @@
         .floating-actions {
           right: 14px !important;
           right: calc(14px + env(safe-area-inset-right, 0px)) !important;
-          top: 50% !important;
+          top: 40% !important;
           bottom: auto !important;
           transform: translateY(-50%) !important;
           -webkit-transform: translateY(-50%) !important;
@@ -129,7 +129,7 @@
 
 <body>
     <!-- Floating Quick Actions (Persistent on right side from top to bottom) -->
-    <div class="floating-actions" style="position: fixed !important; right: 18px !important; top: 50% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; pointer-events: auto !important;">
+    <div class="floating-actions">
         <a href="tel:+919372228042" class="float-btn float-call" aria-label="Call Now" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <i class="fa-solid fa-phone"></i>
             <span class="float-tooltip">Call Now</span>
