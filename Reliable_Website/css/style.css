@@ -1858,7 +1858,7 @@ textarea {
   position: fixed !important;
   right: 18px !important;
   right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-  top: 50% !important;
+  top: 60% !important;
   bottom: auto !important;
   transform: translateY(-50%) !important;
   -webkit-transform: translateY(-50%) !important;
@@ -1991,8 +1991,8 @@ textarea {
   height: 100px;
   width: auto;
   display: block;
-  margin: 0 auto 15px auto !important;
-  align-self: center !important;
+  margin: 0 0 15px 0 !important;
+  align-self: flex-start !important;
   object-fit: contain;
 }
 

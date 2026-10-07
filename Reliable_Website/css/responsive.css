@@ -266,12 +266,13 @@
 
   .floating-actions {
     position: fixed !important;
-    right: 14px !important;
-    right: calc(14px + env(safe-area-inset-right, 0px)) !important;
-    top: 40% !important;
-    bottom: auto !important;
-    transform: translateY(-50%) !important;
-    -webkit-transform: translateY(-50%) !important;
+    right: 16px !important;
+    right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+    bottom: 85px !important;
+    bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    transform: none !important;
+    -webkit-transform: none !important;
     z-index: 2147483647 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -632,6 +633,7 @@
     width: 100% !important;
   }
 
+  @media (max-width: 1024px) {
   .footer-brand img,
   .footer-brand .footer-logo-img,
   .footer-logo-img {
@@ -639,6 +641,7 @@
     align-self: center !important;
     display: block !important;
   }
+}
 
   .footer-brand ul,
   .footer-brand .footer-brand-list,
@@ -678,12 +681,13 @@
 @media (max-width: 1024px) {
   .floating-actions {
     position: fixed !important;
-    right: 14px !important;
-    right: calc(14px + env(safe-area-inset-right, 0px)) !important;
-    top: 40% !important;
-    bottom: auto !important;
-    transform: translateY(-50%) !important;
-    -webkit-transform: translateY(-50%) !important;
+    right: 16px !important;
+    right: calc(16px + env(safe-area-inset-right, 0px)) !important;
+    bottom: 85px !important;
+    bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    transform: none !important;
+    -webkit-transform: none !important;
     z-index: 2147483647 !important;
     display: flex !important;
     flex-direction: column !important;
