@@ -23,49 +23,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css?v=20261007_2">
+    <link rel="stylesheet" href="css/responsive.css?v=20261007_2">
+
+    <!-- Strictly remove section label orange dot sitewide -->
+    <style>
+        .section-label::before,
+        .section-label:before,
+        .section-label::after,
+        .section-label:after {
+            display: none !important;
+            content: none !important;
+            content: "" !important;
+            width: 0 !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
+    <!-- Persistent Floating Actions Styles (Visible from page start across all devices) -->
+    <style>
+      .floating-actions {
+        position: fixed !important;
+        right: 18px !important;
+        right: calc(18px + env(safe-area-inset-right, 0px)) !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%) !important;
+        -webkit-transform: translateY(-50%) !important;
+        z-index: 2147483647 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      @media (max-width: 1024px) {
+        .floating-actions {
+          right: 14px !important;
+          right: calc(14px + env(safe-area-inset-right, 0px)) !important;
+          top: 50% !important;
+          bottom: auto !important;
+          transform: translateY(-50%) !important;
+          -webkit-transform: translateY(-50%) !important;
+          z-index: 2147483647 !important;
+          gap: 10px !important;
+        }
+        .float-btn {
+          width: 48px !important;
+          height: 48px !important;
+        }
+      }
+      .float-btn.whatsapp,
+      .float-btn.call {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .float-btn.scroll-top,
+      #scrollTopBtn.scroll-top,
+      #scrollTopBtn {
+        position: fixed !important;
+        bottom: 25px !important;
+        bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 20px !important;
+        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
+        z-index: 2147483646 !important;
+        background-color: var(--dark-navy) !important;
+      }
+    </style>
+
 </head>
 <body>
+    <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
+    <div class="floating-actions" style="position: fixed !important; right: 18px !important; top: 50% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; pointer-events: auto !important;">
+        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span class="float-tooltip">WhatsApp Us</span>
+        </a>
+        <a href="tel:+919604648777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="float-tooltip">Call Us</span>
+        </a>
+    </div>
 
-    <!-- ==========================================
-       HERO EXACT REPLICA
-    ========================================== -->
-    <div class="hero-exact" style="height: 400px;">
-      <img src="assets/images/Our-process-bg.png" style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-      <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(18,47,85,0.7), rgba(18,47,85,0.7)); z-index: -1;"></div>
-      
-      
-      
+    <!-- Standalone Scroll to Top Button (Bottom right) -->
+    <a href="#" class="float-btn scroll-top" id="scrollTopBtn" aria-label="Scroll Top" style="position: fixed !important; bottom: 25px !important; right: 20px !important; z-index: 2147483646 !important; display: none !important; background-color: var(--dark-navy) !important;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <span class="float-tooltip">Scroll Top</span>
+    </a>
+
+
+
+
+
+    
+    <!-- Floating Quick Actions (Right side of screen, vertically centered) -->
+
+
+
+
       <!-- ==========================================
-           TOP BAR
-        ========================================== -->
-        <div class="top-bar-exact">
-            <div class="top-bar-content">
-                <div class="top-bar-left">
-                    <span class="top-bar-item">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Pune, Maharashtra
-                    </span>
-                    <span class="top-bar-divider">|</span>
-                    <span class="top-bar-item">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                        +91 96046 48777 / +91 86000 44688
-                    </span>
-                </div>
-                <div class="top-bar-right">
-                    <a href="https://wa.me/919604648777" target="_blank" class="top-bar-social" aria-label="WhatsApp">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    </a>
-                    <a href="tel:+919604648777" class="top-bar-social" aria-label="Call Us">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    </a>
-                    <a href="mailto:info@reliablelandsurvey.in" class="top-bar-social" aria-label="Email Us">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+       TOP BAR (Shared Component)
+    ========================================== -->
+    <div id="site-topbar"></div>
+    <script src="js/topbar.js"></script>
 
         <nav class="nav-exact anim-nav">
             <div class="nav-logo">
@@ -98,50 +164,917 @@
             <a href="contact.html">Contact</a>
         </div>
             <button class="nav-btn" onclick="window.location.href='contact.html'">Get a Quote &rarr;</button>
-            <div class="hamburger-exact">
+        <div class="hamburger-exact">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
-      <div class="hero-content-exact" style="margin-top: 140px; padding-bottom: 80px; text-align: center;">
-        <h1 class="hero-title-exact anim-title" style="font-size: 56px; color: #fff; width: 100%; display: block;">Project Gallery</h1>
-      </div>
+
+    <!-- ==========================================
+       GALLERY HERO BANNER (Exact About Us Presentation)
+    ========================================== -->
+    <div class="about-hero-exact gallery-hero-exact"
+        style="position: relative; width: 100%; height: 480px; max-height: 500px; min-height: 440px; background-color: #eaf4fc; padding-top: 140px; overflow: hidden; box-sizing: border-box;">
+
+        <!-- Animated Background Image (Matches About Us page exactly) -->
+        <img src="assets/images/about-hero-clean.jpg" alt="Field Project Gallery" class="bg-pan-anim"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
+
+        <!-- Overlay Text (Matches About Us page exactly) -->
+        <div
+            style="position: absolute; top: 135px; left: 0; width: 100%; height: calc(100% - 135px); display: flex; flex-direction: column; justify-content: center; padding: 0 8%; z-index: 2; pointer-events: none; box-sizing: border-box;">
+            <div class="text-fade-in-left" style="max-width: 620px; padding-bottom: 20px; pointer-events: auto;">
+                <h5
+                    style="color: var(--primary-navy); font-weight: 700; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px;">
+                    PROJECT SHOWCASE</h5>
+                <div style="width: 40px; height: 3px; background: var(--accent-orange); margin-bottom: 25px;"></div>
+                <h1
+                    style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--dark-navy); line-height: 1.1; margin-bottom: 20px; font-weight: 800; text-shadow: 0 0 15px rgba(255,255,255,0.7);">
+                    Precision in Focus. <span style="color: var(--accent-orange);">Captured in Field.</span>
+                </h1>
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.6; max-width: 540px; font-weight: 700; margin-bottom: 25px; text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.9);">
+                    Explore verified field operations and engineering portfolio across Maharashtra — Total Station benchmarks, DGPS networks, RTK drone mapping, and LiDAR scans.
+                </p>
+                <div>
+                    <a href="#gallery-grid" class="hero-gallery-cta">
+                        Explore Projects <span class="cta-arrow">&darr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-        <section class="section" style="padding: 100px 0; background: var(--bg-soft);">
+    <style>
+      .hero-gallery-cta {
+        padding: 16px 36px;
+        font-size: 15.5px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: linear-gradient(135deg, #F47B20, #e06912);
+        color: #ffffff !important;
+        text-decoration: none;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        box-shadow: 0 8px 25px rgba(244, 123, 32, 0.35);
+        animation: pulseGlowGallery 2.4s infinite;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .hero-gallery-cta:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 14px 35px rgba(244, 123, 32, 0.52) !important;
+      }
+      .hero-gallery-cta .cta-arrow {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1;
+        animation: bounceArrowY 1.8s infinite ease-in-out;
+      }
+      @keyframes pulseGlowGallery {
+        0% { box-shadow: 0 0 0 0 rgba(244, 123, 32, 0.6), 0 8px 25px rgba(244, 123, 32, 0.35); }
+        70% { box-shadow: 0 0 0 16px rgba(244, 123, 32, 0), 0 12px 30px rgba(244, 123, 32, 0.45); }
+        100% { box-shadow: 0 0 0 0 rgba(244, 123, 32, 0), 0 8px 25px rgba(244, 123, 32, 0.35); }
+      }
+      @keyframes bounceArrowY {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(5px); }
+      }
+    </style>
+
+        <section class="section gallery-showcase-section" style="padding: 95px 0 105px; background: #f0f7fd url('assets/images/gallery-section-bg.png') center top / cover no-repeat; position: relative;">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 50px;">
-                    <h2 class="section-heading">Project Highlights</h2>
+                    <h2 class="section-heading" style="color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading);">Project & Product Gallery</h2>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                    <img src="assets/images/highway.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/metro.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/railway.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/drone.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/lidar.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/Our-process-bg.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <style>
+                    /* GALLERY HOVER & LIGHTBOX STYLES */
+                    .gallery-item {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 14px;
+                        box-shadow: 0 8px 24px rgba(8, 43, 76, 0.08);
+                        background: #ffffff;
+                        border: 1px solid #e2e8f0;
+                        cursor: pointer;
+                        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+                    }
+                    .gallery-item:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 16px 36px rgba(8, 43, 76, 0.16);
+                        border-color: var(--accent-orange);
+                    }
+                    .gallery-item img {
+                        width: 100%;
+                        height: 270px;
+                        object-fit: cover;
+                        display: block;
+                        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+                    .gallery-item:hover img {
+                        transform: scale(1.08);
+                    }
+                    .gallery-hover-overlay {
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(180deg, rgba(8, 43, 76, 0.05) 0%, rgba(8, 43, 76, 0.85) 100%);
+                        opacity: 0;
+                        transition: opacity 0.35s ease;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding: 20px;
+                        pointer-events: none;
+                        box-sizing: border-box;
+                    }
+                    .gallery-item:hover .gallery-hover-overlay {
+                        opacity: 1;
+                    }
+                    .gallery-badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: linear-gradient(135deg, #F47B20, #e06912);
+                        color: #ffffff;
+                        font-size: 11px;
+                        font-weight: 800;
+                        padding: 4px 10px;
+                        border-radius: 20px;
+                        align-self: flex-start;
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                        box-shadow: 0 4px 12px rgba(244, 123, 32, 0.4);
+                        transform: translateY(10px);
+                        transition: transform 0.35s ease;
+                    }
+                    .gallery-item:hover .gallery-badge {
+                        transform: translateY(0);
+                    }
+                    .gallery-caption-text {
+                        color: #ffffff;
+                        font-size: 13.5px;
+                        font-weight: 700;
+                        margin: 8px 0 0 0;
+                        line-height: 1.35;
+                        text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+                        transform: translateY(10px);
+                        transition: transform 0.4s ease 0.05s;
+                    }
+                    .gallery-item:hover .gallery-caption-text {
+                        transform: translateY(0);
+                    }
+
+                    /* LIGHTBOX MODAL STYLES */
+                    .lightbox-modal {
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(5, 22, 39, 0.94);
+                        backdrop-filter: blur(14px);
+                        z-index: 99999;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                        padding: 20px;
+                        box-sizing: border-box;
+                    }
+                    .lightbox-modal.active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .lightbox-container {
+                        max-width: 1050px;
+                        max-height: 90vh;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+                        transform: scale(0.92);
+                        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+                    .lightbox-modal.active .lightbox-container {
+                        transform: scale(1);
+                    }
+                    .lightbox-img {
+                        max-width: 100%;
+                        max-height: 75vh;
+                        object-fit: contain;
+                        border-radius: 12px;
+                        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+                        border: 2px solid rgba(255, 255, 255, 0.15);
+                    }
+                    .lightbox-caption-bar {
+                        margin-top: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        color: #ffffff;
+                        padding: 0 10px;
+                    }
+                    .lightbox-caption-title {
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #f8fafc;
+                        font-family: var(--font-heading);
+                    }
+                    .lightbox-counter {
+                        font-size: 13px;
+                        color: var(--accent-orange);
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        background: rgba(244, 123, 32, 0.15);
+                        padding: 4px 12px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(244, 123, 32, 0.3);
+                    }
+                    .lightbox-close-btn {
+                        position: absolute;
+                        top: -50px;
+                        right: 0;
+                        background: rgba(255, 255, 255, 0.15);
+                        border: none;
+                        color: #ffffff;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 24px;
+                        cursor: pointer;
+                        transition: all 0.25s ease;
+                    }
+                    .lightbox-close-btn:hover {
+                        background: var(--accent-orange);
+                        transform: rotate(90deg);
+                    }
+                    .lightbox-nav-btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: rgba(255, 255, 255, 0.15);
+                        border: none;
+                        color: #ffffff;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: all 0.25s ease;
+                    }
+                    .lightbox-nav-btn:hover {
+                        background: var(--accent-orange);
+                        transform: translateY(-50%) scale(1.1);
+                    }
+                    .lightbox-prev-btn { left: -65px; }
+                    .lightbox-next-btn { right: -65px; }
+                    @media (max-width: 991px) {
+                        .lightbox-prev-btn { left: 10px; }
+                        .lightbox-next-btn { right: 10px; }
+                        .lightbox-close-btn { top: -45px; right: 10px; }
+                    }
+
+                    /* ROTATING MARQUEE DELIVERABLES SECTION (RELIABLE BRAND THEME) */
+                    .deliverables-rotator-container {
+                        margin-top: 50px;
+                        background: #ffffff;
+                        border: 1px solid #e2e8f0;
+                        border-radius: 16px;
+                        padding: 24px 0 28px;
+                        box-shadow: 0 8px 30px rgba(8, 43, 76, 0.05);
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .deliverables-rotator-container::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        height: 3px;
+                        background: linear-gradient(90deg, var(--accent-orange), #ff9f43, var(--primary-navy));
+                    }
+
+                    .deliverables-rotator-title {
+                        text-align: center;
+                        font-size: 13px;
+                        font-weight: 800;
+                        letter-spacing: 2.2px;
+                        text-transform: uppercase;
+                        color: var(--accent-orange);
+                        margin: 0 0 20px 0;
+                        font-family: var(--font-heading);
+                    }
+
+                    .deliv-marquee-viewport {
+                        overflow: hidden;
+                        width: 100%;
+                        position: relative;
+                        padding: 4px 0;
+                        mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+                        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+                    }
+
+                    .deliv-marquee-track {
+                        display: flex;
+                        width: max-content;
+                        gap: 16px;
+                        animation: delivRotateAnimation 60s linear infinite;
+                    }
+
+                    .deliv-marquee-viewport:hover .deliv-marquee-track {
+                        animation-play-state: paused;
+                    }
+
+                    @keyframes delivRotateAnimation {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .deliv-card {
+                        display: flex;
+                        align-items: stretch;
+                        width: 285px;
+                        height: 60px;
+                        flex-shrink: 0;
+                        background: #ffffff;
+                        border: 1px solid #e2e8f0;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        box-shadow: 0 2px 6px rgba(8, 43, 76, 0.04);
+                        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+                        cursor: default;
+                    }
+
+                    .deliv-card:hover {
+                        transform: translateY(-2px);
+                        border-color: var(--accent-orange);
+                        box-shadow: 0 8px 20px rgba(8, 43, 76, 0.15), 0 0 0 1px var(--accent-orange);
+                    }
+
+                    .deliv-badge {
+                        width: 52px;
+                        background: #ffffff;
+                        color: var(--dark-navy);
+                        font-weight: 800;
+                        font-size: 19px;
+                        font-family: var(--font-heading);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-right: 1px solid rgba(8, 43, 76, 0.08);
+                        flex-shrink: 0;
+                        user-select: none;
+                        transition: color 0.25s ease;
+                    }
+
+                    .deliv-card:hover .deliv-badge {
+                        color: var(--accent-orange);
+                    }
+
+                    .deliv-info {
+                        flex: 1;
+                        background: linear-gradient(135deg, #082B4C 0%, #123F68 100%);
+                        padding: 9px 14px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        overflow: hidden;
+                    }
+
+                    /* Darker Midnight Navy Shade (matches alternating card tone from reference layout) */
+                    .deliv-card.deliv-dark .deliv-badge {
+                        color: #041B33;
+                    }
+
+                    .deliv-card.deliv-dark:hover .deliv-badge {
+                        color: var(--accent-orange);
+                    }
+
+                    .deliv-card.deliv-dark .deliv-info {
+                        background: linear-gradient(135deg, #041B33 0%, #082B4C 100%);
+                    }
+
+                    .deliv-title {
+                        color: #ffffff;
+                        font-size: 13.5px;
+                        font-weight: 700;
+                        line-height: 1.25;
+                        margin: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-family: var(--font-heading);
+                    }
+
+                    .deliv-sub {
+                        color: rgba(255, 255, 255, 0.82);
+                        font-size: 11px;
+                        line-height: 1.2;
+                        margin-top: 3px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                </style>
+
+                <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+                    
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item" data-index="0" data-src="assets/images/gallery-1.jpg" data-caption="Survey Ground Control Benchmark & Infrastructure Monument">
+                        <img src="assets/images/gallery-1.jpg" alt="Survey Ground Control Benchmark & Infrastructure Monument" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Ground Control Benchmark & Infrastructure Monument</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item" data-index="1" data-src="assets/images/gallery-2.jpg" data-caption="Rail & Metro Alignment Infrastructure Survey">
+                        <img src="assets/images/gallery-2.jpg" alt="Rail & Metro Alignment Infrastructure Survey" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Rail & Metro Alignment Infrastructure Survey</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item" data-index="2" data-src="assets/images/gallery-3.jpg" data-caption="Total Station, RTK Drone & DGPS GNSS Geospatial Instrumentation">
+                        <img src="assets/images/gallery-3.jpg" alt="Total Station, RTK Drone & DGPS GNSS Geospatial Instrumentation" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Total Station, RTK Drone & DGPS GNSS Field Station</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item" data-index="3" data-src="assets/images/gallery-4.jpg" data-caption="DGPS GNSS Control & Total Station Layout Survey on Construction Site">
+                        <img src="assets/images/gallery-4.jpg" alt="DGPS GNSS Control & Total Station Layout Survey on Construction Site" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">DGPS GNSS Control & Site Layout Demarcation</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item" data-index="4" data-src="assets/images/gallery-5.jpg" data-caption="Cadastral Boundary Survey & GIS Land Parcel Demarcation">
+                        <img src="assets/images/gallery-5.jpg" alt="Cadastral Boundary Survey & GIS Land Parcel Demarcation" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Cadastral Boundary Survey & Land Parcel GIS</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item" data-index="5" data-src="assets/images/gallery-6.jpg" data-caption="Highway & River Bridge Infrastructure Geodetic Survey Benchmark">
+                        <img src="assets/images/gallery-6.jpg" alt="Highway & River Bridge Infrastructure Geodetic Survey Benchmark" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Highway & River Bridge Geodetic Survey Benchmark</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-item" data-index="6" data-src="assets/images/gallery-7.jpg" data-caption="Roadway Drainage Culvert & Highway Alignment Survey">
+                        <img src="assets/images/gallery-7.jpg" alt="Roadway Drainage Culvert & Highway Alignment Survey" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Roadway Drainage Culvert & Alignment Stakes</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item" data-index="7" data-src="assets/images/gallery-8.jpg" data-caption="Plotted Land Layout & Residential Township Topographical Survey">
+                        <img src="assets/images/gallery-8.jpg" alt="Plotted Land Layout & Residential Township Topographical Survey" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Plotted Land Layout & Township Topographical Survey</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 9 -->
+                    <div class="gallery-item" data-index="8" data-src="assets/images/gallery-9.jpg" data-caption="Drone Photogrammetry, Total Station Operation & Valley Mapping Engineers">
+                        <img src="assets/images/gallery-9.jpg" alt="Drone Photogrammetry, Total Station Operation & Valley Mapping Engineers" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Drone Photogrammetry & Total Station Field Crew</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ==========================================
+                   ROTATING DELIVERABLES MARQUEE (AS PER REFERENCE IMAGE)
+                ========================================== -->
+                <div class="deliverables-rotator-container" id="deliverables-rotator">
+                    <h3 class="deliverables-rotator-title">OUR DELIVERABLES</h3>
+                    
+                    <div class="deliv-marquee-viewport">
+                        <div class="deliv-marquee-track">
+                            <!-- SET 1 (17 Items) -->
+                            <!-- Card 1 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">T</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Topographical Plan</h4>
+                                    <span class="deliv-sub">Boundary & Feature Demarcation</span>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">C</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Contour / Spot Level Plan</h4>
+                                    <span class="deliv-sub">0.5m & 1.0m Elevation Contours</span>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">DGPS Control & Coordinate List</h4>
+                                    <span class="deliv-sub">WGS84 / UTM Coordinate Lists</span>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">B</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Benchmark Details</h4>
+                                    <span class="deliv-sub">Survey of India GTS & MSL Ties</span>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">L</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">L-Section</h4>
+                                    <span class="deliv-sub">Longitudinal Gradient Profiles</span>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">X</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Cross-Sections</h4>
+                                    <span class="deliv-sub">Transverse Ground & Earthwork Cuts</span>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">A</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Alignment Data</h4>
+                                    <span class="deliv-sub">Horizontal & Vertical Geometry</span>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">R</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Road / Structure Inventory</h4>
+                                    <span class="deliv-sub">Culvert, Bridge & Asset Audit</span>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">U</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Utility Mapping</h4>
+                                    <span class="deliv-sub">Underground & Overhead Network</span>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">C</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">CAD Drawings</h4>
+                                    <span class="deliv-sub">Layer-Standardized .DWG / .DXF</span>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">G</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">GIS-ready Data</h4>
+                                    <span class="deliv-sub">ESRI Shapefiles & GeoPackage</span>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">DEM / DTM Support</h4>
+                                    <span class="deliv-sub">Digital Elevation & Terrain Surfaces</span>
+                                </div>
+                            </div>
+                            <!-- Card 13 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">L</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">LiDAR Point Cloud / Classified Data</h4>
+                                    <span class="deliv-sub">Classified 3D .LAS / .LAZ Dense Clouds</span>
+                                </div>
+                            </div>
+                            <!-- Card 14 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">O</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Drone Orthomosaic / DSM</h4>
+                                    <span class="deliv-sub">High-Res Spatial GeoTIFF Rasters</span>
+                                </div>
+                            </div>
+                            <!-- Card 15 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">3D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">3D Terrain / Asset Model Support</h4>
+                                    <span class="deliv-sub">Civil 3D Mesh & BIM Geospatial</span>
+                                </div>
+                            </div>
+                            <!-- Card 16 -->
+                            <div class="deliv-card">
+                                <div class="deliv-badge">S</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Survey Report</h4>
+                                    <span class="deliv-sub">Certified & Stamped QA Volumes</span>
+                                </div>
+                            </div>
+                            <!-- Card 17 -->
+                            <div class="deliv-card deliv-dark">
+                                <div class="deliv-badge">R</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Digital Field Data Reliable</h4>
+                                    <span class="deliv-sub">Verified Raw Station & Rover Logs</span>
+                                </div>
+                            </div>
+
+                            <!-- SET 2 (Duplicate for Seamless Infinite Marquee Loop) -->
+                            <!-- Card 1 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">T</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Topographical Plan</h4>
+                                    <span class="deliv-sub">Boundary & Feature Demarcation</span>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">C</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Contour / Spot Level Plan</h4>
+                                    <span class="deliv-sub">0.5m & 1.0m Elevation Contours</span>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">DGPS Control & Coordinate List</h4>
+                                    <span class="deliv-sub">WGS84 / UTM Coordinate Lists</span>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">B</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Benchmark Details</h4>
+                                    <span class="deliv-sub">Survey of India GTS & MSL Ties</span>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">L</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">L-Section</h4>
+                                    <span class="deliv-sub">Longitudinal Gradient Profiles</span>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">X</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Cross-Sections</h4>
+                                    <span class="deliv-sub">Transverse Ground & Earthwork Cuts</span>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">A</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Alignment Data</h4>
+                                    <span class="deliv-sub">Horizontal & Vertical Geometry</span>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">R</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Road / Structure Inventory</h4>
+                                    <span class="deliv-sub">Culvert, Bridge & Asset Audit</span>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">U</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Utility Mapping</h4>
+                                    <span class="deliv-sub">Underground & Overhead Network</span>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">C</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">CAD Drawings</h4>
+                                    <span class="deliv-sub">Layer-Standardized .DWG / .DXF</span>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">G</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">GIS-ready Data</h4>
+                                    <span class="deliv-sub">ESRI Shapefiles & GeoPackage</span>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">DEM / DTM Support</h4>
+                                    <span class="deliv-sub">Digital Elevation & Terrain Surfaces</span>
+                                </div>
+                            </div>
+                            <!-- Card 13 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">L</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">LiDAR Point Cloud / Classified Data</h4>
+                                    <span class="deliv-sub">Classified 3D .LAS / .LAZ Dense Clouds</span>
+                                </div>
+                            </div>
+                            <!-- Card 14 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">O</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Drone Orthomosaic / DSM</h4>
+                                    <span class="deliv-sub">High-Res Spatial GeoTIFF Rasters</span>
+                                </div>
+                            </div>
+                            <!-- Card 15 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">3D</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">3D Terrain / Asset Model Support</h4>
+                                    <span class="deliv-sub">Civil 3D Mesh & BIM Geospatial</span>
+                                </div>
+                            </div>
+                            <!-- Card 16 -->
+                            <div class="deliv-card" aria-hidden="true">
+                                <div class="deliv-badge">S</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Survey Report</h4>
+                                    <span class="deliv-sub">Certified & Stamped QA Volumes</span>
+                                </div>
+                            </div>
+                            <!-- Card 17 -->
+                            <div class="deliv-card deliv-dark" aria-hidden="true">
+                                <div class="deliv-badge">R</div>
+                                <div class="deliv-info">
+                                    <h4 class="deliv-title">Digital Field Data Reliable</h4>
+                                    <span class="deliv-sub">Verified Raw Station & Rover Logs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- ==========================================
+           INTERACTIVE LIGHTBOX MODAL
+        ========================================== -->
+        <div id="galleryLightboxModal" class="lightbox-modal" aria-hidden="true" role="dialog">
+            <div class="lightbox-container">
+                <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Preview">&times;</button>
+                <button type="button" class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Previous Photo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery Preview">
+                <button type="button" class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" aria-label="Next Photo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <div class="lightbox-caption-bar">
+                    <div id="lightboxCaption" class="lightbox-caption-title"></div>
+                    <div id="lightboxCounter" class="lightbox-counter">1 / 9</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- LIGHTBOX SCRIPT -->
+        <script>
+            (function() {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const modal = document.getElementById('galleryLightboxModal');
+                const lightboxImg = document.getElementById('lightboxImg');
+                const lightboxCaption = document.getElementById('lightboxCaption');
+                const lightboxCounter = document.getElementById('lightboxCounter');
+                const closeBtn = document.getElementById('lightboxCloseBtn');
+                const prevBtn = document.getElementById('lightboxPrevBtn');
+                const nextBtn = document.getElementById('lightboxNextBtn');
+
+                if (!modal || !galleryItems.length) return;
+
+                const imagesData = Array.from(galleryItems).map(item => ({
+                    src: item.getAttribute('data-src') || item.querySelector('img').src,
+                    caption: item.getAttribute('data-caption') || item.querySelector('img').alt
+                }));
+
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    if (index < 0) index = imagesData.length - 1;
+                    if (index >= imagesData.length) index = 0;
+                    currentIndex = index;
+
+                    lightboxImg.src = imagesData[currentIndex].src;
+                    lightboxCaption.textContent = imagesData[currentIndex].caption;
+                    lightboxCounter.textContent = `${currentIndex + 1} / ${imagesData.length}`;
+                }
+
+                function openLightbox(index) {
+                    showImage(index);
+                    modal.classList.add('active');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeLightbox() {
+                    modal.classList.remove('active');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                galleryItems.forEach((item, idx) => {
+                    item.addEventListener('click', () => openLightbox(idx));
+                });
+
+                closeBtn.addEventListener('click', closeLightbox);
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeLightbox();
+                });
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showImage(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showImage(currentIndex + 1);
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (!modal.classList.contains('active')) return;
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+                    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+                });
+            })();
+        </script>
         <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1 -->
                 <div class="footer-brand">
-                    <div style="width: fit-content;">
-                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy">
-                        <p style="color: #000; font-weight: bold; margin-bottom: 12px; font-size: 1.05rem;">Reliable Land Survey Consultancy</p>
-                        <ul style="list-style: none; padding: 0; margin: 0; color: #000;">
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Professional Surveying</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Geospatial</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> LiDAR</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Drone Mapping</li>
-                            <li style="margin-bottom: 0; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Infrastructure</li>
+                    <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
+                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; margin: 0 auto 15px auto; display: block; align-self: center;">
+                        <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
+                            <li>Professional Surveying</li>
+                            <li>Geospatial</li>
+                            <li>LiDAR</li>
+                            <li>Drone Mapping</li>
+                            <li>Infrastructure</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Column 2 -->
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -176,10 +1109,23 @@
                         <p>Pune, Maharashtra, India</p>
                         <p><a href="tel:+919604648777">+91 96046 48777</a></p>
                         <p><a href="mailto:info@reliablelandsurvey.in">info@reliablelandsurvey.in</a></p>
-                        <a href="https://wa.me/919604648777" style="color: #25D366; display: flex; align-items: center; gap: 8px; font-weight: bold;">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                            WhatsApp
-                        </a>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,26 +1139,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- ==========================================
-       FLOATING ACTION BUTTONS
-    ========================================== -->
-    <div class="floating-actions">
-        <a href="#" class="float-btn scroll-top" id="scrollTopBtn" style="display: none; background-color: var(--dark-navy); margin-bottom: 10px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-            <span class="float-tooltip">Scroll Top</span>
-        </a>
-        <a href="https://wa.me/919604648777" target="_blank" class="float-btn whatsapp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span class="float-tooltip">WhatsApp Us</span>
-        </a>
-        <a href="tel:+919604648777" class="float-btn call">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span class="float-tooltip">Call Us</span>
-        </a>
-    </div>
-
-    <!-- Script -->
+<!-- Script -->
     <script src="js/script.js"></script>
 </body>
 </html>

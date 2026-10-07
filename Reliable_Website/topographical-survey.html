@@ -22,38 +22,111 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css?v=20261007_2">
+    <link rel="stylesheet" href="css/responsive.css?v=20261007_2">
+
+    <!-- Strictly remove section label orange dot sitewide -->
+    <style>
+        .section-label::before,
+        .section-label:before,
+        .section-label::after,
+        .section-label:after {
+            display: none !important;
+            content: none !important;
+            content: "" !important;
+            width: 0 !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
+    <!-- Persistent Floating Actions Styles (Visible from page start across all devices) -->
+    <style>
+      .floating-actions {
+        position: fixed !important;
+        right: 18px !important;
+        right: calc(18px + env(safe-area-inset-right, 0px)) !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translateY(-50%) !important;
+        -webkit-transform: translateY(-50%) !important;
+        z-index: 2147483647 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      @media (max-width: 1024px) {
+        .floating-actions {
+          right: 14px !important;
+          right: calc(14px + env(safe-area-inset-right, 0px)) !important;
+          top: 50% !important;
+          bottom: auto !important;
+          transform: translateY(-50%) !important;
+          -webkit-transform: translateY(-50%) !important;
+          z-index: 2147483647 !important;
+          gap: 10px !important;
+        }
+        .float-btn {
+          width: 48px !important;
+          height: 48px !important;
+        }
+      }
+      .float-btn.whatsapp,
+      .float-btn.call {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .float-btn.scroll-top,
+      #scrollTopBtn.scroll-top,
+      #scrollTopBtn {
+        position: fixed !important;
+        bottom: 25px !important;
+        bottom: calc(25px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 20px !important;
+        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
+        z-index: 2147483646 !important;
+        background-color: var(--dark-navy) !important;
+      }
+    </style>
+
 </head>
 <body>
-
-    <!-- TOP BAR -->
-    <div class="top-bar-exact">
-        <div class="top-bar-content">
-            <div class="top-bar-left">
-                <span class="top-bar-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    Pune, Maharashtra
-                </span>
-                <span class="top-bar-divider">|</span>
-                <span class="top-bar-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    +91 96046 48777 / +91 86000 44688
-                </span>
-            </div>
-            <div class="top-bar-right">
-                <a href="https://wa.me/919604648777" target="_blank" class="top-bar-social" aria-label="WhatsApp">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                </a>
-                <a href="tel:+919604648777" class="top-bar-social" aria-label="Call Us">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                </a>
-                <a href="mailto:info@reliablelandsurvey.in" class="top-bar-social" aria-label="Email Us">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </a>
-            </div>
-        </div>
+    <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
+    <div class="floating-actions" style="position: fixed !important; right: 18px !important; top: 50% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; pointer-events: auto !important;">
+        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span class="float-tooltip">WhatsApp Us</span>
+        </a>
+        <a href="tel:+919604648777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="float-tooltip">Call Us</span>
+        </a>
     </div>
+
+    <!-- Standalone Scroll to Top Button (Bottom right) -->
+    <a href="#" class="float-btn scroll-top" id="scrollTopBtn" aria-label="Scroll Top" style="position: fixed !important; bottom: 25px !important; right: 20px !important; z-index: 2147483646 !important; display: none !important; background-color: var(--dark-navy) !important;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <span class="float-tooltip">Scroll Top</span>
+    </a>
+
+
+
+
+
+
+
+    <!-- ==========================================
+       TOP BAR (Shared Component)
+    ========================================== -->
+    <div id="site-topbar"></div>
+    <script src="js/topbar.js"></script>
 
     <!-- MAIN NAVBAR -->
     <nav class="nav-exact anim-nav">
@@ -94,26 +167,43 @@
         </div>
     </nav>
 
-    <!-- BREADCRUMB & HERO BANNER -->
-    <section style="background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-navy) 100%); padding: 75px 20px 60px 20px; margin-top: 135px; text-align: center; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 80% 20%, rgba(244,123,32,0.15) 0%, transparent 60%); pointer-events: none;"></div>
-        <div class="container" style="position: relative; z-index: 2; max-width: 950px;">
-            <div style="font-size: 12px; font-weight: 800; color: #a9b9c9; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                <a href="index.html" style="color: #cbd5e1; text-decoration: none;">HOME</a>
-                <span style="color: var(--accent-orange);">&raquo;</span>
-                <a href="services.html" style="color: #cbd5e1; text-decoration: none;">SERVICES</a>
-                <span style="color: var(--accent-orange);">&raquo;</span>
-                <span style="color: var(--accent-orange); font-weight: 800;">TOPOGRAPHICAL SURVEY</span>
+    <!-- ==========================================
+       HERO BANNER (Exact About Us Presentation)
+    ========================================== -->
+    <div class="about-hero-exact service-hero-banner"
+        style="position: relative; width: 100%; height: 480px; max-height: 500px; min-height: 440px; background-color: #eaf4fc; padding-top: 140px; overflow: hidden; box-sizing: border-box;">
+
+        <!-- Animated Background Image (Matches About Us page exactly) -->
+        <img src="assets/images/about-hero-clean.jpg" alt="Topographical Land Survey" class="bg-pan-anim"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
+
+        <!-- Overlay Text (Matches About Us page exactly) -->
+        <div
+            style="position: absolute; top: 135px; left: 0; width: 100%; height: calc(100% - 135px); display: flex; flex-direction: column; justify-content: center; padding: 0 8%; z-index: 2; pointer-events: none; box-sizing: border-box;">
+            <div class="text-fade-in-left" style="max-width: 650px; padding-bottom: 20px; pointer-events: auto;">
+                <div style="font-size: 12px; font-weight: 800; color: var(--primary-navy); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <a href="index.html" style="color: #4b5563; text-decoration: none;">HOME</a>
+                    <span style="color: var(--accent-orange);">&raquo;</span>
+                    <a href="services.html" style="color: #4b5563; text-decoration: none;">SERVICES</a>
+                    <span style="color: var(--accent-orange);">&raquo;</span>
+                    <span style="color: var(--accent-orange); font-weight: 800;">TOPOGRAPHICAL SURVEY</span>
+                </div>
+                <div style="width: 40px; height: 3px; background: var(--accent-orange); margin-bottom: 20px;"></div>
+                <h1
+                    style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--dark-navy); line-height: 1.15; margin-bottom: 18px; font-weight: 800; text-shadow: 0 0 15px rgba(255,255,255,0.7);">
+                    Topographical <span style="color: var(--accent-orange);">Land Survey.</span>
+                </h1>
+                <p style="font-size: 1.05rem; color: #333; line-height: 1.6; max-width: 550px; font-weight: 700; text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.9);">
+                    High-precision natural and man-made feature mapping with certified geodetic benchmarks in Pune & Maharashtra.
+                </p>
             </div>
-            <h1 style="color: #ffffff; font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; font-family: var(--font-heading); line-height: 1.2; margin: 0 0 16px 0;">Topographical Land Survey In Pune & Maharashtra</h1>
-            <p style="color: #e2e8f0; font-size: 16.5px; line-height: 1.6; max-width: 780px; margin: 0 auto; font-weight: 500;">High-Precision Natural & Man-Made Feature Mapping with Certified Geodetic Benchmarks</p>
         </div>
-    </section>
+    </div>
 
     <!-- TECHNICAL SPECS & OVERVIEW -->
     <section class="section" style="padding: 70px 0; background: #f8fafc;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: stretch; background: #ffffff; border-radius: 16px; box-shadow: 0 12px 35px rgba(8, 43, 76, 0.06); border: 1px solid #e2e8f0; padding: clamp(25px, 4vw, 45px); box-sizing: border-box;">
+            <div class="service-spec-grid" style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: stretch; background: #ffffff; border-radius: 16px; box-shadow: 0 12px 35px rgba(8, 43, 76, 0.06); border: 1px solid #e2e8f0; padding: clamp(25px, 4vw, 45px); box-sizing: border-box;">
                 
                 <!-- Left: Media & Quick CTA -->
                 <div style="display: flex; flex-direction: column; justify-content: space-between;">
@@ -191,28 +281,28 @@
                 
                 <div style="background: #ffffff; border-radius: 12px; padding: 25px 28px; border: 1px solid #e2e8f0; box-shadow: 0 6px 20px rgba(8,43,76,0.04); transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--accent-orange)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); display: inline-block;"></span>
+                        
                         <h3 style="color: var(--dark-navy); font-size: 18px; font-weight: 800; font-family: var(--font-heading); margin: 0;">Contour & Digital Elevation Modeling (DEM)</h3>
                     </div>
                     <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.6; margin: 0;">Precise 0.2m, 0.5m, or 1.0m interval contour lines integrated with TIN meshes for exact cut-and-fill earthwork calculations.</p>
                 </div>
                 <div style="background: #ffffff; border-radius: 12px; padding: 25px 28px; border: 1px solid #e2e8f0; box-shadow: 0 6px 20px rgba(8,43,76,0.04); transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--accent-orange)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); display: inline-block;"></span>
+                        
                         <h3 style="color: var(--dark-navy); font-size: 18px; font-weight: 800; font-family: var(--font-heading); margin: 0;">Comprehensive Utility & Infrastructure Mapping</h3>
                     </div>
                     <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.6; margin: 0;">Accurate location and depth inversion mapping of drainage channels, culverts, water lines, electric poles, and underground utility corridors.</p>
                 </div>
                 <div style="background: #ffffff; border-radius: 12px; padding: 25px 28px; border: 1px solid #e2e8f0; box-shadow: 0 6px 20px rgba(8,43,76,0.04); transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--accent-orange)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); display: inline-block;"></span>
+                        
                         <h3 style="color: var(--dark-navy); font-size: 18px; font-weight: 800; font-family: var(--font-heading); margin: 0;">Legal & Cadastral Boundary Alignment</h3>
                     </div>
                     <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.6; margin: 0;">Demarcation and cross-verification of revenue boundary limits against official village maps (7/12 extract and Gut maps).</p>
                 </div>
                 <div style="background: #ffffff; border-radius: 12px; padding: 25px 28px; border: 1px solid #e2e8f0; box-shadow: 0 6px 20px rgba(8,43,76,0.04); transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--accent-orange)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); display: inline-block;"></span>
+                        
                         <h3 style="color: var(--dark-navy); font-size: 18px; font-weight: 800; font-family: var(--font-heading); margin: 0;">As-Built Topographical Verification</h3>
                     </div>
                     <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.6; margin: 0;">Pre-construction and post-construction baseline surveys ensuring alignment with sanctioned architectural master plans.</p>
@@ -330,14 +420,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div style="width: fit-content;">
-                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy">
-                        <p style="color: #000; font-weight: bold; margin-bottom: 12px; font-size: 1.05rem;">Reliable Land Survey Consultancy</p>
-                        <ul style="list-style: none; padding: 0; margin: 0; color: #000;">
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Professional Surveying</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Geospatial Solutions</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> LiDAR & Drone Mapping</li>
-                            <li style="margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; top: 0; color: var(--accent-orange); font-weight: bold;">•</span> Infrastructure Corridors</li>
+                    <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
+                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; margin: 0 auto 15px auto; display: block; align-self: center;">
+                        <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
+                            <li>Professional Surveying</li>
+                            <li>Geospatial</li>
+                            <li>LiDAR</li>
+                            <li>Drone Mapping</li>
+                            <li>Infrastructure</li>
                         </ul>
                     </div>
                 </div>
@@ -373,10 +463,23 @@
                         <p>Pune, Maharashtra, India</p>
                         <p><a href="tel:+919604648777">+91 96046 48777</a> / <a href="tel:+918600044688">+91 86000 44688</a></p>
                         <p><a href="mailto:info@reliablelandsurvey.in">info@reliablelandsurvey.in</a></p>
-                        <a href="https://wa.me/919604648777" style="color: #25D366; display: flex; align-items: center; gap: 8px; font-weight: bold;">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                            WhatsApp Us
-                        </a>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -391,22 +494,7 @@
     </footer>
 
     <!-- FLOATING ACTION BUTTONS -->
-    <div class="floating-actions">
-        <a href="#" class="float-btn scroll-top" id="scrollTopBtn" style="display: none; background-color: var(--dark-navy); margin-bottom: 10px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-            <span class="float-tooltip">Scroll Top</span>
-        </a>
-        <a href="https://wa.me/919604648777" target="_blank" class="float-btn whatsapp">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span class="float-tooltip">WhatsApp Us</span>
-        </a>
-        <a href="tel:+919604648777" class="float-btn call">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span class="float-tooltip">Call Us</span>
-        </a>
-    </div>
-
-    <!-- Script -->
+<!-- Script -->
     <script src="js/script.js"></script>
 </body>
 </html>
