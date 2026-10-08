@@ -4032,3 +4032,420 @@ div[style*="grid-template-columns: 1fr 1.15fr"] {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================
+   SERVICE SPECIFICATION ACTION BUTTONS
+   (Request Quote & WhatsApp Us Animated CTAs)
+========================================== */
+.btn-spec-quote,
+.btn-spec-whatsapp {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 15px 18px !important;
+  font-size: 14.5px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              background-color 0.3s ease,
+              filter 0.3s ease !important;
+  z-index: 1 !important;
+  letter-spacing: 0.2px;
+}
+
+/* Continuous Elegant Shimmer Light Beam Effect */
+.btn-spec-quote::after,
+.btn-spec-whatsapp::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -130% !important;
+  width: 75% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 50%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  transform: rotate(20deg) !important;
+  pointer-events: none !important;
+  animation: specBtnShine 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+  z-index: 2 !important;
+}
+
+.btn-spec-whatsapp::after {
+  animation-delay: 1.9s !important; /* Alternates shine rhythm with Request Quote */
+}
+
+@keyframes specBtnShine {
+  0% {
+    left: -130%;
+  }
+  26%, 100% {
+    left: 160%;
+  }
+}
+
+/* Request Quote Specific Styles & Pulsing Glow */
+.btn-spec-quote {
+  background: var(--accent-orange, #F47B20) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(244, 123, 32, 0.35) !important;
+  animation: specPulseOrange 3.5s ease-in-out infinite !important;
+}
+
+@keyframes specPulseOrange {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(244, 123, 32, 0.32);
+  }
+  50% {
+    box-shadow: 0 8px 22px rgba(244, 123, 32, 0.55);
+  }
+}
+
+/* WhatsApp Us Specific Styles & Pulsing Glow */
+.btn-spec-whatsapp {
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35) !important;
+  animation: specPulseGreen 3.5s ease-in-out infinite !important;
+  animation-delay: 1.75s !important;
+}
+
+@keyframes specPulseGreen {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.32);
+  }
+  50% {
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.55);
+  }
+}
+
+/* Interactive Hover State with 3D Elevation & Radiant Glow */
+.btn-spec-quote:hover {
+  transform: translateY(-3.5px) scale(1.02) !important;
+  background: #e06a14 !important;
+  box-shadow: 0 12px 28px rgba(244, 123, 32, 0.55), 0 4px 10px rgba(244, 123, 32, 0.3) !important;
+  filter: brightness(1.04) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-spec-whatsapp:hover {
+  transform: translateY(-3.5px) scale(1.02) !important;
+  background: #1eb956 !important;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55), 0 4px 10px rgba(37, 211, 102, 0.3) !important;
+  filter: brightness(1.04) !important;
+  color: #FFFFFF !important;
+}
+
+/* Active Click Press State */
+.btn-spec-quote:active,
+.btn-spec-whatsapp:active {
+  transform: translateY(-1px) scale(0.98) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ==========================================
+   KEY CAPABILITIES & CORE DELIVERABLES SECTION
+   (Theme background and animated interactive cards)
+========================================== */
+.capabilities-theme-section {
+  background: radial-gradient(circle at 10% 15%, rgba(244, 123, 32, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at 90% 85%, rgba(8, 43, 76, 0.14) 0%, transparent 45%),
+              linear-gradient(135deg, #e3effa 0%, #edf5fc 50%, #d8e8f7 100%) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.capabilities-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.capability-card {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  padding: 32px 26px 28px !important;
+  border: 1px solid #dbe7f2 !important;
+  box-shadow: 0 8px 24px rgba(8, 43, 76, 0.04) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease !important;
+  cursor: pointer !important;
+}
+
+/* Top accent gradient bar */
+.capability-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, var(--accent-orange), #ffaa5b) !important;
+  transition: height 0.3s ease !important;
+}
+
+.capability-card.theme-navy::before {
+  background: linear-gradient(90deg, var(--primary-navy), #2563eb) !important;
+}
+
+/* Shimmer beam across the card on hover */
+.capability-card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -120% !important;
+  width: 60% !important;
+  height: 200% !important;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.6), transparent) !important;
+  transform: rotate(25deg) !important;
+  pointer-events: none !important;
+  transition: left 0.75s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.capability-card:hover::after {
+  left: 150% !important;
+}
+
+/* Card Hover Animation */
+.capability-card:hover {
+  transform: translateY(-8px) scale(1.015) !important;
+  box-shadow: 0 22px 42px -8px rgba(8, 43, 76, 0.14), 0 0 0 1.5px var(--accent-orange) !important;
+  border-color: var(--accent-orange) !important;
+}
+
+.capability-card.theme-navy:hover {
+  box-shadow: 0 22px 42px -8px rgba(8, 43, 76, 0.14), 0 0 0 1.5px var(--primary-navy) !important;
+  border-color: var(--primary-navy) !important;
+}
+
+/* Icon Container & Hover Animation */
+.cap-icon-box {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  margin-bottom: 18px !important;
+  background: rgba(244, 123, 32, 0.1) !important;
+  color: var(--accent-orange) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.35s ease,
+              color 0.35s ease,
+              box-shadow 0.35s ease !important;
+}
+
+.capability-card.theme-navy .cap-icon-box {
+  background: rgba(8, 43, 76, 0.08) !important;
+  color: var(--dark-navy) !important;
+}
+
+.capability-card:hover .cap-icon-box {
+  transform: scale(1.12) rotate(6deg) !important;
+  background: var(--accent-orange) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(244, 123, 32, 0.38) !important;
+}
+
+.capability-card.theme-navy:hover .cap-icon-box {
+  background: var(--primary-navy) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(8, 43, 76, 0.35) !important;
+}
+
+/* Card Heading Hover Transition */
+.capability-card h3 {
+  color: var(--dark-navy) !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  font-family: var(--font-heading) !important;
+  margin: 0 0 10px 0 !important;
+  line-height: 1.35 !important;
+  transition: color 0.3s ease !important;
+}
+
+.capability-card:hover h3 {
+  color: var(--accent-orange) !important;
+}
+
+.capability-card.theme-navy:hover h3 {
+  color: #2563eb !important;
+}
+
+/* Card Paragraph */
+.capability-card p {
+  color: var(--text-muted) !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* ==========================================
+   FAQS THEME SECTION
+   (Theme background)
+========================================== */
+.faqs-theme-section {
+  background: radial-gradient(circle at 10% 15%, rgba(244, 123, 32, 0.10) 0%, transparent 40%),
+              radial-gradient(circle at 90% 85%, rgba(8, 43, 76, 0.12) 0%, transparent 45%),
+              linear-gradient(135deg, #e3effa 0%, #edf5fc 50%, #d8e8f7 100%) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* ==========================================
+   SERVICE PAGE CTA BANNER
+   (High-contrast typography & animated buttons)
+========================================== */
+.service-cta-banner {
+  background: linear-gradient(135deg, #082B4C 0%, #123F68 100%) !important;
+  padding: 85px 20px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.service-cta-banner h2 {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 3.8vw, 2.7rem) !important;
+  font-weight: 800 !important;
+  font-family: var(--font-heading) !important;
+  margin: 0 0 16px 0 !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+.service-cta-banner p {
+  color: #cbd5e1 !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  margin: 0 auto 32px auto !important;
+  max-width: 680px !important;
+}
+
+.service-cta-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Quote Button with Pulsing Glow Animation */
+.cta-banner-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: var(--accent-orange) !important;
+  color: #ffffff !important;
+  padding: 16px 36px !important;
+  font-size: 15.5px !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(244, 123, 32, 0.35) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  animation: ctaBtnPulse 2.8s infinite ease-in-out !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.cta-banner-btn-primary::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -120% !important;
+  width: 60% !important;
+  height: 200% !important;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  transform: rotate(25deg) !important;
+  transition: left 0.7s ease !important;
+}
+
+.cta-banner-btn-primary:hover::after {
+  left: 150% !important;
+}
+
+.cta-banner-btn-primary:hover {
+  background: var(--accent-orange-hover) !important;
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 14px 30px rgba(244, 123, 32, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.cta-banner-btn-primary svg {
+  transition: transform 0.3s ease !important;
+}
+
+.cta-banner-btn-primary:hover svg {
+  transform: translateX(5px) !important;
+}
+
+/* Secondary Phone Button with Glassmorphism & Hover Glow */
+.cta-banner-btn-phone {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  text-decoration: none !important;
+  padding: 16px 32px !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 15.5px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.cta-banner-btn-phone:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.cta-banner-btn-phone svg {
+  transition: transform 0.35s ease !important;
+}
+
+.cta-banner-btn-phone:hover svg {
+  transform: rotate(-15deg) scale(1.2) !important;
+  color: var(--accent-orange) !important;
+}
+
+/* Keyframe for glowing pulse on the primary button */
+@keyframes ctaBtnPulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(244, 123, 32, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(244, 123, 32, 0.65), 0 0 0 4px rgba(244, 123, 32, 0.2);
+  }
+}
+
+
+
+
