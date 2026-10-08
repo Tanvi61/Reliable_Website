@@ -26,9 +26,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261007_11">
-    <link rel="stylesheet" href="css/responsive.css?v=20261007_11">
+    <link rel="stylesheet" href="css/style.css?v=20261007_12">
+    <link rel="stylesheet" href="css/responsive.css?v=20261007_12">
 
+    <!-- Strictly prevent horizontal overflow on all viewports -->
+    <style>
+      html, body {
+        overflow-x: hidden !important;
+        overflow-x: clip !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      *, *::before, *::after {
+        box-sizing: border-box !important;
+      }
+      @media (max-width: 1024px) {
+        .nav-exact {
+          left: 10px !important;
+          right: 10px !important;
+          width: auto !important;
+          max-width: calc(100vw - 20px) !important;
+          box-sizing: border-box !important;
+        }
+        .nav-exact .nav-links {
+          display: none !important;
+        }
+        .nav-exact .nav-links.active {
+          display: block !important;
+        }
+      }
+    </style>
     <!-- Strictly remove section label orange dot sitewide -->
     <style>
         .section-label::before,
@@ -294,10 +322,10 @@
     </style>
     <section class="section" style="padding: 100px 20px; background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-navy) 100%); overflow: hidden; position: relative;">
         <!-- Subtle dark background glow -->
-        <div style="position: absolute; top: 0; right: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(244,123,32,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+        <div style="position: absolute; top: 0; right: 0; width: min(600px, 100vw); height: min(600px, 100vw); max-width: 100%; background: radial-gradient(circle, rgba(244,123,32,0.15) 0%, transparent 70%); pointer-events: none; overflow: hidden;"></div>
         
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 60px; align-items: center;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(30px, 4vw, 60px); align-items: center;">
                 
                 <!-- Left Content -->
                 <div class="fade-up">
