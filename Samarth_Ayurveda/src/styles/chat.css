@@ -1,0 +1,705 @@
+/* ========================================================
+   FLOATING CHAT WITH SONA WIDGET & CHAT APPLICATION
+   Matches reference Ayurveda design pixel-for-pixel
+   (Extracted directly from live Sona Herbal / ShopAssist widget)
+======================================================== */
+
+:root {
+  --sona-green-900: #123b22;
+  --sona-green-700: #1c5d31;
+  --sona-green-600: #23733a;
+  --sona-green-500: #2f8f46;
+  --sona-green-100: #dff4e2;
+  --sona-green-50: #f2fbf3;
+  --sona-ring: #d8efd9;
+  --sona-pill-tab: #607a52;
+}
+
+/* Fixed Container - Visible in the whole screen */
+.sona-floating-chat-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: inherit;
+  pointer-events: none;
+}
+
+/* Floating Trigger Wrapper */
+.sona-chat-trigger-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: auto;
+  user-select: none;
+}
+
+/* Dismiss / Hide text prompt button */
+.sona-chat-dismiss-btn {
+  position: absolute;
+  top: -8px;
+  right: 72px;
+  z-index: 10;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.sona-chat-dismiss-btn:hover {
+  color: #0f172a;
+  background: #f8fafc;
+  transform: scale(1.08);
+}
+
+.sona-chat-dismiss-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Main Clickable Trigger Button */
+.sona-chat-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+/* "Chat with Sona" Green Pill Tab */
+.sona-chat-pill {
+  position: relative;
+  margin-right: -8px;
+  border-radius: 15px;
+  background-color: var(--sona-pill-tab);
+  color: #ffffff;
+  padding: 12px 20px 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(18, 59, 34, 0.22);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sona-chat-trigger-btn:hover .sona-chat-pill {
+  background-color: var(--sona-green-700);
+  transform: translateX(-2px);
+  box-shadow: 0 10px 28px rgba(18, 59, 34, 0.28);
+}
+
+.sona-chat-pill.is-hidden {
+  opacity: 0;
+  transform: scale(0.8) translateX(20px);
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Circular Avatar Wrapper (Prominent 74px Circle with Sage Ring) */
+.sona-chat-avatar-wrap {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px var(--sona-ring), 0 10px 28px rgba(18, 59, 34, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  overflow: visible;
+  padding: 6px;
+}
+
+.sona-chat-trigger-btn:hover .sona-chat-avatar-wrap {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px #c2e5c4, 0 12px 32px rgba(18, 59, 34, 0.28);
+}
+
+/* Sona Image */
+.sona-chat-avatar-img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Live Active Dot */
+.sona-chat-online-dot {
+  position: absolute;
+  bottom: 6px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #10b981;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================================
+   CHAT APPLICATION WINDOW (POPOVER DIALOG)
+======================================================== */
+.sona-chat-window {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 410px;
+  max-width: calc(100vw - 20px);
+  height: min(720px, calc(100vh - 32px));
+  max-height: calc(100vh - 32px);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid var(--sona-green-100);
+  box-shadow: 0 20px 60px rgba(18, 59, 34, 0.22), 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 2147483647;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.96);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+}
+
+.sona-chat-window.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Chat Header - Matches Sona Herbal / ShopAssist */
+.sona-chat-header {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--sona-green-700);
+  padding: 14px 16px;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.sona-chat-header-bg-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 90% 20%, rgba(208, 174, 73, 0.22), transparent 30%);
+}
+
+.sona-chat-header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sona-chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sona-chat-header-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.sona-chat-header-meta {
+  min-width: 0;
+}
+
+.sona-chat-header-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sona-chat-header-subtitle {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--sona-green-50);
+  line-height: 1.2;
+}
+
+.sona-chat-header-close-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  border: none;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.18s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.sona-chat-header-close-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Messages Body - Light mint pale gradient */
+.sona-chat-body {
+  flex: 1;
+  background: linear-gradient(to bottom, var(--sona-green-50) 0%, #ffffff 42%, #ffffff 100%);
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+.sona-chat-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sona-chat-body::-webkit-scrollbar-thumb {
+  background: #d4e8da;
+  border-radius: 4px;
+}
+
+/* Chat Message Rows */
+.sona-chat-msg-row {
+  display: flex;
+  width: 100%;
+  animation: sonaMsgFadeIn 0.22s ease-out;
+}
+
+@keyframes sonaMsgFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sona-chat-msg-row.msg-bot {
+  justify-content: flex-start;
+}
+
+.sona-chat-msg-row.msg-user {
+  justify-content: flex-end;
+}
+
+/* Chat Bubbles */
+.sona-chat-msg-bubble {
+  max-width: 86%;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  border-radius: 16px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.sona-chat-msg-row.msg-bot .sona-chat-msg-bubble {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid var(--sona-green-100);
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.sona-chat-msg-row.msg-user .sona-chat-msg-bubble {
+  background: var(--sona-green-600);
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 1px 3px rgba(35, 115, 58, 0.2);
+}
+
+.sona-chat-msg-bubble a {
+  color: var(--sona-green-700);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Rich Product Card inside Bot Message */
+.sona-chat-product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  white-space: normal;
+}
+
+.sona-chat-product-header {
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--sona-green-700) 0%, var(--sona-green-600) 100%);
+  padding: 14px;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(18, 59, 34, 0.15);
+}
+
+.sona-chat-product-badge {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(242, 251, 243, 0.82);
+}
+
+.sona-chat-product-title {
+  margin: 4px 0 0 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.sona-chat-product-price {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: var(--sona-green-700);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sona-chat-product-mrp {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.sona-chat-product-section {
+  border-radius: 12px;
+  border: 1px solid var(--sona-green-100);
+  background: var(--sona-green-50);
+  padding: 10px 12px;
+}
+
+.sona-chat-product-section.section-grey {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+.sona-chat-product-section.section-alert {
+  background: #fffbeb;
+  border-color: #fef3c7;
+}
+
+.sona-chat-product-label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sona-green-700);
+}
+
+.sona-chat-product-section.section-grey .sona-chat-product-label {
+  color: #64748b;
+}
+
+.sona-chat-product-section.section-alert .sona-chat-product-label {
+  color: #b45309;
+}
+
+.sona-chat-product-val {
+  margin: 3px 0 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.sona-chat-product-disclaimer {
+  margin: 2px 0 0 0;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #64748b;
+}
+
+.sona-chat-product-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: var(--sona-green-600);
+  color: #ffffff;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(35, 115, 58, 0.25);
+  margin-top: 4px;
+}
+
+.sona-chat-product-btn:hover {
+  background-color: var(--sona-green-700);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(35, 115, 58, 0.32);
+}
+
+/* Typing Indicator */
+.sona-chat-typing-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  background: #ffffff;
+  border: 1px solid var(--sona-green-100);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-size: 13.5px;
+  color: #64748b;
+  width: fit-content;
+}
+
+.sona-chat-typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  animation: sonaTypingBounce 1.2s infinite ease-in-out;
+}
+
+.sona-chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.sona-chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes sonaTypingBounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+}
+
+/* Footer Section - Quick actions & input */
+.sona-chat-footer {
+  border-top: 1px solid var(--sona-green-100);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 14px 14px 14px;
+  box-shadow: 0 -10px 24px rgba(18, 59, 34, 0.05);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* Quick Action Chips Row - Horizontal scroll */
+.sona-chat-chips-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sona-chat-chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.sona-chat-chip {
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--sona-green-100);
+  background-color: var(--sona-green-50);
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--sona-green-700);
+  cursor: pointer;
+  transition: all 0.16s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.sona-chat-chip:hover {
+  border-color: var(--sona-green-500);
+  background-color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sona-chat-chip:active,
+.sona-chat-chip.is-active {
+  background-color: #ffffff;
+  border: 1.5px solid var(--sona-green-700);
+  color: var(--sona-green-700);
+}
+
+/* Placeholder Pill - Matches Screenshot exact "Please choose an option above" */
+.sona-chat-input-placeholder-pill {
+  border-radius: 9999px;
+  border: 1px solid var(--sona-green-100);
+  background-color: #f8fafc;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5d6f83;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  text-align: left;
+}
+
+.sona-chat-input-placeholder-pill:hover {
+  border-color: var(--sona-green-500);
+  background-color: #ffffff;
+  color: #334155;
+}
+
+.sona-chat-input-placeholder-pill.is-hidden {
+  display: none;
+}
+
+/* Active Form Input */
+.sona-chat-input-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sona-chat-input-form.is-hidden {
+  display: none;
+}
+
+.sona-chat-input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--sona-green-100);
+  background-color: #f8fafc;
+  padding: 11px 18px;
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.sona-chat-input::placeholder {
+  color: #94a3b8;
+}
+
+.sona-chat-input:focus {
+  border-color: var(--sona-green-500);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 143, 70, 0.12);
+}
+
+.sona-chat-send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--sona-green-600);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(35, 115, 58, 0.28);
+  padding: 0;
+}
+
+.sona-chat-send-btn:hover:not(:disabled) {
+  background-color: var(--sona-green-700);
+  transform: scale(1.05);
+}
+
+.sona-chat-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .sona-floating-chat-container {
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .sona-chat-avatar-wrap {
+    width: 66px;
+    height: 66px;
+    box-shadow: 0 0 0 3.5px var(--sona-ring), 0 8px 22px rgba(18, 59, 34, 0.22);
+    padding: 5px;
+  }
+
+  .sona-chat-avatar-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sona-chat-pill {
+    padding: 10px 18px 10px 14px;
+    font-size: 13.5px;
+    border-radius: 14px;
+    margin-right: -6px;
+  }
+
+  .sona-chat-online-dot {
+    width: 17px;
+    height: 17px;
+    bottom: 5px;
+    right: 1px;
+    border: 2.5px solid #ffffff;
+  }
+
+  .sona-chat-dismiss-btn {
+    right: 64px;
+    top: -6px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .sona-chat-window {
+    bottom: 8px;
+    right: 8px;
+    width: calc(100vw - 16px);
+    max-width: calc(100vw - 16px);
+    height: min(640px, calc(100svh - 96px));
+    border-radius: 18px;
+  }
+}

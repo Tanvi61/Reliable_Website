@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800;900&display=swap');
+
+/* Exact Bricolage Grotesque font assets matching original store */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/bricolagegrotesque_n5.woff2') format('woff2'),
+       url('https://sonaherbal.com/cdn/fonts/bricolage_grotesque/bricolagegrotesque_n5.8c091e52a78b3e58ef96221ce55140a80a8253ff.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/bricolagegrotesque_n5.woff2') format('woff2'),
+       url('https://sonaherbal.com/cdn/fonts/bricolage_grotesque/bricolagegrotesque_n5.8c091e52a78b3e58ef96221ce55140a80a8253ff.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/bricolagegrotesque_n7.woff2') format('woff2'),
+       url('https://sonaherbal.com/cdn/fonts/bricolage_grotesque/bricolagegrotesque_n7.de5675dd7a8e145fdc4cb2cfe67a16cb085528d0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/bricolagegrotesque_n7.woff2') format('woff2'),
+       url('https://sonaherbal.com/cdn/fonts/bricolage_grotesque/bricolagegrotesque_n7.de5675dd7a8e145fdc4cb2cfe67a16cb085528d0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/bricolagegrotesque_n7.woff2') format('woff2'),
+       url('https://sonaherbal.com/cdn/fonts/bricolage_grotesque/bricolagegrotesque_n7.de5675dd7a8e145fdc4cb2cfe67a16cb085528d0.woff2') format('woff2');
+}
+
+:root {
+  /* Typography */
+  --font-family: 'Bricolage Grotesque', sans-serif;
+  
+  /* Brand Color Palette */
+  --color-brand-green: #084e10;
+  --color-brand-green-dark: #052d0a;
+  --color-brand-green-light: #166e22;
+  --color-brand-forest: #062b20;
+  --color-brand-forest-dark: #031a14;
+  --color-gold: #d7b36a;
+  --color-gold-dark: #b8863b;
+  --color-gold-light: #f5e4bd;
+  --color-orange-accent: #f28b31;
+  --color-sale-red: #c4301c;
+  --color-cart-bubble: #d93b26;
+
+  /* Neutrals & Backgrounds */
+  --bg-white: #ffffff;
+  --bg-cream: #fffaf2;
+  --bg-light-gray: #f5f5f5;
+  --bg-warm-light: #fcfaf5;
+  --text-dark: #111111;
+  --text-muted: #555555;
+  --text-light-muted: #777777;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-color-dark: rgba(255, 255, 255, 0.15);
+
+  /* Layout */
+  --container-max-width: 1400px;
+  --container-padding: 24px;
+  --container-padding-mobile: 16px;
+
+  /* Corner Radii */
+  --radius-button: 60px;
+  --radius-badge: 60px;
+  --radius-card: 18px;
+  --radius-dialog: 20px;
+  --radius-input: 60px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-floating: 0 30px 80px rgba(20, 45, 28, 0.14);
+}

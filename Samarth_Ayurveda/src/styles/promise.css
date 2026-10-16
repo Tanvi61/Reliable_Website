@@ -1,0 +1,218 @@
+/* ========================================================
+   OUR PROMISE SECTION (Exact Ayurveda match)
+======================================================== */
+.sona-promise-white {
+  padding: 86px 18px;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.spw-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.spw-head {
+  max-width: 760px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.spw-eyebrow {
+  color: #b88a44;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.spw-head h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.08;
+  font-weight: 900;
+  color: #0f3a2e;
+  letter-spacing: -0.5px;
+}
+
+.spw-head p {
+  margin: 18px auto 0;
+  color: #6a6258;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 690px;
+}
+
+.spw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.spw-card {
+  background: #fcfbf8;
+  border: 1px solid rgba(184, 138, 68, 0.26);
+  border-radius: 28px;
+  padding: 34px 26px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spw-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(184, 138, 68, 0.55);
+  box-shadow: 0 14px 34px rgba(184, 138, 68, 0.08);
+}
+
+.spw-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  border: 1px solid rgba(15, 58, 46, 0.18);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f3a2e;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(15, 58, 46, 0.06);
+}
+
+.spw-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.spw-card h3 {
+  margin: 0;
+  color: #0f3a2e;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.spw-card p {
+  margin: 14px 0 0;
+  color: #6c6256;
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+
+.spw-stats {
+  margin-top: 34px;
+  border: 1px solid rgba(184, 138, 68, 0.28);
+  border-radius: 30px;
+  background: #ffffff;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.spw-stat {
+  text-align: center;
+  padding: 18px;
+  border-radius: 22px;
+  background: #fcfbf8;
+}
+
+.spw-stat strong {
+  display: block;
+  color: #0f3a2e;
+  font-size: 36px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.spw-stat span {
+  display: block;
+  margin-top: 9px;
+  color: #8b6b3c;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 990px) {
+  .spw-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 749px) {
+  .sona-promise-white {
+    padding: 60px 16px;
+  }
+
+  .spw-head {
+    margin-bottom: 34px;
+  }
+
+  .spw-head h2 {
+    font-size: 34px;
+  }
+
+  .spw-head p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .spw-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .spw-card {
+    padding: 22px 14px;
+    border-radius: 18px;
+    min-height: 245px;
+  }
+
+  .spw-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .spw-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .spw-card h3 {
+    font-size: 17px;
+  }
+
+  .spw-card p {
+    font-size: 13px;
+  }
+
+  .spw-stats {
+    grid-template-columns: 1fr;
+    padding: 20px 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .spw-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .spw-card {
+    min-height: auto;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,173 @@
+/* ========================================================
+   MEET OUR FOUNDER SECTION (Exact Ayurveda match)
+======================================================== */
+.sona-founder {
+  padding: 90px 18px;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.sf-wrap {
+  max-width: 1240px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.sf-image {
+  position: relative;
+}
+
+.sf-image img {
+  width: 100%;
+  display: block;
+  border-radius: 34px;
+  border: 1px solid rgba(184, 138, 68, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.sf-badge {
+  position: absolute;
+  right: -18px;
+  bottom: 28px;
+  background: #0f3a2e;
+  color: #fffaf2;
+  padding: 18px 22px;
+  border-radius: 22px;
+  font-weight: 900;
+  box-shadow: 0 18px 45px rgba(15, 58, 46, 0.18);
+  font-size: 15px;
+}
+
+.sf-badge span {
+  display: block;
+  color: #d7b36a;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 800;
+}
+
+.sf-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-eyebrow {
+  color: #b88a44;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.sf-content h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.08;
+  font-weight: 950;
+  color: #0f3a2e;
+  letter-spacing: -0.5px;
+}
+
+.sf-content p {
+  margin: 18px 0 0;
+  color: #5f574d;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.sf-quote {
+  margin-top: 28px;
+  padding: 24px 26px;
+  border-left: 4px solid #b88a44;
+  background: #fcfbf8;
+  border-radius: 0 24px 24px 0;
+  color: #0f3a2e;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.sf-name {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sf-sign {
+  font-size: 32px;
+  color: #0f3a2e;
+  font-weight: 950;
+  font-family: 'Bricolage Grotesque', cursive, serif;
+}
+
+.sf-role {
+  color: #8b6b3c;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .sona-founder {
+    padding: 70px 18px;
+  }
+
+  .sf-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .sf-badge {
+    right: 12px;
+    bottom: 16px;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 749px) {
+  .sona-founder {
+    padding: 56px 14px;
+  }
+
+  .sf-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .sf-image img {
+    border-radius: 24px;
+  }
+
+  .sf-badge {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 15px;
+    border-radius: 16px;
+    font-size: 13px;
+  }
+
+  .sf-content {
+    text-align: center;
+  }
+
+  .sf-quote {
+    text-align: left;
+    font-size: 15px;
+    padding: 18px 20px;
+    border-radius: 0 18px 18px 0;
+  }
+
+  .sf-name {
+    justify-content: center;
+  }
+}

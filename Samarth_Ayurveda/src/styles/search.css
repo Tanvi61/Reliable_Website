@@ -1,0 +1,142 @@
+/* ========================================================
+   PREDICTIVE SEARCH MODAL
+======================================================== */
+.search-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all var(--transition-fast);
+}
+
+.search-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-box-container {
+  width: 100%;
+  max-width: 680px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid var(--color-brand-green);
+  padding-bottom: 12px;
+}
+
+.search-icon-left {
+  color: var(--color-brand-green);
+  font-size: 20px;
+}
+
+.search-input-field {
+  flex: 1;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.search-close-icon {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 20px;
+  padding: 4px;
+  transition: color var(--transition-fast);
+}
+
+.search-close-icon:hover {
+  color: #000000;
+}
+
+.search-results-list {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-item-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.search-item-card:hover {
+  background-color: #f5f8f5;
+}
+
+.search-item-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.search-item-info {
+  flex: 1;
+}
+
+.search-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.search-item-price {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-brand-green);
+}
+
+@media (max-width: 600px) {
+  .search-modal {
+    padding: 20px 14px;
+  }
+
+  .search-box-container {
+    padding: 16px;
+    border-radius: 16px;
+    gap: 14px;
+  }
+
+  .search-input-field {
+    font-size: 16px;
+  }
+
+  .search-results-list {
+    max-height: 60vh;
+  }
+}
+
+#trackModalClose:hover,
+#policyModalClose:hover {
+  background-color: #e2e8e3 !important;
+  color: #111111 !important;
+}
