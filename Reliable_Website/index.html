@@ -63,9 +63,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261010-11">
-    <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
+    <link rel="stylesheet" href="css/style.css?v=20261028-drone-focus">
+    <link rel="stylesheet" href="css/responsive.css?v=20261028-drone-focus">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -178,7 +178,7 @@
   "url": "https://www.reliablelandsurvey.in/",
   "logo": "https://www.reliablelandsurvey.in/assets/images/logo.png",
   "image": "https://www.reliablelandsurvey.in/assets/images/logo.png",
-  "description": "Professional land surveying, DGPS, Total Station, RTK Drone mapping, LiDAR scanning and GIS processing across Maharashtra, India.",
+  "description": "Professional land surveying, DGPS, Total Station, RTK Drone mapping, LiDAR scanning and GPR processing across Maharashtra, India.",
   "telephone": "+919604646777",
   "email": "tanviii6104@gmail.com",
   "priceRange": "$",
@@ -289,10 +289,8 @@
        HERO EXACT REPLICA
     ========================================== -->
     <div class="hero-exact">
-        <video class="hero-video-bg video-primary" autoplay muted playsinline>
-            <source src="assets/video/hero-bg-videl.mp4" type="video/mp4">
-        </video>
-        <video class="hero-video-bg video-secondary" muted playsinline>
+        <!-- Background Drone Video (Continuously playing in background) -->
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/images/drone.jpg">
             <source src="assets/video/hero-bg-videl.mp4" type="video/mp4">
         </video>
 
@@ -323,7 +321,10 @@
                     <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
                     <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
                     <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
                         <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
@@ -355,7 +356,62 @@
                 LiDAR, drone mapping, DGPS, Total Station and modern<br class="desktop-break">
                 survey technology for infrastructure projects.
             </p>
+        </div>
 
+        <!-- Rectangular Showcase Slider Box (Floating on Right Side) -->
+        <div class="hero-showcase-box" id="heroShowcaseBox">
+            <div class="showcase-slider">
+                <!-- Slide 1: Proprietors & Central Office -->
+                <div class="showcase-slide active">
+                    <img src="assets/images/hero-proprietors-office.jpg" alt="Reliable Land Survey Consultancy Proprietors Mahesh Deshmukh & Sharad Pingale" class="showcase-img" style="object-position: center 30%;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Leadership & Team</span>
+                        <h4 class="showcase-title">Central Office & Executive Leadership</h4>
+                    </div>
+                </div>
+                <!-- Slide 2: Road & Highway Survey -->
+                <div class="showcase-slide">
+                    <img src="assets/images/why-reliable-infrastructure.jpg" alt="Field Survey Engineers Operating Total Station and Tripod" class="showcase-img" style="object-position: center 35%;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Field Operations</span>
+                        <h4 class="showcase-title">Highways & Road Infrastructure Survey</h4>
+                    </div>
+                </div>
+                <!-- Slide 3: Metro Rail Transit -->
+                <div class="showcase-slide">
+                    <img src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey" class="showcase-img" style="object-position: center center;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Transit Corridors</span>
+                        <h4 class="showcase-title">Metro Rail Track & Alignment Survey</h4>
+                    </div>
+                </div>
+                <!-- Slide 4: RTK Drone & 3D LiDAR -->
+                <div class="showcase-slide">
+                    <img src="assets/images/drone.jpg" alt="RTK Drone Mapping and LiDAR Aerial Geospatial Survey" class="showcase-img" style="object-position: center center;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Aerial Geospatial</span>
+                        <h4 class="showcase-title">RTK Drone & 3D LiDAR Mapping</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Navigation Controls -->
+            <div class="showcase-nav-bar">
+                <div class="showcase-dots" id="showcaseDots">
+                    <button class="showcase-dot active" aria-label="Slide 1"></button>
+                    <button class="showcase-dot" aria-label="Slide 2"></button>
+                    <button class="showcase-dot" aria-label="Slide 3"></button>
+                    <button class="showcase-dot" aria-label="Slide 4"></button>
+                </div>
+                <div class="showcase-arrows">
+                    <button class="showcase-arrow prev" id="showcasePrev" aria-label="Previous Slide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="showcase-arrow next" id="showcaseNext" aria-label="Next Slide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -373,10 +429,13 @@
                         Accuracy.<br>Driven by Technology.</h2>
 
                     <p style="font-size: 16px; color: var(--text-body); margin-bottom: 18px; line-height: 1.7;">
-                        Reliable Land Survey Consultancy is a professional surveying and geospatial service provider focused on delivering accurate field data, engineering-ready deliverables, and dependable on-site support.
+                        Reliable Land Survey Consultancy is a professional surveying and geospatial service provider delivering accurate field data, reliable surveying solutions, and engineering-ready outputs for infrastructure and development projects.
+                    </p>
+                    <p style="font-size: 16px; color: var(--text-body); margin-bottom: 18px; line-height: 1.7;">
+                        We specialize in surveying services for Metro Rail, Railways, Highways, and Land Development, combining experienced field professionals with modern surveying technologies to deliver precise and dependable results.
                     </p>
                     <p style="font-size: 16px; color: var(--text-body); margin-bottom: 20px; line-height: 1.7;">
-                        We provide specialized surveying solutions across critical infrastructure sectors including Metro Rail, Railways, Highways, and Land Development. Combining experienced field practices with modern surveying technology, our team delivers high-precision, dependable data tailored for engineering and construction excellence.
+                        We support engineers, contractors, and developers with trusted data and on-site expertise, ensuring precision, quality, and efficiency throughout every project.
                     </p>
 
                     <div style="margin-bottom: 25px; padding: 12px 18px; background: rgba(244, 123, 32, 0.08); border-left: 3px solid var(--accent-orange); border-radius: 0 6px 6px 0; display: inline-flex; align-items: center; gap: 14px; max-width: 100%; box-sizing: border-box;">
@@ -489,7 +548,7 @@
                 </style>
                 <div style="position: relative; margin-top: 20px;">
                     <div class="premium-image-container">
-                        <img decoding="async" src="assets/images/highway.jpg" alt="High Precision Highway & Infrastructure Land Survey in Maharashtra" title="Reliable Land Survey Consultancy - Highway & Infrastructure Alignment">
+                        <img decoding="async" src="assets/images/about-survey-experience.jpg?v=20261027-field" alt="Professional Land Surveyors Team - Reliable Land Survey Consultancy" title="Field Survey Engineers & Precision Measurements - 15+ Years Experience" style="object-position: center 35%; aspect-ratio: 3/4; max-height: 560px;">
                     </div>
 
                     <div class="floating-stat-badge">
@@ -713,8 +772,8 @@
                 </div>
                 <div class="tech-counter-item">
                     <div class="tech-content">
-                        <div class="tech-number counter-number" data-target="15">0</div>
-                        <div class="tech-counter-label">Working Instruments</div>
+                        <div class="tech-number counter-number" data-target="17+">0</div>
+                        <div class="tech-counter-label">Deliverables</div>
                     </div>
                 </div>
                 <div class="tech-counter-item">
@@ -747,7 +806,7 @@
 
                 <!-- GROUP 1 -->
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/highway.jpg" alt="Highway Infrastructure Survey & Geometric Alignment Profiling" title="Highway & Expressway Alignment Survey Services" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/highway-road-survey.jpg?v=20261028" alt="Highway and Road Survey Engineers Operating Total Station" title="Highway & Expressway Alignment Survey Services - Reliable Land Survey Field Team" class="expertise-bg" style="object-position: center 35%;">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -762,7 +821,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/metro.jpg" alt="Metro Rail Route Viaduct and Pier Construction Layout Survey" title="Metro Rail Mass Transit Infrastructure Survey" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey by Field Engineers" title="Metro Rail Mass Transit Infrastructure Survey - Reliable Land Survey Consultancy" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -777,7 +836,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg?v=20261026-train" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -807,7 +866,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -822,7 +881,7 @@
 
                 <!-- GROUP 2 (DUPLICATE FOR SEAMLESS SCROLL) -->
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/highway.jpg" alt="Highway Infrastructure Survey & Geometric Alignment Profiling" title="Highway & Expressway Alignment Survey Services" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/highway-road-survey.jpg?v=20261028" alt="Highway and Road Survey Engineers Operating Total Station" title="Highway & Expressway Alignment Survey Services - Reliable Land Survey Field Team" class="expertise-bg" style="object-position: center 35%;">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -837,7 +896,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/metro.jpg" alt="Metro Rail Route Viaduct and Pier Construction Layout Survey" title="Metro Rail Mass Transit Infrastructure Survey" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey by Field Engineers" title="Metro Rail Mass Transit Infrastructure Survey - Reliable Land Survey Consultancy" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -852,7 +911,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg?v=20261026-train" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -882,7 +941,7 @@
                 </div>
 
                 <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
-                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
+                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -1060,7 +1119,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.2s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img decoding="async" loading="lazy" src="assets/images/metro.jpg" alt="Engineering Ready CAD Drawings and GIS Spatial Data Deliverables" title="Engineering Ready Survey Data & CAD Deliverables" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/cad-gis-processing.jpg?v=20261026-cadgis" alt="Engineering Ready CAD Drawings and GPR Subsurface Data Deliverables" title="Engineering Ready Survey Data & CAD Deliverables" class="flip-front-bg">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1072,7 +1131,7 @@
                         </div>
                         <div class="flip-card-back">
                             <h3>Engineering Ready</h3>
-                            <p>Delivering actionable CAD/GIS data and 3D point clouds instantly usable by engineering
+                            <p>Delivering actionable CAD/GPR data and 3D point clouds instantly usable by engineering
                                 teams without additional processing.</p>
                         </div>
                     </div>
@@ -1105,7 +1164,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.4s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img decoding="async" loading="lazy" src="assets/images/highway.jpg" alt="Infrastructure Focused Land Surveying for Bridges, Highways and Metros" title="Infrastructure Land Survey Expertise - Maharashtra Projects" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/why-reliable-infrastructure.jpg" alt="Field Surveyors Operating Total Station on Infrastructure Project" title="Infrastructure Land Survey Expertise - Reliable Land Survey Field Team" class="flip-front-bg" style="object-position: center 35%;">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1284,7 +1343,7 @@
                                 stroke-width="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
-                            </svg></div> GIS-ready Data
+                            </svg></div> GPR-ready Data
                     </div>
                 </div>
                 <!-- Duplicate for infinite scroll -->
@@ -1336,7 +1395,7 @@
                                 stroke-width="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
-                            </svg></div> GIS-ready Data
+                            </svg></div> GPR-ready Data
                     </div>
                 </div>
             </div>
@@ -1610,7 +1669,10 @@
                         <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
                         <a href="road-highway-survey.html">Road & Highway Survey</a>
                         <a href="rail-metro-survey.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
@@ -1618,7 +1680,7 @@
                 <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
                     <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
-                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -1656,10 +1718,10 @@
                 <div class="footer-col footer-col-map">
                     <h4>Office Location</h4>
                     <div class="footer-map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
                     </div>
                     <div style="margin-top: 10px; text-align: left;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
                             <span>Open in Google Maps</span> &rarr;
                         </a>
                     </div>
@@ -1676,6 +1738,7 @@
     </footer>
 <!-- Script -->
     <script src="js/script.js?v=20261010-11" defer></script>
+    <script src="js/hero-slider.js?v=20261028-drone-focus" defer></script>
 </body>
 
 </html>

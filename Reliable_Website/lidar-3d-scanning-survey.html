@@ -63,7 +63,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20261010-11">
     <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -290,7 +290,10 @@
                     <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
                     <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
                     <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
                         <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
@@ -336,240 +339,194 @@
         </div>
     </div>
 
-    <!-- TECHNICAL SPECS & OVERVIEW -->
-    <section class="section service-spec-section engineering-survey-section" style="padding: 75px 0; position: relative; overflow: hidden; background: #f0f7fd url('assets/images/engineering-survey-bg.png') no-repeat center center; background-size: cover;">
+        <!-- MAIN OVERVIEW SECTION -->
+    <section class="section" style="padding: 70px 0 60px 0; background: #ffffff;">
         <div class="container">
-            <div class="service-spec-grid" style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: stretch; background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; box-shadow: 0 20px 45px rgba(8, 43, 76, 0.12); border: 1px solid rgba(255, 255, 255, 0.95); padding: clamp(25px, 4vw, 45px); box-sizing: border-box;">
-                
-                <!-- Left: Media & Quick CTA -->
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <!-- Animated Geospatial Media Card -->
-                        <div class="spec-media-card">
-                            <img decoding="async" loading="lazy" src="assets/images/lidar.jpg" alt="LiDAR Laser Scanner Generating 3D Point Cloud for Dense Topography" title="LiDAR 3D Scanning Survey - Dense Point Cloud Elevation Modeling">
-                            <div class="spec-live-pill">
-                                <span class="spec-live-dot"></span>
-                                <span>SURVEY-GRADE ACCURACY</span>
-                            </div>
-                            <div class="spec-media-overlay">
-                                <div class="media-subtitle">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                    GEOSPATIAL EXPERTISE
-                                </div>
-                                <div class="media-title">Drone LiDAR & 3D Scanning</div>
-                            </div>
-                        </div>
-                                                <!-- Animated Feature Highlight Cards -->
-                        <div class="spec-feature-cards">
-                            <div class="spec-feature-card">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Rapid Field Dispatch Across Maharashtra</div>
-                                    <div class="spec-feature-desc">State-of-the-art aerial and mobile LiDAR scanners deployed on tight project schedules.</div>
-                                </div>
-                            </div>
-                            <div class="spec-feature-card theme-navy">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Penetrates Dense Forest & Vegetation</div>
-                                    <div class="spec-feature-desc">Multi-return laser pulses capture true bare-earth topography beneath heavy forest foliage.</div>
-                                </div>
-                            </div>
-                            <div class="spec-feature-card">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Dense 3D Classified Point Clouds</div>
-                                    <div class="spec-feature-desc">Millions of geo-referenced 3D points per second for civil engineering and corridor modeling.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-spec-cta-grid" style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                        <a href="contact.html?service=lidar-3d-scanning-survey" class="btn btn-primary btn-spec-quote" style="padding: 15px 18px; font-size: 14.5px; border-radius: 8px; font-weight: 700; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Enquire Now</span></a>
-                        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="btn btn-spec-whatsapp" style="background: #25D366; color: #fff; text-decoration: none; padding: 15px 18px; border-radius: 8px; font-weight: 700; font-size: 14.5px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px;">WhatsApp Us</a>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <div class="section-label" style="margin-bottom: 10px;">ACTIVE LASER SCANNING & CANOPY PENETRATION</div>
+                    <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: var(--dark-navy); font-weight: 800; line-height: 1.25; margin-bottom: 20px;">
+                        Aerial Drone LiDAR & Terrestrial 3D Laser Scanning Services
+                    </h2>
+                    <p style="color: #334155; font-size: 15.5px; line-height: 1.7; margin-bottom: 16px;">
+                        <strong>Light Detection and Ranging (LiDAR)</strong> utilizes active laser pulses to penetrate dense forest canopies, thick vegetation, and steep shadows where standard optical photogrammetry cannot see the ground. By pulsing hundreds of thousands of laser beams per second, multi-return LiDAR captures true bare-earth terrain models (DTM) with extraordinary structural detail.
+                    </p>
+                    <p style="color: #334155; font-size: 15.5px; line-height: 1.7; margin-bottom: 24px;">
+                        At <strong>Reliable Land Survey Consultancy</strong>, we deploy cutting-edge aerial drone LiDAR sensors and mobile laser scanners across Maharashtra. We deliver classified 3D point clouds (LAS/LAZ), bare-earth digital elevation models, powerline catenary sag models, and dense slope profiles for highways, railway ghat sections, dams, and transmission corridors.
+                    </p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+                        <a href="contact.html?service=drone-lidar-scanning" class="btn-quotation-overview">
+                            <span>Request Quotation</span>
+                            <span class="arrow-icon">&rarr;</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Right: Technical Specs Table & Description -->
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div class="section-label" style="margin-bottom: 6px; font-weight: 800; letter-spacing: 1.5px;">ENGINEERING SPECIFICATIONS</div>
-                        <h2 style="color: var(--dark-navy); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 6px 0; font-weight: 800; font-family: var(--font-heading); line-height: 1.25;">Technical Standards & Deliverables</h2>
-                        <span class="spec-heading-accent"></span>
-                        <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.65; margin: 0 0 20px 0;">Light Detection and Ranging (LiDAR) utilizes active laser pulses to penetrate dense forest canopies, crops, and shadows where standard photogrammetry cannot see the ground. <strong>Reliable Land Survey Consultancy</strong> deploys advanced aerial LiDAR payloads that pulse hundreds of thousands of laser beams per second, capturing true bare-earth terrain models (DTM) and complex structural assets.</p>
-                        
-                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
-                            
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">SERVICE TYPE</td>
-                            <td class="spec-table-val">Drone LiDAR & 3D Scanning</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">PRIMARY EQUIPMENT</td>
-                            <td class="spec-table-val">High-Pulse Multi-Return Aerial LiDAR Sensors (240,000 pts/sec), High-Accuracy IMUs</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">POINT CLOUD DENSITY</td>
-                            <td class="spec-table-val">150 to 450+ points per square meter (XYZ)</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">CANOPY PENETRATION</td>
-                            <td class="spec-table-val">Triple-return laser pulse extracting true bare-earth ground beneath thick forests & crops</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">OUTPUT DELIVERABLES</td>
-                            <td class="spec-table-val">Classified LAS/LAZ Point Clouds (Ground, Low/High Veg, Buildings), Bare-Earth DTM, 3D CAD Meshes</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">APPLICATIONS</td>
-                            <td class="spec-table-val">Forest Corridors, Transmission Line Sag, Dam Basins, Hill Roads, Mining Digitization</td>
-                        </tr>
-                        </table>
-                        <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(8,43,76,0.12); display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
-                            <div style="font-size: 14px; color: var(--primary-navy); font-weight: 600;">
-                                Need customized surveying solutions or field mobilization?
-                            </div>
-                            <a href="contact.html?service=lidar-3d-scanning-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(244,123,32,0.28); transition: all 0.25s ease;">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                                <span>Enquire for LiDAR 3D Scanning</span>
-                            </a>
-                        </div>
+                <!-- Featured Image -->
+                <div style="position: relative;">
+                    <div style="background: linear-gradient(135deg, var(--accent-orange), var(--dark-navy)); padding: 6px; border-radius: 18px; box-shadow: 0 16px 40px rgba(8, 43, 76, 0.12);">
+                        <img decoding="async" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR Laser Scanner Generating 3D Point Cloud for Dense Topography" title="LiDAR 3D Scanning Survey - Dense Point Cloud Elevation Modeling" style="width: 100%; height: auto; max-height: 440px; object-fit: cover; object-position: center center; border-radius: 12px; display: block;">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- KEY SERVICE CAPABILITIES -->
-    <section class="section capabilities-theme-section" style="padding: 85px 0;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="text-center" style="margin-bottom: 50px;">
-                <div class="section-label" style="margin-bottom: 8px;">CORE DELIVERABLES</div>
-                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Key Capabilities & Applications</h2>
-                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 15px; line-height: 1.6;">Designed to provide high accuracy for engineers, architects, developers, and project managers.</p>
+    <!-- KEY CAPABILITIES SECTION -->
+    <section class="section" style="padding: 70px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="text-center" style="max-width: 750px; margin: 0 auto 50px auto;">
+                <div class="section-label">SPECIALIZED CAPABILITIES</div>
+                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.3rem); color: var(--dark-navy); font-weight: 800; margin-bottom: 12px;">
+                    Advanced Laser Scanning Solutions
+                </h2>
+                <p style="color: #64748b; font-size: 15px;">
+                    Capturing true bare-earth terrain and millimeter structural geometry through foliage and complex terrain.
+                </p>
             </div>
 
-            <div class="capabilities-grid">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 26px;">
                 <!-- Card 1 -->
-                <div class="capability-card">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/><path d="M4 18h16"/></svg>
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(244, 123, 32, 0.1); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3>True Bare-Earth Extraction Beneath Dense Foliage</h3>
-                    <p>Extracting ground points through dense sugarcane, forest canopies, and jungle brush for highway alignments and dam submergence studies.</p>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">True Bare-Earth Extraction Beneath Dense Foliage</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Extracting ground points through dense sugarcane, forest canopies, and jungle brush for highway alignments and dam submergence studies.
+                    </p>
                 </div>
+
                 <!-- Card 2 -->
-                <div class="capability-card theme-navy">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(8, 43, 76, 0.08); color: var(--primary-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                     </div>
-                    <h3>Powerline Corridor & Vegetation Clearance Analysis</h3>
-                    <p>Detailed 3D modeling of transmission conductors, tower structures, catenary sag calculations, and dangerous vegetation encroachment zones.</p>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Powerline Corridor & Vegetation Clearance Analysis</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Detailed 3D modeling of transmission conductors, tower structures, catenary sag calculations, and dangerous vegetation encroachment zones.
+                    </p>
                 </div>
+
                 <!-- Card 3 -->
-                <div class="capability-card">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(244, 123, 32, 0.1); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
                     </div>
-                    <h3>Structural & Heritage 3D Digitization</h3>
-                    <p>High-density laser scanning of historical monuments, bridge piers, tunnel portals, and industrial piping with millimeter point clouds.</p>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Structural & Heritage 3D Digitization</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        High-density laser scanning of historical monuments, bridge piers, tunnel portals, and industrial piping with millimeter point clouds.
+                    </p>
                 </div>
+
                 <!-- Card 4 -->
-                <div class="capability-card theme-navy">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(8, 43, 76, 0.08); color: var(--primary-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
                     </div>
-                    <h3>Landslide & Steep Cliff Stability Profiling</h3>
-                    <p>Capturing vertical rock faces, ghat roads, and active landslides to compute geological slope stability and rockfall hazard risks.</p>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Landslide & Steep Cliff Stability Profiling</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Capturing vertical rock faces, ghat roads, and active landslides to compute geological slope stability and rockfall hazard risks.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQS SECTION -->
-    <section class="section faqs-theme-section" style="padding: 85px 0;">
+    <!-- FAQ SECTION (ACCORDION) -->
+    <section class="section" style="padding: 70px 0; background: #f8fafc; border-top: 1px solid #e2e8f0;">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 45px;">
-                <div class="section-label" style="margin-bottom: 8px;">TECHNICAL FAQS</div>
-                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Frequently Asked Questions</h2>
-                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 15px;">Specific queries regarding our Drone LiDAR & 3D Scanning methodology and deliverables.</p>
+            <div class="text-center" style="max-width: 720px; margin: 0 auto 40px auto;">
+                <div class="section-label">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.3rem); color: var(--dark-navy); font-weight: 800; margin-bottom: 12px;">
+                    Drone LiDAR & 3D Scanning FAQs
+                </h2>
+                <p style="color: #64748b; font-size: 15px;">Clear answers to common questions about drone LiDAR, point cloud density, and canopy penetration.</p>
             </div>
 
-            <div class="faq-list">
-                
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">Why choose LiDAR over standard Drone Photogrammetry?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Photogrammetry relies on visible light and cannot see through thick trees or vegetation. LiDAR emits active laser pulses that physically pass through gaps in the leaves, recording the actual ground beneath.
+            <div class="faq-list" style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px;">
+                <!-- FAQ 1 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">Why choose LiDAR over standard Drone Photogrammetry?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Photogrammetry relies on visible light and cannot see through thick trees or vegetation. LiDAR emits active laser pulses that physically pass through gaps in the leaves, recording the actual ground beneath.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">What is the point cloud density of your LiDAR scans?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Our enterprise aerial LiDAR captures 150 to 450+ points per square meter, delivering dense 3D point cloud representations of terrain and infrastructure.
+
+                <!-- FAQ 2 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">What is the point cloud density of your LiDAR scans?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Our enterprise aerial LiDAR captures 150 to 450+ points per square meter, delivering dense 3D point cloud representations of terrain and infrastructure.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">Can LiDAR data be directly loaded into AutoCAD Civil 3D?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Yes. We deliver classified .LAS, .LAZ, and LandXML surface formats ready for immediate import into AutoCAD Civil 3D, Revit, Bentley MicroStation, and GIS software.
+
+                <!-- FAQ 3 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">Can LiDAR data be directly loaded into AutoCAD Civil 3D?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Yes. We deliver classified .LAS, .LAZ, and LandXML surface formats ready for immediate import into AutoCAD Civil 3D, Revit, Bentley MicroStation, and GIS software.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">How many laser returns do your LiDAR sensors capture per pulse?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Our high-end LiDAR sensors record up to 5 discrete laser returns per pulse (multi-echo capability), allowing the laser to pierce tree leaves, twigs, and underbrush to record the true ground surface underneath.
+
+                <!-- FAQ 4 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">How many laser returns do your LiDAR sensors capture per pulse?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Our high-end LiDAR sensors record up to 5 discrete laser returns per pulse (multi-echo capability), allowing the laser to pierce tree leaves, twigs, and underbrush to record the true ground surface underneath.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">Can terrestrial laser scanning (TLS) be used for heritage conservation and plant piping?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Yes. Our terrestrial 3D laser scanners achieve millimeter-grade point spacing, creating exact digital twins of heritage monuments, complex MEP piping, bridge girders, and industrial factory interiors.
+
+                <!-- FAQ 5 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">Can terrestrial laser scanning (TLS) be used for heritage conservation and plant piping?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Yes. Our terrestrial 3D laser scanners achieve millimeter-grade point spacing, creating exact digital twins of heritage monuments, complex MEP piping, bridge girders, and industrial factory interiors.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">What colorization and classification do you apply to raw point clouds?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        We integrate high-resolution RGB calibrated cameras to colorize point clouds in true natural color, followed by automated and manual point classification into ground, low vegetation, medium/high vegetation, buildings, and noise.
+
+                <!-- FAQ 6 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">What colorization and classification do you apply to raw point clouds?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            We integrate high-resolution RGB calibrated cameras to colorize point clouds in true natural color, followed by automated and manual point classification into ground, low vegetation, medium/high vegetation, buildings, and noise.
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </section>
 
-        <!-- CTA BANNER -->
+    <!-- CTA BANNER -->
     <section class="service-cta-banner">
         <!-- Animated Topo Grid Background -->
         <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; animation: gridPan 15s linear infinite; opacity: 0.5; pointer-events: none; z-index: 1;"></div>
@@ -634,7 +591,10 @@
                         <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
                         <a href="road-highway-survey.html">Road & Highway Survey</a>
                         <a href="rail-metro-survey.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
@@ -642,7 +602,7 @@
                 <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
                     <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
-                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -680,10 +640,10 @@
                 <div class="footer-col footer-col-map">
                     <h4>Office Location</h4>
                     <div class="footer-map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
                     </div>
                     <div style="margin-top: 10px; text-align: left;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
                             <span>Open in Google Maps</span> &rarr;
                         </a>
                     </div>

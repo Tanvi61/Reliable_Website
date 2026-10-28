@@ -480,8 +480,17 @@ document.addEventListener('DOMContentLoaded', () => {
        10. FAQ HOVER / TOUCH INTERACTION
     ========================================== */
     document.querySelectorAll('.faq-card').forEach(card => {
+        // Click support to toggle open/close
+        card.addEventListener('click', () => {
+            const wasActive = card.classList.contains('is-active');
+            document.querySelectorAll('.faq-card').forEach(c => {
+                if (c !== card) c.classList.remove('is-active');
+            });
+            card.classList.toggle('is-active');
+        });
         // Touch support for mobile devices
         card.addEventListener('touchstart', () => {
+            const wasActive = card.classList.contains('is-active');
             document.querySelectorAll('.faq-card').forEach(c => {
                 if (c !== card) c.classList.remove('is-active');
             });

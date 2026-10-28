@@ -24,7 +24,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Survey Services | Reliable Land Survey Consultancy Pune</title>
-    <meta name="description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GIS processing.">
+    <meta name="description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GPR processing.">
     <meta name="keywords" content="Land Survey Services, Topographical Survey, DGPS Control, Drone LiDAR, Total Station Pune">
     
     
@@ -37,7 +37,7 @@
     <meta property="og:site_name" content="Reliable Land Survey Consultancy">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Our Survey Services | Reliable Land Survey Consultancy Pune">
-    <meta property="og:description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GIS processing.">
+    <meta property="og:description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GPR processing.">
     <meta property="og:url" content="https://www.reliablelandsurvey.in/land-survey-services.html">
     <meta property="og:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
     <meta property="og:image:width" content="1200">
@@ -48,7 +48,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Our Survey Services | Reliable Land Survey Consultancy Pune">
-    <meta name="twitter:description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GIS processing.">
+    <meta name="twitter:description" content="Explore our end-to-end surveying services: Topographical Survey, DGPS Control, Total Station, RTK Drone Mapping, LiDAR 3D Scanning, Road, Rail & GPR processing.">
     <meta name="twitter:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
 
     <link rel="canonical" href="https://www.reliablelandsurvey.in/land-survey-services.html">
@@ -64,7 +64,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20261010-11">
     <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -254,7 +254,25 @@
         "@type": "ListItem",
         "position": 9,
         "url": "https://www.reliablelandsurvey.in/cad-gis-processing-services.html",
-        "name": "CAD & GIS Processing"
+        "name": "CAD & GPR Processing"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://www.reliablelandsurvey.in/bathymetric-survey.html",
+        "name": "Bathymetric Survey"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://www.reliablelandsurvey.in/contour-survey.html",
+        "name": "Contour Survey"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://www.reliablelandsurvey.in/digital-auto-level-survey.html",
+        "name": "Digital Auto Level Survey"
       }
     ]
   }
@@ -337,7 +355,10 @@
                     <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
                     <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
                     <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
                         <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
@@ -392,12 +413,57 @@
        DETAILED SERVICES
     ========================================== -->
     <style>
+      .service-card-hover {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+      }
       .service-card-hover:hover {
         transform: translateY(-10px);
         box-shadow: 0 15px 40px rgba(0,0,0,0.1);
       }
       .service-card-hover:hover h3 {
         color: var(--accent-orange);
+      }
+      .service-card-hover > div {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        box-sizing: border-box !important;
+      }
+      .service-card-hover > div > p {
+        flex-grow: 1 !important;
+        margin-bottom: 20px !important;
+      }
+      .service-card-hover .product-action-bar {
+        margin-top: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        flex-wrap: nowrap !important;
+        padding-top: 16px !important;
+        border-top: 1px solid #edf2f7 !important;
+      }
+      .service-card-hover .btn-product-enquiry {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      .service-card-hover .product-action-bar a:last-child {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      @media (max-width: 480px) {
+        .service-card-hover > div {
+          padding: 24px 18px !important;
+        }
+        .service-card-hover .btn-product-enquiry {
+          padding: 8px 12px !important;
+          font-size: 12.5px !important;
+        }
+        .service-card-hover .product-action-bar a:last-child {
+          font-size: 12.5px !important;
+        }
       }
     </style>
     <section class="section" style="background-color: #f8f9fa; padding: 80px 0;">
@@ -415,7 +481,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Topographical Survey</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Detailed mapping of natural and man-made features. We produce highly accurate contour maps, spot levels, and comprehensive baseline data essential for preliminary design and detailed engineering.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=topographical-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -434,7 +500,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">DGPS / GNSS Control</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Establishment of primary and secondary geodetic control networks using dual-frequency GNSS receivers. Crucial for long linear projects like highways, railways, and metro rail systems.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=dgps-gnss-control-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -449,11 +515,11 @@
 
                 <!-- Service 3 -->
                 <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg" alt="Total Station High Precision Layout and Staking Survey" title="Total Station Survey Services - Precise Engineering Measurements" style="width: 100%; height: 220px; object-fit: cover;">
+                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg?v=20261026-train" alt="Total Station Railway Track and Precision Alignment Survey" title="Total Station Survey Services - Precise Engineering Measurements" style="width: 100%; height: 220px; object-fit: cover; object-position: center 30%;">
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Total Station Survey</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">High-precision detailed surveys for construction staking, as-built mapping, structural alignment, and complex boundary demarcations using advanced Total Stations.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=total-station-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -472,7 +538,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">RTK Drone Mapping</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Rapid aerial photogrammetry over vast terrains. Delivers high-resolution orthomosaics, Digital Elevation Models (DEM), and 3D surface models with absolute accuracy.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=rtk-drone-mapping-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -487,11 +553,11 @@
 
                 <!-- Service 5 -->
                 <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg" alt="LiDAR 3D Laser Scanning Survey and Point Cloud Modeling" title="LiDAR 3D Scanning Survey - Terrestrial and Aerial Laser Scanning" style="width: 100%; height: 220px; object-fit: cover;">
+                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR 3D Laser Scanning Survey and Point Cloud Modeling" title="LiDAR 3D Scanning Survey - Terrestrial and Aerial Laser Scanning" style="width: 100%; height: 220px; object-fit: cover;">
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">LiDAR 3D Scanning</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Aerial and terrestrial laser scanning for dense vegetation penetration and complex structural modeling. Outputs highly dense and extremely accurate 3D point clouds.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=lidar-3d-scanning-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -506,11 +572,11 @@
 
                 <!-- Service 6 -->
                 <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img decoding="async" loading="lazy" src="assets/images/metro.jpg" alt="CAD Drafting and GIS Data Processing Services" title="CAD & GIS Processing Services - Engineering Ready Deliverables" style="width: 100%; height: 220px; object-fit: cover;">
+                    <img decoding="async" loading="lazy" src="assets/images/cad-gis-processing.jpg?v=20261026-cadgis" alt="CAD Drafting and GPR Data Processing Services" title="CAD & GPR Processing Services - Engineering Ready Deliverables" style="width: 100%; height: 220px; object-fit: cover; object-position: center 25%;">
                     <div style="padding: 30px;">
-                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">CAD / GIS Processing</h3>
-                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">In-house processing turning raw field data into engineering-ready deliverables including L-sections, Cross-sections, detailed Utility Maps, and complete GIS spatial databases.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">CAD / GPR Processing</h3>
+                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">In-house processing turning raw field data into engineering-ready deliverables including L-sections, Cross-sections, detailed Utility Maps, and complete GPR subsurface utility mapping.</p>
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=cad-gis-processing-services" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -529,7 +595,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Drone Photogrammetry</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Aerial orthomosaic, DSM/DTM generation, terrain mapping, corridor mapping and progress documentation.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=drone-photogrammetry-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -544,11 +610,11 @@
 
                 <!-- Service 8 -->
                 <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
-                    <img decoding="async" loading="lazy" src="assets/images/rail-metro.jpg" alt="Rail and Metro Rapid Transit Infrastructure Survey Services" title="Rail & Metro Survey - Track Alignment and Station Staking" style="width: 100%; height: 220px; object-fit: cover;">
+                    <img decoding="async" loading="lazy" src="assets/images/rail-metro.jpg?v=20261026-metro" alt="Rail and Metro Rapid Transit Infrastructure Alignment Survey Services" title="Rail & Metro Survey - Track Viaduct Alignment and Station Staking" style="width: 100%; height: 220px; object-fit: cover; object-position: center 35%;">
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Rail / Metro</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Corridor, station/depot, track/alignment, pier/viaduct, utilities and asset inventory support.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=rail-metro-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -567,7 +633,7 @@
                     <div style="padding: 30px;">
                         <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Road / Highway</h3>
                         <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Corridor, L-section, cross-sections, drainage, structures, utilities and DPR survey support.</p>
-                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: wrap;">
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
                             <a href="contact.html?service=road-highway-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                                 <span>Enquire Now</span>
@@ -580,23 +646,422 @@
                     </div>
                 </div>
 
+                <!-- Service 10 -->
+                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <img decoding="async" loading="lazy" src="assets/images/bathymetric-survey.jpg" alt="Bathymetric Hydrographic Survey Services Pune" title="Bathymetric Survey - Underwater Depth and Hydrographic Mapping" style="width: 100%; height: 220px; object-fit: cover;">
+                    <div style="padding: 30px;">
+                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Bathymetric Survey</h3>
+                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Reservoir capacity, riverbed bathymetry, pond desilting, underwater depth profiling & sub-aquatic 3D modeling.</p>
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
+                            <a href="contact.html?service=bathymetric-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Enquire Now</span>
+                            </a>
+                            <a href="bathymetric-survey.html" style="color: var(--primary-navy); font-weight: 700; font-size: 13.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s;">
+                                <span>View Details</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 11 -->
+                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <img decoding="async" loading="lazy" src="assets/images/contour-survey.jpg?v=20261026-contour" alt="Contour Survey and Terrain Elevation Mapping Pune" title="Contour Survey - Ground Elevation Contours and Spot Levels" style="width: 100%; height: 220px; object-fit: cover; object-position: center 32%;">
+                    <div style="padding: 30px;">
+                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Contour Survey</h3>
+                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Ground elevation contours, spot level grids, DTM/DEM 3D modeling, slope gradients & earthwork cut/fill volume computations.</p>
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
+                            <a href="contact.html?service=contour-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Enquire Now</span>
+                            </a>
+                            <a href="contour-survey.html" style="color: var(--primary-navy); font-weight: 700; font-size: 13.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s;">
+                                <span>View Details</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 12 -->
+                <div class="service-card-hover" style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <img decoding="async" loading="lazy" src="assets/images/digital-auto-level-survey.jpg" alt="Digital Auto Level Survey Pune" title="Digital Auto Level Survey - High Precision Elevation & Settlement Monitoring" style="width: 100%; height: 220px; object-fit: cover; object-position: center;">
+                    <div style="padding: 30px;">
+                        <h3 style="color: var(--dark-navy); font-size: 22px; margin-bottom: 15px; transition: color 0.3s;">Digital Auto Level Survey</h3>
+                        <p style="color: var(--primary-navy); font-size: 15px; line-height: 1.6; margin-bottom: 25px;">Sub-millimeter vertical benchmark transfer, barcoded invar staff leveling, structural settlement monitoring & fly-leveling loops.</p>
+                        <div class="product-action-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf2f7; flex-wrap: nowrap;">
+                            <a href="contact.html?service=digital-auto-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 9px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(244, 123, 32, 0.25); transition: all 0.25s ease;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Enquire Now</span>
+                            </a>
+                            <a href="digital-auto-level-survey.html" style="color: var(--primary-navy); font-weight: 700; font-size: 13.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s;">
+                                <span>View Details</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-       CALL TO ACTION (Deploy Our Survey Crews)
+                <!-- ==========================================
+       SOFTWARE SERVICES & PLATFORMS (DYNAMIC ROTATING MARQUEE)
     ========================================== -->
+    <style>
+        /* DYNAMIC ROTATING SOFTWARE PLATFORMS (MATCHES REFERENCE DELIVERABLES LAYOUT) */
+        .software-rotator-container {
+            margin: 0;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px 0 28px;
+            box-shadow: 0 8px 30px rgba(8, 43, 76, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .software-rotator-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-orange), #ff9f43, var(--primary-navy));
+        }
+
+        .software-rotator-title {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            margin: 0 0 20px 0;
+            font-family: var(--font-heading);
+        }
+
+        .soft-marquee-viewport {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            padding: 4px 0;
+            mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+        }
+
+        .soft-marquee-track {
+            display: flex;
+            width: max-content;
+            gap: 16px;
+            animation: softRotateAnimation 45s linear infinite;
+        }
+
+        .soft-marquee-viewport:hover .soft-marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes softRotateAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .soft-card {
+            display: flex;
+            align-items: stretch;
+            width: 295px;
+            height: 62px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(8, 43, 76, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            cursor: pointer;
+        }
+
+        .soft-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 8px 20px rgba(8, 43, 76, 0.15), 0 0 0 1px var(--accent-orange);
+        }
+
+        .soft-badge {
+            width: 52px;
+            background: #ffffff;
+            color: var(--dark-navy);
+            font-weight: 800;
+            font-size: 19px;
+            font-family: var(--font-heading);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(8, 43, 76, 0.08);
+            flex-shrink: 0;
+            user-select: none;
+            transition: color 0.25s ease;
+        }
+
+        .soft-card:hover .soft-badge {
+            color: var(--accent-orange);
+        }
+
+        .soft-info {
+            flex: 1;
+            background: linear-gradient(135deg, #082B4C 0%, #123F68 100%);
+            padding: 9px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .soft-card.soft-dark .soft-badge {
+            color: #041B33;
+        }
+
+        .soft-card.soft-dark:hover .soft-badge {
+            color: var(--accent-orange);
+        }
+
+        .soft-card.soft-dark .soft-info {
+            background: linear-gradient(135deg, #041B33 0%, #082B4C 100%);
+        }
+
+        .soft-title {
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: var(--font-heading);
+        }
+
+        .soft-sub {
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 11px;
+            line-height: 1.35;
+            margin-top: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+    <section class="software-services-section" id="software-services" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); padding: 50px 0 70px 0; border-top: 1px solid #e2e8f0; position: relative;">
+        <div class="container">
+            <!-- Dynamic Rotating Marquee Container (Exact Reference Styling) -->
+            <div class="software-rotator-container" id="software-rotator">
+                <h3 class="software-rotator-title">OUR SOFTWARE PLATFORMS</h3>
+                
+                <div class="soft-marquee-viewport">
+                    <div class="soft-marquee-track">
+                        <!-- SET 1 (10 Items) -->
+                        <!-- Card 1: AutoCAD -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #d9383a;">A</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">AutoCAD</h4>
+                                <span class="soft-sub">2D & 3D Drafting (.DWG/.DXF)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Civil 3D -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #8e2b88;">C</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Civil 3D</h4>
+                                <span class="soft-sub">TIN Surfaces & LandXML Modeling</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Global Mapper -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #2f855a;">G</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Global Mapper</h4>
+                                <span class="soft-sub">GIS & Elevation Profiling (DEM)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Pix4D -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #38a169;">P</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Pix4D</h4>
+                                <span class="soft-sub">Drone Photogrammetry & Orthomosaics</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: LASTools -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #dd6b20;">L</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">LASTools (rapidlasso)</h4>
+                                <span class="soft-sub">LiDAR Processing (.LAS/.LAZ)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: GIS & Mapping -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #3182ce;">G</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">GIS & Mapping Software</h4>
+                                <span class="soft-sub">Spatial Geodatabases & Cartography</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: ArcGIS Pro -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #0d5c9c;">A</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">ArcGIS Pro</h4>
+                                <span class="soft-sub">Spatial Analytics & Thematic QA</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: QGIS Desktop -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #589632;">Q</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">QGIS Desktop</h4>
+                                <span class="soft-sub">Vector & Raster Attribute Layers</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Bentley MicroStation -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #0072b8;">M</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">MicroStation</h4>
+                                <span class="soft-sub">Infrastructure Engineering .DGN</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: CloudCompare -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #009688;">C</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">CloudCompare</h4>
+                                <span class="soft-sub">3D Point Cloud Mesh & Inspection</span>
+                            </div>
+                        </div>
+
+                        <!-- SET 2 (Duplicate for Seamless Loop) -->
+                        <!-- Card 1: AutoCAD -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #d9383a;">A</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">AutoCAD</h4>
+                                <span class="soft-sub">2D & 3D Drafting (.DWG/.DXF)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Civil 3D -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #8e2b88;">C</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Civil 3D</h4>
+                                <span class="soft-sub">TIN Surfaces & LandXML Modeling</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Global Mapper -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #2f855a;">G</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Global Mapper</h4>
+                                <span class="soft-sub">GIS & Elevation Profiling (DEM)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Pix4D -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #38a169;">P</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">Pix4D</h4>
+                                <span class="soft-sub">Drone Photogrammetry & Orthomosaics</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: LASTools -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #dd6b20;">L</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">LASTools (rapidlasso)</h4>
+                                <span class="soft-sub">LiDAR Processing (.LAS/.LAZ)</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: GIS & Mapping -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #3182ce;">G</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">GIS & Mapping Software</h4>
+                                <span class="soft-sub">Spatial Geodatabases & Cartography</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: ArcGIS Pro -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #0d5c9c;">A</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">ArcGIS Pro</h4>
+                                <span class="soft-sub">Spatial Analytics & Thematic QA</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: QGIS Desktop -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #589632;">Q</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">QGIS Desktop</h4>
+                                <span class="soft-sub">Vector & Raster Attribute Layers</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Bentley MicroStation -->
+                        <div class="soft-card">
+                            <div class="soft-badge" style="color: #0072b8;">M</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">MicroStation</h4>
+                                <span class="soft-sub">Infrastructure Engineering .DGN</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: CloudCompare -->
+                        <div class="soft-card soft-dark">
+                            <div class="soft-badge" style="color: #009688;">C</div>
+                            <div class="soft-info">
+                                <h4 class="soft-title">CloudCompare</h4>
+                                <span class="soft-sub">3D Point Cloud Mesh & Inspection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
     <section class="service-cta-banner">
-        <!-- Animated Topo Grid Background -->
-        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; animation: gridPan 15s linear infinite; opacity: 0.5; pointer-events: none; z-index: 1;"></div>
-        <div style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(circle, rgba(244,123,32,0.18) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
-        <div class="container" style="position: relative; z-index: 2; max-width: 750px;">
+        <div class="container text-center" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
             <h2>Deploy Our Survey Crews to Your Project</h2>
             <p>Equipped with high-precision total stations, dual-frequency DGPS, and RTK drones, our Pune teams mobilize within 24-48 hours across Maharashtra and India.</p>
             <div class="service-cta-buttons">
                 <a href="contact.html" class="cta-banner-btn-primary">
-                    <span>Request Project Quotation</span>
+                    <span>Get an Engineering Quote &rarr;</span>
                 </a>
                 <a href="tel:+919604646777" class="cta-banner-btn-phone">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -650,7 +1115,10 @@
                         <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
                         <a href="road-highway-survey.html">Road & Highway Survey</a>
                         <a href="rail-metro-survey.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
@@ -658,7 +1126,7 @@
                 <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
                     <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
-                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -696,10 +1164,10 @@
                 <div class="footer-col footer-col-map">
                     <h4>Office Location</h4>
                     <div class="footer-map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
                     </div>
                     <div style="margin-top: 10px; text-align: left;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
                             <span>Open in Google Maps</span> &rarr;
                         </a>
                     </div>

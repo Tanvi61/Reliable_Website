@@ -64,7 +64,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20261010-11">
     <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -330,7 +330,10 @@
                     <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
                     <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
                     <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
                         <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
@@ -821,7 +824,10 @@
                                     <option value="Drone Photogrammetry">Drone Photogrammetry Survey</option>
                                     <option value="Road & Highway Survey">Road & Highway Survey</option>
                                     <option value="Rail & Metro Survey">Rail & Metro Survey</option>
-                                    <option value="CAD & GIS Processing">CAD & GIS Processing</option>
+                                    <option value="CAD & GPR Processing">CAD & GPR Processing</option>
+                                    <option value="Bathymetric Survey">Bathymetric & Hydrographic Survey</option>
+                                    <option value="Contour Survey">Contour & Elevation Land Survey</option>
+                        <option value="Digital Auto Level Survey">Digital Auto Level Survey</option>
                                     <option value="General Consultation">General Survey Consultation</option>
                                 </select>
                             </div>
@@ -831,40 +837,7 @@
                             </div>
                         </div>
 
-                        <!-- Streamlined Anti-Spam Captcha Verification (QA Item 27) -->
-                        <div class="reliable-captcha-section" style="margin-top: 14px; padding: 12px 14px; background: #f8fafc; border: 1.5px solid #d5e2ef; border-radius: 10px; box-shadow: 0 2px 8px rgba(8, 43, 76, 0.04);">
-                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-                                <span style="font-size: 11.5px; font-weight: 800; color: #082b4c; letter-spacing: 0.6px; text-transform: uppercase; font-family: var(--font-heading); display: inline-flex; align-items: center; gap: 5px;">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#082b4c" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                    Security Verification <span style="color: #ef4444;">*</span>
-                                </span>
-                                <label style="display: inline-flex; align-items: center; gap: 8px; margin: 0; cursor: pointer; font-size: 13px; font-weight: 600; color: #1e293b; user-select: none;">
-                                    <input type="checkbox" id="robotCheck" style="width: 17px; height: 17px; cursor: pointer; accent-color: #082b4c;">
-                                    <span>I'm not a robot</span>
-                                </label>
-                            </div>
-
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <!-- Captcha Display Badge -->
-                                <div id="captchaCodeBadge" style="user-select: none; -webkit-user-select: none; background: linear-gradient(135deg, #082b4c, #123f68); color: #ffffff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 800; letter-spacing: 3px; padding: 7px 10px; border-radius: 6px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); text-decoration: line-through; border: 1px dashed #f47b20; flex-shrink: 0; text-align: center; min-width: 88px; box-sizing: border-box;">
-                                    <span id="captchaCodeText">7W3K9</span>
-                                </div>
-                                <!-- Refresh Button -->
-                                <button type="button" id="btnRefreshCaptcha" title="Generate New Captcha Code" aria-label="Refresh Security Code" style="background: #ffffff; border: 1.5px solid #d5e2ef; color: #082b4c; width: 36px; height: 36px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all 0.2s ease;">
-                                    <svg id="captchaRefreshIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.4s ease;"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-                                </button>
-                                <!-- Captcha Input Field -->
-                                <input type="text" id="contactCaptchaInput" name="captcha_code" class="contact-input-field" placeholder="Code" maxlength="6" autocomplete="off" required style="flex: 1; min-width: 0; padding: 8px 10px; font-size: 13.5px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">
-                            </div>
-
-                            <!-- Captcha Validation Error Notice -->
-                            <div id="captchaError" style="display: none; margin-top: 8px; padding: 7px 12px; border-radius: 6px; background: #fef2f2; border: 1px solid #f87171; color: #b91c1c; font-size: 12.5px; font-weight: 600; align-items: center; gap: 6px;">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                                <span id="captchaErrorMsg">Please enter the security code.</span>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 14px;">
+                        <div style="margin-top: 18px;">
                             <button type="submit" id="contactSubmitBtn" class="btn btn-primary submit-consultation-btn" style="width: 100%; padding: 14px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;">
                                 Submit Consultation Request
                             </button>
@@ -891,7 +864,7 @@
                             </div>
                             <div style="flex: 1;">
                                 <div class="info-block-tag">HEADQUARTERS LOCATION</div>
-                                <p style="color: #082b4c; font-size: 14.5px; font-weight: 800; margin: 0 0 3px 0; line-height: 1.35;">Pune, Maharashtra, India</p>
+                                <p style="color: #082b4c; font-size: 14.5px; font-weight: 800; margin: 0 0 3px 0; line-height: 1.35;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                                 <p style="color: #1e293b; font-size: 12.5px; font-weight: 500; margin: 0; line-height: 1.35;">Central Operations Hub • Executing surveys across Maharashtra &amp; Pan-India</p>
                             </div>
                         </div>
@@ -945,7 +918,7 @@
 
                     </div>
                     <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="contact-map-tab-btn" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="contact-map-tab-btn" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg> View on Map
                         </a>
                         <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="contact-wa-tab-btn" style="background: #25D366; color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 18px rgba(37, 211, 102, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.25)';">
@@ -1086,7 +1059,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="showroom-map-btn">
+                <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="showroom-map-btn">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
                     OPEN IN GOOGLE MAPS
                 </a>
@@ -1099,25 +1072,25 @@
                     <!-- Floating Place Info Window (Over Map) -->
                     <div style="position: absolute; top: 16px; left: 16px; background: #ffffff; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(8, 43, 76, 0.15); border: 1px solid #e2e8f0; z-index: 5; max-width: 290px; pointer-events: auto;">
                         <h4 style="margin: 0 0 3px 0; color: var(--dark-navy); font-size: 14px; font-weight: 800; line-height: 1.3; font-family: var(--font-heading);">Reliable Land Survey Consultancy</h4>
-                        <p style="margin: 0 0 6px 0; color: var(--text-body); font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Pune, Maharashtra, India</p>
+                        <p style="margin: 0 0 6px 0; color: var(--text-body); font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <div style="display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--accent-orange); margin-bottom: 12px;">
                             <span>5.0</span>
                             <span style="letter-spacing: 1px;">★★★★★</span>
                             <span style="color: var(--text-muted); font-weight: 600; font-size: 11px;">(98+ Reviews)</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--primary-navy); color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s;" onmouseover="this.style.background='var(--accent-orange)'" onmouseout="this.style.background='var(--primary-navy)'">
+                            <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" style="background: var(--primary-navy); color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s;" onmouseover="this.style.background='var(--accent-orange)'" onmouseout="this.style.background='var(--primary-navy)'">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                                 Open in Maps
                             </a>
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.25s;" onmouseover="this.style.background='rgba(244, 123, 32, 0.15)'; this.style.color='var(--accent-orange)';" onmouseout="this.style.background='rgba(18, 63, 104, 0.08)'; this.style.color='var(--primary-navy)';" title="Directions">
+                            <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.25s;" onmouseover="this.style.background='rgba(244, 123, 32, 0.15)'; this.style.color='var(--accent-orange)';" onmouseout="this.style.background='rgba(18, 63, 104, 0.08)'; this.style.color='var(--primary-navy)';" title="Directions">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- Google Map Iframe -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 482px; flex: 1; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 482px; flex: 1; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -1255,7 +1228,10 @@
                         <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
                         <a href="road-highway-survey.html">Road & Highway Survey</a>
                         <a href="rail-metro-survey.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
@@ -1263,7 +1239,7 @@
                 <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
                     <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
-                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -1301,10 +1277,10 @@
                 <div class="footer-col footer-col-map">
                     <h4>Office Location</h4>
                     <div class="footer-map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
                     </div>
                     <div style="margin-top: 10px; text-align: left;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
                             <span>Open in Google Maps</span> &rarr;
                         </a>
                     </div>
@@ -1358,90 +1334,11 @@
             showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
         }
 
-        // Captcha State & Logic (QA Item 27)
-        var currentCaptchaCode = '';
-        var captchaTextEl = document.getElementById('captchaCodeText');
-        var captchaInputEl = document.getElementById('contactCaptchaInput');
-        var refreshBtn = document.getElementById('btnRefreshCaptcha');
-        var refreshIcon = document.getElementById('captchaRefreshIcon');
-        var robotCheck = document.getElementById('robotCheck');
-        var captchaError = document.getElementById('captchaError');
-        var captchaErrorMsg = document.getElementById('captchaErrorMsg');
-
-        function generateCaptcha() {
-            var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-            var code = '';
-            for (var i = 0; i < 5; i++) {
-                code += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            currentCaptchaCode = code;
-            if (captchaTextEl) {
-                captchaTextEl.textContent = code;
-            }
-            if (captchaInputEl) {
-                captchaInputEl.value = '';
-                captchaInputEl.style.borderColor = '#d5e2ef';
-            }
-            if (captchaError) {
-                captchaError.style.display = 'none';
-            }
-        }
-
-        function showCaptchaError(msg) {
-            if (captchaError && captchaErrorMsg) {
-                captchaErrorMsg.textContent = msg;
-                captchaError.style.display = 'flex';
-                captchaError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        }
-
-        generateCaptcha();
-
-        if (refreshBtn) {
-            refreshBtn.addEventListener('click', function() {
-                if (refreshIcon) {
-                    refreshIcon.style.transform = 'rotate(360deg)';
-                    setTimeout(function() {
-                        refreshIcon.style.transform = 'none';
-                    }, 400);
-                }
-                generateCaptcha();
-            });
-        }
-
         var form = document.getElementById('contactForm');
         if (!form) return;
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Captcha Verification Checks
-            if (captchaInputEl) {
-                var userCode = captchaInputEl.value.trim().toUpperCase();
-                if (!userCode) {
-                    showCaptchaError('Please enter the 5-character security code.');
-                    captchaInputEl.style.borderColor = '#ef4444';
-                    captchaInputEl.focus();
-                    return;
-                }
-                if (userCode !== currentCaptchaCode) {
-                    showCaptchaError('Security code does not match. A new code has been generated. Please try again.');
-                    captchaInputEl.style.borderColor = '#ef4444';
-                    generateCaptcha();
-                    captchaInputEl.focus();
-                    return;
-                }
-            }
-
-            if (robotCheck && !robotCheck.checked) {
-                showCaptchaError('Please check the "I\'m not a robot" security box.');
-                robotCheck.focus();
-                return;
-            }
-
-            if (captchaError) {
-                captchaError.style.display = 'none';
-            }
 
             var btn = document.getElementById('contactSubmitBtn') || form.querySelector('button[type="submit"]');
             var statusBox = document.getElementById('contactFormStatus');
@@ -1489,8 +1386,6 @@
             .then(function(data) {
                 showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
                 form.reset();
-                generateCaptcha();
-                if (robotCheck) robotCheck.checked = false;
             })
             .catch(function(err) {
                 console.warn('AJAX error, falling back to standard submit:', err);

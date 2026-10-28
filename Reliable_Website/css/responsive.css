@@ -565,20 +565,32 @@ html, body {
   }
   .nav-exact .nav-btn { display: none !important; }
   
-  .hero-exact::before { 
-    width: 100%; 
-    background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.3) 100%); 
+  .hero-exact {
+    height: auto !important;
+    min-height: 780px !important;
+    padding-bottom: 50px !important;
   }
-  
+  .hero-exact::before { 
+    width: 100% !important; 
+    background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.3) 100%) !important; 
+  }
   .hero-content-exact { 
     position: relative; left: 0; top: 0; width: 100%; max-width: 100%; 
-    padding: 140px 20px 60px; text-align: center; display: flex; flex-direction: column; align-items: center;
+    padding: 140px 20px 20px; text-align: center; display: flex; flex-direction: column; align-items: center;
+  }
+  .hero-showcase-box {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    margin: 25px auto 0 !important;
+    width: 92% !important;
+    max-width: 520px !important;
+    height: 300px !important;
   }
   .hero-eyebrow-container { justify-content: center; }
-  .hero-title-exact, .hero-desc-exact { font-size: 3.5rem; line-height: 1.1; width: 100%; max-width: 100%; }
+  .hero-title-exact, .hero-desc-exact { font-size: 3.2rem; line-height: 1.1; width: 100%; max-width: 100%; }
   .hero-desc-exact { font-size: 1.1rem; }
   .desktop-break { display: none; }
-  .hero-actions { justify-content: center; width: 100%; flex-wrap: wrap; }
   
   .about-modern-wrapper { flex-direction: column; gap: 30px; }
   .about-modern-content { order: 2; text-align: center; }
@@ -747,7 +759,7 @@ html, body {
   
   .footer { padding-bottom: 20px; background-position: bottom center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 15px; margin-top: 150px; }
-  .nav-logo img { height: 40px; }
+  .nav-logo img { height: 52px; }
 }
 
 @media (max-width: 991px) {

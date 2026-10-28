@@ -63,7 +63,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20261010-11">
     <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
-    <link rel="stylesheet" href="css/header-footer.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -290,7 +290,10 @@
                     <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
                     <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
                     <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
                         <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
@@ -337,240 +340,194 @@
         </div>
     </div>
 
-    <!-- TECHNICAL SPECS & OVERVIEW -->
-    <section class="section service-spec-section engineering-survey-section" style="padding: 75px 0; position: relative; overflow: hidden; background: #f0f7fd url('assets/images/engineering-survey-bg.png') no-repeat center center; background-size: cover;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="service-spec-grid" style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: stretch; background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; box-shadow: 0 20px 45px rgba(8, 43, 76, 0.12); border: 1px solid rgba(255, 255, 255, 0.95); padding: clamp(25px, 4vw, 45px); box-sizing: border-box;">
-                
-                <!-- Left: Media & Quick CTA -->
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <!-- Animated Geospatial Media Card -->
-                        <div class="spec-media-card">
-                            <img decoding="async" loading="lazy" src="assets/images/about.jpg" alt="Topographical Survey Field Crew Measuring Contours and Spot Levels" title="Topographical Survey Field Execution - Ground Feature Demarcation">
-                            <div class="spec-live-pill">
-                                <span class="spec-live-dot"></span>
-                                <span>SURVEY-GRADE ACCURACY</span>
-                            </div>
-                            <div class="spec-media-overlay">
-                                <div class="media-subtitle">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                    GEOSPATIAL EXPERTISE
-                                </div>
-                                <div class="media-title">Topographical Survey</div>
-                            </div>
-                        </div>
-                                                <!-- Animated Feature Highlight Cards -->
-                        <div class="spec-feature-cards">
-                            <div class="spec-feature-card">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Rapid Field Dispatch Across Maharashtra</div>
-                                    <div class="spec-feature-desc">Direct mobilization from Pune headquarters for urgent infrastructure & topographical requirements.</div>
-                                </div>
-                            </div>
-                            <div class="spec-feature-card theme-navy">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Survey of India (SOI) Datum Compliance</div>
-                                    <div class="spec-feature-desc">Tied to national permanent GTS control pillars with closed-loop traverse mathematical closure.</div>
-                                </div>
-                            </div>
-                            <div class="spec-feature-card">
-                                <div class="spec-feature-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                                </div>
-                                <div>
-                                    <div class="spec-feature-title">Multi-Layered CAD & 3D Deliverables</div>
-                                    <div class="spec-feature-desc">Handover includes 2D/3D AutoCAD .DWG, LandXML, DTM surface meshes, and stamped survey drawings.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-spec-cta-grid" style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                        <a href="contact.html?service=topographical-survey" class="btn btn-primary btn-spec-quote" style="padding: 15px 18px; font-size: 14.5px; border-radius: 8px; font-weight: 700; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span>Enquire Now</span></a>
-                        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="btn btn-spec-whatsapp" style="background: #25D366; color: #fff; text-decoration: none; padding: 15px 18px; border-radius: 8px; font-weight: 700; font-size: 14.5px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 8px;">WhatsApp Us</a>
-                    </div>
-                </div>
-
-                <!-- Right: Technical Specs Table & Description -->
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div class="section-label" style="margin-bottom: 6px; font-weight: 800; letter-spacing: 1.5px;">ENGINEERING SPECIFICATIONS</div>
-                        <h2 style="color: var(--dark-navy); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 6px 0; font-weight: 800; font-family: var(--font-heading); line-height: 1.25;">Technical Standards & Deliverables</h2>
-                        <span class="spec-heading-accent"></span>
-                        <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.65; margin: 0 0 20px 0;">A Topographical Survey provides the fundamental baseline for all architectural design, civil engineering, and infrastructure development. At <strong>Reliable Land Survey Consultancy</strong>, our expert survey crews map every physical feature on the ground with millimeter accuracy — including terrain contours, spot elevations, trees (with girth and species), utility manholes, overhead power lines, drainage channels, building footprints, and boundary fence lines.</p>
-                        
-                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
-                            
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">SERVICE TYPE</td>
-                            <td class="spec-table-val">Topographical Survey</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">PRIMARY EQUIPMENT</td>
-                            <td class="spec-table-val">Dual-Frequency RTK GNSS, 1" High-Precision Total Stations, Auto Levels</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">ACCURACY / TOLERANCE</td>
-                            <td class="spec-table-val">Horizontal: ±5mm + 1ppm | Vertical: ±1mm per km leveling</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">OUTPUT DELIVERABLES</td>
-                            <td class="spec-table-val">AutoCAD .DWG/.DXF (2D & 3D), 0.5m/1.0m Contours, DTM Surfaces, Spot Levels</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">COMPLIANCE STANDARDS</td>
-                            <td class="spec-table-val">Survey of India (SOI) GTS datum, WGS84 / UTM Grid & Local Grids</td>
-                        </tr>
-                        <tr class="spec-table-row">
-                            <td class="spec-table-label">HEADQUARTERS / REACH</td>
-                            <td class="spec-table-val">Pune Headquarters | 24-48h Rapid Field Mobilization Pan-India</td>
-                        </tr>
-                        </table>
-                        <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(8,43,76,0.12); display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
-                            <div style="font-size: 14px; color: var(--primary-navy); font-weight: 600;">
-                                Need customized surveying solutions or field mobilization?
-                            </div>
-                            <a href="contact.html?service=topographical-survey" class="btn-product-enquiry" style="background: var(--accent-orange); color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(244,123,32,0.28); transition: all 0.25s ease;">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                                <span>Enquire for Topographical Survey</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- KEY SERVICE CAPABILITIES -->
-    <section class="section capabilities-theme-section" style="padding: 85px 0;">
-        <div class="container" style="position: relative; z-index: 1;">
-            <div class="text-center" style="margin-bottom: 50px;">
-                <div class="section-label" style="margin-bottom: 8px;">CORE DELIVERABLES</div>
-                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Key Capabilities & Applications</h2>
-                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 15px; line-height: 1.6;">Designed to provide high accuracy for engineers, architects, developers, and project managers.</p>
-            </div>
-
-            <div class="capabilities-grid">
-                <!-- Card 1 -->
-                <div class="capability-card">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/><path d="M4 18h16"/></svg>
-                    </div>
-                    <h3>Contour & Digital Elevation Modeling (DEM)</h3>
-                    <p>Precise 0.2m, 0.5m, or 1.0m interval contour lines integrated with TIN meshes for exact cut-and-fill earthwork calculations.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="capability-card theme-navy">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    </div>
-                    <h3>Comprehensive Utility & Infrastructure Mapping</h3>
-                    <p>Accurate location and depth inversion mapping of drainage channels, culverts, water lines, electric poles, and underground utility corridors.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="capability-card">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>Legal & Cadastral Boundary Alignment</h3>
-                    <p>Demarcation and cross-verification of revenue boundary limits against official village maps (7/12 extract and Gut maps).</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="capability-card theme-navy">
-                    <div class="cap-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    </div>
-                    <h3>As-Built Topographical Verification</h3>
-                    <p>Pre-construction and post-construction baseline surveys ensuring alignment with sanctioned architectural master plans.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQS SECTION -->
-    <section class="section faqs-theme-section" style="padding: 85px 0;">
+        <!-- MAIN OVERVIEW SECTION -->
+    <section class="section" style="padding: 70px 0 60px 0; background: #ffffff;">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 45px;">
-                <div class="section-label" style="margin-bottom: 8px;">TECHNICAL FAQS</div>
-                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3vw, 2.3rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 12px 0;">Frequently Asked Questions</h2>
-                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 15px;">Specific queries regarding our Topographical Survey methodology and deliverables.</p>
-            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <div class="section-label" style="margin-bottom: 10px;">HIGH-PRECISION TOPOGRAPHICAL & TERRAIN MAPPING</div>
+                    <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: var(--dark-navy); font-weight: 800; line-height: 1.25; margin-bottom: 20px;">
+                        Engineering-Grade Topographical Mapping & Elevation Baseline Surveys
+                    </h2>
+                    <p style="color: #334155; font-size: 15.5px; line-height: 1.7; margin-bottom: 16px;">
+                        A <strong>Topographical Survey</strong> is an indispensable engineering pre-requisite for civil construction, architecture, township planning, drainage design, and highway alignments. By identifying every physical feature on the ground—contours, spot levels, trees, utility manholes, drains, and building footprints—it creates an exact digital canvas for planning and construction.
+                    </p>
+                    <p style="color: #334155; font-size: 15.5px; line-height: 1.7; margin-bottom: 24px;">
+                        At <strong>Reliable Land Survey Consultancy</strong>, our expert survey crews deploy dual-frequency RTK GNSS receivers and high-precision Total Stations (1" accuracy). Tied to Survey of India (SOI) national benchmarks, we deliver millimeter-accurate 2D/3D AutoCAD drawings (.DWG), TIN surface models, contour lines (0.2m–1.0m intervals), and comprehensive spot level data across Pune and Maharashtra.
+                    </p>
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+                        <a href="contact.html?service=topographical-survey" class="btn-quotation-overview">
+                            <span>Request Quotation</span>
+                            <span class="arrow-icon">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
 
-            <div class="faq-list">
-                
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">Why is a topographical survey essential before construction?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        A topographical survey reveals the exact surface relief, slopes, and existing site obstacles. It prevents expensive engineering design mistakes, foundation rework, and inaccurate earthwork budget estimations.
+                <!-- Featured Image -->
+                <div style="position: relative;">
+                    <div style="background: linear-gradient(135deg, var(--accent-orange), var(--dark-navy)); padding: 6px; border-radius: 18px; box-shadow: 0 16px 40px rgba(8, 43, 76, 0.12);">
+                        <img decoding="async" src="assets/images/about.jpg" alt="Topographical Survey Field Crew Measuring Contours and Spot Levels" title="Topographical Survey Field Execution - Ground Feature Demarcation" style="width: 100%; height: auto; max-height: 440px; object-fit: cover; object-position: center center; border-radius: 12px; display: block;">
                     </div>
                 </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">What contour intervals do you generate?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        We standardly generate 0.5m or 1.0m contour intervals, and can deliver ultra-fine 0.2m intervals for sensitive grading, drainage design, or golf course developments.
-                    </div>
-                </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">What file formats will I receive?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Deliverables include standard AutoCAD (.DWG, .DXF), 3D surfaces (.TIN, .LandXML), CSV coordinate tables (Easting, Northing, Elevation, Description), and stamped PDF layout sheets.
-                    </div>
-                </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">How do you accurately survey heavily vegetated or wooded land?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        For dense tree canopy or jungle areas, we employ a hybrid methodology combining penetration ground-strike LiDAR with electronic total stations and traverse clearing lines, ensuring true bare-earth terrain capture beneath foliage.
-                    </div>
-                </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">How are site boundary markers and natural drainage features identified?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        We map all physical boundary markers (fences, compound walls, stones), natural streams, nallas, water bodies, and catchment flow directions with spot level elevations, clearly flagged on CAD layers for hydrology and site planning.
-                    </div>
-                </div>
-            </div>
-            <div class="faq-card fade-up">
-                <div class="faq-card-header">
-                    <span class="faq-question">Can the topographical survey be tied into Mean Sea Level (MSL) benchmarks?</span>
-                </div>
-                <div class="faq-card-body">
-                    <div class="faq-card-content">
-                        Yes. We tie all ground elevation levels to the nearest Survey of India (SOI) Mean Sea Level (MSL) benchmark or established geodetic vertical datum using high-precision digital levels and dual-frequency GNSS.
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </section>
 
-        <!-- CTA BANNER -->
+    <!-- KEY CAPABILITIES SECTION -->
+    <section class="section" style="padding: 70px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="text-center" style="max-width: 750px; margin: 0 auto 50px auto;">
+                <div class="section-label">SPECIALIZED CAPABILITIES</div>
+                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.3rem); color: var(--dark-navy); font-weight: 800; margin-bottom: 12px;">
+                    Comprehensive Topographical Surveying Solutions
+                </h2>
+                <p style="color: #64748b; font-size: 15px;">
+                    From residential plots and commercial campuses to multi-hectare infrastructure corridors and industrial parks.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 26px;">
+                <!-- Card 1 -->
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(244, 123, 32, 0.1); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Contour & Digital Elevation Modeling (DEM)</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Precise 0.2m, 0.5m, or 1.0m interval contour lines integrated with TIN meshes for exact cut-and-fill earthwork calculations.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(8, 43, 76, 0.08); color: var(--primary-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Comprehensive Utility & Infrastructure Mapping</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Accurate location and depth inversion mapping of drainage channels, culverts, water lines, electric poles, and underground utility corridors.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(244, 123, 32, 0.1); color: var(--accent-orange); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">Legal & Cadastral Boundary Alignment</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Demarcation and cross-verification of revenue boundary limits against official village maps (7/12 extract and Gut maps).
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card-hover" style="background: #ffffff; padding: 32px 26px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(8, 43, 76, 0.04); display: flex; flex-direction: column;">
+                    <div style="width: 52px; height: 52px; border-radius: 10px; background: rgba(8, 43, 76, 0.08); color: var(--primary-navy); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 style="font-size: 19px; color: var(--dark-navy); font-weight: 700; margin-bottom: 12px;">As-Built Topographical Verification</h3>
+                    <p style="color: #64748b; font-size: 14.5px; line-height: 1.6; margin: 0; flex: 1;">
+                        Pre-construction and post-construction baseline surveys ensuring alignment with sanctioned architectural master plans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCORDION) -->
+    <section class="section" style="padding: 70px 0; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="text-center" style="max-width: 720px; margin: 0 auto 40px auto;">
+                <div class="section-label">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.3rem); color: var(--dark-navy); font-weight: 800; margin-bottom: 12px;">
+                    Topographical Survey FAQs
+                </h2>
+                <p style="color: #64748b; font-size: 15px;">Clear answers to common questions about topographical surveys, contour intervals, and CAD deliverables.</p>
+            </div>
+
+            <div class="faq-list" style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px;">
+                <!-- FAQ 1 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">Why is a topographical survey essential before construction?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            A topographical survey reveals the exact surface relief, slopes, and existing site obstacles. It prevents expensive engineering design mistakes, foundation rework, and inaccurate earthwork budget estimations.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">What contour intervals do you generate?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            We standardly generate 0.5m or 1.0m contour intervals, and can deliver ultra-fine 0.2m intervals for sensitive grading, drainage design, or golf course developments.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">What file formats will I receive?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Deliverables include standard AutoCAD (.DWG, .DXF), 3D surfaces (.TIN, .LandXML), CSV coordinate tables (Easting, Northing, Elevation, Description), and stamped PDF layout sheets.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">How do you accurately survey heavily vegetated or wooded land?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            For dense tree canopy or jungle areas, we employ a hybrid methodology combining penetration ground-strike LiDAR with electronic total stations and traverse clearing lines, ensuring true bare-earth terrain capture beneath foliage.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">How are site boundary markers and natural drainage features identified?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            We map all physical boundary markers (fences, compound walls, stones), natural streams, nallas, water bodies, and catchment flow directions with spot level elevations, clearly flagged on CAD layers for hydrology and site planning.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-card fade-up">
+                    <div class="faq-card-header">
+                        <span class="faq-question">Can the topographical survey be tied into Mean Sea Level (MSL) benchmarks?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-card-body">
+                        <div class="faq-card-content">
+                            Yes. We tie all ground elevation levels to the nearest Survey of India (SOI) Mean Sea Level (MSL) benchmark or established geodetic vertical datum using high-precision digital levels and dual-frequency GNSS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
     <section class="service-cta-banner">
         <!-- Animated Topo Grid Background -->
         <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; animation: gridPan 15s linear infinite; opacity: 0.5; pointer-events: none; z-index: 1;"></div>
@@ -635,7 +592,10 @@
                         <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
                         <a href="road-highway-survey.html">Road & Highway Survey</a>
                         <a href="rail-metro-survey.html">Rail & Metro Survey</a>
-                        <a href="cad-gis-processing-services.html">CAD & GIS Services</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
@@ -643,7 +603,7 @@
                 <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
                     <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
-                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
                             Mahesh Deshmukh<br>
                             <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
@@ -681,10 +641,10 @@
                 <div class="footer-col footer-col-map">
                     <h4>Office Location</h4>
                     <div class="footer-map-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
                     </div>
                     <div style="margin-top: 10px; text-align: left;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="footer-map-directions-link">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
                             <span>Open in Google Maps</span> &rarr;
                         </a>
                     </div>
