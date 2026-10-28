@@ -1,0 +1,348 @@
+/* ========================================================
+   PRODUCT DETAIL PAGE / MODAL
+======================================================== */
+.pdp-section {
+  padding: 40px 0 80px;
+  background-color: #ffffff;
+}
+
+.pdp-breadcrumbs {
+  padding: 16px 0 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #707070;
+  flex-wrap: wrap;
+}
+
+.pdp-breadcrumbs a {
+  color: #121212;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.pdp-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.pdp-breadcrumbs span {
+  color: #707070;
+}
+
+.pdp-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 52px;
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .pdp-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pdp-gallery-wrap {
+    position: static;
+  }
+}
+
+/* Gallery Side */
+.pdp-gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 90px;
+}
+
+.pdp-main-image-box {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #f7f7f7;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.pdp-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pdp-thumbs-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.pdp-thumb-btn {
+  width: 68px;
+  height: 90px;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: #f7f7f7;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.pdp-thumb-btn.active {
+  border-color: #121212;
+}
+
+.pdp-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Side */
+.pdp-info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-badge-pill {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--color-sale-red);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.pdp-title {
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.pdp-ratings-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.pdp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pdp-sale-price {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.pdp-regular-price {
+  font-size: 18px;
+  color: var(--text-light-muted);
+  text-decoration: line-through;
+}
+
+.pdp-discount-badge {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-sale-red);
+  background: #fde8e5;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Actions Section */
+.pdp-actions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.pdp-qty-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.pdp-qty-control {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: var(--radius-button);
+  padding: 4px;
+  width: fit-content;
+}
+
+.pdp-qty-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pdp-qty-val {
+  min-width: 36px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pdp-btn-row {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .pdp-btn-row {
+    flex-direction: column;
+  }
+}
+
+.btn-add-cart-large {
+  flex: 1;
+  height: 50px;
+  background: #121212;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  font-family: inherit;
+}
+
+.btn-add-cart-large:hover {
+  background: #2b2b2b;
+  transform: translateY(-1px);
+}
+
+.btn-buy-now {
+  flex: 1;
+  height: 50px;
+  background: var(--color-orange-accent);
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  font-family: inherit;
+}
+
+.btn-buy-now:hover {
+  background: #e07920;
+  transform: translateY(-1px);
+}
+
+/* Trust Indicators */
+.pdp-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 28px;
+}
+
+.pdp-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.pdp-trust-icon {
+  font-size: 20px;
+}
+
+/* Accordion Tabs */
+.pdp-accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pdp-acc-item {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pdp-acc-btn {
+  width: 100%;
+  padding: 16px 20px;
+  background: #fafafa;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pdp-acc-btn span.icon {
+  font-size: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.pdp-acc-item.open .pdp-acc-btn span.icon {
+  transform: rotate(45deg);
+}
+
+.pdp-acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444444;
+}
+
+.pdp-acc-item.open .pdp-acc-body {
+  max-height: 500px;
+  padding: 16px 20px;
+}

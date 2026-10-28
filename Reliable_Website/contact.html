@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Performance Optimization: Resource Preconnects & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
     <meta charset="UTF-8">
+
+    <!-- Google Analytics (GA4 - gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N13T37FJ7D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N13T37FJ7D');
+    </script>
+
+    <!-- Google Search Console (GSC) Verification -->
+    <meta name="google-site-verification" content="GSC_RELIABLE_LAND_SURVEY_VERIFICATION_TOKEN" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reliable Land Survey Consultancy | Surveying & Geospatial Solutions Pune</title>
-    <meta name="description" content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
-    <meta name="keywords" content="Land Survey, DGPS, GNSS, Total Station, RTK Drone, LiDAR, Topographical Survey, Infrastructure Survey, Pune, Maharashtra">
+    <title>Contact Us | Reliable Land Survey Consultancy Pune</title>
+    <meta name="description" content="Get in touch with our survey engineers for project quotations, technical consultation, or office visits in Pune, Maharashtra. Phone: +91 96046 46777.">
+    <meta name="keywords" content="Contact Surveyors Pune, Land Survey Quotation, Survey Office Kokane Chowk, Land Survey Contact Maharashtra">
     
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Reliable Land Survey Consultancy">
-    <meta property="og:description" content="Precision surveying and geospatial solutions for modern infrastructure.">
+    
+    <!-- Standard Meta Tags -->
+    <meta name="author" content="Reliable Land Survey Consultancy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#082B4C">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:site_name" content="Reliable Land Survey Consultancy">
     <meta property="og:type" content="website">
-    
-    <link rel="canonical" href="https://www.reliablelandsurvey.in/">
+    <meta property="og:title" content="Contact Us | Reliable Land Survey Consultancy Pune">
+    <meta property="og:description" content="Get in touch with our survey engineers for project quotations, technical consultation, or office visits in Pune, Maharashtra. Phone: +91 96046 46777.">
+    <meta property="og:url" content="https://www.reliablelandsurvey.in/contact.html">
+    <meta property="og:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Reliable Land Survey Consultancy Logo">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Reliable Land Survey Consultancy Pune">
+    <meta name="twitter:description" content="Get in touch with our survey engineers for project quotations, technical consultation, or office visits in Pune, Maharashtra. Phone: +91 96046 46777.">
+    <meta name="twitter:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
+
+    <link rel="canonical" href="https://www.reliablelandsurvey.in/contact.html">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.jpg?v=2" type="image/jpeg">
@@ -22,9 +61,10 @@
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261008_5">
-    <link rel="stylesheet" href="css/responsive.css?v=20261008_5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20261010-11">
+    <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -78,10 +118,7 @@
         position: fixed !important;
         right: 18px !important;
         right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-        top: 60% !important;
-        bottom: auto !important;
-        transform: translateY(-50%) !important;
-        -webkit-transform: translateY(-50%) !important;
+        bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
         z-index: 2147483647 !important;
         display: flex !important;
         flex-direction: column !important;
@@ -119,10 +156,7 @@
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          top: 42% !important;
-          bottom: auto !important;
-          transform: translateY(-50%) !important;
-          -webkit-transform: translateY(-50%) !important;
+          bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
           z-index: 2147483647 !important;
           gap: 10px !important;
         }
@@ -133,15 +167,100 @@
       }
     </style>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.reliablelandsurvey.in/contact.html#webpage",
+  "url": "https://www.reliablelandsurvey.in/contact.html",
+  "name": "Contact Us | Reliable Land Survey Consultancy Pune",
+  "isPartOf": {
+    "@id": "https://www.reliablelandsurvey.in/#website"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.reliablelandsurvey.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact Us",
+        "item": "https://www.reliablelandsurvey.in/contact.html"
+      }
+    ]
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What kind of surveys do you perform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in Topographical Surveys, DGPS/GNSS Control Establishment, LiDAR Drone Scanning, Route Alignments (Highways/Railways), and detailed As-Built structural surveys using state-of-the-art robotic total stations and RTK drones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is your Drone LiDAR mapping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our LiDAR sensors deployed on DJI enterprise drones can achieve absolute precision of down to 2-3 cm (XYZ) depending on flight parameters and ground control points. It easily penetrates dense vegetation to capture true ground models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard turnaround time for a project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turnaround time heavily depends on the project scope, terrain, and deliverables. However, our use of modern drone mapping allows us to capture thousands of acres in a single day, reducing traditional field time by up to 70%. We provide a precise timeline along with our quotation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What formats do you deliver the final data in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We deliver engineering-ready data compatible with major CAD and GIS software. Common formats include AutoCAD (.DWG, .DXF), point clouds (.LAS, .LAZ), GeoTIFF orthomosaics, shapefiles (.SHP), and standard PDF reports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you undertake survey projects outside of Pune and Maharashtra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, while our headquarters and primary operations hub are based in Pune, we undertake surveying and geospatial consultancy projects across Maharashtra and nationwide throughout India for large-scale infrastructure, highways, industrial corridors, and renewable energy sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information is required to get a detailed project quotation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To provide an accurate and prompt quotation, we typically need the project site location (Google Maps pin or KMZ boundary), the total land area or route corridor length, the desired survey type (e.g., Topographical, Drone LiDAR, DGPS Control, or Total Station), and your preferred engineering deliverables (CAD .DWG, contours, DTM/DEM, or point clouds)."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
-    <div class="floating-actions" style="position: fixed !important; right: 16px !important; top: 42% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
-        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+    <div class="floating-actions" style="position: fixed !important; right: 16px !important; bottom: 85px !important; top: auto !important; transform: none !important; -webkit-transform: none !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             <span class="float-tooltip">WhatsApp Us</span>
         </a>
-        <a href="tel:+919604648777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="tel:+919604646777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span class="float-tooltip">Call Us</span>
         </a>
@@ -153,23 +272,17 @@
         if (!el) return;
         var isMobile = window.innerWidth <= 1024;
         el.style.setProperty('position', 'fixed', 'important');
-        el.style.setProperty('bottom', 'auto', 'important');
-        el.style.setProperty('transform', 'translateY(-50%)', 'important');
-        el.style.setProperty('-webkit-transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('bottom', isMobile ? '85px' : '90px', 'important');
+        el.style.setProperty('top', 'auto', 'important');
+        el.style.setProperty('transform', 'none', 'important');
+        el.style.setProperty('-webkit-transform', 'none', 'important');
         el.style.setProperty('z-index', '2147483647', 'important');
         el.style.setProperty('display', 'flex', 'important');
         el.style.setProperty('flex-direction', 'column', 'important');
         el.style.setProperty('visibility', 'visible', 'important');
         el.style.setProperty('opacity', '1', 'important');
-        if (isMobile) {
-          el.style.setProperty('top', '42%', 'important');
-          el.style.setProperty('right', '16px', 'important');
-          el.style.setProperty('gap', '10px', 'important');
-        } else {
-          el.style.setProperty('top', '60%', 'important');
-          el.style.setProperty('right', '18px', 'important');
-          el.style.setProperty('gap', '12px', 'important');
-        }
+        el.style.setProperty('right', isMobile ? '16px' : '18px', 'important');
+        el.style.setProperty('gap', isMobile ? '10px' : '12px', 'important');
       }
       alignFloatingWidget();
       window.addEventListener('resize', alignFloatingWidget);
@@ -194,32 +307,35 @@
        TOP BAR (Shared Component)
     ========================================== -->
     <div id="site-topbar"></div>
-    <script src="js/topbar.js"></script>
+    <script src="js/topbar.js?v=20261010-06" defer></script>
 
     <nav class="nav-exact anim-nav">
         <div class="nav-logo">
-            <img src="assets/logo/logo-transparent.png" alt="Logo">
+            <img fetchpriority="high" decoding="async" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Pune - Land & Drone Survey Services" title="Reliable Land Survey Consultancy - Expert Land Surveyors in Pune, Maharashtra">
         </div>
         <div class="nav-links" id="mobileNavMenu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <div class="nav-dropdown">
-                <a href="services.html" class="nav-dropdown-toggle">
+                <a href="land-survey-services.html" class="nav-dropdown-toggle">
                     Services
                     <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
                 </a>
                 <div class="nav-dropdown-menu">
                     <a href="topographical-survey.html" class="nav-dropdown-item">Topographical Survey</a>
-                    <a href="dgps-gnss-control.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
+                    <a href="dgps-gnss-control-survey.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
                     <a href="total-station-survey.html" class="nav-dropdown-item">Total Station Survey</a>
-                    <a href="rtk-drone-mapping.html" class="nav-dropdown-item">RTK Drone Mapping</a>
-                    <a href="lidar-3d-scanning.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
-                    <a href="drone-photogrammetry.html" class="nav-dropdown-item">Drone Photogrammetry</a>
-                    <a href="road-highway.html" class="nav-dropdown-item">Road & Highway Survey</a>
-                    <a href="rail-metro.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="rtk-drone-mapping-survey.html" class="nav-dropdown-item">RTK Drone Mapping</a>
+                    <a href="lidar-3d-scanning-survey.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
+                    <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
+                    <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
+                    <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
-                        <a href="services.html">All Services &rarr;</a>
+                        <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -241,13 +357,17 @@
         style="position: relative; width: 100%; height: 480px; max-height: 500px; min-height: 440px; background-color: #eaf4fc; padding-top: 140px; overflow: hidden; box-sizing: border-box;">
 
         <!-- Animated Background Image (Matches About Us page exactly) -->
-        <img src="assets/images/about-hero-clean.jpg" alt="Geospatial Infrastructure Surveying" class="bg-pan-anim"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
+        <img decoding="async" src="assets/images/about-hero-clean.jpg" alt="Contact Reliable Land Survey Consultancy Pune - Request Survey Quotation & Site Mobilization" title="Contact Us - Reliable Land Survey Consultancy Pune Office" class="bg-pan-anim" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
 
         <!-- Overlay Text (Matches About Us page exactly) -->
         <div
             style="position: absolute; top: 135px; left: 0; width: 100%; height: calc(100% - 135px); display: flex; flex-direction: column; justify-content: center; padding: 0 8%; z-index: 2; pointer-events: none; box-sizing: border-box;">
             <div class="text-fade-in-left" style="max-width: 600px; padding-bottom: 20px; pointer-events: auto;">
+            <nav aria-label="breadcrumb" class="breadcrumb-container" style="margin-bottom: 14px;">
+                    <ol class="breadcrumb" style="list-style: none; padding: 0; margin: 0; font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <li class="breadcrumb-item"><a href="index.html" style="color: #4b5563; text-decoration: none; transition: color 0.2s;">HOME</a></li><li aria-hidden="true" style="color: var(--accent-orange);">&raquo;</li><li class="breadcrumb-item active" style="color: var(--accent-orange); font-weight: 800; white-space: nowrap;" aria-current="page">CONTACT US</li>
+                    </ol>
+                </nav>
                 <h5
                     style="color: var(--primary-navy); font-weight: 700; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px;">
                     CONTACT US</h5>
@@ -271,7 +391,7 @@
             <div class="text-center" style="margin-bottom: 35px;">
                 <div class="section-label" style="margin-bottom: 8px;">GET IN TOUCH</div>
                 <h2 class="section-heading" style="font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading); margin: 0 0 10px 0;">Consultation & Headquarters</h2>
-                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 15px; line-height: 1.6;">
+                <p style="color: #1e293b; max-width: 650px; margin: 0 auto; font-size: 15.5px; font-weight: 500; line-height: 1.6;">
                     Submit your project specifications for an engineering quotation or reach out directly to our Pune headquarters.
                 </p>
             </div>
@@ -288,13 +408,21 @@
                     grid-template-columns: 1fr;
                     gap: 30px;
                 }
+                .contact-info-list {
+                    flex: none !important;
+                    gap: 14px !important;
+                    margin: 16px 0 20px 0 !important;
+                }
+                .contact-box-right .info-block-row {
+                    flex: none !important;
+                }
             }
             /* GET IN TOUCH CONVERGING ANIMATION & CARD STYLING */
             .contact-box-card {
                 background: #ffffff;
                 border-radius: 16px;
-                box-shadow: 0 10px 30px rgba(8, 43, 76, 0.06);
-                border: 1px solid #e2e8f0;
+                box-shadow: 0 12px 35px rgba(8, 43, 76, 0.08);
+                border: 1.5px solid #cbd5e1;
                 padding: clamp(28px, 3.5vw, 40px);
                 display: flex;
                 flex-direction: column;
@@ -303,15 +431,11 @@
                 box-sizing: border-box;
                 will-change: transform, opacity;
             }
-            .contact-box-left {
-                opacity: 0;
-                transform: translateX(-120px);
-                transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
-            }
+            .contact-box-left,
             .contact-box-right {
-                opacity: 0;
-                transform: translateX(120px);
-                transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+                opacity: 1 !important;
+                transform: none !important;
+                transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
             }
             .contact-box-left.animate,
             .contact-box-right.animate {
@@ -327,17 +451,18 @@
                 }
             }
             .contact-card-header {
-                font-size: 22px;
-                color: var(--dark-navy);
+                font-size: 24px;
+                color: #082b4c;
                 font-weight: 800;
                 font-family: var(--font-heading);
                 margin: 0 0 8px 0;
                 line-height: 1.3;
             }
             .contact-card-sub {
-                color: var(--text-muted);
-                font-size: 14px;
-                line-height: 1.55;
+                color: #1e293b;
+                font-size: 14.5px;
+                font-weight: 500;
+                line-height: 1.6;
                 margin: 0 0 22px 0;
             }
             .contact-form-grid {
@@ -358,10 +483,10 @@
                 grid-column: span 2;
             }
             .contact-label {
-                font-size: 11.5px;
-                font-weight: 700;
-                color: var(--dark-navy);
-                letter-spacing: 0.5px;
+                font-size: 12px;
+                font-weight: 800;
+                color: #082b4c;
+                letter-spacing: 0.6px;
                 text-transform: uppercase;
                 margin-bottom: 6px;
                 display: block;
@@ -370,36 +495,284 @@
             .contact-input-field {
                 width: 100%;
                 padding: 12px 15px;
-                border: 1.5px solid #d9e2ec;
+                border: 1.5px solid #cbd5e1;
                 border-radius: 8px;
-                font-size: 14px;
+                font-size: 14.5px;
                 font-family: var(--font-main);
-                color: var(--text-dark);
+                color: #0f172a;
+                font-weight: 600;
                 background: #ffffff;
                 outline: none;
                 transition: all 0.25s ease;
                 box-sizing: border-box;
                 display: block;
             }
+            .contact-input-field::placeholder {
+                color: #475569;
+                font-weight: 500;
+                opacity: 0.95;
+            }
             .contact-input-field:focus {
                 border-color: var(--accent-orange);
                 box-shadow: 0 0 0 3px rgba(244, 123, 32, 0.15);
                 background: #ffffff;
             }
+            /* CONTINUOUS ANIMATED TABS SYSTEM */
+            @keyframes tabFloatContinuous {
+                0%, 100% {
+                    transform: translateY(0);
+                    border-color: #cbd5e1;
+                    box-shadow: 0 3px 10px rgba(8, 43, 76, 0.04);
+                    background: #f8fafc;
+                }
+                50% {
+                    transform: translateY(-3.5px);
+                    border-color: rgba(244, 123, 32, 0.55);
+                    box-shadow: 0 10px 24px rgba(8, 43, 76, 0.09), 0 0 0 1px rgba(244, 123, 32, 0.22);
+                    background: #ffffff;
+                }
+            }
+            @keyframes tabShimmerSweep {
+                0%, 35% {
+                    left: -120%;
+                }
+                75%, 100% {
+                    left: 170%;
+                }
+            }
+            @keyframes iconBeaconGlow {
+                0%, 100% {
+                    transform: scale(1);
+                    box-shadow: 0 0 0 0 rgba(244, 123, 32, 0);
+                }
+                50% {
+                    transform: scale(1.08);
+                    box-shadow: 0 0 14px 2px rgba(244, 123, 32, 0.28);
+                }
+            }
+            @keyframes actionMapFloat {
+                0%, 100% {
+                    transform: translateY(0);
+                    box-shadow: 0 4px 12px rgba(8, 43, 76, 0.15);
+                }
+                50% {
+                    transform: translateY(-2.5px);
+                    box-shadow: 0 8px 20px rgba(8, 43, 76, 0.28);
+                }
+            }
+            @keyframes actionWaFloat {
+                0%, 100% {
+                    transform: translateY(0);
+                    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+                }
+                50% {
+                    transform: translateY(-2.5px);
+                    box-shadow: 0 10px 22px rgba(37, 211, 102, 0.45);
+                }
+            }
+            @keyframes faqCardContinuous {
+                0%, 100% {
+                    transform: translateY(0);
+                    border-color: #cbd5e1;
+                    box-shadow: 0 4px 15px rgba(8, 43, 76, 0.03);
+                }
+                50% {
+                    transform: translateY(-2.5px);
+                    border-color: rgba(244, 123, 32, 0.42);
+                    box-shadow: 0 10px 24px rgba(8, 43, 76, 0.08), 0 0 0 1px rgba(244, 123, 32, 0.18);
+                }
+            }
+            @keyframes faqBarContinuous {
+                0%, 100% {
+                    opacity: 0.25;
+                    transform: scaleY(0.35);
+                }
+                50% {
+                    opacity: 0.85;
+                    transform: scaleY(0.9);
+                }
+            }
+
             .info-block-row {
                 background: #f8fafc;
-                border: 1px solid #edf2f7;
+                border: 1.5px solid #cbd5e1;
                 border-radius: 10px;
-                padding: 14px 16px;
+                padding: 15px 18px;
                 display: flex;
                 gap: 14px;
                 align-items: center;
-                transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+                position: relative;
+                overflow: hidden;
+                flex: 1;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                            border-color 0.3s ease, 
+                            box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                            background 0.3s ease;
+                animation: tabFloatContinuous 4s ease-in-out infinite;
+                will-change: transform, box-shadow, border-color;
             }
+
+            /* Elegant light sheen reflection moving across each tab */
+            .info-block-row::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -120%;
+                width: 60%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+                transform: skewX(-22deg);
+                pointer-events: none;
+                animation: tabShimmerSweep 4s ease-in-out infinite;
+            }
+
+            /* Staggered continuous delays for the 5 tabs */
+            .info-block-row:nth-child(1),
+            .info-block-row:nth-child(1)::after {
+                animation-delay: 0s;
+            }
+            .info-block-row:nth-child(2),
+            .info-block-row:nth-child(2)::after {
+                animation-delay: 0.8s;
+            }
+            .info-block-row:nth-child(3),
+            .info-block-row:nth-child(3)::after {
+                animation-delay: 1.6s;
+            }
+            .info-block-row:nth-child(4),
+            .info-block-row:nth-child(4)::after {
+                animation-delay: 2.4s;
+            }
+            .info-block-row:nth-child(5),
+            .info-block-row:nth-child(5)::after {
+                animation-delay: 3.2s;
+            }
+            .info-block-row:nth-child(6),
+            .info-block-row:nth-child(6)::after {
+                animation-delay: 4.0s;
+            }
+
+            /* Continuous soft pulse for icon badges inside the tabs */
+            .info-block-row > div:first-child {
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+                animation: iconBeaconGlow 4s ease-in-out infinite;
+            }
+            .info-block-row:nth-child(1) > div:first-child { animation-delay: 0s; }
+            .info-block-row:nth-child(2) > div:first-child { animation-delay: 0.8s; }
+            .info-block-row:nth-child(3) > div:first-child { animation-delay: 1.6s; }
+            .info-block-row:nth-child(4) > div:first-child { animation-delay: 2.4s; }
+            .info-block-row:nth-child(5) > div:first-child { animation-delay: 3.2s; }
+
+            /* Interactive Hover State: pauses continuous wave and locks in elevated focus */
             .info-block-row:hover {
-                border-color: #cbd5e1;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(8, 43, 76, 0.05);
+                animation-play-state: paused;
+                border-color: var(--accent-orange) !important;
+                transform: translateY(-4px) scale(1.01) !important;
+                box-shadow: 0 14px 28px rgba(8, 43, 76, 0.12), 0 0 0 1.5px rgba(244, 123, 32, 0.35) !important;
+                background: #ffffff !important;
+            }
+            .info-block-row:hover::after {
+                opacity: 0;
+            }
+            .info-block-row:hover > div:first-child {
+                animation-play-state: paused;
+                transform: scale(1.12);
+                box-shadow: 0 0 16px 3px rgba(244, 123, 32, 0.35);
+            }
+
+            /* Action tabs (View on Map & WhatsApp) continuous breathing */
+            .contact-map-tab-btn {
+                animation: actionMapFloat 3.2s ease-in-out infinite;
+            }
+            .contact-wa-tab-btn {
+                animation: actionWaFloat 3.2s ease-in-out infinite 1.6s;
+            }
+            .contact-map-tab-btn:hover,
+            .contact-wa-tab-btn:hover {
+                animation-play-state: paused !important;
+            }
+
+            /* FAQ continuous breathing animations */
+            .faq-card {
+                animation: faqCardContinuous 4.8s ease-in-out infinite;
+                will-change: transform, box-shadow, border-color;
+            }
+            .faq-card::before {
+                animation: faqBarContinuous 4.8s ease-in-out infinite;
+            }
+            .faq-card:nth-child(1), .faq-card:nth-child(1)::before { animation-delay: 0s; }
+            .faq-card:nth-child(2), .faq-card:nth-child(2)::before { animation-delay: 0.8s; }
+            .faq-card:nth-child(3), .faq-card:nth-child(3)::before { animation-delay: 1.6s; }
+            .faq-card:nth-child(4), .faq-card:nth-child(4)::before { animation-delay: 2.4s; }
+            .faq-card:nth-child(5), .faq-card:nth-child(5)::before { animation-delay: 3.2s; }
+            .faq-card:nth-child(6), .faq-card:nth-child(6)::before { animation-delay: 4.0s; }
+            .faq-card:hover, .faq-card:focus-within, .faq-card.is-active {
+                animation-play-state: paused;
+            }
+            .faq-card:hover::before, .faq-card:focus-within::before, .faq-card.is-active::before {
+                animation-play-state: paused;
+            }
+            .info-block-tag {
+                font-size: 11.5px;
+                font-weight: 800;
+                color: #082b4c;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+                margin-bottom: 3px;
+                font-family: var(--font-heading);
+            }
+            /* CONTINUOUS ANIMATION FOR SUBMIT BUTTON */
+            @keyframes submitBtnFloat {
+                0%, 100% {
+                    transform: translateY(0);
+                    box-shadow: 0 4px 14px rgba(244, 123, 32, 0.28);
+                }
+                50% {
+                    transform: translateY(-3px);
+                    box-shadow: 0 12px 28px rgba(244, 123, 32, 0.48), 0 0 16px rgba(244, 123, 32, 0.32);
+                }
+            }
+            @keyframes submitBtnShimmer {
+                0%, 30% {
+                    left: -120%;
+                }
+                70%, 100% {
+                    left: 170%;
+                }
+            }
+            .submit-consultation-btn {
+                position: relative;
+                overflow: hidden;
+                animation: submitBtnFloat 3.6s ease-in-out infinite;
+                will-change: transform, box-shadow;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                            box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                            background-color 0.25s ease;
+            }
+            .submit-consultation-btn::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -120%;
+                width: 60%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+                transform: skewX(-25deg);
+                pointer-events: none;
+                animation: submitBtnShimmer 3.6s ease-in-out infinite;
+            }
+            .submit-consultation-btn:hover {
+                animation-play-state: paused !important;
+                background: var(--accent-orange-hover) !important;
+                transform: translateY(-4px) scale(1.01) !important;
+                box-shadow: 0 16px 36px rgba(244, 123, 32, 0.52), 0 0 20px rgba(244, 123, 32, 0.35) !important;
+            }
+            .submit-consultation-btn:hover::after {
+                opacity: 0;
+            }
+            .submit-consultation-btn:active {
+                transform: translateY(-1px) scale(0.99) !important;
+                box-shadow: 0 6px 18px rgba(244, 123, 32, 0.35) !important;
             }
         </style>
         
@@ -413,53 +786,60 @@
                         <p class="contact-card-sub">Provide your project specifications. Our survey engineers will review the scope and respond within 24 hours.</p>
                     </div>
                     
-                    <form id="contactForm" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-                        <div class="contact-form-grid">
+                    <div id="contactFormStatus" style="display: none; padding: 16px 20px; border-radius: 10px; margin-bottom: 22px; font-size: 14.5px; line-height: 1.55; box-shadow: 0 4px 15px rgba(8, 43, 76, 0.06); transition: all 0.3s ease;"></div>
+
+                    
+                    
+                    <form id="contactForm" action="https://formsubmit.co/tanviii6104@gmail.com" method="POST" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1; margin-top: 6px;">
+                        <!-- Destination & Configuration Fields -->
+                        <input type="hidden" name="_subject" value="New Project Quotation Request - Reliable Land Surveyors">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_replyto" id="contactReplyTo" value="">
+                        <input type="hidden" name="_next" id="contactNext" value="">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="contact-form-grid" style="gap: 14px;">
                             <div>
-                                <label class="contact-label">Full Name *</label>
-                                <input type="text" id="contact-name" class="contact-input-field" placeholder="Enter full name" required>
+                                <label class="contact-label" for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="Full Name" class="contact-input-field" placeholder="Enter full name" autocomplete="name" required>
                             </div>
                             <div>
-                                <label class="contact-label">Company / Firm Name</label>
-                                <input type="text" id="contact-company" class="contact-input-field" placeholder="Organization name">
+                                <label class="contact-label" for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" name="Phone Number" class="contact-input-field" placeholder="+91 96046 46777" autocomplete="tel" required>
                             </div>
                             <div>
-                                <label class="contact-label">Email Address *</label>
-                                <input type="email" id="contact-email" class="contact-input-field" placeholder="name@example.com" required>
+                                <label class="contact-label" for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="Email Address" class="contact-input-field" placeholder="name@example.com" autocomplete="email" required>
                             </div>
                             <div>
-                                <label class="contact-label">Phone Number *</label>
-                                <input type="tel" id="contact-phone" class="contact-input-field" placeholder="+91 96046 48777" required>
-                            </div>
-                            <div class="full-width">
-                                <label class="contact-label">Survey Service Required *</label>
-                                <select id="contact-service" class="contact-input-field" required style="cursor: pointer;">
-                                    <option value="" disabled selected>Select a survey service...</option>
+                                <label class="contact-label" for="contact-service">Survey Service *</label>
+                                <select id="contact-service" name="Survey Service Required" class="contact-input-field" required style="cursor: pointer;">
+                                    <option value="" disabled selected>Select service required...</option>
                                     <option value="Topographical Survey">Topographical & Land Survey</option>
-                                    <option value="DGPS / GNSS Control">DGPS / GNSS Control Establishment</option>
-                                    <option value="Total Station Survey">Total Station Measurement & Layout</option>
-                                    <option value="RTK Drone Mapping">RTK Drone Aerial Mapping & Photogrammetry</option>
+                                    <option value="DGPS / GNSS Control">DGPS / GNSS Control</option>
+                                    <option value="Total Station Survey">Total Station Measurement</option>
+                                    <option value="RTK Drone Mapping">RTK Drone Aerial Mapping</option>
                                     <option value="Drone LiDAR Scanning">Drone LiDAR & 3D Scanning</option>
-                                    <option value="Road & Highway Survey">Road & Highway Alignment Survey</option>
-                                    <option value="Rail & Metro Survey">Rail & Metro Infrastructure Survey</option>
-                                    <option value="CAD & GIS Processing">CAD Drafting & GIS Processing</option>
+                                    <option value="Drone Photogrammetry">Drone Photogrammetry Survey</option>
+                                    <option value="Road & Highway Survey">Road & Highway Survey</option>
+                                    <option value="Rail & Metro Survey">Rail & Metro Survey</option>
+                                    <option value="CAD & GPR Processing">CAD & GPR Processing</option>
+                                    <option value="Bathymetric Survey">Bathymetric & Hydrographic Survey</option>
+                                    <option value="Contour Survey">Contour & Elevation Land Survey</option>
+                        <option value="Digital Auto Level Survey">Digital Auto Level Survey</option>
                                     <option value="General Consultation">General Survey Consultation</option>
                                 </select>
                             </div>
                             <div class="full-width">
-                                <label class="contact-label">Project Location & Scope</label>
-                                <input type="text" id="contact-location" class="contact-input-field" placeholder="e.g. Pune, PCMC, Hinjewadi, or Acreage/KM">
-                            </div>
-                            <div class="full-width">
-                                <label class="contact-label">Message *</label>
-                                <textarea id="contact-message" class="contact-input-field" rows="3" placeholder="Describe site details, required deliverables (Contours, 3D CAD, Point Cloud), and timeline..." required style="resize: vertical;"></textarea>
+                                <label class="contact-label" for="contact-message">Project Location, Scope & Deliverables *</label>
+                                <textarea id="contact-message" name="Project Details & Deliverables" class="contact-input-field" rows="3" placeholder="Briefly describe project location, estimated area/km, required deliverables (Contours, 3D CAD, Point Cloud)..." required style="resize: vertical; min-height: 85px;"></textarea>
                             </div>
                         </div>
 
                         <div style="margin-top: 18px;">
-                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <button type="submit" id="contactSubmitBtn" class="btn btn-primary submit-consultation-btn" style="width: 100%; padding: 14px 24px; font-size: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;">
                                 Submit Consultation Request
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                             </button>
                         </div>
                     </form>
@@ -468,85 +848,80 @@
 
             <!-- Box 2 (Right): Headquarters Card -->
             <div class="contact-box-card contact-box-right">
-                <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; height: 100%;">
                     <div>
-                        <h3 class="contact-card-header">Direct Office</h3>
-                        <p class="contact-card-sub">Reach our technical desk directly for active field project coordination or visit our central Pune office.</p>
+                        <h3 class="contact-card-header">Direct Office &amp; Technical Desk</h3>
+                        <p class="contact-card-sub" style="margin-bottom: 0;">Reach our technical desk directly for active field project coordination, methodology review, or visit our central Pune office.</p>
+                    </div>
+
+                    <!-- Contact Info Blocks List: Evenly distributed & proportioned -->
+                    <div class="contact-info-list" style="display: flex; flex-direction: column; justify-content: space-between; gap: 12px; margin: 16px 0 18px 0; flex: 1;">
                         
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            
-                            <!-- Address -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">HEADQUARTERS LOCATION</div>
-                                    <p style="color: var(--dark-navy); font-size: 14.5px; font-weight: 700; line-height: 1.3; margin: 0;">Pune, Maharashtra, India</p>
-                                    <p style="color: var(--text-muted); font-size: 12.5px; margin: 2px 0 0 0; line-height: 1.3;">Executing surveys across Maharashtra & Pan-India</p>
-                                </div>
+                        <!-- 1. Address -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
-
-                            <!-- Proprietors -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">PROPRIETORS</div>
-                                    <p style="color: var(--dark-navy); font-size: 14.5px; font-weight: 700; margin: 0; line-height: 1.4;">Mahesh Deshmukh &amp; Sharad Pingale</p>
-                                </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">HEADQUARTERS LOCATION</div>
+                                <p style="color: #082b4c; font-size: 14.5px; font-weight: 800; margin: 0 0 3px 0; line-height: 1.35;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
+                                <p style="color: #1e293b; font-size: 12.5px; font-weight: 500; margin: 0; line-height: 1.35;">Central Operations Hub • Executing surveys across Maharashtra &amp; Pan-India</p>
                             </div>
+                        </div>
 
-                            <!-- Phone -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; font-family: var(--font-heading);">DIRECT CONTACT PHONES</div>
-                                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                                        <div style="font-size: 14px; color: var(--dark-navy);">
-                                            <span style="font-weight: 600; color: #64748b;">Mahesh Deshmukh:</span> <a href="tel:+919604648777" style="color: var(--dark-navy); font-size: 14.5px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 96046 48777</a>
-                                        </div>
-                                        <div style="font-size: 14px; color: var(--dark-navy);">
-                                            <span style="font-weight: 600; color: #64748b;">Sharad Pingale:</span> <a href="tel:+918600044688" style="color: var(--dark-navy); font-size: 14.5px; font-weight: 800; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--accent-orange)'" onmouseout="this.style.color='var(--dark-navy)'">+91 86000 44688</a>
-                                        </div>
+                        <!-- 2. Proprietors & Direct Contact -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(8, 43, 76, 0.1); color: var(--dark-navy); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">PROPRIETORS &amp; SENIOR CONSULTANTS</div>
+                                <div style="display: flex; flex-direction: column; gap: 4px;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                                        <span style="color: #082b4c; font-size: 14px; font-weight: 800;">Mahesh Deshmukh</span>
+                                        <a href="tel:+918600044688" style="color: var(--accent-orange); text-decoration: none; font-size: 13px; font-weight: 700;">+91 86000 44688</a>
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                                        <span style="color: #082b4c; font-size: 14px; font-weight: 800;">Sharad Pingale</span>
+                                        <a href="tel:+919604646777" style="color: var(--accent-orange); text-decoration: none; font-size: 13px; font-weight: 700;">+91 96046 46777</a>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Email -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">OFFICIAL EMAIL</div>
-                                    <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); font-size: 14.5px; font-weight: 700; text-decoration: none; word-break: break-all;">info@reliablelandsurvey.in</a>
-                                </div>
-                            </div>
-
-                            <!-- Hours -->
-                            <div class="info-block-row">
-                                <div style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                </div>
-                                <div style="flex: 1;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #8898aa; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; font-family: var(--font-heading);">OPERATING HOURS</div>
-                                    <p style="color: var(--dark-navy); font-size: 14px; font-weight: 700; margin: 0 0 2px 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
-                                    <span style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); font-size: 10.5px; font-weight: 800; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block;">CLOSED ON SUNDAYS</span>
-                                </div>
-                            </div>
-
                         </div>
-                    </div>
 
-                    <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                        <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
+                        <!-- 3. Official Email -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(244, 123, 32, 0.12); color: var(--accent-orange); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">OFFICIAL INQUIRY &amp; RFQ EMAIL</div>
+                                <a href="mailto:info@reliablelandsurvey.in" style="color: var(--accent-orange); text-decoration: none; font-size: 14.5px; font-weight: 800; display: block; margin-bottom: 3px;">info@reliablelandsurvey.in</a>
+                                <p style="color: #1e293b; font-size: 12.5px; font-weight: 500; margin: 0; line-height: 1.35;">Share KMZ site boundaries, tender documents, or survey requirements</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Operating Hours & Mobilization -->
+                        <div class="info-block-row" style="padding: 14px 18px;">
+                            <div style="background: rgba(8, 43, 76, 0.1); color: var(--dark-navy); width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="info-block-tag">OPERATING &amp; MOBILIZATION HOURS</div>
+                                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px;">
+                                    <p style="color: #082b4c; font-size: 14px; font-weight: 800; margin: 0;">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+                                    <span style="background: #ffedd5; color: #c2410c; font-size: 11px; font-weight: 800; padding: 2px 7px; border-radius: 4px; letter-spacing: 0.5px; display: inline-block; border: 1px solid rgba(194, 65, 12, 0.2);">CLOSED ON SUNDAYS</span>
+                                </div>
+                                <p style="color: #1e293b; font-size: 12px; font-weight: 500; margin: 0; line-height: 1.35;">Field survey crew mobilization available 24/7 on prior coordination</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="contact-map-tab-btn" style="background: var(--dark-navy); color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--primary-navy)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--dark-navy)'; this.style.transform='translateY(0)';">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg> View on Map
                         </a>
-                        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" style="background: #25D366; color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 18px rgba(37, 211, 102, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.25)';">
+                        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="contact-wa-tab-btn" style="background: #25D366; color: #fff; text-decoration: none; padding: 14px 16px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 18px rgba(37, 211, 102, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.25)';">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> WhatsApp
                         </a>
                     </div>
@@ -557,7 +932,7 @@
 </section>
 
 <!-- SHOWROOM-STYLE VISIT US & FRAMED MAP SECTION -->
-<section class="section fade-up" style="padding: 85px 0 95px 0; background-color: #e2e8f0;">
+<section class="section" style="padding: 85px 0 95px 0; background-color: #e2e8f0;">
     <div class="container">
         
         <style>
@@ -633,9 +1008,8 @@
             <!-- Left Column: Visit Us & Highlights -->
             <div>
                 <!-- Pre-Label Tag -->
-                <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
-                    <span class="section-label" style="margin: 0; font-size: 11.5px; letter-spacing: 1.5px;">VISIT US</span>
+                <div style="margin-bottom: 12px;">
+                    <span class="section-label" style="margin: 0; font-size: 14px; font-weight: 800; letter-spacing: 2.5px; display: inline-block;">VISIT US</span>
                 </div>
 
                 <!-- Main Section Title -->
@@ -685,7 +1059,7 @@
                 </div>
 
                 <!-- CTA Button -->
-                <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" class="showroom-map-btn">
+                <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="showroom-map-btn">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
                     OPEN IN GOOGLE MAPS
                 </a>
@@ -698,25 +1072,25 @@
                     <!-- Floating Place Info Window (Over Map) -->
                     <div style="position: absolute; top: 16px; left: 16px; background: #ffffff; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(8, 43, 76, 0.15); border: 1px solid #e2e8f0; z-index: 5; max-width: 290px; pointer-events: auto;">
                         <h4 style="margin: 0 0 3px 0; color: var(--dark-navy); font-size: 14px; font-weight: 800; line-height: 1.3; font-family: var(--font-heading);">Reliable Land Survey Consultancy</h4>
-                        <p style="margin: 0 0 6px 0; color: var(--text-body); font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Pune, Maharashtra, India</p>
+                        <p style="margin: 0 0 6px 0; color: var(--text-body); font-size: 11.5px; line-height: 1.35;">Central Technical Office | Pune Hub<br>Gajrukmini Apartment, Pune, Maharashtra, India</p>
                         <div style="display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--accent-orange); margin-bottom: 12px;">
                             <span>5.0</span>
                             <span style="letter-spacing: 1px;">★★★★★</span>
                             <span style="color: var(--text-muted); font-weight: 600; font-size: 11px;">(98+ Reviews)</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: var(--primary-navy); color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s;" onmouseover="this.style.background='var(--accent-orange)'" onmouseout="this.style.background='var(--primary-navy)'">
+                            <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" style="background: var(--primary-navy); color: #ffffff; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s;" onmouseover="this.style.background='var(--accent-orange)'" onmouseout="this.style.background='var(--primary-navy)'">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                                 Open in Maps
                             </a>
-                            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.25s;" onmouseover="this.style.background='rgba(244, 123, 32, 0.15)'; this.style.color='var(--accent-orange)';" onmouseout="this.style.background='rgba(18, 63, 104, 0.08)'; this.style.color='var(--primary-navy)';" title="Directions">
+                            <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" style="background: rgba(18, 63, 104, 0.08); color: var(--primary-navy); width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.25s;" onmouseover="this.style.background='rgba(244, 123, 32, 0.15)'; this.style.color='var(--accent-orange)';" onmouseout="this.style.background='rgba(18, 63, 104, 0.08)'; this.style.color='var(--primary-navy)';" title="Directions">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- Google Map Iframe -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 482px; flex: 1; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; width: 100%; height: 100%; min-height: 482px; flex: 1; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -725,7 +1099,7 @@
 </section>
 
 <!-- FAQ SECTION WITH ANIMATIONS & CUSTOM BACKGROUND -->
-<section class="section fade-up" style="position: relative; padding: 100px 0 115px 0; overflow: hidden; background: url('assets/images/faq-bg.png') no-repeat center center / cover;">
+<section class="section" style="position: relative; padding: 100px 0 115px 0; overflow: hidden; background: url('assets/images/faq-bg.png') no-repeat center center / cover;">
     
     <!-- Soft Overlay for Optimal Text & Card Contrast -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.5) 100%); z-index: 0; pointer-events: none;"></div>
@@ -810,13 +1184,16 @@
         </div>
     </div>
 </section>
-        <footer class="footer">
+        <!-- ==========================================
+       FOOTER
+    ========================================== -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1 -->
                 <div class="footer-brand">
                     <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
-                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; display: block;">
+                        <a href="index.html" style="display: block;" title="Reliable Land Survey Consultancy"><img decoding="async" loading="lazy" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Official Logo - Pune Land Surveying Services" title="Reliable Land Survey Consultancy - High Precision Geospatial Engineering Solutions" class="footer-logo-img" style="height: 100px; width: auto; display: block;"></a>
                         <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
                             <li>Professional Surveying</li>
                             <li>Geospatial</li>
@@ -828,71 +1205,226 @@
                 </div>
 
                 <!-- Column 2 -->
-                <div class="footer-col">
+                <div class="footer-col footer-col-links">
                     <h4>Quick Links</h4>
                     <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#industries">Industries</a>
-                        <a href="#technology">Technology</a>
-                        <a href="#why-us">Why Us</a>
-                        <a href="#contact">Contact</a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="land-survey-services.html">Our Services</a>
+                        <a href="gallery.html">Project Gallery</a>
+                        <a href="review.html">Client Reviews</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
-                
+
                 <!-- Column 3 -->
-                <div class="footer-col">
-                    <h4>Services</h4>
+                <div class="footer-col footer-col-services">
+                    <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="#services">Topographical Survey</a>
-                        <a href="#services">DGPS / GNSS</a>
-                        <a href="#services">Total Station</a>
-                        <a href="#services">RTK Drone</a>
-                        <a href="#services">LiDAR Drone</a>
-                        <a href="#services">CAD / GIS</a>
+                        <a href="topographical-survey.html">Topographical Survey</a>
+                        <a href="dgps-gnss-control-survey.html">DGPS / GNSS Control</a>
+                        <a href="total-station-survey.html">Total Station Survey</a>
+                        <a href="rtk-drone-mapping-survey.html">RTK Drone Mapping</a>
+                        <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
+                        <a href="road-highway-survey.html">Road & Highway Survey</a>
+                        <a href="rail-metro-survey.html">Rail & Metro Survey</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
-                
-                <!-- Column 4 -->
-                <div class="footer-col">
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
-                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 16px;">
-                        <p>Pune, Maharashtra, India</p>
-                        <p style="margin: 0; line-height: 1.45;"><strong>Proprietors:</strong><br>Mahesh Deshmukh<br><a href="tel:+919604648777">+91 96046 48777</a><br><span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br><a href="tel:+918600044688">+91 86000 44688</a></p>
-                        <p><a href="mailto:info@reliablelandsurvey.in">info@reliablelandsurvey.in</a></p>
-                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
+                        <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
+                            Mahesh Deshmukh<br>
+                            <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 86000 44688</span>
+                            </a><br>
+                            <span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br>
+                            <a href="tel:+919604646777" class="footer-phone-link" title="Click to Call Sharad Pingale (+91 96046 46777)" aria-label="Call Sharad Pingale +91 96046 46777">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 96046 46777</span>
+                            </a>
+                        </p>
+                        <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #000 !important;">info@reliablelandsurvey.in</a></p>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 4px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center;">
-                    <p>&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All Rights Reserved.</p>
-                    <p>Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
-                </div>
 
+                <!-- Column 5: Office Location Map -->
+                <div class="footer-col footer-col-map">
+                    <h4>Office Location</h4>
+                    <div class="footer-map-card">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left;">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
+                            <span>Open in Google Maps</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; color: var(--accent-orange) !important;">
+                    <p style="color: var(--accent-orange) !important;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All&nbsp;Rights&nbsp;Reserved.</p>
+                    <p style="color: var(--accent-orange) !important;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
+                </div>
             </div>
         </div>
     </footer>
 <!-- Script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20261010-11" defer></script>
+
+    <!-- Contact Form AJAX Submission & Redirect Handler -->
+    <script>
+    (function() {
+        function showFormStatus(statusBox, title, message) {
+            if (!statusBox) return;
+            clearTimeout(statusBox._hideTimer);
+            statusBox.style.display = 'block';
+            statusBox.style.opacity = '1';
+            statusBox.style.transform = 'translateY(0)';
+            statusBox.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            statusBox.style.background = '#ecfdf5';
+            statusBox.style.border = '1.5px solid #10b981';
+            statusBox.style.color = '#065f46';
+            statusBox.innerHTML = '<div style="display:flex;align-items:center;gap:12px;">' +
+                '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>' +
+                '<div><strong style="font-size:15px;color:#064e3b;">' + title + '</strong> ' +
+                '<span style="font-size:14px;color:#065f46;">' + message + '</span></div></div>';
+            statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Automatically disappear after 5 seconds with smooth fade
+            statusBox._hideTimer = setTimeout(function() {
+                statusBox.style.opacity = '0';
+                statusBox.style.transform = 'translateY(-8px)';
+                setTimeout(function() {
+                    statusBox.style.display = 'none';
+                    statusBox.style.transform = 'translateY(0)';
+                }, 600);
+            }, 5000);
+        }
+
+        // Check for redirect return status (?submitted=true)
+        if (window.location.search.indexOf('submitted=true') !== -1) {
+            var statusBox = document.getElementById('contactFormStatus');
+            showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
+        }
+
+        var form = document.getElementById('contactForm');
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var btn = document.getElementById('contactSubmitBtn') || form.querySelector('button[type="submit"]');
+            var statusBox = document.getElementById('contactFormStatus');
+            var originalText = btn ? btn.innerHTML : 'Submit Consultation Request';
+
+            if (btn) {
+                btn.disabled = true;
+                btn.style.opacity = '0.75';
+                btn.style.cursor = 'not-allowed';
+                btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">Submitting Request...</span>';
+            }
+
+            if (statusBox) {
+                clearTimeout(statusBox._hideTimer);
+                statusBox.style.display = 'none';
+            }
+
+            // Sync _replyto and absolute _next for FormSubmit
+            var emailVal = (document.getElementById('contact-email') || {}).value;
+            var replyToInput = form.querySelector('input[name="_replyto"]');
+            if (replyToInput && emailVal) {
+                replyToInput.value = emailVal;
+            }
+            var nextInput = form.querySelector('input[name="_next"]');
+            if (nextInput) {
+                if (window.location.protocol.startsWith('http')) {
+                    nextInput.value = window.location.origin + window.location.pathname + '?submitted=true';
+                } else {
+                    nextInput.value = '';
+                }
+            }
+
+            var formData = new FormData(form);
+
+            fetch('https://formsubmit.co/ajax/tanviii6104@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                showFormStatus(statusBox, 'Request Sent Successfully!', 'It will get verified within 24 hours.');
+                form.reset();
+            })
+            .catch(function(err) {
+                console.warn('AJAX error, falling back to standard submit:', err);
+                form.submit();
+            })
+            .finally(function() {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    btn.style.cursor = 'pointer';
+                    btn.innerHTML = originalText;
+                }
+            });
+        });
+    })();
+    </script>
+
+
+    <!-- Auto-select service from URL parameter (e.g. ?service=road-highway-survey) -->
+    <script>
+    (function() {
+        try {
+            var params = new URLSearchParams(window.location.search);
+            var s = params.get('service');
+            if (s && document.getElementById('contact-service')) {
+                var select = document.getElementById('contact-service');
+                var sClean = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+                for (var i = 0; i < select.options.length; i++) {
+                    var optClean = select.options[i].value.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    if (optClean.includes(sClean) || sClean.includes(optClean)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        } catch(e) {}
+    })();
+    </script>
+
 </body>
 </html>
 

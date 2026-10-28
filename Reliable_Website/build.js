@@ -15,7 +15,7 @@ function updatePage(filename, sectionsToKeep, activeNav) {
 
     // Replace the videos with an image, and set the height to 400px
     headerHtml = headerHtml.replace(/<video.*?<\/video>/gs, '');
-    headerHtml = headerHtml.replace('<div class="hero-exact">', '<div class="hero-exact" style="height: 400px;">\n      <img src="assets/images/Our-process-bg.png" style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1;">\n      <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(18,47,85,0.7), rgba(18,47,85,0.7)); z-index: -1;"></div>');
+    headerHtml = headerHtml.replace('<div class="hero-exact">', '<div class="hero-exact" style="height: 400px;">\n      <img src="assets/images/our-process-bg.png" style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1;">\n      <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(18,47,85,0.7), rgba(18,47,85,0.7)); z-index: -1;"></div>');
 
     const titles = {
         'about': 'About Us',
@@ -57,7 +57,7 @@ function updatePage(filename, sectionsToKeep, activeNav) {
                     <img src="assets/images/railway.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <img src="assets/images/drone.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                     <img src="assets/images/lidar.jpg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="assets/images/Our-process-bg.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="assets/images/our-process-bg.png" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </section>

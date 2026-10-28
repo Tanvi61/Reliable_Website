@@ -2,18 +2,55 @@
 <html lang="en">
 
 <head>
+    <!-- Performance Optimization: Resource Preconnects & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
     <meta charset="UTF-8">
+
+    <!-- Google Analytics (GA4 - gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N13T37FJ7D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N13T37FJ7D');
+    </script>
+
+    <!-- Google Search Console (GSC) Verification -->
+    <meta name="google-site-verification" content="GSC_RELIABLE_LAND_SURVEY_VERIFICATION_TOKEN" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reliable Land Survey Consultancy | Surveying & Geospatial Solutions Pune</title>
-    <meta name="description"
-        content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
-    <meta name="keywords"
-        content="Land Survey, DGPS, GNSS, Total Station, RTK Drone, LiDAR, Topographical Survey, Infrastructure Survey, Pune, Maharashtra">
+    <meta name="description" content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
+    <meta name="keywords" content="Land Survey, DGPS, GNSS, Total Station, RTK Drone, LiDAR, Topographical Survey, Infrastructure Survey, Pune, Maharashtra">
 
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Reliable Land Survey Consultancy">
-    <meta property="og:description" content="Precision surveying and geospatial solutions for modern infrastructure.">
+    
+    <!-- Standard Meta Tags -->
+    <meta name="author" content="Reliable Land Survey Consultancy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#082B4C">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:site_name" content="Reliable Land Survey Consultancy">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Reliable Land Survey Consultancy | Surveying & Geospatial Solutions Pune">
+    <meta property="og:description" content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
+    <meta property="og:url" content="https://www.reliablelandsurvey.in/">
+    <meta property="og:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Reliable Land Survey Consultancy Logo">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reliable Land Survey Consultancy | Surveying & Geospatial Solutions Pune">
+    <meta name="twitter:description" content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
+    <meta name="twitter:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
 
     <link rel="canonical" href="https://www.reliablelandsurvey.in/">
 
@@ -25,9 +62,10 @@
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261008_5">
-    <link rel="stylesheet" href="css/responsive.css?v=20261008_5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20261028-drone-focus">
+    <link rel="stylesheet" href="css/responsive.css?v=20261028-drone-focus">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -81,10 +119,7 @@
         position: fixed !important;
         right: 18px !important;
         right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-        top: 60% !important;
-        bottom: auto !important;
-        transform: translateY(-50%) !important;
-        -webkit-transform: translateY(-50%) !important;
+        bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
         z-index: 2147483647 !important;
         display: flex !important;
         flex-direction: column !important;
@@ -122,10 +157,7 @@
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          top: 42% !important;
-          bottom: auto !important;
-          transform: translateY(-50%) !important;
-          -webkit-transform: translateY(-50%) !important;
+          bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
           z-index: 2147483647 !important;
           gap: 10px !important;
         }
@@ -136,16 +168,82 @@
       }
     </style>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.reliablelandsurvey.in/#organization",
+  "name": "Reliable Land Survey Consultancy",
+  "alternateName": "Reliable Land Survey Pune",
+  "url": "https://www.reliablelandsurvey.in/",
+  "logo": "https://www.reliablelandsurvey.in/assets/images/logo.png",
+  "image": "https://www.reliablelandsurvey.in/assets/images/logo.png",
+  "description": "Professional land surveying, DGPS, Total Station, RTK Drone mapping, LiDAR scanning and GPR processing across Maharashtra, India.",
+  "telephone": "+919604646777",
+  "email": "tanviii6104@gmail.com",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.5204,
+    "longitude": 73.8567
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "19:00"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Maharashtra"
+    },
+    {
+      "@type": "Country",
+      "name": "India"
+    }
+  ],
+  "sameAs": [
+    "https://wa.me/919604646777"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.reliablelandsurvey.in/#website",
+  "url": "https://www.reliablelandsurvey.in/",
+  "name": "Reliable Land Survey Consultancy",
+  "description": "Precision surveying and geospatial solutions for modern infrastructure.",
+  "publisher": {
+    "@id": "https://www.reliablelandsurvey.in/#organization"
+  }
+}
+    </script>
 </head>
 
 <body>
     <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
-    <div class="floating-actions" style="position: fixed !important; right: 16px !important; top: 42% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
-        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+    <div class="floating-actions" style="position: fixed !important; right: 16px !important; bottom: 85px !important; top: auto !important; transform: none !important; -webkit-transform: none !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             <span class="float-tooltip">WhatsApp Us</span>
         </a>
-        <a href="tel:+919604648777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="tel:+919604646777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span class="float-tooltip">Call Us</span>
         </a>
@@ -157,23 +255,17 @@
         if (!el) return;
         var isMobile = window.innerWidth <= 1024;
         el.style.setProperty('position', 'fixed', 'important');
-        el.style.setProperty('bottom', 'auto', 'important');
-        el.style.setProperty('transform', 'translateY(-50%)', 'important');
-        el.style.setProperty('-webkit-transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('bottom', isMobile ? '85px' : '90px', 'important');
+        el.style.setProperty('top', 'auto', 'important');
+        el.style.setProperty('transform', 'none', 'important');
+        el.style.setProperty('-webkit-transform', 'none', 'important');
         el.style.setProperty('z-index', '2147483647', 'important');
         el.style.setProperty('display', 'flex', 'important');
         el.style.setProperty('flex-direction', 'column', 'important');
         el.style.setProperty('visibility', 'visible', 'important');
         el.style.setProperty('opacity', '1', 'important');
-        if (isMobile) {
-          el.style.setProperty('top', '42%', 'important');
-          el.style.setProperty('right', '16px', 'important');
-          el.style.setProperty('gap', '10px', 'important');
-        } else {
-          el.style.setProperty('top', '60%', 'important');
-          el.style.setProperty('right', '18px', 'important');
-          el.style.setProperty('gap', '12px', 'important');
-        }
+        el.style.setProperty('right', isMobile ? '16px' : '18px', 'important');
+        el.style.setProperty('gap', isMobile ? '10px' : '12px', 'important');
       }
       alignFloatingWidget();
       window.addEventListener('resize', alignFloatingWidget);
@@ -197,10 +289,8 @@
        HERO EXACT REPLICA
     ========================================== -->
     <div class="hero-exact">
-        <video class="hero-video-bg video-primary" autoplay muted playsinline>
-            <source src="assets/video/hero-bg-videl.mp4" type="video/mp4">
-        </video>
-        <video class="hero-video-bg video-secondary" muted playsinline>
+        <!-- Background Drone Video (Continuously playing in background) -->
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/images/drone.jpg">
             <source src="assets/video/hero-bg-videl.mp4" type="video/mp4">
         </video>
 
@@ -208,32 +298,35 @@
        TOP BAR (Shared Component)
     ========================================== -->
     <div id="site-topbar"></div>
-    <script src="js/topbar.js"></script>
+    <script src="js/topbar.js?v=20261010-06" defer></script>
 
         <nav class="nav-exact anim-nav">
             <div class="nav-logo">
-                <img src="assets/logo/logo-transparent.png" alt="Logo">
+            <img fetchpriority="high" decoding="async" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Pune - Land & Drone Survey Services" title="Reliable Land Survey Consultancy - Expert Land Surveyors in Pune, Maharashtra">
             </div>
             <div class="nav-links" id="mobileNavMenu">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
                         <div class="nav-dropdown">
-                <a href="services.html" class="nav-dropdown-toggle">
+                <a href="land-survey-services.html" class="nav-dropdown-toggle">
                     Services
                     <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
                 </a>
                 <div class="nav-dropdown-menu">
                     <a href="topographical-survey.html" class="nav-dropdown-item">Topographical Survey</a>
-                    <a href="dgps-gnss-control.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
+                    <a href="dgps-gnss-control-survey.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
                     <a href="total-station-survey.html" class="nav-dropdown-item">Total Station Survey</a>
-                    <a href="rtk-drone-mapping.html" class="nav-dropdown-item">RTK Drone Mapping</a>
-                    <a href="lidar-3d-scanning.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
-                    <a href="drone-photogrammetry.html" class="nav-dropdown-item">Drone Photogrammetry</a>
-                    <a href="road-highway.html" class="nav-dropdown-item">Road & Highway Survey</a>
-                    <a href="rail-metro.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="rtk-drone-mapping-survey.html" class="nav-dropdown-item">RTK Drone Mapping</a>
+                    <a href="lidar-3d-scanning-survey.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
+                    <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
+                    <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
+                    <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
-                        <a href="services.html">All Services &rarr;</a>
+                        <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -263,11 +356,62 @@
                 LiDAR, drone mapping, DGPS, Total Station and modern<br class="desktop-break">
                 survey technology for infrastructure projects.
             </p>
-            <div class="hero-actions anim-actions">
-                <a href="services.html" class="btn-explore">Explore Our Services &rarr;</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
+        </div>
+
+        <!-- Rectangular Showcase Slider Box (Floating on Right Side) -->
+        <div class="hero-showcase-box" id="heroShowcaseBox">
+            <div class="showcase-slider">
+                <!-- Slide 1: Proprietors & Central Office -->
+                <div class="showcase-slide active">
+                    <img src="assets/images/hero-proprietors-office.jpg" alt="Reliable Land Survey Consultancy Proprietors Mahesh Deshmukh & Sharad Pingale" class="showcase-img" style="object-position: center 30%;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Leadership & Team</span>
+                        <h4 class="showcase-title">Central Office & Executive Leadership</h4>
+                    </div>
+                </div>
+                <!-- Slide 2: Road & Highway Survey -->
+                <div class="showcase-slide">
+                    <img src="assets/images/why-reliable-infrastructure.jpg" alt="Field Survey Engineers Operating Total Station and Tripod" class="showcase-img" style="object-position: center 35%;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Field Operations</span>
+                        <h4 class="showcase-title">Highways & Road Infrastructure Survey</h4>
+                    </div>
+                </div>
+                <!-- Slide 3: Metro Rail Transit -->
+                <div class="showcase-slide">
+                    <img src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey" class="showcase-img" style="object-position: center center;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Transit Corridors</span>
+                        <h4 class="showcase-title">Metro Rail Track & Alignment Survey</h4>
+                    </div>
+                </div>
+                <!-- Slide 4: RTK Drone & 3D LiDAR -->
+                <div class="showcase-slide">
+                    <img src="assets/images/drone.jpg" alt="RTK Drone Mapping and LiDAR Aerial Geospatial Survey" class="showcase-img" style="object-position: center center;">
+                    <div class="showcase-caption">
+                        <span class="showcase-tag">Aerial Geospatial</span>
+                        <h4 class="showcase-title">RTK Drone & 3D LiDAR Mapping</h4>
+                    </div>
+                </div>
             </div>
 
+            <!-- Slide Navigation Controls -->
+            <div class="showcase-nav-bar">
+                <div class="showcase-dots" id="showcaseDots">
+                    <button class="showcase-dot active" aria-label="Slide 1"></button>
+                    <button class="showcase-dot" aria-label="Slide 2"></button>
+                    <button class="showcase-dot" aria-label="Slide 3"></button>
+                    <button class="showcase-dot" aria-label="Slide 4"></button>
+                </div>
+                <div class="showcase-arrows">
+                    <button class="showcase-arrow prev" id="showcasePrev" aria-label="Previous Slide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="showcase-arrow next" id="showcaseNext" aria-label="Next Slide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -285,15 +429,21 @@
                         Accuracy.<br>Driven by Technology.</h2>
 
                     <p style="font-size: 16px; color: var(--text-body); margin-bottom: 18px; line-height: 1.7;">
-                        Reliable Land Survey Consultancy is a professional surveying and geospatial service provider focused on delivering accurate field data, engineering-ready deliverables, and dependable on-site support.
+                        Reliable Land Survey Consultancy is a professional surveying and geospatial service provider delivering accurate field data, reliable surveying solutions, and engineering-ready outputs for infrastructure and development projects.
+                    </p>
+                    <p style="font-size: 16px; color: var(--text-body); margin-bottom: 18px; line-height: 1.7;">
+                        We specialize in surveying services for Metro Rail, Railways, Highways, and Land Development, combining experienced field professionals with modern surveying technologies to deliver precise and dependable results.
                     </p>
                     <p style="font-size: 16px; color: var(--text-body); margin-bottom: 20px; line-height: 1.7;">
-                        We provide specialized surveying solutions across critical infrastructure sectors including Metro Rail, Railways, Highways, and Land Development. Combining experienced field practices with modern surveying technology, our team delivers high-precision, dependable data tailored for engineering and construction excellence.
+                        We support engineers, contractors, and developers with trusted data and on-site expertise, ensuring precision, quality, and efficiency throughout every project.
                     </p>
 
-                    <div style="margin-bottom: 25px; padding: 12px 18px; background: rgba(244, 123, 32, 0.08); border-left: 3px solid var(--accent-orange); border-radius: 0 6px 6px 0; display: inline-flex; align-items: center; gap: 12px;">
-                        <span style="font-size: 11px; font-weight: 800; color: var(--accent-orange); letter-spacing: 1px; text-transform: uppercase;">PROPRIETORS:</span>
-                        <span style="font-size: 14.5px; font-weight: 700; color: var(--dark-navy);">Mahesh Deshmukh &amp; Sharad Pingale</span>
+                    <div style="margin-bottom: 25px; padding: 12px 18px; background: rgba(244, 123, 32, 0.08); border-left: 3px solid var(--accent-orange); border-radius: 0 6px 6px 0; display: inline-flex; align-items: center; gap: 14px; max-width: 100%; box-sizing: border-box;">
+                        <span style="font-size: 11px; font-weight: 800; color: var(--accent-orange); letter-spacing: 1px; text-transform: uppercase; flex-shrink: 0;">PROPRIETORS:</span>
+                        <div style="display: flex; flex-direction: column; gap: 3px; font-size: 14.5px; font-weight: 700; color: var(--dark-navy); line-height: 1.35;">
+                            <span>Mahesh Deshmukh</span>
+                            <span>Sharad Pingale</span>
+                        </div>
                     </div>
 
                     <div><a href="about.html" class="btn btn-primary">Learn More About Us &rarr;</a></div>
@@ -398,7 +548,7 @@
                 </style>
                 <div style="position: relative; margin-top: 20px;">
                     <div class="premium-image-container">
-                        <img src="assets/images/highway.jpg" alt="Highway Infrastructure Survey">
+                        <img decoding="async" src="assets/images/about-survey-experience.jpg?v=20261027-field" alt="Professional Land Surveyors Team - Reliable Land Survey Consultancy" title="Field Survey Engineers & Precision Measurements - 15+ Years Experience" style="object-position: center 35%; aspect-ratio: 3/4; max-height: 560px;">
                     </div>
 
                     <div class="floating-stat-badge">
@@ -513,22 +663,92 @@
                 position: relative;
                 z-index: 3;
                 text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                padding: 0 4px;
             }
 
             .tech-number {
                 font-size: 3.5rem;
                 font-weight: 800;
                 color: #fff;
-                margin-bottom: 10px;
+                margin-bottom: 8px;
                 text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+                line-height: 1.1;
+                font-family: 'Inter', 'Manrope', sans-serif;
             }
 
+            .tech-counter-label,
             .tech-label {
-                font-size: 0.95rem;
-                font-weight: 800;
-                color: #FF5722;
-                text-transform: uppercase;
-                letter-spacing: 1px;
+                position: static !important;
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                font-size: 0.95rem !important;
+                font-weight: 700 !important;
+                color: #FF5722 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.8px !important;
+                line-height: 1.35 !important;
+                text-align: center !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                animation: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                white-space: normal !important;
+                word-break: normal !important;
+                overflow-wrap: break-word !important;
+                font-family: 'Inter', 'Manrope', sans-serif !important;
+            }
+
+            @media (max-width: 768px) {
+                .counter-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                    gap: 12px !important;
+                    margin-top: 25px !important;
+                }
+
+                .tech-counter-item {
+                    padding: 22px 8px !important;
+                    min-height: 140px !important;
+                }
+
+                .tech-number {
+                    font-size: clamp(2rem, 7vw, 2.5rem) !important;
+                    margin-bottom: 6px !important;
+                }
+
+                .tech-counter-label,
+                .tech-label {
+                    font-size: clamp(0.72rem, 2.8vw, 0.82rem) !important;
+                    line-height: 1.3 !important;
+                    letter-spacing: 0.3px !important;
+                    padding: 0 4px !important;
+                }
+            }
+
+            @media (max-width: 360px) {
+                .counter-grid {
+                    gap: 10px !important;
+                }
+
+                .tech-counter-item {
+                    padding: 18px 6px !important;
+                    min-height: 130px !important;
+                }
+
+                .tech-counter-label,
+                .tech-label {
+                    font-size: 0.72rem !important;
+                    letter-spacing: 0.2px !important;
+                }
             }
         </style>
 
@@ -537,29 +757,29 @@
                 style="color: #FFFFFF; font-weight: bold; letter-spacing: 2px; border-color: rgba(255,255,255,0.2);">
                 Precision Backed by Capability</div>
 
-            <div class="counter-grid" style="gap: 30px; margin-top: 40px;">
+            <div class="counter-grid">
                 <div class="tech-counter-item">
                     <div class="tech-content">
                         <div class="tech-number counter-number" data-target="22+">0</div>
-                        <div class="tech-label">Technical Manpower</div>
+                        <div class="tech-counter-label">Technical Manpower</div>
                     </div>
                 </div>
                 <div class="tech-counter-item">
                     <div class="tech-content">
                         <div class="tech-number counter-number" data-target="22">0</div>
-                        <div class="tech-label">Instruments Listed</div>
+                        <div class="tech-counter-label">Instruments Listed</div>
                     </div>
                 </div>
                 <div class="tech-counter-item">
                     <div class="tech-content">
-                        <div class="tech-number counter-number" data-target="15">0</div>
-                        <div class="tech-label">Working Instruments</div>
+                        <div class="tech-number counter-number" data-target="17+">0</div>
+                        <div class="tech-counter-label">Deliverables</div>
                     </div>
                 </div>
                 <div class="tech-counter-item">
                     <div class="tech-content">
                         <div class="tech-number counter-number" data-target="2">0</div>
-                        <div class="tech-label">Advanced Drones</div>
+                        <div class="tech-counter-label">Advanced Drones</div>
                     </div>
                 </div>
             </div>
@@ -585,8 +805,8 @@
             <div class="expertise-marquee">
 
                 <!-- GROUP 1 -->
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/highway.jpg" alt="Highways" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/highway-road-survey.jpg?v=20261028" alt="Highway and Road Survey Engineers Operating Total Station" title="Highway & Expressway Alignment Survey Services - Reliable Land Survey Field Team" class="expertise-bg" style="object-position: center 35%;">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -600,8 +820,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/metro.jpg" alt="Metro Rail" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey by Field Engineers" title="Metro Rail Mass Transit Infrastructure Survey - Reliable Land Survey Consultancy" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -615,8 +835,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/railway.jpg" alt="Railways" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg?v=20261026-train" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -629,8 +849,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/drone.jpg" alt="Drone Mapping" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/drone.jpg" alt="RTK Drone Aerial Survey Mapping for Large Acreage Land" title="UAV Drone Photogrammetry & Orthomosaic Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -645,8 +865,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/lidar.jpg" alt="LiDAR" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -660,8 +880,8 @@
                 </div>
 
                 <!-- GROUP 2 (DUPLICATE FOR SEAMLESS SCROLL) -->
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/highway.jpg" alt="Highways" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/highway-road-survey.jpg?v=20261028" alt="Highway and Road Survey Engineers Operating Total Station" title="Highway & Expressway Alignment Survey Services - Reliable Land Survey Field Team" class="expertise-bg" style="object-position: center 35%;">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -675,8 +895,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/metro.jpg" alt="Metro Rail" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/metro-rail-transit.jpg?v=20261028" alt="Metro Rail Viaduct and Track Alignment Survey by Field Engineers" title="Metro Rail Mass Transit Infrastructure Survey - Reliable Land Survey Consultancy" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -690,8 +910,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/railway.jpg" alt="Railways" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/railway.jpg?v=20261026-train" alt="Railway Track Alignment & Corridor Topographical Surveying" title="Railway Infrastructure Survey Services" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -704,8 +924,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/drone.jpg" alt="Drone Mapping" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/drone.jpg" alt="RTK Drone Aerial Survey Mapping for Large Acreage Land" title="UAV Drone Photogrammetry & Orthomosaic Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -720,8 +940,8 @@
                     </div>
                 </div>
 
-                <div class="expertise-card" onclick="window.location.href='services.html';" style="cursor: pointer;">
-                    <img src="assets/images/lidar.jpg" alt="LiDAR" class="expertise-bg">
+                <div class="expertise-card" onclick="window.location.href='land-survey-services.html';" style="cursor: pointer;">
+                    <img decoding="async" loading="lazy" src="assets/images/lidar.jpg?v=20261023" alt="LiDAR 3D Laser Scanning Point Cloud Ground Elevation Modeling" title="Drone LiDAR 3D Laser Scanning Survey" class="expertise-bg">
                     <div class="expertise-overlay"></div>
                     <div class="expertise-content">
                         <div class="expertise-icon">
@@ -748,31 +968,32 @@
             <h2 class="section-heading fade-up">From Field Survey<br>to Engineering-Ready Data</h2>
 
             <div class="process-timeline">
-                <div class="process-line-bg fade-up"></div>
-                <div class="process-line-fill"></div>
+                <div class="process-line-bg fade-up">
+                    <div class="process-line-fill"></div>
+                </div>
 
                 <div class="process-steps">
-                    <div class="process-step zoom-in" style="animation-delay: 0.1s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.1s; transition-delay: 0.1s;">
                         <div class="step-node">01</div>
                         <h4 class="step-title">Project Study &<br class="desktop-break"> Reconnaissance</h4>
                     </div>
-                    <div class="process-step zoom-in" style="animation-delay: 0.2s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.2s; transition-delay: 0.2s;">
                         <div class="step-node">02</div>
                         <h4 class="step-title">Control<br class="desktop-break"> Establishment</h4>
                     </div>
-                    <div class="process-step zoom-in" style="animation-delay: 0.3s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.3s; transition-delay: 0.3s;">
                         <div class="step-node">03</div>
                         <h4 class="step-title">Detailed Field <br class="desktop-break">Observations</h4>
                     </div>
-                    <div class="process-step zoom-in" style="animation-delay: 0.4s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.4s; transition-delay: 0.4s;">
                         <div class="step-node">04</div>
                         <h4 class="step-title">Data Processing<br class="desktop-break"> & Drafting</h4>
                     </div>
-                    <div class="process-step zoom-in" style="animation-delay: 0.5s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.5s; transition-delay: 0.5s;">
                         <div class="step-node">05</div>
                         <h4 class="step-title">Independent <br class="desktop-break">Checking</h4>
                     </div>
-                    <div class="process-step zoom-in" style="animation-delay: 0.6s;">
+                    <div class="process-step zoom-in" style="animation-delay: 0.6s; transition-delay: 0.6s;">
                         <div class="step-node">06</div>
                         <h4 class="step-title">Final Deliverables<br class="desktop-break"> & Report</h4>
                     </div>
@@ -792,7 +1013,7 @@
             <div class="tech-interactive-grid">
                 <!-- Left: Interactive Visual -->
                 <div class="tech-preview-container fade-up">
-                    <img src="assets/images/rtk_drone_latest.jpg" alt="Technology Preview" class="tech-preview-img">
+                    <img decoding="async" loading="lazy" src="assets/images/rtk-drone-latest.jpg" alt="Commercial RTK Survey Drone with Geospatial Sensor for Precision Photogrammetry" title="RTK Aerial Survey Drone - Reliable Land Survey Technology" class="tech-preview-img">
                     <div class="tech-preview-overlay">
                         <h3 class="tech-preview-title">RTK Drone</h3>
                         <p class="tech-preview-desc">DJI Matrice 300 RTK for high-accuracy aerial mapping.</p>
@@ -802,7 +1023,7 @@
                 <!-- Right: Tech List -->
                 <div class="tech-list slide-in-right">
                     <!-- Tech 1 -->
-                    <div class="tech-item active" data-img="assets/images/rtk_drone_latest.jpg"
+                    <div class="tech-item active" data-img="assets/images/rtk-drone-latest.jpg"
                         data-desc="DJI Matrice 300 RTK for high-accuracy aerial mapping.">
                         <div class="tech-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2">
@@ -876,7 +1097,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.1s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/images/about.jpg" alt="Advanced Tech bg" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/about.jpg" alt="Advanced Surveying Technology - Digital Total Stations and Dual Frequency GNSS" title="Advanced Geospatial Technology - Reliable Land Survey" class="flip-front-bg">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -898,7 +1119,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.2s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/images/metro.jpg" alt="Engineering Ready bg" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/cad-gis-processing.jpg?v=20261026-cadgis" alt="Engineering Ready CAD Drawings and GPR Subsurface Data Deliverables" title="Engineering Ready Survey Data & CAD Deliverables" class="flip-front-bg">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -910,7 +1131,7 @@
                         </div>
                         <div class="flip-card-back">
                             <h3>Engineering Ready</h3>
-                            <p>Delivering actionable CAD/GIS data and 3D point clouds instantly usable by engineering
+                            <p>Delivering actionable CAD/GPR data and 3D point clouds instantly usable by engineering
                                 teams without additional processing.</p>
                         </div>
                     </div>
@@ -920,7 +1141,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.3s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/images/drone.jpg" alt="Quality Control bg" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/drone.jpg" alt="Rigorous Multi-Tier Quality Control in Land Survey Field Measurements" title="Geospatial Quality Control & Calibration Standards" class="flip-front-bg">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -943,7 +1164,7 @@
                 <div class="flip-card fade-up" style="animation-delay: 0.4s;">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/images/highway.jpg" alt="Infrastructure Focused bg" class="flip-front-bg">
+                            <img decoding="async" loading="lazy" src="assets/images/why-reliable-infrastructure.jpg" alt="Field Surveyors Operating Total Station on Infrastructure Project" title="Infrastructure Land Survey Expertise - Reliable Land Survey Field Team" class="flip-front-bg" style="object-position: center 35%;">
                             <div class="flip-front-overlay"></div>
                             <div class="flip-front-content">
                                 <div class="flip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1122,7 +1343,7 @@
                                 stroke-width="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
-                            </svg></div> GIS-ready Data
+                            </svg></div> GPR-ready Data
                     </div>
                 </div>
                 <!-- Duplicate for infinite scroll -->
@@ -1174,7 +1395,7 @@
                                 stroke-width="2">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                 <circle cx="12" cy="10" r="3" />
-                            </svg></div> GIS-ready Data
+                            </svg></div> GPR-ready Data
                     </div>
                 </div>
             </div>
@@ -1404,13 +1625,16 @@
             color: var(--accent-orange) !important;
         }
     </style>
+    <!-- ==========================================
+       FOOTER
+    ========================================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1 -->
                 <div class="footer-brand">
                     <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
-                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; display: block;">
+                        <a href="index.html" style="display: block;" title="Reliable Land Survey Consultancy"><img decoding="async" loading="lazy" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Official Logo - Pune Land Surveying Services" title="Reliable Land Survey Consultancy - High Precision Geospatial Engineering Solutions" class="footer-logo-img" style="height: 100px; width: auto; display: block;"></a>
                         <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
                             <li>Professional Surveying</li>
                             <li>Geospatial</li>
@@ -1422,74 +1646,99 @@
                 </div>
 
                 <!-- Column 2 -->
-                <div class="footer-col">
+                <div class="footer-col footer-col-links">
                     <h4>Quick Links</h4>
                     <div class="footer-links">
                         <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a href="index.html#technology">Technology</a>
-                        <a href="index.html#why-us">Why Us</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="about.html">About Us</a>
+                        <a href="land-survey-services.html">Our Services</a>
+                        <a href="gallery.html">Project Gallery</a>
+                        <a href="review.html">Client Reviews</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="footer-col">
-                    <h4>Services</h4>
+                <div class="footer-col footer-col-services">
+                    <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="services.html">Topographical Survey</a>
-                        <a href="services.html">DGPS / GNSS</a>
-                        <a href="services.html">Total Station</a>
-                        <a href="services.html">RTK Drone</a>
-                        <a href="services.html">LiDAR Drone</a>
-                        <a href="services.html">CAD / GIS</a>
+                        <a href="topographical-survey.html">Topographical Survey</a>
+                        <a href="dgps-gnss-control-survey.html">DGPS / GNSS Control</a>
+                        <a href="total-station-survey.html">Total Station Survey</a>
+                        <a href="rtk-drone-mapping-survey.html">RTK Drone Mapping</a>
+                        <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
+                        <a href="road-highway-survey.html">Road & Highway Survey</a>
+                        <a href="rail-metro-survey.html">Rail & Metro Survey</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
 
-                <!-- Column 4 -->
-                <div class="footer-col">
+                <!-- Column 4: Contact -->
+                <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
-                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 16px;">
-                        <p>Pune, Maharashtra, India</p>
-                        <p style="margin: 0; line-height: 1.45; color: #000 !important;"><strong>Proprietors:</strong><br>Mahesh Deshmukh<br><a href="tel:+919604648777" style="color: #000 !important;">+91 96046 48777</a><br><span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br><a href="tel:+918600044688" style="color: #000 !important;">+91 86000 44688</a></p>
-                        <p><a href="mailto:info@reliablelandsurvey.in" style="color: #000 !important;">info@reliablelandsurvey.in</a></p>
-                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
+                        <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
+                            Mahesh Deshmukh<br>
+                            <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 86000 44688</span>
+                            </a><br>
+                            <span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br>
+                            <a href="tel:+919604646777" class="footer-phone-link" title="Click to Call Sharad Pingale (+91 96046 46777)" aria-label="Call Sharad Pingale +91 96046 46777">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 96046 46777</span>
+                            </a>
+                        </p>
+                        <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #000 !important;">info@reliablelandsurvey.in</a></p>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 4px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Column 5: Office Location Map -->
+                <div class="footer-col footer-col-map">
+                    <h4>Office Location</h4>
+                    <div class="footer-map-card">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left;">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
+                            <span>Open in Google Maps</span> &rarr;
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                <div class="copyright-info"
-                    style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; color: var(--accent-orange) !important;">
-                    <p style="color: var(--accent-orange) !important;">&copy; 2026 <strong>Reliable Land Survey
-                            Consultancy</strong>. All&nbsp;Rights&nbsp;Reserved.</p>
-                    <p style="color: var(--accent-orange) !important;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis
-                                Innovation Pvt.Ltd</a></strong></p>
+                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; color: var(--accent-orange) !important;">
+                    <p style="color: var(--accent-orange) !important;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All&nbsp;Rights&nbsp;Reserved.</p>
+                    <p style="color: var(--accent-orange) !important;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
                 </div>
-
             </div>
         </div>
     </footer>
 <!-- Script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20261010-11" defer></script>
+    <script src="js/hero-slider.js?v=20261028-drone-focus" defer></script>
 </body>
 
 </html>

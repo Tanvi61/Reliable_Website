@@ -1,0 +1,694 @@
+/* ========================================================
+   EXACT REPLICA FOOTER - AYURVEDA
+   Matching Reference Typography, Colors, Pill Form & Instagram Videos
+======================================================== */
+
+.site-footer {
+  background-color: var(--color-brand-green, #084e10);
+  color: #ffffff;
+  padding: 72px 0 36px;
+  margin-top: auto;
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: var(--container-max-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 24px);
+}
+
+/* --------------------------------------------------------
+   1. TOP NEWSLETTER ROW
+-------------------------------------------------------- */
+.footer-newsletter-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter-title {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.015em;
+  max-width: 580px;
+}
+
+.footer-newsletter-form-wrap {
+  flex: 0 1 450px;
+  width: 100%;
+  min-width: 280px;
+}
+
+.footer-newsletter-form {
+  width: 100%;
+}
+
+.footer-newsletter-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #eaedea;
+  border-radius: 9999px;
+  height: 52px;
+  padding: 4px 6px 4px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.footer-newsletter-pill:focus-within {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+  transform: translateY(-1px);
+}
+
+.footer-newsletter-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+  padding-right: 50px;
+}
+
+.footer-newsletter-input::placeholder {
+  color: #666666;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.footer-newsletter-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.footer-newsletter-btn:hover {
+  background: #222222;
+  transform: scale(1.06);
+}
+
+.footer-newsletter-btn svg {
+  display: block;
+  stroke-width: 2.5;
+}
+
+.footer-newsletter-disclaimer {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 12px;
+  line-height: 1.45;
+}
+
+.footer-newsletter-disclaimer a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-newsletter-disclaimer a:hover {
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------
+   2. LOWER 3 COLUMNS GRID
+-------------------------------------------------------- */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: flex-start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-title {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  letter-spacing: 0;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-link {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --------------------------------------------------------
+   3. INSTAGRAM 3 VIDEOS GRID & HANDLE
+-------------------------------------------------------- */
+.footer-col-instagram {
+  max-width: 520px;
+}
+
+.footer-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 148px));
+  gap: 12px;
+  width: 100%;
+}
+
+.footer-video-card {
+  position: relative;
+  aspect-ratio: 0.78;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #063b19;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.footer-video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+}
+
+.footer-video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.footer-video-card:hover .footer-video-thumb {
+  transform: scale(1.06);
+}
+
+.footer-video-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.footer-video-card:hover .footer-video-player {
+  opacity: 1;
+}
+
+.footer-video-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-video-card:hover .footer-video-badge {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.footer-video-badge svg {
+  display: block;
+}
+
+.footer-ig-handle-wrap {
+  margin-top: 16px;
+}
+
+.footer-ig-handle {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer-ig-handle:hover {
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------
+   4. BOTTOM COPYRIGHT & LOCALIZATION
+-------------------------------------------------------- */
+/* --------------------------------------------------------
+   4. BOTTOM COPYRIGHT & LOCALIZATION (CENTERED)
+   QA Item 16: Verify company name and copyright both center of footer
+-------------------------------------------------------- */
+.footer-col-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-logo .footer-logo-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.footer-about-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 18px;
+}
+
+.footer-google-review-wrap {
+  margin-bottom: 18px;
+}
+
+.footer-google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.footer-google-review-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: #ffd166;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.google-icon-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.google-review-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12.5px;
+  line-height: 1.3;
+}
+
+.google-review-text strong {
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.stars-gold {
+  color: #ffd166;
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social-btn:hover {
+  background: #ffd166;
+  color: #084e10;
+  transform: translateY(-2px);
+}
+
+.footer-contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.footer-contact-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.fci-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.footer-map-action {
+  margin-top: 16px;
+}
+
+.footer-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.footer-map-btn:hover {
+  background: #ffffff;
+  color: #084e10;
+  transform: translateY(-1px);
+}
+
+/* QA Item 16: Verify company name and copyright both center of footer */
+.footer-bottom-bar-centered {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-centered-copyright p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+}
+
+.footer-centered-copyright strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.footer-site-link {
+  color: #ffd166;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-site-link:hover {
+  opacity: 0.85;
+}
+
+.footer-policy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-policy-row a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-policy-row a:hover {
+  color: #ffd166;
+  text-decoration: underline;
+}
+
+.footer-bottom-bar {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  font-size: 13.5px;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.footer-copyright a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.footer-copyright a:hover {
+  opacity: 0.85;
+}
+
+.footer-localization-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-lang-select {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.footer-lang-select:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-lang-select option {
+  background: #084e10;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------
+   5. RESPONSIVE MEDIA QUERIES
+-------------------------------------------------------- */
+@media (max-width: 960px) {
+  .footer-newsletter-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-newsletter-form-wrap {
+    flex: none;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 36px;
+  }
+
+  .footer-col-instagram {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+
+  .footer-videos-grid {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 38px 0 24px;
+  }
+
+  .footer-newsletter-wrap {
+    gap: 16px;
+  }
+
+  .footer-newsletter-title {
+    font-size: clamp(22px, 6vw, 26px);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .footer-newsletter-form-wrap {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-newsletter-disclaimer {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .footer-col-title {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .footer-links-list {
+    gap: 8px;
+  }
+
+  .footer-link {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .footer-col-instagram {
+    grid-column: span 1;
+  }
+
+  .footer-videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .footer-video-card {
+    border-radius: 14px;
+  }
+
+  .footer-video-thumb,
+  .footer-video-player {
+    border-radius: 14px;
+  }
+
+  .footer-video-badge {
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-video-badge svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .footer-bottom-bar {
+    margin-top: 28px;
+    padding-top: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,310 @@
+const fs = require('fs');
+const path = require('path');
+const puppeteer = require('e:/MindAxis_Web/Samarth_Ayurveda/node_modules/puppeteer-core');
+
+const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+const ARTIFACT_DIR = 'C:\\\\Users\\\\HP\\\\.gemini\\\\antigravity-ide\\\\brain\\\\e419adda-178e-4737-97b0-cf828728f817';
+
+// HTML for Option A: 5-Column Footer
+const optionA_Html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+  <style>
+    body { margin: 0; padding: 0; background: #e8f4fc; font-family: 'DM Sans', sans-serif; }
+    .footer-grid-5col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.8fr 1.1fr 1.2fr 1.4fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 1200px) {
+      .footer-grid-5col {
+        grid-template-columns: 1.2fr 1fr 1.2fr 1.4fr;
+      }
+      .footer-col-map {
+        grid-column: span 4;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-grid-5col {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="height: 100px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #082b4c;">
+    OPTION A: 5-COLUMN FOOTER (PROPRIETORS AT TOP, DEDICATED LARGE MAP COLUMN)
+  </div>
+
+  <footer class="footer" style="background: linear-gradient(180deg, #f0f7fd 0%, #e1effa 100%); padding: 50px 0 30px 0; border-top: 1px solid rgba(8,43,76,0.1);">
+    <div class="container" style="max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+      <div class="footer-grid-5col">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <div class="footer-brand-inner">
+            <a href="index.html" style="display: block;"><img src="assets/logo/logo-transparent.png" alt="Reliable Logo" style="height: 85px; width: auto; margin-bottom: 12px;"></a>
+            <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; font-size: 13.5px; display: flex; flex-direction: column; gap: 6px;">
+              <li>Professional Surveying</li>
+              <li>Geospatial Solutions</li>
+              <li>LiDAR 3D Scanning</li>
+              <li>RTK Drone Mapping</li>
+              <li>Infrastructure Projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Quick Links</h4>
+          <div class="footer-links" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <a href="index.html" style="color: #000; text-decoration: none;">Home</a>
+            <a href="about.html" style="color: #000; text-decoration: none;">About Us</a>
+            <a href="services.html" style="color: #000; text-decoration: none;">Our Services</a>
+            <a href="gallery.html" style="color: #000; text-decoration: none;">Project Gallery</a>
+            <a href="review.html" style="color: #000; text-decoration: none;">Client Reviews</a>
+            <a href="contact.html" style="color: #000; text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Our Services</h4>
+          <div class="footer-links" style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px;">
+            <a href="topographical-survey.html" style="color: #000; text-decoration: none;">Topographical Survey</a>
+            <a href="dgps-gnss-control.html" style="color: #000; text-decoration: none;">DGPS / GNSS Control</a>
+            <a href="total-station-survey.html" style="color: #000; text-decoration: none;">Total Station Survey</a>
+            <a href="rtk-drone-mapping.html" style="color: #000; text-decoration: none;">RTK Drone Mapping</a>
+            <a href="lidar-3d-scanning.html" style="color: #000; text-decoration: none;">Drone LiDAR Scanning</a>
+            <a href="road-highway.html" style="color: #000; text-decoration: none;">Road & Highway Survey</a>
+            <a href="rail-metro.html" style="color: #000; text-decoration: none;">Rail & Metro Survey</a>
+            <a href="cad-gis-processing.html" style="color: #000; text-decoration: none;">CAD & GIS Processing</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Proprietors (At the very top!) -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Contact</h4>
+          <div class="footer-links" style="color: #000; font-size: 13.5px; display: flex; flex-direction: column; gap: 12px;">
+            <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+            
+            <div style="background: rgba(244, 123, 32, 0.08); padding: 10px 12px; border-radius: 8px; border-left: 3px solid var(--accent-orange);">
+              <div style="font-size: 11px; font-weight: 800; color: var(--accent-orange); text-transform: uppercase; margin-bottom: 4px;">Proprietors & Desk:</div>
+              <div style="font-weight: 700; color: #082b4c; font-size: 13.5px; line-height: 1.4;">Mahesh Deshmukh</div>
+              <a href="tel:+918600044688" style="color: #082b4c; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 5px;">📞 +91 86000 44688</a>
+              <div style="font-weight: 700; color: #082b4c; font-size: 13.5px; line-height: 1.4; margin-top: 6px;">Sharad Pingale</div>
+              <a href="tel:+919604646777" style="color: #082b4c; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 5px;">📞 +91 96046 46777</a>
+            </div>
+
+            <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #082b4c; text-decoration: none; font-weight: 600;">✉️ info@reliablelandsurvey.in</a></p>
+
+            <div class="footer-social-icons" style="display: flex; align-items: center; gap: 10px; margin-top: 2px;">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" style="color: #E1306C; width: 32px; height: 32px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px;">📸</a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" style="color: #1877F2; width: 32px; height: 32px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px;">f</a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener" style="color: #FF0000; width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px;">▶</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Dedicated Large Map Column -->
+        <div class="footer-col footer-col-map">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0; display: flex; align-items: center; justify-content: space-between;">
+            <span>Headquarters Location</span>
+            <span style="font-size: 11px; background: rgba(8,43,76,0.1); padding: 2px 7px; border-radius: 4px; font-weight: 600;">Pune, MH</span>
+          </h4>
+          <div style="border-radius: 10px; overflow: hidden; border: 1.5px solid rgba(8, 43, 76, 0.18); box-shadow: 0 4px 15px rgba(8, 43, 76, 0.08); width: 100%; height: 185px; position: relative;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+          </div>
+          <div style="margin-top: 10px; text-align: right;">
+            <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="font-size: 12.5px; font-weight: 700; color: var(--accent-orange); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Open in Google Maps</span> &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div style="border-top: 1px solid rgba(8, 43, 76, 0.12); padding-top: 20px; text-align: center; color: var(--accent-orange); font-size: 13.5px;">
+        <p style="margin: 0 0 6px 0;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All Rights Reserved.</p>
+        <p style="margin: 0; color: #64748b; font-size: 12.5px;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" style="color: #082b4c; text-decoration: none;">MindAxis Innovation Pvt.Ltd</a></strong></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(__dirname, 'test_footer_optionA.html'), optionA_Html, 'utf8');
+
+// HTML for Option B: 4 Columns on Top + Dedicated Full-Width Map Banner below
+const optionB_Html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+  <style>
+    body { margin: 0; padding: 0; background: #e8f4fc; font-family: 'DM Sans', sans-serif; }
+    .footer-grid-4col {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.1fr 1.3fr;
+      gap: 35px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 991px) {
+      .footer-grid-4col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-grid-4col {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="height: 80px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #082b4c;">
+    OPTION B: 4 TOP COLUMNS + DEDICATED WIDE LOCATION MAP BANNER
+  </div>
+
+  <footer class="footer" style="background: linear-gradient(180deg, #f0f7fd 0%, #e1effa 100%); padding: 50px 0 30px 0; border-top: 1px solid rgba(8,43,76,0.1);">
+    <div class="container" style="max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+      
+      <!-- Top 4 Columns (Proprietors & Phone right at top of Col 4!) -->
+      <div class="footer-grid-4col">
+        <!-- Col 1 -->
+        <div class="footer-brand">
+          <div class="footer-brand-inner">
+            <a href="index.html" style="display: block;"><img src="assets/logo/logo-transparent.png" alt="Reliable Logo" style="height: 90px; width: auto; margin-bottom: 12px;"></a>
+            <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; font-size: 13.5px; display: flex; flex-direction: column; gap: 6px;">
+              <li>Professional Surveying</li>
+              <li>Geospatial Solutions</li>
+              <li>LiDAR 3D Scanning</li>
+              <li>RTK Drone Mapping</li>
+              <li>Infrastructure Projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Quick Links</h4>
+          <div class="footer-links" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <a href="index.html" style="color: #000; text-decoration: none;">Home</a>
+            <a href="about.html" style="color: #000; text-decoration: none;">About Us</a>
+            <a href="services.html" style="color: #000; text-decoration: none;">Our Services</a>
+            <a href="gallery.html" style="color: #000; text-decoration: none;">Project Gallery</a>
+            <a href="review.html" style="color: #000; text-decoration: none;">Client Reviews</a>
+            <a href="contact.html" style="color: #000; text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Our Services</h4>
+          <div class="footer-links" style="display: flex; flex-direction: column; gap: 9px; font-size: 13.5px;">
+            <a href="topographical-survey.html" style="color: #000; text-decoration: none;">Topographical Survey</a>
+            <a href="dgps-gnss-control.html" style="color: #000; text-decoration: none;">DGPS / GNSS Control</a>
+            <a href="total-station-survey.html" style="color: #000; text-decoration: none;">Total Station Survey</a>
+            <a href="rtk-drone-mapping.html" style="color: #000; text-decoration: none;">RTK Drone Mapping</a>
+            <a href="lidar-3d-scanning.html" style="color: #000; text-decoration: none;">Drone LiDAR Scanning</a>
+            <a href="road-highway.html" style="color: #000; text-decoration: none;">Road & Highway Survey</a>
+            <a href="rail-metro.html" style="color: #000; text-decoration: none;">Rail & Metro Survey</a>
+            <a href="cad-gis-processing.html" style="color: #000; text-decoration: none;">CAD & GIS Processing</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Proprietors at TOP! -->
+        <div class="footer-col">
+          <h4 style="font-size: 16px; font-weight: 800; color: #082b4c; margin: 0 0 16px 0;">Contact & Desk</h4>
+          <div class="footer-links" style="color: #000; font-size: 13.5px; display: flex; flex-direction: column; gap: 10px;">
+            <p style="margin: 0; font-weight: 700; color: #082b4c;">Pune, Maharashtra, India</p>
+
+            <div style="background: rgba(244, 123, 32, 0.08); padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--accent-orange);">
+              <div style="font-size: 11px; font-weight: 800; color: var(--accent-orange); text-transform: uppercase; margin-bottom: 4px;">Proprietors & Senior Consultants:</div>
+              <div style="font-weight: 700; color: #082b4c; font-size: 14px; line-height: 1.4;">Mahesh Deshmukh</div>
+              <a href="tel:+918600044688" style="color: #082b4c; text-decoration: none; font-weight: 600; font-size: 13.5px; display: inline-flex; align-items: center; gap: 5px;">📞 +91 86000 44688</a>
+              <div style="font-weight: 700; color: #082b4c; font-size: 14px; line-height: 1.4; margin-top: 6px;">Sharad Pingale</div>
+              <a href="tel:+919604646777" style="color: #082b4c; text-decoration: none; font-weight: 600; font-size: 13.5px; display: inline-flex; align-items: center; gap: 5px;">📞 +91 96046 46777</a>
+            </div>
+
+            <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #082b4c; text-decoration: none; font-weight: 600;">✉️ info@reliablelandsurvey.in</a></p>
+
+            <div class="footer-social-icons" style="display: flex; align-items: center; gap: 10px; margin-top: 4px;">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" style="color: #E1306C; width: 34px; height: 34px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px;">📸</a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" style="color: #1877F2; width: 34px; height: 34px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px;">f</a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener" style="color: #FF0000; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px;">▶</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dedicated Wide Map Banner (Option B) -->
+      <div style="background: #ffffff; border-radius: 12px; border: 1.5px solid rgba(8, 43, 76, 0.15); box-shadow: 0 6px 20px rgba(8, 43, 76, 0.06); padding: 16px 20px; margin-bottom: 30px; display: grid; grid-template-columns: 1fr 2fr; gap: 24px; align-items: center;">
+        <div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--accent-orange); letter-spacing: 0.8px; text-transform: uppercase;">Central Operations Hub</span>
+          <h4 style="font-size: 20px; font-weight: 800; color: #082b4c; margin: 4px 0 8px 0;">Visit Our Pune Headquarters</h4>
+          <p style="color: #475569; font-size: 13.5px; line-height: 1.5; margin: 0 0 14px 0;">Central coordination desk for land, highway, rail, and drone survey projects across Maharashtra and Pan-India.</p>
+          <a href="https://maps.google.com/?q=Pune,+Maharashtra" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: var(--dark-navy); color: #fff; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 13.5px; text-decoration: none;">
+            <span>Get Directions on Map</span> &rarr;
+          </a>
+        </div>
+        <div style="border-radius: 8px; overflow: hidden; height: 180px; border: 1px solid #d5e2ef;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04360431358!2d73.79292675000001!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689146522361!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Pune Location"></iframe>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div style="border-top: 1px solid rgba(8, 43, 76, 0.12); padding-top: 20px; text-align: center; color: var(--accent-orange); font-size: 13.5px;">
+        <p style="margin: 0 0 6px 0;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All Rights Reserved.</p>
+        <p style="margin: 0; color: #64748b; font-size: 12.5px;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" style="color: #082b4c; text-decoration: none;">MindAxis Innovation Pvt.Ltd</a></strong></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.join(__dirname, 'test_footer_optionB.html'), optionB_Html, 'utf8');
+
+// Now launch Puppeteer to screenshot both
+(async () => {
+  const browser = await puppeteer.launch({
+    executablePath: CHROME_PATH,
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
+  // 1. Screenshot Option A
+  const pageA = await browser.newPage();
+  await pageA.setViewport({ width: 1440, height: 900 });
+  await pageA.goto('file:///' + path.join(__dirname, 'test_footer_optionA.html').replace(/\\/g, '/'), { waitUntil: 'networkidle2' });
+  await new Promise(r => setTimeout(r, 600));
+  await pageA.screenshot({
+    path: path.join(ARTIFACT_DIR, 'footer_design_optionA.png')
+  });
+  await pageA.close();
+
+  // 2. Screenshot Option B
+  const pageB = await browser.newPage();
+  await pageB.setViewport({ width: 1440, height: 900 });
+  await pageB.goto('file:///' + path.join(__dirname, 'test_footer_optionB.html').replace(/\\/g, '/'), { waitUntil: 'networkidle2' });
+  await new Promise(r => setTimeout(r, 600));
+  await pageB.screenshot({
+    path: path.join(ARTIFACT_DIR, 'footer_design_optionB.png')
+  });
+  await pageB.close();
+
+  await browser.close();
+  console.log('Both footer options screenshotted successfully!');
+})().catch(console.error);

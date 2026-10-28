@@ -90,18 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15
+        threshold: 0.05
     };
 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
-            } else {
-                // Prevent jitter by only removing animation when scrolling back up (element goes below viewport)
-                if (entry.boundingClientRect.top > 0) {
-                    entry.target.classList.remove('animate');
-                }
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -164,42 +160,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const processLineFill = document.querySelector('.process-line-fill');
     
     if (processSection && processTimeline && processLineFill) {
-        // Ensure transition is very quick or disabled for scroll-linked animation
-        processLineFill.style.transition = 'width 0.1s ease-out';
-        
-        window.addEventListener('scroll', () => {
-            // Get coordinates
+        processLineFill.style.transition = 'width 0.12s ease-out, height 0.12s ease-out';
+
+        const updateProcessProgress = () => {
             const rect = processTimeline.getBoundingClientRect();
-            
-            // Calculate how much of the element is visible
-            // We want it to start filling when the top of timeline hits middle of screen (or a bit lower)
-            // And finish filling when the bottom of timeline is above the middle
-            
             const windowHeight = window.innerHeight;
-            
-            // The point in the viewport where animation starts (e.g., 75% down the screen)
-            const triggerPoint = windowHeight * 0.75; 
-            
-            // Scroll progress percentage
+            const triggerPoint = windowHeight * 0.75;
             let progress = 0;
-            
+
             if (rect.top < triggerPoint) {
-                const distance = 400; // arbitrary pixel distance for the line to fully draw
+                const distance = 420;
                 let scrolledPastTrigger = triggerPoint - rect.top;
-                progress = (scrolledPastTrigger / distance) * 100;
-                
-                if (progress < 0) progress = 0;
-                if (progress > 100) progress = 100;
+                progress = Math.min(100, Math.max(0, (scrolledPastTrigger / distance) * 100));
             }
-            
-            if (window.innerWidth <= 768) {
-                processLineFill.style.width = '4px';
+
+            if (window.innerWidth <= 767) {
+                processLineFill.style.width = '100%';
                 processLineFill.style.height = progress + '%';
             } else {
-                processLineFill.style.height = '4px';
+                processLineFill.style.height = '100%';
                 processLineFill.style.width = progress + '%';
             }
-        });
+        };
+
+        window.addEventListener('scroll', updateProcessProgress, { passive: true });
+        window.addEventListener('resize', updateProcessProgress);
+        updateProcessProgress();
     }
 
     /* ==========================================
@@ -494,8 +480,17 @@ document.addEventListener('DOMContentLoaded', () => {
        10. FAQ HOVER / TOUCH INTERACTION
     ========================================== */
     document.querySelectorAll('.faq-card').forEach(card => {
+        // Click support to toggle open/close
+        card.addEventListener('click', () => {
+            const wasActive = card.classList.contains('is-active');
+            document.querySelectorAll('.faq-card').forEach(c => {
+                if (c !== card) c.classList.remove('is-active');
+            });
+            card.classList.toggle('is-active');
+        });
         // Touch support for mobile devices
         card.addEventListener('touchstart', () => {
+            const wasActive = card.classList.contains('is-active');
             document.querySelectorAll('.faq-card').forEach(c => {
                 if (c !== card) c.classList.remove('is-active');
             });
@@ -503,6 +498,118 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     });
 
+    /* ==========================================
+       11. FOOTER CALLING LINKS
+    ========================================== */
+    document.querySelectorAll('.footer-phone-link, .footer a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const tel = this.getAttribute('href');
+            if (tel) {
+                window.location.href = tel;
+            }
+        });
+    });
+
     /* Custom cursor removed per user request */
+    /* ==========================================
+       12. DIRECT EMAIL FORM SUBMISSION TO tanviii6104@gmail.com
+    ========================================== */
+    function setupFormSubmit(formId, statusId, btnId, successMsg) {
+        var form = document.getElementById(formId);
+        if (!form || form._hasSubmitHandler) return;
+        form._hasSubmitHandler = true;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var btn = document.getElementById(btnId) || form.querySelector('button[type="submit"]');
+            var statusBox = document.getElementById(statusId);
+            var originalText = btn ? btn.innerHTML : 'Submit';
+
+            if (btn) {
+                btn.disabled = true;
+                btn.style.opacity = '0.75';
+                btn.style.cursor = 'not-allowed';
+                btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">Submitting...</span>';
+            }
+
+            if (statusBox) {
+                clearTimeout(statusBox._hideTimer);
+                statusBox.style.display = 'none';
+            }
+
+            // Sync _replyto and absolute _next for FormSubmit
+            var emailInput = form.querySelector('input[type="email"]');
+            var replyToInput = form.querySelector('input[name="_replyto"]');
+            if (replyToInput && emailInput && emailInput.value) {
+                replyToInput.value = emailInput.value;
+            }
+            var nextInput = form.querySelector('input[name="_next"]');
+            if (nextInput) {
+                if (window.location.protocol.startsWith('http')) {
+                    nextInput.value = window.location.origin + window.location.pathname + '?submitted=true';
+                } else {
+                    nextInput.value = '';
+                }
+            }
+
+            var formData = new FormData(form);
+
+            fetch('https://formsubmit.co/ajax/tanviii6104@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                if (statusBox) {
+                    clearTimeout(statusBox._hideTimer);
+                    statusBox.style.display = 'block';
+                    statusBox.style.opacity = '1';
+                    statusBox.style.transform = 'translateY(0)';
+                    statusBox.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    statusBox.style.background = '#ecfdf5';
+                    statusBox.style.border = '1.5px solid #10b981';
+                    statusBox.style.color = '#065f46';
+                    statusBox.innerHTML = '<div style="display:flex;align-items:center;gap:12px;">' +
+                        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>' +
+                        '<div><strong style="font-size:15px;color:#064e3b;">Request Sent Successfully!</strong> ' +
+                        '<span style="font-size:14px;color:#065f46;">' + successMsg + '</span></div></div>';
+                    statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Auto disappear after 5 seconds
+                    statusBox._hideTimer = setTimeout(function() {
+                        statusBox.style.opacity = '0';
+                        statusBox.style.transform = 'translateY(-8px)';
+                        setTimeout(function() {
+                            statusBox.style.display = 'none';
+                            statusBox.style.transform = 'translateY(0)';
+                        }, 600);
+                    }, 5000);
+                }
+                form.reset();
+            })
+            .catch(function(err) {
+                console.warn('AJAX fallback to native POST:', err);
+                form.submit();
+            })
+            .finally(function() {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    btn.style.cursor = 'pointer';
+                    btn.innerHTML = originalText;
+                }
+            });
+        });
+    }
+
+    setupFormSubmit('contactForm', 'contactFormStatus', 'contactSubmitBtn', 'It will get verified within 24 hours.');
+    setupFormSubmit('reviewForm', 'reviewFormStatus', 'reviewSubmitBtn', 'It will get verified within 24 hours.');
 
 });
+

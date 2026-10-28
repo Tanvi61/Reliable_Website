@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Performance Optimization: Resource Preconnects & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
     <meta charset="UTF-8">
+
+    <!-- Google Analytics (GA4 - gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N13T37FJ7D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-N13T37FJ7D');
+    </script>
+
+    <!-- Google Search Console (GSC) Verification -->
+    <meta name="google-site-verification" content="GSC_RELIABLE_LAND_SURVEY_VERIFICATION_TOKEN" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reliable Land Survey Consultancy | Surveying & Geospatial Solutions Pune</title>
-    <meta name="description" content="Professional land surveying, DGPS, GNSS, Total Station, RTK Drone, LiDAR, photogrammetry and geospatial solutions for infrastructure projects in Pune, Maharashtra.">
-    <meta name="keywords" content="Land Survey, DGPS, GNSS, Total Station, RTK Drone, LiDAR, Topographical Survey, Infrastructure Survey, Pune, Maharashtra">
+    <title>Project Gallery | Reliable Land Survey Consultancy Pune</title>
+    <meta name="description" content="Explore field photos, aerial drone imagery, LiDAR point clouds, and completed survey projects by Reliable Land Survey Consultancy across Maharashtra.">
+    <meta name="keywords" content="Survey Project Photos, Drone Survey Images, LiDAR Point Clouds Pune, Field Survey Gallery">
     
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Reliable Land Survey Consultancy">
-    <meta property="og:description" content="Precision surveying and geospatial solutions for modern infrastructure.">
+    
+    <!-- Standard Meta Tags -->
+    <meta name="author" content="Reliable Land Survey Consultancy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#082B4C">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:site_name" content="Reliable Land Survey Consultancy">
     <meta property="og:type" content="website">
-    
-    <link rel="canonical" href="https://www.reliablelandsurvey.in/">
+    <meta property="og:title" content="Project Gallery | Reliable Land Survey Consultancy Pune">
+    <meta property="og:description" content="Explore field photos, aerial drone imagery, LiDAR point clouds, and completed survey projects by Reliable Land Survey Consultancy across Maharashtra.">
+    <meta property="og:url" content="https://www.reliablelandsurvey.in/gallery.html">
+    <meta property="og:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Reliable Land Survey Consultancy Logo">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Gallery | Reliable Land Survey Consultancy Pune">
+    <meta name="twitter:description" content="Explore field photos, aerial drone imagery, LiDAR point clouds, and completed survey projects by Reliable Land Survey Consultancy across Maharashtra.">
+    <meta name="twitter:image" content="https://www.reliablelandsurvey.in/assets/images/logo.png">
+
+    <link rel="canonical" href="https://www.reliablelandsurvey.in/gallery.html">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.jpg?v=2" type="image/jpeg">
@@ -22,9 +61,10 @@
         <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261008_5">
-    <link rel="stylesheet" href="css/responsive.css?v=20261008_5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20261010-11">
+    <link rel="stylesheet" href="css/responsive.css?v=20261010-11">
+    <link rel="stylesheet" href="css/header-footer.css?v=20261026-logo">
 
     <!-- Strictly prevent horizontal overflow on all viewports -->
     <style>
@@ -78,10 +118,7 @@
         position: fixed !important;
         right: 18px !important;
         right: calc(18px + env(safe-area-inset-right, 0px)) !important;
-        top: 60% !important;
-        bottom: auto !important;
-        transform: translateY(-50%) !important;
-        -webkit-transform: translateY(-50%) !important;
+        bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
         z-index: 2147483647 !important;
         display: flex !important;
         flex-direction: column !important;
@@ -119,10 +156,7 @@
         .floating-actions {
           right: 16px !important;
           right: calc(16px + env(safe-area-inset-right, 0px)) !important;
-          top: 42% !important;
-          bottom: auto !important;
-          transform: translateY(-50%) !important;
-          -webkit-transform: translateY(-50%) !important;
+          bottom: 85px !important; bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important; top: auto !important; transform: none !important; -webkit-transform: none !important;
           z-index: 2147483647 !important;
           gap: 10px !important;
         }
@@ -133,15 +167,44 @@
       }
     </style>
 
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.reliablelandsurvey.in/gallery.html#webpage",
+  "url": "https://www.reliablelandsurvey.in/gallery.html",
+  "name": "Project Gallery | Reliable Land Survey Consultancy Pune",
+  "isPartOf": {
+    "@id": "https://www.reliablelandsurvey.in/#website"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.reliablelandsurvey.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Project Gallery",
+        "item": "https://www.reliablelandsurvey.in/gallery.html"
+      }
+    ]
+  }
+}
+    </script>
 </head>
 <body>
     <!-- Floating Quick Actions (Persistent on right side across entire page from top to bottom) -->
-    <div class="floating-actions" style="position: fixed !important; right: 16px !important; top: 42% !important; bottom: auto !important; transform: translateY(-50%) !important; -webkit-transform: translateY(-50%) !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
-        <a href="https://wa.me/919604648777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+    <div class="floating-actions" style="position: fixed !important; right: 16px !important; bottom: 85px !important; top: auto !important; transform: none !important; -webkit-transform: none !important; z-index: 2147483647 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="https://wa.me/919604646777" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp" style="background-color: #25D366 !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.89-4.443 9.891-9.891.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.74-1.975zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             <span class="float-tooltip">WhatsApp Us</span>
         </a>
-        <a href="tel:+919604648777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
+        <a href="tel:+919604646777" class="float-btn call" aria-label="Call Us" title="Call Now" style="background-color: var(--accent-orange) !important; display: flex !important; visibility: visible !important; opacity: 1 !important;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span class="float-tooltip">Call Us</span>
         </a>
@@ -153,23 +216,17 @@
         if (!el) return;
         var isMobile = window.innerWidth <= 1024;
         el.style.setProperty('position', 'fixed', 'important');
-        el.style.setProperty('bottom', 'auto', 'important');
-        el.style.setProperty('transform', 'translateY(-50%)', 'important');
-        el.style.setProperty('-webkit-transform', 'translateY(-50%)', 'important');
+        el.style.setProperty('bottom', isMobile ? '85px' : '90px', 'important');
+        el.style.setProperty('top', 'auto', 'important');
+        el.style.setProperty('transform', 'none', 'important');
+        el.style.setProperty('-webkit-transform', 'none', 'important');
         el.style.setProperty('z-index', '2147483647', 'important');
         el.style.setProperty('display', 'flex', 'important');
         el.style.setProperty('flex-direction', 'column', 'important');
         el.style.setProperty('visibility', 'visible', 'important');
         el.style.setProperty('opacity', '1', 'important');
-        if (isMobile) {
-          el.style.setProperty('top', '42%', 'important');
-          el.style.setProperty('right', '16px', 'important');
-          el.style.setProperty('gap', '10px', 'important');
-        } else {
-          el.style.setProperty('top', '60%', 'important');
-          el.style.setProperty('right', '18px', 'important');
-          el.style.setProperty('gap', '12px', 'important');
-        }
+        el.style.setProperty('right', isMobile ? '16px' : '18px', 'important');
+        el.style.setProperty('gap', isMobile ? '10px' : '12px', 'important');
       }
       alignFloatingWidget();
       window.addEventListener('resize', alignFloatingWidget);
@@ -197,32 +254,35 @@
        TOP BAR (Shared Component)
     ========================================== -->
     <div id="site-topbar"></div>
-    <script src="js/topbar.js"></script>
+    <script src="js/topbar.js?v=20261010-06" defer></script>
 
         <nav class="nav-exact anim-nav">
             <div class="nav-logo">
-                <img src="assets/logo/logo-transparent.png" alt="Logo">
+            <img fetchpriority="high" decoding="async" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Pune - Land & Drone Survey Services" title="Reliable Land Survey Consultancy - Expert Land Surveyors in Pune, Maharashtra">
             </div>
             <div class="nav-links" id="mobileNavMenu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <div class="nav-dropdown">
-                <a href="services.html" class="nav-dropdown-toggle">
+                <a href="land-survey-services.html" class="nav-dropdown-toggle">
                     Services
                     <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
                 </a>
                 <div class="nav-dropdown-menu">
                     <a href="topographical-survey.html" class="nav-dropdown-item">Topographical Survey</a>
-                    <a href="dgps-gnss-control.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
+                    <a href="dgps-gnss-control-survey.html" class="nav-dropdown-item">DGPS / GNSS Control</a>
                     <a href="total-station-survey.html" class="nav-dropdown-item">Total Station Survey</a>
-                    <a href="rtk-drone-mapping.html" class="nav-dropdown-item">RTK Drone Mapping</a>
-                    <a href="lidar-3d-scanning.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
-                    <a href="drone-photogrammetry.html" class="nav-dropdown-item">Drone Photogrammetry</a>
-                    <a href="road-highway.html" class="nav-dropdown-item">Road & Highway Survey</a>
-                    <a href="rail-metro.html" class="nav-dropdown-item">Rail & Metro Survey</a>
-                    <a href="cad-gis-processing.html" class="nav-dropdown-item">CAD & GIS Processing</a>
+                    <a href="rtk-drone-mapping-survey.html" class="nav-dropdown-item">RTK Drone Mapping</a>
+                    <a href="lidar-3d-scanning-survey.html" class="nav-dropdown-item">Drone LiDAR Scanning</a>
+                    <a href="drone-photogrammetry-survey.html" class="nav-dropdown-item">Drone Photogrammetry</a>
+                    <a href="road-highway-survey.html" class="nav-dropdown-item">Road & Highway Survey</a>
+                    <a href="rail-metro-survey.html" class="nav-dropdown-item">Rail & Metro Survey</a>
+                    <a href="cad-gis-processing-services.html" class="nav-dropdown-item">CAD & GPR Processing</a>
+                    <a href="bathymetric-survey.html" class="nav-dropdown-item">Bathymetric Survey</a>
+                    <a href="contour-survey.html" class="nav-dropdown-item">Contour Survey</a>
+                    <a href="digital-auto-level-survey.html" class="nav-dropdown-item">Digital Auto Level Survey</a>
                     <div class="dropdown-footer-link">
-                        <a href="services.html">All Services &rarr;</a>
+                        <a href="land-survey-services.html">All Services &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -244,75 +304,48 @@
         style="position: relative; width: 100%; height: 480px; max-height: 500px; min-height: 440px; background-color: #eaf4fc; padding-top: 140px; overflow: hidden; box-sizing: border-box;">
 
         <!-- Animated Background Image (Matches About Us page exactly) -->
-        <img src="assets/images/about-hero-clean.jpg" alt="Field Project Gallery" class="bg-pan-anim"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
+        <img decoding="async" src="assets/images/about-hero-clean.jpg" alt="Reliable Land Survey Consultancy Field Project Gallery - On-Site Engineering Survey Work" title="Survey Project Gallery - Drone, DGPS & Total Station Field Operations" class="bg-pan-anim" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: right center; z-index: 1;">
 
         <!-- Overlay Text (Matches About Us page exactly) -->
         <div
             style="position: absolute; top: 135px; left: 0; width: 100%; height: calc(100% - 135px); display: flex; flex-direction: column; justify-content: center; padding: 0 8%; z-index: 2; pointer-events: none; box-sizing: border-box;">
             <div class="text-fade-in-left" style="max-width: 620px; padding-bottom: 20px; pointer-events: auto;">
+                <nav aria-label="breadcrumb" class="breadcrumb-container" style="margin-bottom: 14px;">
+                    <ol class="breadcrumb" style="list-style: none; padding: 0; margin: 0; font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <li class="breadcrumb-item"><a href="index.html" style="color: #4b5563; text-decoration: none; transition: color 0.2s;">HOME</a></li><li aria-hidden="true" style="color: var(--accent-orange);">&raquo;</li><li class="breadcrumb-item active" style="color: var(--accent-orange); font-weight: 800; white-space: nowrap;" aria-current="page">PROJECT GALLERY</li>
+                    </ol>
+                </nav>
                 <h5
                     style="color: var(--primary-navy); font-weight: 700; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px;">
                     PROJECT SHOWCASE</h5>
                 <div style="width: 40px; height: 3px; background: var(--accent-orange); margin-bottom: 25px;"></div>
                 <h1
                     style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--dark-navy); line-height: 1.1; margin-bottom: 20px; font-weight: 800; text-shadow: 0 0 15px rgba(255,255,255,0.7);">
-                    Precision in Focus. <span style="color: var(--accent-orange);">Captured in Field.</span>
+                    Precision in Focus.<span class="gallery-title-break"> </span><span class="gallery-title-accent" style="color: var(--accent-orange);">Captured in Field.</span>
                 </h1>
-                <p style="font-size: 1.1rem; color: #333; line-height: 1.6; max-width: 540px; font-weight: 700; margin-bottom: 25px; text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.9);">
+                <p style="font-size: 1.1rem; color: #333; line-height: 1.6; max-width: 540px; font-weight: 700; text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.9);">
                     Explore verified field operations and engineering portfolio across Maharashtra — Total Station benchmarks, DGPS networks, RTK drone mapping, and LiDAR scans.
                 </p>
-                <div>
-                    <a href="#gallery-grid" class="hero-gallery-cta">
-                        Explore Projects <span class="cta-arrow">&darr;</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
 
     <style>
-      .hero-gallery-cta {
-        padding: 16px 36px;
-        font-size: 15.5px;
-        border-radius: 50px;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: linear-gradient(135deg, #F47B20, #e06912);
-        color: #ffffff !important;
-        text-decoration: none;
-        font-weight: 800;
-        letter-spacing: 0.3px;
-        box-shadow: 0 8px 25px rgba(244, 123, 32, 0.35);
-        animation: pulseGlowGallery 2.4s infinite;
-        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .hero-gallery-cta:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 14px 35px rgba(244, 123, 32, 0.52) !important;
-      }
-      .hero-gallery-cta .cta-arrow {
-        display: inline-block;
-        font-size: 18px;
-        line-height: 1;
-        animation: bounceArrowY 1.8s infinite ease-in-out;
-      }
-      @keyframes pulseGlowGallery {
-        0% { box-shadow: 0 0 0 0 rgba(244, 123, 32, 0.6), 0 8px 25px rgba(244, 123, 32, 0.35); }
-        70% { box-shadow: 0 0 0 16px rgba(244, 123, 32, 0), 0 12px 30px rgba(244, 123, 32, 0.45); }
-        100% { box-shadow: 0 0 0 0 rgba(244, 123, 32, 0), 0 8px 25px rgba(244, 123, 32, 0.35); }
-      }
-      @keyframes bounceArrowY {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(5px); }
+      @media (max-width: 1024px) {
+        .gallery-title-break {
+          display: none;
+        }
+        .gallery-title-accent {
+          display: block;
+          margin-top: 6px;
+        }
       }
     </style>
 
         <section class="section gallery-showcase-section" style="padding: 95px 0 105px; background: #f0f7fd url('assets/images/gallery-section-bg.png') center top / cover no-repeat; position: relative;">
             <div class="container">
                 <div class="text-center" style="margin-bottom: 50px;">
-                    <h2 class="section-heading" style="color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading);">Project & Product Gallery</h2>
+                    <h2 class="section-heading" style="color: var(--dark-navy); font-weight: 800; font-family: var(--font-heading);">Project & Service Gallery</h2>
                 </div>
                 <style>
                     /* GALLERY HOVER & LIGHTBOX STYLES */
@@ -660,8 +693,8 @@
                 <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
                     
                     <!-- Gallery Item 1 -->
-                    <div class="gallery-item" data-index="0" data-src="assets/images/gallery-1.jpg" data-caption="Survey Ground Control Benchmark & Infrastructure Monument">
-                        <img src="assets/images/gallery-1.jpg" alt="Survey Ground Control Benchmark & Infrastructure Monument" loading="lazy">
+                    <div class="gallery-item" data-index="0" data-src="assets/images/gallery-1.jpg?v=20261023" data-caption="Survey Ground Control Benchmark & Infrastructure Monument">
+                        <img decoding="async" src="assets/images/gallery-1.jpg?v=20261023" alt="Permanent Ground Control Benchmark Monument Built for Highway Infrastructure Survey" title="Survey Benchmark Ground Monument - Reliable Land Survey Consultancy" loading="lazy">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">Ground Control Benchmark & Infrastructure Monument</p>
@@ -669,8 +702,8 @@
                     </div>
 
                     <!-- Gallery Item 2 -->
-                    <div class="gallery-item" data-index="1" data-src="assets/images/gallery-2.jpg" data-caption="Rail & Metro Alignment Infrastructure Survey">
-                        <img src="assets/images/gallery-2.jpg" alt="Rail & Metro Alignment Infrastructure Survey" loading="lazy">
+                    <div class="gallery-item" data-index="1" data-src="assets/images/gallery-2.jpg?v=20261023" data-caption="Rail & Metro Alignment Infrastructure Survey">
+                        <img decoding="async" src="assets/images/gallery-2.jpg?v=20261023" alt="Rail & Metro Corridor Alignment Survey Using Precision Geodetic Instruments" title="Rail & Metro Infrastructure Alignment Survey Operation" loading="lazy">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">Rail & Metro Alignment Infrastructure Survey</p>
@@ -679,7 +712,7 @@
 
                     <!-- Gallery Item 3 -->
                     <div class="gallery-item" data-index="2" data-src="assets/images/gallery-3.jpg" data-caption="Total Station, RTK Drone & DGPS GNSS Geospatial Instrumentation">
-                        <img src="assets/images/gallery-3.jpg" alt="Total Station, RTK Drone & DGPS GNSS Geospatial Instrumentation" loading="lazy">
+                        <img decoding="async" src="assets/images/gallery-3.jpg" alt="State of the Art Survey Equipment - Total Station, RTK Drone & DGPS GNSS Receivers" title="Advanced Survey Instrumentation & Geospatial Hardware" loading="lazy">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">Total Station, RTK Drone & DGPS GNSS Field Station</p>
@@ -687,8 +720,8 @@
                     </div>
 
                     <!-- Gallery Item 4 -->
-                    <div class="gallery-item" data-index="3" data-src="assets/images/gallery-4.jpg" data-caption="DGPS GNSS Control & Total Station Layout Survey on Construction Site">
-                        <img src="assets/images/gallery-4.jpg" alt="DGPS GNSS Control & Total Station Layout Survey on Construction Site" loading="lazy">
+                    <div class="gallery-item" data-index="3" data-src="assets/images/gallery-4.jpg?v=20261026" data-caption="DGPS GNSS Control & Site Benchmark Demarcation">
+                        <img decoding="async" src="assets/images/gallery-4.jpg?v=20261026" alt="DGPS GNSS Control & Site Benchmark Demarcation in Pune" title="DGPS GNSS Control & Site Benchmark Demarcation" loading="lazy" style="object-position: center 36%;">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">DGPS GNSS Control & Site Layout Demarcation</p>
@@ -696,17 +729,17 @@
                     </div>
 
                     <!-- Gallery Item 5 -->
-                    <div class="gallery-item" data-index="4" data-src="assets/images/gallery-5.jpg" data-caption="Cadastral Boundary Survey & GIS Land Parcel Demarcation">
-                        <img src="assets/images/gallery-5.jpg" alt="Cadastral Boundary Survey & GIS Land Parcel Demarcation" loading="lazy">
+                    <div class="gallery-item" data-index="4" data-src="assets/images/gallery-5.jpg?v=20261026" data-caption="Cadastral Boundary Survey & GPR Utility & Land Demarcation">
+                        <img decoding="async" src="assets/images/gallery-5.jpg?v=20261026" alt="Cadastral Boundary Demarcation and GPR Utility Measurement in Rural Maharashtra" title="Cadastral Boundary Demarcation & GPR Utility Survey" loading="lazy" style="object-position: center 28%;">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
-                            <p class="gallery-caption-text">Cadastral Boundary Survey & Land Parcel GIS</p>
+                            <p class="gallery-caption-text">Cadastral Boundary Survey & Land Parcel GPR</p>
                         </div>
                     </div>
 
                     <!-- Gallery Item 6 -->
-                    <div class="gallery-item" data-index="5" data-src="assets/images/gallery-6.jpg" data-caption="Highway & River Bridge Infrastructure Geodetic Survey Benchmark">
-                        <img src="assets/images/gallery-6.jpg" alt="Highway & River Bridge Infrastructure Geodetic Survey Benchmark" loading="lazy">
+                    <div class="gallery-item" data-index="5" data-src="assets/images/gallery-6.jpg?v=20261023" data-caption="Highway & River Bridge Infrastructure Geodetic Survey Benchmark">
+                        <img decoding="async" src="assets/images/gallery-6.jpg?v=20261023" alt="Highway Flyover and River Bridge Geodetic Survey Benchmark Installation" title="Bridge Infrastructure Survey Benchmark & Alignment" loading="lazy">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">Highway & River Bridge Geodetic Survey Benchmark</p>
@@ -714,8 +747,8 @@
                     </div>
 
                     <!-- Gallery Item 7 -->
-                    <div class="gallery-item" data-index="6" data-src="assets/images/gallery-7.jpg" data-caption="Roadway Drainage Culvert & Highway Alignment Survey">
-                        <img src="assets/images/gallery-7.jpg" alt="Roadway Drainage Culvert & Highway Alignment Survey" loading="lazy">
+                    <div class="gallery-item" data-index="6" data-src="assets/images/gallery-7.jpg?v=20261026" data-caption="Roadway Drainage Culvert & Highway Alignment Survey">
+                        <img decoding="async" src="assets/images/gallery-7.jpg?v=20261026" alt="Roadway Drainage Culvert & Highway Alignment Survey" title="Roadway Drainage Culvert & Highway Alignment Survey" loading="lazy" style="object-position: center 42%;">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
                             <p class="gallery-caption-text">Roadway Drainage Culvert & Alignment Stakes</p>
@@ -723,20 +756,47 @@
                     </div>
 
                     <!-- Gallery Item 8 -->
-                    <div class="gallery-item" data-index="7" data-src="assets/images/gallery-8.jpg" data-caption="Plotted Land Layout & Residential Township Topographical Survey">
-                        <img src="assets/images/gallery-8.jpg" alt="Plotted Land Layout & Residential Township Topographical Survey" loading="lazy">
+                    <div class="gallery-item" data-index="7" data-src="assets/images/gallery-8.jpg?v=20261026" data-caption="GNSS surveying for precise measurements in garden areas.">
+                        <img decoding="async" src="assets/images/gallery-8.jpg?v=20261026" alt="GNSS surveying for precise measurements in garden areas." title="GNSS surveying for precise measurements in garden areas." loading="lazy" style="object-position: center 25%;">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
-                            <p class="gallery-caption-text">Plotted Land Layout & Township Topographical Survey</p>
+                            <p class="gallery-caption-text">GNSS surveying for precise measurements in garden areas.</p>
                         </div>
                     </div>
 
                     <!-- Gallery Item 9 -->
-                    <div class="gallery-item" data-index="8" data-src="assets/images/gallery-9.jpg" data-caption="Drone Photogrammetry, Total Station Operation & Valley Mapping Engineers">
-                        <img src="assets/images/gallery-9.jpg" alt="Drone Photogrammetry, Total Station Operation & Valley Mapping Engineers" loading="lazy">
+                    <div class="gallery-item" data-index="8" data-src="assets/images/gallery-9.jpg?v=20261026" data-caption="DGPS/GNSS receiver setup for precise surveying.">
+                        <img decoding="async" src="assets/images/gallery-9.jpg?v=20261026" alt="DGPS/GNSS receiver setup for precise surveying." title="DGPS/GNSS receiver setup for precise surveying." loading="lazy" style="object-position: center 25%;">
                         <div class="gallery-hover-overlay">
                             <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
-                            <p class="gallery-caption-text">Drone Photogrammetry & Total Station Field Crew</p>
+                            <p class="gallery-caption-text">DGPS/GNSS receiver setup for precise surveying.</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 10 -->
+                    <div class="gallery-item" data-index="9" data-src="assets/images/gallery-10.jpg" data-caption="Robotic Total Station Precision Alignment & Bridge Construction Staking">
+                        <img decoding="async" src="assets/images/gallery-10.jpg" alt="Robotic Total Station Precision Alignment Survey on Highway & Bridge Construction Site" title="Bridge Infrastructure Robotic Total Station Survey - Reliable Land Survey Consultancy" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Robotic Total Station & Bridge Construction Staking</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 11 -->
+                    <div class="gallery-item" data-index="10" data-src="assets/images/gallery-11.jpg" data-caption="Digital Auto-Level Precise Highway Elevation & Pavement Grade Survey">
+                        <img decoding="async" src="assets/images/gallery-11.jpg" alt="Leica Digital Auto-Level Performing Precise Highway Elevation and Pavement Grade Survey" title="Highway Road Construction Precision Leveling Survey - Reliable Land Survey Consultancy" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">Digital Auto-Level Highway Elevation Survey</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 12 -->
+                    <div class="gallery-item" data-index="11" data-src="assets/images/gallery-12.jpg" data-caption="Commercial RTK Aerial Drone Infrastructure & Highway Interchange Mapping">
+                        <img decoding="async" src="assets/images/gallery-12.jpg" alt="Commercial RTK Aerial Survey Drone Inspecting Multi-Lane Highway Interchange and Bridge Flyover" title="Commercial RTK Drone Aerial Survey - Reliable Land Survey Consultancy" loading="lazy">
+                        <div class="gallery-hover-overlay">
+                            <span class="gallery-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> View Photo</span>
+                            <p class="gallery-caption-text">RTK Aerial Drone Highway Interchange Mapping</p>
                         </div>
                     </div>
 
@@ -835,7 +895,7 @@
                             <div class="deliv-card deliv-dark">
                                 <div class="deliv-badge">G</div>
                                 <div class="deliv-info">
-                                    <h4 class="deliv-title">GIS-ready Data</h4>
+                                    <h4 class="deliv-title">GPR-ready Data</h4>
                                     <span class="deliv-sub">ESRI Shapefiles & GeoPackage</span>
                                 </div>
                             </div>
@@ -973,7 +1033,7 @@
                             <div class="deliv-card deliv-dark" aria-hidden="true">
                                 <div class="deliv-badge">G</div>
                                 <div class="deliv-info">
-                                    <h4 class="deliv-title">GIS-ready Data</h4>
+                                    <h4 class="deliv-title">GPR-ready Data</h4>
                                     <span class="deliv-sub">ESRI Shapefiles & GeoPackage</span>
                                 </div>
                             </div>
@@ -1040,7 +1100,7 @@
                 <button type="button" class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Previous Photo">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </button>
-                <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery Preview">
+                <img decoding="async" loading="lazy" id="lightboxImg" class="lightbox-img" src="" alt="Full Resolution Land Survey Project Preview Image" title="Survey Project Photographic Evidence Preview">
                 <button type="button" class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" aria-label="Next Photo">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </button>
@@ -1124,13 +1184,33 @@
                 });
             })();
         </script>
-        <footer class="footer">
+            <!-- CTA BANNER -->
+    <section class="service-cta-banner">
+        <div class="container text-center" style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+            <h2>Deploy Our Survey Crews to Your Project</h2>
+            <p>Equipped with high-precision total stations, dual-frequency DGPS, and RTK drones, our Pune teams mobilize within 24-48 hours across Maharashtra and India.</p>
+            <div class="service-cta-buttons">
+                <a href="contact.html" class="cta-banner-btn-primary">
+                    <span>Get an Engineering Quote &rarr;</span>
+                </a>
+                <a href="tel:+919604646777" class="cta-banner-btn-phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+91 96046 46777</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       FOOTER
+    ========================================== -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <!-- Column 1 -->
                 <div class="footer-brand">
                     <div class="footer-brand-inner" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
-                        <img src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy" class="footer-logo-img" style="height: 100px; width: auto; display: block;">
+                        <a href="index.html" style="display: block;" title="Reliable Land Survey Consultancy"><img decoding="async" loading="lazy" src="assets/logo/logo-transparent.png" alt="Reliable Land Survey Consultancy Official Logo - Pune Land Surveying Services" title="Reliable Land Survey Consultancy - High Precision Geospatial Engineering Solutions" class="footer-logo-img" style="height: 100px; width: auto; display: block;"></a>
                         <ul class="footer-brand-list" style="list-style: none; padding: 0; margin: 0; color: #000; text-align: left; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 100%;">
                             <li>Professional Surveying</li>
                             <li>Geospatial</li>
@@ -1142,71 +1222,98 @@
                 </div>
 
                 <!-- Column 2 -->
-                <div class="footer-col">
+                <div class="footer-col footer-col-links">
                     <h4>Quick Links</h4>
                     <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#industries">Industries</a>
-                        <a href="#technology">Technology</a>
-                        <a href="#why-us">Why Us</a>
-                        <a href="#contact">Contact</a>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="land-survey-services.html">Our Services</a>
+                        <a href="gallery.html">Project Gallery</a>
+                        <a href="review.html">Client Reviews</a>
+                        <a href="contact.html">Contact Us</a>
                     </div>
                 </div>
-                
+
                 <!-- Column 3 -->
-                <div class="footer-col">
-                    <h4>Services</h4>
+                <div class="footer-col footer-col-services">
+                    <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="#services">Topographical Survey</a>
-                        <a href="#services">DGPS / GNSS</a>
-                        <a href="#services">Total Station</a>
-                        <a href="#services">RTK Drone</a>
-                        <a href="#services">LiDAR Drone</a>
-                        <a href="#services">CAD / GIS</a>
+                        <a href="topographical-survey.html">Topographical Survey</a>
+                        <a href="dgps-gnss-control-survey.html">DGPS / GNSS Control</a>
+                        <a href="total-station-survey.html">Total Station Survey</a>
+                        <a href="rtk-drone-mapping-survey.html">RTK Drone Mapping</a>
+                        <a href="lidar-3d-scanning-survey.html">Drone LiDAR Scanning</a>
+                        <a href="road-highway-survey.html">Road & Highway Survey</a>
+                        <a href="rail-metro-survey.html">Rail & Metro Survey</a>
+                        <a href="cad-gis-processing-services.html">CAD & GPR Processing</a>
+                        <a href="bathymetric-survey.html">Bathymetric Survey</a>
+                        <a href="contour-survey.html">Contour Survey</a>
+                        <a href="digital-auto-level-survey.html">Digital Auto Level Survey</a>
                     </div>
                 </div>
-                
-                <!-- Column 4 -->
-                <div class="footer-col">
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col footer-col-contact">
                     <h4>Contact</h4>
-                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 16px;">
-                        <p>Pune, Maharashtra, India</p>
-                        <p style="margin: 0; line-height: 1.45;"><strong>Proprietors:</strong><br>Mahesh Deshmukh<br><a href="tel:+919604648777">+91 96046 48777</a><br><span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br><a href="tel:+918600044688">+91 86000 44688</a></p>
-                        <p><a href="mailto:info@reliablelandsurvey.in">info@reliablelandsurvey.in</a></p>
-                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    <div class="footer-links" style="color: #000; font-size: 0.92rem; gap: 14px;">
+                        <p style="margin: 0; font-weight: 700; color: #082b4c;">Gajrukmini Apartment, Pune, Maharashtra, India</p>
+                        <p style="margin: 0; line-height: 1.55;"><strong>Proprietors:</strong><br>
+                            Mahesh Deshmukh<br>
+                            <a href="tel:+918600044688" class="footer-phone-link" title="Click to Call Mahesh Deshmukh (+91 86000 44688)" aria-label="Call Mahesh Deshmukh +91 86000 44688">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 86000 44688</span>
+                            </a><br>
+                            <span style="display:inline-block; margin-top: 6px;">Sharad Pingale</span><br>
+                            <a href="tel:+919604646777" class="footer-phone-link" title="Click to Call Sharad Pingale (+91 96046 46777)" aria-label="Call Sharad Pingale +91 96046 46777">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <span>+91 96046 46777</span>
+                            </a>
+                        </p>
+                        <p style="margin: 0;"><a href="mailto:info@reliablelandsurvey.in" style="color: #000 !important;">info@reliablelandsurvey.in</a></p>
+                        <div class="footer-social-icons" style="display: flex; align-items: center; gap: 12px; margin-top: 4px;">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social-link instagram" aria-label="Instagram" style="color: #E1306C; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(225, 48, 108, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social-link facebook" aria-label="Facebook" style="color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(24, 119, 242, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                 </svg>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social-link youtube" aria-label="YouTube" style="color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 0, 0, 0.1); transition: all 0.25s ease;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center;">
-                    <p>&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All Rights Reserved.</p>
-                    <p>Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
-                </div>
 
+                <!-- Column 5: Office Location Map -->
+                <div class="footer-col footer-col-map">
+                    <h4>Office Location</h4>
+                    <div class="footer-map-card">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1892.045!2d73.78746329!3d18.46810974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI4JzA1LjIiTiA3M8KwNDcnMTQuOSJF!5e0!3m2!1sen!2sin!4v1730090000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Reliable Land Survey Consultancy Headquarters Location"></iframe>
+                    </div>
+                    <div style="margin-top: 10px; text-align: left;">
+                        <a href="https://maps.google.com/maps/search/Gajrukmini%20Apartment/@18.46810974,73.78746329,17z?hl=en" target="_blank" rel="noopener" class="footer-map-directions-link">
+                            <span>Open in Google Maps</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright-info" style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; color: var(--accent-orange) !important;">
+                    <p style="color: var(--accent-orange) !important;">&copy; 2026 <strong>Reliable Land Survey Consultancy</strong>. All&nbsp;Rights&nbsp;Reserved.</p>
+                    <p style="color: var(--accent-orange) !important;">Developed by <strong><a href="https://mindaxisinnovation.com/" target="_blank" rel="noopener" class="mindaxis-footer-link" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; text-decoration: none !important;">MindAxis Innovation Pvt.Ltd</a></strong></p>
+                </div>
             </div>
         </div>
     </footer>
 <!-- Script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=20261010-11" defer></script>
 </body>
 </html>
 

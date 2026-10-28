@@ -1,0 +1,245 @@
+/* ========================================================
+   INSTAGRAM REEL STORIES HIGHLIGHTS
+======================================================== */
+.reels-section {
+  padding: 18px 0 14px;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.reels-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (max-width: 768px) {
+  .reels-container {
+    padding: 0 var(--container-padding-mobile);
+  }
+}
+
+.reels-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 2px 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.reels-row::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform var(--transition-fast);
+}
+
+.reel-item:hover {
+  transform: translateY(-2px);
+}
+
+.reel-ring {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.2);
+}
+
+@media (max-width: 768px) {
+  .reel-ring {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.reel-item:hover .reel-ring {
+  box-shadow: 0 6px 16px rgba(220, 39, 67, 0.35);
+}
+
+.reel-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  background: #f0f0f0;
+}
+
+.reel-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  max-width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================================================
+   REEL STORIES MODAL VIEWER
+======================================================== */
+.reel-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.reel-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.reel-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 90vh;
+  max-height: 750px;
+  background: #000000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.reel-modal-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000000;
+}
+
+.reel-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color var(--transition-fast);
+}
+
+.reel-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.reel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.reel-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.reel-prev-btn {
+  left: 12px;
+}
+
+.reel-next-btn {
+  right: 12px;
+}
+
+.reel-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 10;
+}
+
+.reel-modal-info {
+  color: #ffffff;
+}
+
+.reel-modal-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.reel-cta-btn {
+  background: var(--color-orange-accent);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(242, 139, 49, 0.4);
+}
+
+.reel-cta-btn:hover {
+  transform: translateY(-2px);
+  background: #e07920;
+}
+
+@media (max-width: 480px) {
+  .reel-modal-box {
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .reel-bottom-bar {
+    padding: 20px 16px 24px;
+  }
+}

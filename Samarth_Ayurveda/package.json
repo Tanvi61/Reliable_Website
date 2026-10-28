@@ -1,0 +1,15 @@
+{
+  "name": "samarth-ayurveda-sona-herbal",
+  "version": "1.0.0",
+  "description": "Authentic recreation of Ayurveda (ayurveda.com) e-commerce website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.13.0",
+    "vite": "^6.0.0"
+  }
+}

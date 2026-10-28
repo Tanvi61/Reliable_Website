@@ -1,0 +1,417 @@
+/* ========================================================
+   ABOUT PAGE STYLES - SAMARTH AYURVEDA
+   QA Checklist Item 8 & 9:
+   - About Company Section
+   - Our Purpose Section with Our Vision & Our Mission
+   - Our Clients Section with Stats & Reviews
+======================================================== */
+
+.about-page-wrapper {
+  background: #f8faf8;
+  color: #1a2e1d;
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  padding-bottom: 80px;
+}
+
+/* 1. Header Banner */
+.about-hero-banner {
+  background: linear-gradient(135deg, #042e09 0%, #084e10 60%, #0f681a 100%);
+  color: #ffffff;
+  padding: 64px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 209, 102, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero-eyebrow {
+  display: inline-block;
+  background: rgba(255, 209, 102, 0.2);
+  border: 1px solid rgba(255, 209, 102, 0.45);
+  color: #ffd166;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.about-hero-title {
+  font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.about-hero-desc {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 2. About Company Section */
+.about-company-section {
+  padding: 72px 0 54px;
+}
+
+.about-company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.about-company-image-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(8, 78, 16, 0.18);
+}
+
+.about-company-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-company-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(4, 46, 9, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 209, 102, 0.4);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 16px;
+}
+
+.about-company-badge strong {
+  display: block;
+  font-size: 15px;
+  color: #ffd166;
+}
+
+.about-company-badge span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.about-section-eyebrow {
+  color: #084e10;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.about-section-heading {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #084e10;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.about-company-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #3d5041;
+  margin-bottom: 18px;
+}
+
+.about-company-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.about-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddeadf;
+  font-size: 14px;
+  font-weight: 700;
+  color: #084e10;
+}
+
+.about-feat-icon {
+  font-size: 18px;
+}
+
+/* 3. Our Purpose Section (QA Item 8) */
+.our-purpose-section {
+  padding: 64px 0;
+  background: #ffffff;
+  border-top: 1px solid #e2ede4;
+  border-bottom: 1px solid #e2ede4;
+}
+
+.purpose-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 48px auto;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.purpose-card {
+  background: linear-gradient(145deg, #f7fbf8 0%, #edf5ef 100%);
+  border: 2px solid #d4e8d8;
+  border-radius: 24px;
+  padding: 40px 36px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.purpose-card:hover {
+  transform: translateY(-4px);
+  border-color: #084e10;
+  box-shadow: 0 20px 45px rgba(8, 78, 16, 0.12);
+}
+
+.purpose-card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #084e10, #168a26);
+  color: #ffd166;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 20px rgba(8, 78, 16, 0.25);
+}
+
+.purpose-card-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #084e10;
+  margin: 0 0 14px 0;
+}
+
+.purpose-card-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #415645;
+  margin: 0;
+}
+
+.purpose-card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.purpose-card-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2e1d;
+}
+
+.purpose-bullet-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #084e10;
+  flex-shrink: 0;
+}
+
+/* 4. Our Clients Section (QA Item 9) */
+.our-clients-section {
+  padding: 72px 0 30px;
+}
+
+.clients-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px auto;
+}
+
+.clients-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.client-stat-card {
+  background: #ffffff;
+  border: 1px solid #ddeadf;
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.client-stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.client-stat-num {
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 800;
+  color: #084e10;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.client-stat-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #556c5a;
+}
+
+.clients-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.client-review-card {
+  background: #ffffff;
+  border: 1px solid #ddeadf;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.client-review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(8, 78, 16, 0.12);
+  border-color: #bcdbc1;
+}
+
+.client-rating-stars {
+  color: #ffb703;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.client-review-quote {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #2e4231;
+  font-style: italic;
+  margin: 0;
+}
+
+.client-author-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eef4f0;
+  padding-top: 14px;
+}
+
+.client-author-meta strong {
+  display: block;
+  font-size: 14.5px;
+  color: #084e10;
+}
+
+.client-author-meta span {
+  font-size: 12px;
+  color: #6a7f6f;
+}
+
+.client-verified-tag {
+  background: #eef7f0;
+  color: #084e10;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive Media Queries for About */
+@media (max-width: 900px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .clients-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-company-features {
+    grid-template-columns: 1fr;
+  }
+  .clients-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .client-stat-card {
+    padding: 18px 12px;
+    border-radius: 14px;
+  }
+  .client-stat-num {
+    font-size: 26px;
+  }
+  .client-stat-label {
+    font-size: 12px;
+  }
+  .purpose-card {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .clients-stats-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .client-stat-card {
+    padding: 16px 14px;
+  }
+}

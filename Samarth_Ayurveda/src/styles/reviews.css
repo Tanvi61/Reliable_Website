@@ -1,0 +1,244 @@
+/* ========================================================
+   CUSTOMER LOVE / REVIEWS SECTION (Exact Ayurveda match)
+======================================================== */
+.sona-reviews-section {
+  padding: 70px 0;
+  background: #fffaf2;
+  overflow: hidden;
+  font-family: inherit;
+  position: relative;
+}
+
+.sona-reviews-inner {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.sona-reviews-eyebrow {
+  color: #a87935;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sona-reviews-title {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 900;
+  color: #111111;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.sona-reviews-subtitle {
+  margin: 14px auto 42px;
+  max-width: 720px;
+  color: #6d6254;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Continuous Marquee Scrolling Track */
+.sona-reviews-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+  user-select: none;
+}
+
+.sona-reviews-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  animation: sonaReviewScroll 75s linear infinite;
+  will-change: transform;
+}
+
+.sona-reviews-marquee:hover .sona-reviews-track {
+  animation-play-state: paused;
+}
+
+/* Individual Review Card */
+.sona-review-card {
+  width: 345px;
+  min-height: 270px;
+  border: 1px solid rgba(184, 134, 59, 0.28);
+  border-radius: 26px;
+  padding: 26px;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sona-review-card:hover {
+  border-color: rgba(184, 134, 59, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(184, 134, 59, 0.08);
+}
+
+.sona-review-stars {
+  color: #d39a35;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.sona-review-product {
+  color: #9b7134;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.sona-review-text {
+  color: #302820;
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sona-review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.sona-review-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f4d28a, #b8863b);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(184, 134, 59, 0.2);
+}
+
+.sona-review-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: #16110c;
+}
+
+.sona-review-city {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #8b7c6a;
+}
+
+/* Bottom Trust Pills */
+.sona-review-badges {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.sona-review-badge {
+  border: 1px solid rgba(184, 134, 59, 0.28);
+  border-radius: 999px;
+  padding: 11px 18px;
+  color: #4b3a26;
+  font-size: 13px;
+  font-weight: 800;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.sona-review-badge:hover {
+  background: rgba(184, 134, 59, 0.08);
+  border-color: rgba(184, 134, 59, 0.5);
+  transform: translateY(-1px);
+}
+
+@keyframes sonaReviewScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 749px) {
+  .sona-reviews-section {
+    padding: 54px 0;
+  }
+
+  .sona-review-card {
+    width: 290px;
+    min-height: 265px;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .sona-reviews-track {
+    gap: 16px;
+    animation-duration: 60s;
+  }
+
+  .sona-review-badges {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8px;
+    width: 100%;
+  }
+
+  .sona-review-badge {
+    padding: 10px 8px;
+    font-size: clamp(10.5px, 2.9vw, 12px);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    border-radius: 999px;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sona-review-badges {
+    gap: 8px;
+    padding: 0 4px;
+  }
+
+  .sona-review-badge {
+    padding: 9px 4px;
+    font-size: 10px;
+  }
+}

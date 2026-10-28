@@ -1,0 +1,865 @@
+/* ========================================================
+   MY ACCOUNT & SIGN IN PAGE - AYURVEDA
+   Relatable, Luxury Ayurvedic Design System
+======================================================== */
+
+.account-page-wrapper {
+  background: radial-gradient(circle at 10% 10%, rgba(220, 240, 228, 0.45) 0%, transparent 50%),
+              radial-gradient(circle at 90% 85%, rgba(245, 230, 205, 0.35) 0%, transparent 45%),
+              #fdfcf9;
+  min-height: calc(100vh - 160px);
+  padding: 32px 18px 80px;
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  color: #1a2a1f;
+  box-sizing: border-box;
+}
+
+.account-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Breadcrumbs */
+.account-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #687e6f;
+  margin-bottom: 28px;
+}
+
+.account-breadcrumbs a {
+  color: #2e6642;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.account-breadcrumbs a:hover {
+  color: #084e10;
+  text-decoration: underline;
+}
+
+.account-breadcrumbs .sep {
+  color: #9cb1a2;
+}
+
+.account-breadcrumbs .current {
+  color: #1a2a1f;
+  font-weight: 700;
+}
+
+/* Main 2-Column Grid */
+.account-auth-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .account-auth-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Left Column: Brand Perks & Heritage */
+.account-perks-card {
+  background: linear-gradient(145deg, #f3f8f4 0%, #e8f4eb 60%, #fff7eb 100%);
+  border: 1px solid #d5e8d8;
+  border-radius: 24px;
+  padding: 44px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 36px rgba(18, 59, 34, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.account-perks-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(215, 179, 106, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.account-perks-header {
+  margin-bottom: 32px;
+}
+
+.account-perks-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #cce5d2;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #084e10;
+  box-shadow: 0 2px 8px rgba(8, 78, 16, 0.08);
+  margin-bottom: 16px;
+}
+
+.account-perks-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0b3b19;
+  line-height: 1.22;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.account-perks-desc {
+  font-size: 15px;
+  color: #4b6654;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.account-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.account-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.account-perk-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #c9e3cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #084e10;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(8, 78, 16, 0.06);
+}
+
+.account-perk-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.account-perk-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0f361a;
+}
+
+.account-perk-content p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #55725e;
+  line-height: 1.5;
+}
+
+/* Perks Testimonial */
+.account-perks-testimonial {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid #d8ebd9;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-top: 10px;
+}
+
+.account-stars {
+  color: #e59819;
+  font-size: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.account-testimonial-text {
+  font-size: 13.5px;
+  font-style: italic;
+  color: #284732;
+  line-height: 1.5;
+  margin: 0 0 6px 0;
+}
+
+.account-testimonial-author {
+  font-size: 12px;
+  font-weight: 700;
+  color: #084e10;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Right Column: Interactive Auth Card */
+.account-auth-card {
+  background: #ffffff;
+  border: 1px solid #dfeae1;
+  border-radius: 24px;
+  box-shadow: 0 16px 45px rgba(18, 59, 34, 0.08);
+  padding: 38px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .account-auth-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .account-auth-card {
+    padding: 20px 12px;
+    border-radius: 16px;
+  }
+  .account-tab-pill {
+    padding: 9px 8px;
+    font-size: 13px;
+  }
+}
+
+.account-auth-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #084e10, #23733a, #d7b36a);
+}
+
+/* Tab Switcher */
+.account-tab-pills {
+  display: flex;
+  background: #f1f7f2;
+  padding: 5px;
+  border-radius: 40px;
+  border: 1px solid #dbebe0;
+  margin-bottom: 26px;
+}
+
+.account-tab-pill {
+  flex: 1;
+  padding: 11px 16px;
+  border-radius: 30px;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #556e5c;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.account-tab-pill.is-active {
+  background: #084e10;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(8, 78, 16, 0.25);
+}
+
+/* Form Headings */
+.account-form-head {
+  margin-bottom: 24px;
+}
+
+.account-form-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0b3318;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.account-form-subtitle {
+  font-size: 14px;
+  color: #647d6c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Auth Mode Toggle (Password vs OTP) */
+.account-mode-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8faf8;
+  border: 1px dashed #cde2d2;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+
+.account-mode-text {
+  font-size: 13px;
+  color: #3b5a45;
+  font-weight: 600;
+}
+
+.account-mode-btn {
+  background: transparent;
+  border: none;
+  color: #084e10;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.account-mode-btn:hover {
+  color: #1b732d;
+}
+
+/* Form Controls */
+.account-form-group {
+  margin-bottom: 18px;
+}
+
+.account-form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #213c29;
+  margin-bottom: 7px;
+}
+
+.account-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.account-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #7a9482;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.account-input-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.account-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border-radius: 12px;
+  border: 1.5px solid #d4e2d7;
+  background: #fbfdfb;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: #172c1c;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.account-input:focus {
+  border-color: #084e10;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(8, 78, 16, 0.12);
+}
+
+.account-input::placeholder {
+  color: #9ab0a1;
+}
+
+/* Password Toggle */
+.account-toggle-pwd {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #7a9482;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.account-toggle-pwd:hover {
+  color: #084e10;
+}
+
+/* Form Helper Row */
+.account-form-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+.account-remember-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #4b6654;
+  cursor: pointer;
+  user-select: none;
+}
+
+.account-remember-checkbox {
+  accent-color: #084e10;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.account-forgot-link {
+  color: #084e10;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.account-forgot-link:hover {
+  text-decoration: underline;
+  color: #1a7a2e;
+}
+
+/* Primary Submit Button */
+.account-primary-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #084e10 0%, #166e22 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(8, 78, 16, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.account-primary-btn:hover {
+  background: linear-gradient(135deg, #0b5e15 0%, #1c7c29 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 24px rgba(8, 78, 16, 0.35);
+}
+
+.account-primary-btn:active {
+  transform: translateY(0);
+}
+
+/* Dividers */
+.account-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 22px 0;
+  color: #8fa596;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.account-divider::before,
+.account-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e1ede3;
+}
+
+.account-divider span {
+  padding: 0 14px;
+}
+
+/* Social & Secondary Buttons */
+.account-secondary-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1.5px solid #d4e2d7;
+  border-radius: 40px;
+  color: #213c29;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.account-secondary-btn:hover {
+  background: #f7faf7;
+  border-color: #084e10;
+  color: #084e10;
+}
+
+.account-secondary-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Guest Track Note */
+.account-guest-note {
+  margin-top: 24px;
+  padding: 14px 18px;
+  background: #f6fbf7;
+  border: 1px solid #d7e8db;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 13.5px;
+  color: #4b6654;
+}
+
+.account-guest-note a {
+  color: #084e10;
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Concern Chips in Sign Up */
+.account-concerns-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #213c29;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.account-concerns-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.account-concern-chip {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1.5px solid #d4e2d7;
+  background: #fbfdfb;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #476451;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.account-concern-chip.is-selected {
+  background: #084e10;
+  border-color: #084e10;
+  color: #ffffff;
+}
+
+.account-otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+@media (max-width: 360px) {
+  .account-otp-boxes {
+    gap: 8px;
+  }
+  .account-otp-input {
+    width: 44px !important;
+    height: 48px !important;
+    font-size: 20px !important;
+  }
+}
+
+.account-otp-input {
+  width: 52px;
+  height: 56px;
+  border-radius: 12px;
+  border: 2px solid #d4e2d7;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #084e10;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.account-otp-input:focus {
+  border-color: #084e10;
+  box-shadow: 0 0 0 3px rgba(8, 78, 16, 0.15);
+}
+
+.account-resend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #55725e;
+  margin-bottom: 20px;
+}
+
+.account-resend-btn {
+  background: transparent;
+  border: none;
+  color: #084e10;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* ========================================================
+   LOGGED-IN DASHBOARD VIEW
+======================================================== */
+.account-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.account-dashboard-header {
+  background: linear-gradient(135deg, #09471f 0%, #155d2c 60%, #1c733a 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 12px 30px rgba(9, 71, 31, 0.2);
+}
+
+.account-user-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.account-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #084e10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.account-user-info h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.account-user-info p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.account-signout-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.account-signout-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+/* Dashboard Cards Grid */
+.account-dash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .account-dash-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-dash-card {
+  background: #ffffff;
+  border: 1px solid #e1ede3;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(18, 59, 34, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account-dash-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.account-dash-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #eef7f0;
+  color: #084e10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-dash-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.account-dash-card-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0b3318;
+}
+
+.account-order-preview {
+  background: #fbfdfb;
+  border: 1px solid #e6f0e8;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.account-order-id {
+  font-size: 13px;
+  font-weight: 800;
+  color: #084e10;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.account-order-badge {
+  background: #e1f5e6;
+  color: #0d6323;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-order-item-name {
+  font-size: 13.5px;
+  color: #334c3a;
+  margin: 0 0 6px 0;
+}
+
+.account-order-date {
+  font-size: 12px;
+  color: #7b9483;
+}
+
+.account-dash-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background: #f1f8f3;
+  color: #084e10;
+  border: 1px solid #c9e0cf;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+}
+
+.account-dash-btn:hover {
+  background: #084e10;
+  color: #ffffff;
+  border-color: #084e10;
+}
+
+/* Toast Message Notification */
+.account-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: #09471f;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 700;
+  z-index: 99999;
+  animation: slideToastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
